@@ -1,0 +1,25 @@
+sem  all             n=38  R@10 0.92  MRR 0.80  nDCG 0.80  hit@1 0.71  msg 0.74  zero 0
+sem  paraphrase      n= 6  R@10 1.00  MRR 0.92  nDCG 0.94  hit@1 0.83  msg 0.83  zero 0
+sem  crosslingual    n= 6  R@10 1.00  MRR 0.66  nDCG 0.74  hit@1 0.50  msg 0.67  zero 0
+sem  buried          n= 6  R@10 1.00  MRR 0.77  nDCG 0.82  hit@1 0.67  msg 0.67  zero 0
+sem  decoy           n= 7  R@10 1.00  MRR 0.93  nDCG 0.95  hit@1 0.86  msg 0.86  zero 0
+sem  unfinished      n= 7  R@10 0.55  MRR 0.63  nDCG 0.47  hit@1 0.57  msg 0.50  zero 0
+sem  keyword         n= 6  R@10 1.00  MRR 0.92  nDCG 0.94  hit@1 0.83  msg 0.83  zero 0
+sem  query:en        n=23  R@10 0.96  MRR 0.75  nDCG 0.79  hit@1 0.61  msg 0.73  zero 0
+sem  query:no        n= 8  R@10 0.79  MRR 0.78  nDCG 0.74  hit@1 0.75  msg 0.57  zero 0
+sem  query:ru        n= 7  R@10 0.90  MRR 1.00  nDCG 0.93  hit@1 1.00  msg 1.00  zero 0
+sem  same-language   n=24  R@10 1.00  MRR 0.92  nDCG 0.94  hit@1 0.83  msg 0.83  zero 0
+sem  cross-language  n=14  R@10 0.77  MRR 0.61  nDCG 0.57  hit@1 0.50  msg 0.55  zero 0
+hyb10 all             n=38  R@10 0.86  MRR 0.70  nDCG 0.72  hit@1 0.61  msg 0.71  zero 0
+hyb10 paraphrase      n= 6  R@10 1.00  MRR 0.76  nDCG 0.81  hit@1 0.67  msg 0.83  zero 0
+hyb10 crosslingual    n= 6  R@10 1.00  MRR 0.18  nDCG 0.36  hit@1 0.00  msg 0.67  zero 0
+hyb10 buried          n= 6  R@10 0.83  MRR 0.83  nDCG 0.83  hit@1 0.83  msg 0.67  zero 0
+hyb10 decoy           n= 7  R@10 1.00  MRR 0.93  nDCG 0.95  hit@1 0.86  msg 0.86  zero 0
+hyb10 unfinished      n= 7  R@10 0.38  MRR 0.48  nDCG 0.36  hit@1 0.29  msg 0.25  zero 0
+hyb10 keyword         n= 6  R@10 1.00  MRR 1.00  nDCG 1.00  hit@1 1.00  msg 0.83  zero 0
+hyb10 query:en        n=23  R@10 0.87  MRR 0.64  nDCG 0.69  hit@1 0.52  msg 0.68  zero 0
+hyb10 query:no        n= 8  R@10 0.79  MRR 0.70  nDCG 0.71  hit@1 0.63  msg 0.57  zero 0
+hyb10 query:ru        n= 7  R@10 0.90  MRR 0.88  nDCG 0.82  hit@1 0.86  msg 1.00  zero 0
+hyb10 same-language   n=24  R@10 1.00  MRR 0.92  nDCG 0.94  hit@1 0.88  msg 0.83  zero 0
+hyb10 cross-language  n=14  R@10 0.62  MRR 0.31  nDCG 0.34  hit@1 0.14  msg 0.45  zero 0
+{}

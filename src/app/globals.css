@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/*
+ * Theme (src/lib/theme.ts): `dark:` follows data-theme on <html>, set by the theme script
+ * from the user's choice or the system setting. Without JavaScript there is no data-theme,
+ * and the system setting decides.
+ */
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme]), :root:not([data-theme]) *) {
+      @slot;
+    }
+  }
+}
+
+/* Native controls and scrollbars match the theme. */
+:root {
+  color-scheme: light dark;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/*
+ * Search results link to a message heading, #m-<number> (M2.3): keep the
+ * heading clear of the top edge and outline the message it belongs to.
+ * :target covers directly loaded links; [data-linked] is set by
+ * LinkedMessageMarker for in-app navigation (pushState), Back and Forward.
+ */
+article > header > h3[id^="m-"] {
+  scroll-margin-top: 1.5rem;
+}
+article:has(> header > h3[id^="m-"]:target),
+article[data-linked] {
+  outline: 2px solid var(--color-blue-600, #2563eb);
+  outline-offset: 3px;
+}
+
+/*
+ * Wide pages (the map, phase 2): a page whose content starts with [data-layout="wide"] uses the
+ * full application width for the header, the main area and the footer. Unlayered, so it wins
+ * over the max-w-4xl utility on .page-width.
+ */
+body:has(#main-content > [data-layout="wide"]) .page-width {
+  max-width: 96rem;
+}

@@ -1,0 +1,40 @@
+Query: I can't stop thinking about work in the evening
+
+ 1. 0.868 [sleep,stress] Waking at 3am every night — “For a month I've been waking at 3 or 4 every night and my mind starts racing about work. T”
+ 2. 0.862 [py-data,automation] New chat — “works. can i run this automatically every night on windows”
+ 3. 0.858 [stress,exams] Stress før eksamen og jobbsøking samtidig — “Men tenk om jeg går glipp av en god jobb”
+ 4. 0.851 [workplace] Too many meetings — “I'm in meetings 6 hours a day and do my actual work in the evening. How do I fix this with”
+ 5. 0.849 [applications,languages] Помогите с эссе на английском для поступления — “That afternoon changed what I think architecture is for. I realised I had designed an obje”
+ 6. 0.841 [dinners,budgeting] Weekly dinner plan for a family of four — “I'm tired of deciding what to cook every evening. Can you make a weekly dinner plan for tw”
+ 7. 0.840 [workplace] Difficult conversation with a colleague — “A colleague keeps taking credit for my work in meetings. I don't want a war but it has to ”
+ 8. 0.839 [sleep,moving] Плохо сплю после переезда — “Окна выходят на дорогу, ночью шумно”
+ 9. 0.839 [workplace] Negotiating a 4-day week — “It's increasingly common, especially for experienced employees. Make a concrete proposal: ”
+10. 0.834 [interviews] "Tell me about yourself" answer — “I came into programming from a chemistry degree, where I started writing Python scripts to”
+11. 0.834 [stress] Стресс из-за ремонта соседей — “Тогда спланируйте этот месяц: в самые шумные дни работайте из коворкинга или кафе, купите ”
+12. 0.832 [crafts] Pottery wheel or hand building — “If you join a studio, try the wheel there; it has a steeper learning curve but is very sat”
+13. 0.832 [oneoff:riddle] Riddle for a treasure hunt — “"I have a round window but you can't see the view, I spin and I tumble but never leave the”
+14. 0.832 [music] Гитара: как перестать бросать — “Пальцы болят и баррэ не получается”
+15. 0.831 [exams,stress] Exam stress and procrastination — “Final exams in 3 weeks. I keep procrastinating and then panicking at night.”
+16. 0.831 [fiction,stress] Unfinished fantasy novel — “honestly I'm also just exhausted from work and writing feels like another job”
+17. 0.831 [sleep,parenting] Kids bedtime takes two hours — “so they feel some control; - a "bedtime pass": one ticket per night for one extra request,”
+18. 0.830 [stress] Digital detox weekend — “I check my phone constantly and feel scattered. Thinking about a phone-free weekend. Good ”
+19. 0.830 [stress,workplace] Anxiety before presentations — “My heart races and my voice shakes every time I present at work, even in small meetings. H”
+20. 0.829 [workplace] Giving negative feedback to a team member — “Then part of the fix is on your side: make it safe to push back. Go through their current ”
+21. 0.828 [stress,sleep] Overwhelmed and can't switch off — “I feel tense all the time, even on weekends. My shoulders are like stone and my mind keeps”
+22. 0.828 [budgeting,moving] Flytte hjem til foreldrene for å spare — “Hva gjør jeg med pengene i mellomtiden?”
+23. 0.826 [houseplants] Plants for a dark bathroom — “With almost no light, nothing thrives long-term; rotate plants to a brighter room every fe”
+24. 0.826 [oneoff:anniversary] Plan a surprise anniversary weekend — “10th anniversary next month. My wife loves nature and good food. Ideas for a surprise week”
+25. 0.825 [sleep] Melatonin dose — “That's a westward flight, which is easier on the body. Get daylight in the afternoon after”
+
+Target at rank 21; its chunks:
+  0.828 user 32 tok — “I feel tense all the time, even on weekends. My shoulders are like stone and my mind keeps making to-do lists.”
+  0.828 assistant 62 tok — “That sounds like your stress response never gets a chance to turn off. Start with small, daily "off switches":”
+  0.792 user 9 tok — “I tried meditation apps but I get restless”
+  0.814 assistant 62 tok — “Then try movement-based calming instead: yoga, a slow swim, or stretching while listening to music. Many restl”
+  0.752 user 9 tok — “the shoulders are honestly the worst part”
+  0.801 assistant 46 tok — “Heat and gentle movement help: a warm shower aimed at the shoulders, shoulder rolls and chin tucks a few times”
+  0.798 assistant 28 tok — “If it doesn't ease, a physiotherapist or massage therapist can loosen it and show you exercises.”
+  0.789 user 9 tok — “is this something to see a doctor about?”
+  0.812 assistant 56 tok — “Yes, if it's been going on for weeks, affects sleep or concentration, or you're feeling low or anxious most da”
+  0.802 user 8 tok — “ok. I'll book an appointment”
+  0.803 assistant 24 tok — “That's a good step. Keep a short note of symptoms and what makes them better or worse to bring along.”

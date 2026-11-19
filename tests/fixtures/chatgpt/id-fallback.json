@@ -1,0 +1,64 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: id only",
+    "id": "only-id-0000",
+    "mapping": { "n1": { "id": "n1", "message": { "id": "n1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary with id only."] } }, "parent": null, "children": [] } }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: no ids at all",
+    "create_time": 1767657600,
+    "mapping": { "n1": { "id": "n1", "message": { "id": "n1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary without any identifier."] } }, "parent": null, "children": [] } }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: identical twin, first title",
+    "create_time": 1767657700,
+    "mapping": { "n1": { "id": "n1", "message": { "id": "n1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary twin content."] } }, "parent": null, "children": [] } }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: identical twin, second title",
+    "create_time": 1767657700,
+    "update_time": 1767657999,
+    "mapping": { "n1": { "id": "n1", "message": { "id": "n1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary twin content."] } }, "parent": null, "children": [] } }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: no ids and empty mapping",
+    "mapping": {}
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: no ids and only a structural node",
+    "mapping": { "root": { "id": "root", "message": null, "parent": null, "children": [] } }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: numeric conversation_id",
+    "conversation_id": 12345,
+    "id": "fallback-id-0006",
+    "mapping": {}
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: blank conversation_id",
+    "conversation_id": "   ",
+    "id": "fallback-id-0007",
+    "mapping": {}
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: ids disagree",
+    "conversation_id": "cid-0008",
+    "id": "other-id-0008",
+    "mapping": {}
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: reserved prefix",
+    "conversation_id": "derived:v1:not-really-derived",
+    "mapping": {}
+  }
+]

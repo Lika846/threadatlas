@@ -1,0 +1,340 @@
+// @ts-nocheck -- temporary harness: uses better-sqlite3 APIs (backup, transaction) beyond the project's minimal type declarations
+/**
+ * M5.1b migration rehearsal (temporary; archived as
+ * docs/spikes/m5.1b/migration/rehearsal.int.test.ts.txt).
+ *
+ * Populates a synthetic M2 database through the real import code, then rehearses the
+ * reviewed draft migration on copies of it: backup, deploy, verification (data and
+ * schema fingerprints, FTS5, drift), delete-all with the new tables, rollback by
+ * backup restore and by the rollback SQL, a deliberately failing migration, and the
+ * path guards. The draft never enters prisma/: each run uses a throwaway workspace
+ * (prisma.config.ts, the path guard, the schema and the migrations) inside the
+ * project, and every database lives in the system temp directory.
+ */
+import { spawnSync } from "node:child_process";
+import { createHash } from "node:crypto";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import Database from "better-sqlite3";
+import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { analyzeDrift } from "../scripts/migration-drift.mjs";
+import { importText } from "./helpers/import";
+import { migrateTestDatabase } from "./helpers/migrate";
+import { exportText, syntheticConversation, syntheticExport } from "./helpers/synthetic-export";
+import { createPrismaClient } from "../src/lib/db/client";
+import { assertDatabaseIsolation, realDatabasePath, toDatabaseUrl } from "../src/lib/db/path";
+import { deleteAllImportedData } from "../src/lib/data/delete-all";
+import { searchConversations } from "../src/lib/search/search";
+
+const ROOT = process.cwd();
+const NAME = "20261111120000_semantic_index";
+const DRAFT = path.join(ROOT, "docs/spikes/m5.1b/migration");
+const MIGRATION = fs.readFileSync(path.join(DRAFT, "migration.sql"), "utf8");
+const ROLLBACK = fs.readFileSync(path.join(DRAFT, "rollback.sql"), "utf8");
+const CANARY = Buffer.from("M51B-CANARY-VECTOR-".repeat(21)).subarray(0, 388);
+const NEW_TABLES = ["EmbeddingChunk", "EmbeddingIndex", "EmbeddingStatus"];
+const report: Record<string, unknown> = {};
+
+let tmp: string;
+const workspaces: string[] = [];
+const env = (db: string) => ({ ...process.env, DATABASE_URL: toDatabaseUrl(db), THREADATLAS_TEST: "1", CHECKPOINT_DISABLE: "1", PRISMA_HIDE_UPDATE_MESSAGE: "1" });
+
+function cli(cwd: string, db: string, args: string[]) {
+  const t = performance.now();
+  const r = spawnSync(process.execPath, [path.join(ROOT, "node_modules/prisma/build/index.js"), ...args], { cwd, env: env(db), encoding: "utf8", input: "" });
+  return { code: r.status, out: `${r.stdout}\n${r.stderr}`, ms: Math.round(performance.now() - t) };
+}
+
+/** A throwaway Prisma workspace: the project's config and migrations plus the draft. */
+function workspace(migrationSql: string | null): string {
+  const w = fs.mkdtempSync(path.join(ROOT, ".m51b-ws-"));
+  workspaces.push(w);
+  fs.mkdirSync(path.join(w, "src/lib/db"), { recursive: true });
+  fs.copyFileSync(path.join(ROOT, "src/lib/db/path.ts"), path.join(w, "src/lib/db/path.ts"));
+  fs.copyFileSync(path.join(ROOT, "prisma.config.ts"), path.join(w, "prisma.config.ts"));
+  fs.cpSync(path.join(ROOT, "prisma"), path.join(w, "prisma"), { recursive: true });
+  if (migrationSql !== null) {
+    fs.copyFileSync(path.join(DRAFT, "schema.prisma"), path.join(w, "prisma/schema.prisma"));
+    fs.mkdirSync(path.join(w, "prisma/migrations", NAME));
+    fs.writeFileSync(path.join(w, "prisma/migrations", NAME, "migration.sql"), migrationSql);
+  }
+  return w;
+}
+
+const copy = (from: string, name: string) => {
+  const to = path.join(tmp, name);
+  fs.copyFileSync(from, to);
+  return to;
+};
+
+const hex = (v: unknown) => (Buffer.isBuffer(v) ? v.toString("hex") : v);
+const sha = (x: unknown) => createHash("sha256").update(JSON.stringify(x, (_k, v) => hex(v))).digest("hex");
+
+/** Fingerprints of everything that must not change, plus the new objects. */
+function inspect(file: string) {
+  const db = new Database(file, { readonly: true });
+  try {
+    const rows = (t: string) => db.prepare(`SELECT * FROM "${t}" ORDER BY rowid`).all();
+    const all = (sql: string) => db.prepare(sql).all() as Record<string, unknown>[];
+    const master = all(`SELECT type, name, tbl_name, sql FROM sqlite_master ORDER BY type, name`);
+    const isNew = (m: Record<string, unknown>) => NEW_TABLES.includes(String(m.tbl_name));
+    const has = (t: string) => master.some((m) => m.type === "table" && m.name === t);
+    return {
+      data: sha({ b: rows("ImportBatch"), c: rows("Conversation"), m: rows("Message") }),
+      counts: all(`SELECT (SELECT COUNT(*) FROM "Conversation") AS c, (SELECT COUNT(*) FROM "Message") AS m, (SELECT COUNT(*) FROM "ImportBatch") AS b`)[0],
+      oldMigrations: sha(all(`SELECT migration_name, checksum, finished_at, rolled_back_at, applied_steps_count FROM _prisma_migrations WHERE migration_name <> '${NAME}' ORDER BY migration_name`)),
+      thisMigration: all(`SELECT migration_name, finished_at IS NOT NULL AS finished, rolled_back_at IS NOT NULL AS rolledBack, logs IS NOT NULL AS hasLogs FROM _prisma_migrations WHERE migration_name = '${NAME}'`),
+      oldSchema: sha(master.filter((m) => !isNew(m))),
+      newObjects: master.filter(isNew).map((m) => `${m.type}:${m.name}`),
+      newRows: Object.fromEntries(NEW_TABLES.filter(has).map((t) => [t, (db.prepare(`SELECT COUNT(*) AS n FROM "${t}"`).get() as { n: number }).n])),
+      sqliteSequence: has("sqlite_sequence"),
+      integrity: (db.prepare("PRAGMA integrity_check").get() as Record<string, string>).integrity_check,
+      foreignKeyViolations: all("PRAGMA foreign_key_check").length,
+      freePages: (db.prepare("PRAGMA freelist_count").get() as { freelist_count: number }).freelist_count,
+    };
+  } finally {
+    db.close();
+  }
+}
+
+function ftsIntegrity(file: string): boolean {
+  const db = new Database(file);
+  try {
+    db.exec(`INSERT INTO "message_fts"("message_fts") VALUES('integrity-check')`);
+    db.exec(`INSERT INTO "conversation_fts"("conversation_fts") VALUES('integrity-check')`);
+    return true;
+  } catch {
+    return false;
+  } finally {
+    db.close();
+  }
+}
+
+async function searches(file: string) {
+  const db = createPrismaClient({ env: { THREADATLAS_TEST: "1", DATABASE_URL: toDatabaseUrl(file) }, root: ROOT });
+  try {
+    const out: Record<string, unknown> = {};
+    for (const q of ["budsjett", "семена", "synthetic message", "kanariefugl"]) {
+      const r = await searchConversations(db, q, undefined);
+      out[q] = r.status === "ok" ? { total: r.total, ids: r.results.map((x) => x.conversationId), snippets: r.results.map((x) => x.snippet) } : r;
+    }
+    return sha(out);
+  } finally {
+    await db.$disconnect();
+  }
+}
+
+function driftOk(cwd: string, db: string, args: string[]) {
+  const out = path.join(tmp, `drift-${Math.random().toString(36).slice(2)}.sql`);
+  const r = cli(cwd, db, ["migrate", "diff", ...args, "--script", "--output", out]);
+  if (r.code !== 0) return { ok: false, error: r.out.slice(0, 400) };
+  const res = analyzeDrift(fs.readFileSync(out, "utf8")) as { ok: boolean; unexpected: string[]; missing: string[] };
+  return { ok: res.ok, unexpected: res.unexpected, missing: res.missing };
+}
+
+let base: string; // populated M2 database
+let backup: string;
+let before: ReturnType<typeof inspect>;
+let beforeSearch: string;
+let ws: string;
+
+beforeAll(async () => {
+  tmp = fs.mkdtempSync(path.join(os.tmpdir(), "threadatlas-m51b-rehearsal-"));
+  base = path.join(tmp, "m2.db");
+  migrateTestDatabase(base); // the committed migrations only: an M2 database
+  const db = createPrismaClient({ env: { THREADATLAS_TEST: "1", DATABASE_URL: toDatabaseUrl(base) }, root: ROOT });
+  const convs: unknown[] = [
+    ...syntheticExport(40, { messages: 8, idPrefix: "bulk" }),
+    syntheticConversation({ id: "no-1", tag: "Hagen trenger et budsjett for frø", messages: 4 }),
+    syntheticConversation({ id: "ru-1", tag: "Бюджет на семена и инструменты", messages: 4 }),
+    syntheticConversation({ id: "long-1", messages: 1_200, textLength: 300 }),
+    syntheticConversation({ id: "canary-text", tag: "kanariefugl", messages: 2 }),
+  ];
+  await importText(exportText(convs), { writer: { db, dbPath: base } });
+  // A second import replacing some conversations, so the history includes replacements.
+  await importText(exportText(syntheticExport(5, { messages: 3, idPrefix: "bulk", updateTime: 1_800_000_000, tag: "v2" })), { writer: { db, dbPath: base } });
+  await db.$disconnect();
+  before = inspect(base);
+  beforeSearch = await searches(base);
+  report.populated = { ...(before.counts as object), bytes: fs.statSync(base).size };
+  ws = workspace(MIGRATION);
+}, 120_000);
+
+afterAll(() => {
+  for (const w of workspaces) fs.rmSync(w, { recursive: true, force: true });
+  if (tmp) fs.rmSync(tmp, { recursive: true, force: true });
+  const out = process.env.M51B_REHEARSAL_REPORT;
+  if (out) fs.writeFileSync(out, JSON.stringify(report, null, 1));
+});
+
+describe("M5.1b migration rehearsal", { timeout: 120_000 }, () => {
+  it("backs up the populated M2 database with the SQLite backup API and verifies the copy", async () => {
+    const src = new Database(base, { readonly: true });
+    backup = path.join(tmp, "backup.db");
+    await src.backup(backup);
+    src.close();
+    const b = inspect(backup);
+    expect(b.integrity).toBe("ok");
+    expect(b.data).toBe(before.data);
+    expect(b.oldMigrations).toBe(before.oldMigrations);
+    expect(b.oldSchema).toBe(before.oldSchema);
+  });
+
+  it("deploys only the new migration and leaves every existing row, object and FTS5 index unchanged", async () => {
+    const db = copy(base, "deploy.db");
+    const r = cli(ws, db, ["migrate", "deploy"]);
+    report.deploy = { code: r.code, ms: r.ms, applied: /20261111120000_semantic_index/.test(r.out) };
+    expect(r.code).toBe(0);
+    expect(r.out).toContain(NAME);
+    expect(r.out).not.toMatch(/20261104174624_init\s*$|20261107190000_search_index\s*$/m);
+    const a = inspect(db);
+    report.afterDeploy = { newObjects: a.newObjects, sqliteSequence: a.sqliteSequence };
+    expect(a.integrity).toBe("ok");
+    expect(a.foreignKeyViolations).toBe(0);
+    expect(a.data).toBe(before.data);
+    expect(a.oldMigrations).toBe(before.oldMigrations);
+    expect(a.oldSchema).toBe(before.oldSchema);
+    expect(a.thisMigration).toEqual([{ migration_name: NAME, finished: 1, rolledBack: 0, hasLogs: 0 }]);
+    expect(a.newObjects.sort()).toEqual(
+      [
+        "index:EmbeddingChunk_epoch_idx",
+        "index:EmbeddingStatus_state_queuedAt_idx",
+        "index:sqlite_autoindex_EmbeddingChunk_1",
+        "index:sqlite_autoindex_EmbeddingIndex_1",
+        "index:sqlite_autoindex_EmbeddingStatus_1",
+        "table:EmbeddingChunk",
+        "table:EmbeddingIndex",
+        "table:EmbeddingStatus",
+      ].sort(),
+    );
+    expect(a.newRows).toEqual({ EmbeddingChunk: 0, EmbeddingIndex: 0, EmbeddingStatus: 0 });
+    expect(a.sqliteSequence).toBe(false);
+    expect(ftsIntegrity(db)).toBe(true);
+    expect(await searches(db)).toBe(beforeSearch);
+    // Status and drift, from the workspace that has the new migration.
+    const st = cli(ws, db, ["migrate", "status"]);
+    expect(st.code).toBe(0);
+    expect(st.out).toMatch(/up to date/i);
+    const files = driftOk(ws, db, ["--from-migrations", "prisma/migrations", "--to-schema", "prisma/schema.prisma"]);
+    const live = driftOk(ws, db, ["--from-config-datasource", "--to-schema", "prisma/schema.prisma"]);
+    report.drift = { migrationsVsSchema: files, databaseVsSchema: live };
+    expect(files.ok).toBe(true);
+    expect(live.ok).toBe(true);
+    // Idempotent: a second deploy applies nothing.
+    const again = cli(ws, db, ["migrate", "deploy"]);
+    expect(again.code).toBe(0);
+    expect(again.out).toMatch(/No pending migrations/i);
+    expect(inspect(db).data).toBe(before.data);
+  });
+
+  it("the committed drift check flags the draft schema without its migration", () => {
+    const noMigration = workspace(null);
+    fs.copyFileSync(path.join(DRAFT, "schema.prisma"), path.join(noMigration, "prisma/schema.prisma"));
+    const r = driftOk(noMigration, path.join(tmp, "unused.db"), ["--from-migrations", "prisma/migrations", "--to-schema", "prisma/schema.prisma"]);
+    expect(r.ok).toBe(false);
+    expect(r.unexpected?.some((s) => s.includes("EmbeddingChunk"))).toBe(true);
+  });
+
+  it("delete-all (today's code) removes status and chunk rows through the cascade, keeps EmbeddingIndex, and leaves no vector bytes", async () => {
+    const db = copy(base, "delete.db");
+    expect(cli(ws, db, ["migrate", "deploy"]).code).toBe(0);
+    const raw = new Database(db);
+    raw.exec(`INSERT INTO "EmbeddingIndex" VALUES ('main', 1, 'e', 'c', 64, 'q', 384, 0, NULL, '2026-11-11T00:00:00.000+00:00')`);
+    const ids = raw.prepare(`SELECT "id", "contentHash", "parserVersion" FROM "Conversation"`).all() as { id: string; contentHash: string; parserVersion: string }[];
+    const st = raw.prepare(`INSERT INTO "EmbeddingStatus" VALUES (?, ?, ?, 1, 'indexed', NULL, 1, 3, NULL, '2026-11-11T00:00:00.000+00:00', '2026-11-11T00:00:00.000+00:00')`);
+    const ch = raw.prepare(`INSERT INTO "EmbeddingChunk" VALUES (?, ?, ?, 1, ?, 0, 0, 10, 5, ?, ?)`);
+    raw.transaction(() => {
+      for (const c of ids) {
+        st.run(c.id, c.contentHash, c.parserVersion);
+        for (const n of ["n1", "n2", "n3"]) ch.run(c.id, c.contentHash, c.parserVersion, n, "k".repeat(32), CANARY);
+      }
+    })();
+    raw.close();
+    expect(fs.readFileSync(db).includes(CANARY)).toBe(true);
+    const client = createPrismaClient({ env: { THREADATLAS_TEST: "1", DATABASE_URL: toDatabaseUrl(db) }, root: ROOT });
+    const res = await deleteAllImportedData({ writer: { db: client, dbPath: db } });
+    await client.$disconnect();
+    report.deleteAll = { status: res.status, seededStatusRows: ids.length, seededChunks: ids.length * 3 };
+    expect(res.status).toBe("complete");
+    const a = inspect(db);
+    expect(a.newRows).toEqual({ EmbeddingChunk: 0, EmbeddingIndex: 1, EmbeddingStatus: 0 });
+    expect(a.freePages).toBe(0);
+    expect(a.integrity).toBe("ok");
+    expect(fs.readFileSync(db).includes(CANARY)).toBe(false);
+    expect(fs.readFileSync(db).includes(Buffer.from("M51B-CANARY"))).toBe(false);
+    expect(ftsIntegrity(db)).toBe(true);
+  });
+
+  it("rollback A: restoring the backup returns the exact M2 state, and the migration can be applied again", async () => {
+    const db = path.join(tmp, "restored.db");
+    const src = new Database(backup, { readonly: true });
+    await src.backup(db);
+    src.close();
+    const r = inspect(db);
+    expect([r.data, r.oldSchema, r.oldMigrations]).toEqual([before.data, before.oldSchema, before.oldMigrations]);
+    expect(r.newObjects).toEqual([]);
+    const st = cli(ws, db, ["migrate", "status"]);
+    expect(st.out).toContain(NAME); // reported as not yet applied
+    expect(cli(ws, db, ["migrate", "deploy"]).code).toBe(0);
+    expect(inspect(db).data).toBe(before.data);
+  });
+
+  it("rollback B: the rollback SQL returns the M2 schema exactly; the committed migrations report up to date; redeploy works", async () => {
+    const db = copy(base, "rollback.db");
+    expect(cli(ws, db, ["migrate", "deploy"]).code).toBe(0);
+    const raw = new Database(db);
+    raw.exec(ROLLBACK);
+    raw.close();
+    const r = inspect(db);
+    expect(r.newObjects).toEqual([]);
+    expect(r.thisMigration).toEqual([]);
+    expect(r.sqliteSequence).toBe(false);
+    expect([r.data, r.oldSchema, r.oldMigrations]).toEqual([before.data, before.oldSchema, before.oldMigrations]);
+    expect(r.integrity).toBe("ok");
+    expect(ftsIntegrity(db)).toBe(true);
+    const projectStatus = cli(ROOT, db, ["migrate", "status"]);
+    expect(projectStatus.code).toBe(0);
+    expect(projectStatus.out).toMatch(/up to date/i);
+    expect(driftOk(ROOT, db, ["--from-config-datasource", "--to-schema", "prisma/schema.prisma"]).ok).toBe(true);
+    expect(cli(ws, db, ["migrate", "deploy"]).code).toBe(0);
+    expect(inspect(db).newObjects).toHaveLength(8);
+  });
+
+  it("a migration that fails part-way leaves no partial schema and no data change; deploy then refuses until resolved", async () => {
+    const db = copy(base, "failing.db");
+    const broken = MIGRATION.replace("\nCOMMIT;", `\nCREATE TABLE "Conversation" ("x" TEXT);\n\nCOMMIT;`);
+    expect(broken).not.toBe(MIGRATION);
+    const bad = workspace(broken);
+    const r = cli(bad, db, ["migrate", "deploy"]);
+    expect(r.code).not.toBe(0);
+    const a = inspect(db);
+    report.failing = { code: r.code, newObjects: a.newObjects, migrationRow: a.thisMigration };
+    expect(a.newObjects).toEqual([]); // the first CREATE TABLEs were rolled back
+    expect([a.data, a.oldSchema, a.oldMigrations]).toEqual([before.data, before.oldSchema, before.oldMigrations]);
+    expect(a.integrity).toBe("ok");
+    expect(ftsIntegrity(db)).toBe(true);
+    // Prisma records the failure and refuses further deploys (P3009) until resolved.
+    const again = cli(ws, db, ["migrate", "deploy"]);
+    report.failing = { ...(report.failing as object), redeployRefused: again.code !== 0, p3009: /P3009/.test(again.out) };
+    expect(again.code).not.toBe(0);
+    const resolve = cli(ws, db, ["migrate", "resolve", "--rolled-back", NAME]);
+    expect(resolve.code).toBe(0);
+    const fixed = cli(ws, db, ["migrate", "deploy"]);
+    expect(fixed.code).toBe(0);
+    const f = inspect(db);
+    expect(f.newObjects).toHaveLength(8);
+    expect(f.data).toBe(before.data);
+  });
+
+  it("path guards: the real database is refused under the test flag, before anything opens it", () => {
+    const real = realDatabasePath(ROOT);
+    expect(() => assertDatabaseIsolation({ env: { THREADATLAS_TEST: "1" }, root: ROOT, dbPath: real })).toThrow();
+    // Read-only CLI command from the project (committed migrations only); the config refuses first.
+    const r = cli(ROOT, real, ["migrate", "status"]);
+    expect(r.code).not.toBe(0);
+    expect(r.out).toMatch(/isolat|temp/i);
+    // Also a database outside the temp directory that is not the real one.
+    expect(() => assertDatabaseIsolation({ env: { THREADATLAS_TEST: "1" }, root: ROOT, dbPath: path.join(ROOT, "other.db") })).toThrow();
+  });
+});

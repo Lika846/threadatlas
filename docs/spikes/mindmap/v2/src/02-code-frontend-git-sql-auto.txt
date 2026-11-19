@@ -1,0 +1,460 @@
+=== t031 | useEffect runs twice | frontend | - | en
+U: My useEffect that fetches data runs twice on page load. Is that a bug in my code?
+A: In development with React 18+ StrictMode, React mounts, unmounts and remounts components once to surface effects that don't clean up properly. It doesn't happen in production. Make the effect safe to run twice by cancelling stale work:
+
+```jsx
+useEffect(() => {
+  const ctrl = new AbortController();
+  fetch(url, { signal: ctrl.signal }).then(r => r.json()).then(setData).catch(() => {});
+  return () => ctrl.abort();
+}, [url]);
+```
+
+=== t032 | Center a div, again | frontend | - | en
+U: what's the least painful way to center a box both ways inside the page
+A: Make the parent a grid and center its content:
+
+```css
+.page { display: grid; place-items: center; min-height: 100vh; }
+```
+
+`place-items: center` handles both axes. Flexbox works too (`display:flex; justify-content:center; align-items:center`), but the grid version is one line.
+
+=== t033 | Form state in React getting messy | frontend | - | en
+U: I have a sign-up form with 12 fields and a useState for each. Validation is all over the place. Is there a better pattern?
+A: Twelve separate states is a sign to move to a form library or one reducer. React Hook Form is the usual pick: fields register themselves, re-renders stay low, and you can plug in a Zod schema so all validation rules live in one place:
+
+```tsx
+const schema = z.object({ email: z.string().email(), age: z.coerce.number().min(18) });
+const { register, handleSubmit, formState: { errors } } = useForm({ resolver: zodResolver(schema) });
+```
+
+The same schema can validate on the server, so the rules can't drift apart.
+U: does it work with our custom select component?
+A: Yes, wrap it with `Controller`, which passes `value` and `onChange` to components that don't expose a native input. That's the standard way to use third-party or custom inputs.
+
+=== t034 | Mørk modus på nettsiden | frontend | - | no
+U: Hvordan lager jeg mørk modus på en enkel nettside uten rammeverk? Den skal følge innstillingen på maskinen, men brukeren skal kunne overstyre.
+A: Definer fargene som CSS-variabler og bytt dem:
+
+```css
+:root { --bg: #fff; --tekst: #111; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="lys"]) { --bg: #111; --tekst: #eee; } }
+:root[data-tema="mørk"] { --bg: #111; --tekst: #eee; }
+body { background: var(--bg); color: var(--tekst); }
+```
+
+En knapp setter `document.documentElement.dataset.tema` til «lys» eller «mørk» og lagrer valget i localStorage. Uten valg følger siden systemet.
+
+=== t035 | TypeScript: type for an object with dynamic keys | frontend | - | en
+U: How do I type an object like { "2024-01": 120, "2024-02": 98, ... } in TypeScript?
+A: `Record<string, number>` is the simple answer. If the keys follow a pattern you can be stricter with a template literal type:
+
+```ts
+type Month = `${number}-${number}`;
+const totals: Record<Month, number> = { "2024-01": 120 };
+```
+
+With `noUncheckedIndexedAccess` on, reading `totals[key]` gives `number | undefined`, which reminds you to handle months with no data.
+
+=== t036 | Сайт медленно грузится на телефоне | frontend | - | ru
+U: Lighthouse на мобильных показывает 38 баллов. Основная претензия — Largest Contentful Paint 6 секунд. Сайт на Next.js, главная картинка большая.
+A: LCP почти всегда упирается в эту главную картинку. Что сделать:
+1. Отдавать её через `next/image` с `priority`, чтобы она грузилась сразу, а не лениво.
+2. Задать `sizes`, чтобы телефон получал картинку шириной ~800 px, а не 3000.
+3. Формат AVIF или WebP вместо JPEG — обычно в 2–3 раза меньше.
+4. Проверить шрифты: если текст ждёт загрузки веб-шрифта, добавьте `display: swap`.
+После первых двух пунктов LCP обычно падает до 2–3 секунд.
+
+=== t037 | Tailwind classes not applied | frontend | - | en
+U: I added Tailwind to my Vite project, classes show up in the HTML but nothing is styled.
+A: Usually the content paths don't include your files, so Tailwind generates no CSS for them. In Tailwind v3 check `tailwind.config.js`:
+
+```js
+content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+```
+
+and make sure `src/index.css` has the three `@tailwind` lines and is imported in `main.tsx`. In v4 the setup is different: `@import "tailwindcss";` in your CSS and the Vite plugin, no config file needed.
+
+=== t038 | Accessible modal dialog | frontend | - | en
+U: Our modal fails the accessibility audit. What does a modal actually need?
+A: The checklist auditors look for:
+- focus moves into the dialog when it opens and returns to the button that opened it when it closes;
+- Tab cycles inside the dialog only;
+- Escape closes it;
+- it has `role="dialog"`, `aria-modal="true"` and `aria-labelledby` pointing at its heading;
+- the page behind is inert.
+The native `<dialog>` element with `showModal()` gives you most of this for free, including the focus trap and Escape, so it's worth switching to before writing your own.
+
+=== t039 | Liste i React blir treg med 5000 rader | frontend | - | no
+U: Jeg viser en tabell med 5000 rader i React og hele siden henger når jeg skriver i søkefeltet over.
+A: To ting hjelper mest:
+1. Virtualisering: tegn bare radene som er synlige, med for eksempel TanStack Virtual. Da går du fra 5000 til omtrent 30 DOM-rader.
+2. Gjør filtreringen mindre hastende med `useDeferredValue(søk)`, så skrivingen i feltet ikke venter på at tabellen er ferdig.
+Sjekk også at hver rad har en stabil `key` (id, ikke indeks), ellers tegnes radene på nytt unødvendig.
+
+=== t040 | Component library or build our own? | frontend | - | en
+U: Small startup, two frontend devs. Should we build our own component library or use something like shadcn/ui or MUI?
+A: With two developers, building your own from scratch will eat months you don't have. shadcn/ui is a good middle path: the components are copied into your repo, so you own and can change them, but you start from accessible, tested code. MUI is faster to start but harder to make look like your brand. Whatever you choose, put your colours and spacing in design tokens from day one; that's the part that's painful to retrofit.
+
+=== t041 | Animate a list when items are removed | frontend | - | en
+U: When I delete an item from a list it just vanishes. How can I make it fade and slide out in React?
+A: The item has to stay in the DOM while it animates, which plain React state doesn't do. Framer Motion's `AnimatePresence` handles it:
+
+```jsx
+<AnimatePresence>
+  {items.map(i => (
+    <motion.li key={i.id} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.2 }}>
+      {i.name}
+    </motion.li>
+  ))}
+</AnimatePresence>
+```
+
+Respect `prefers-reduced-motion` for users who turn animations off; Framer Motion has `useReducedMotion()` for that.
+
+=== t042 | Хук для загрузки данных с повтором | frontend | web-backend | ru
+U: Напиши хук useFetch, который повторяет запрос до 3 раз при ошибке сети.
+A: Вот простой вариант:
+
+```ts
+function useFetch<T>(url: string) {
+  const [state, setState] = useState<{ data?: T; error?: string; loading: boolean }>({ loading: true });
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      for (let attempt = 1; attempt <= 3; attempt++) {
+        try {
+          const r = await fetch(url);
+          if (!r.ok) throw new Error(String(r.status));
+          const data = await r.json();
+          if (!cancelled) setState({ data, loading: false });
+          return;
+        } catch (e) {
+          if (attempt === 3 && !cancelled) setState({ error: String(e), loading: false });
+          await new Promise(res => setTimeout(res, 500 * attempt));
+        }
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [url]);
+  return state;
+}
+```
+
+Повторять имеет смысл только сетевые ошибки и 5xx; на 4xx повтор ничего не даст. Для серьёзного проекта лучше взять TanStack Query — там повторы, кэш и отмена уже есть.
+
+=== t043 | Undo the last commit but keep my changes | git-devops | - | en
+U: I committed to main by mistake. I want the changes back as uncommitted so I can move them to a branch.
+A: `git reset --soft HEAD~1` removes the commit and leaves the changes staged. Then:
+
+```
+git switch -c my-feature
+git commit -m "..."
+```
+
+If you already pushed main, don't reset it there; instead create the branch from your current commit and revert the commit on main with `git revert`.
+
+=== t044 | Merge conflict in package-lock.json | git-devops | - | en
+U: every time I rebase I get conflicts in package-lock.json. resolving by hand is impossible
+A: Don't resolve it by hand. Take either side and regenerate:
+
+```
+git checkout --theirs package-lock.json   # or --ours
+npm install
+git add package-lock.json
+git rebase --continue
+```
+
+`npm install` rewrites the lockfile to match the merged package.json. You can also add `package-lock.json merge=npm-merge-driver` with the npm merge driver so git does this automatically.
+
+=== t045 | Commit-melding på engelsk | git-devops | - | no
+U: Kan du skrive en commit-melding for dette? Jeg har fikset at brukere ble logget ut når tokenet ble fornyet, og lagt til en test.
+U[en]: It should be in English, the team writes all commits in English.
+A[en]: Here's one in conventional-commit style:
+
+```
+fix(auth): keep users signed in when the access token is refreshed
+
+The refresh handler replaced the session before the new token was
+stored, so the next request was sent without credentials. Store the
+token first, then update the session. Add a regression test.
+```
+
+=== t046 | GitHub Actions: cache node_modules | git-devops | - | en
+U: Our CI spends 3 minutes on npm install every run. How do I cache it in GitHub Actions?
+A: Let `setup-node` cache the npm download cache:
+
+```yaml
+- uses: actions/setup-node@v4
+  with:
+    node-version: 22
+    cache: npm
+- run: npm ci
+```
+
+This caches `~/.npm`, keyed on package-lock.json, which is the recommended approach; caching `node_modules` directly breaks easily across Node versions. Typical install time drops to 20–40 seconds.
+
+=== t047 | Docker container exits immediately | git-devops | - | en
+U: `docker run myimage` starts and exits right away with code 0. No error.
+A: A container lives as long as its main process. Exit code 0 means your command finished successfully — for example a script that runs and ends, or a server started in the background with `&` or as a daemon. Check what runs with `docker inspect myimage --format '{{.Config.Cmd}}'`. For servers, make sure they run in the foreground (e.g. `nginx -g 'daemon off;'`, or `CMD ["node", "server.js"]` instead of `npm start &`).
+
+=== t048 | Как настроить автодеплой на VPS | git-devops | web-backend | ru
+U: Хочу, чтобы после пуша в main сайт сам обновлялся на моём VPS. Сейчас захожу по ssh и делаю git pull руками.
+A: Самый простой путь — GitHub Actions с ssh:
+
+```yaml
+on: { push: { branches: [main] } }
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HOST }}
+          username: deploy
+          key: ${{ secrets.SSH_KEY }}
+          script: cd /srv/app && git pull && npm ci && npm run build && systemctl restart app
+```
+
+Заведите отдельного пользователя `deploy` с правами только на папку приложения и перезапуск сервиса, а ключ храните в секретах репозитория.
+U: а если сборка упадёт, сайт ляжет?
+A: При такой схеме — да, потому что вы собираете прямо в рабочей папке. Надёжнее собирать в новую папку релиза, а потом переключать симлинк `current` на неё. Если сборка упала, симлинк остаётся на старой версии и сайт продолжает работать.
+
+=== t049 | Rewrite history to remove a leaked secret | git-devops | - | en
+U: I pushed an API key to a public repo yesterday. I deleted it in a new commit. Am I safe?
+A: No — the key is still in the history and bots scan public repos within minutes. Do these in order:
+1. Revoke and rotate the key now. This is the only step that actually protects you.
+2. Then remove it from history with `git filter-repo --replace-text` (or BFG), force-push, and ask collaborators to re-clone.
+3. Add the file to `.gitignore` and use a secret scanner (GitHub push protection) so it can't happen again.
+Even after rewriting, forks and caches may keep the old commit, which is why rotating comes first.
+
+=== t050 | Kubernetes pod in CrashLoopBackOff | git-devops | - | en
+U: kubectl get pods shows CrashLoopBackOff for our API after the last deploy. Where do I look?
+A: Start with the previous container's logs, since the current one may have just restarted:
+
+```
+kubectl logs <pod> --previous
+kubectl describe pod <pod>
+```
+
+`describe` shows the last exit code and events. Exit code 137 means it was killed (often out of memory — check `limits.memory`); 1 means the app crashed (the logs will say why, often a missing env var or secret); a failing liveness probe shows up in the events. A probe that starts too early is a common cause after a deploy that made startup slower.
+
+=== t051 | Branching strategy for a small team | git-devops | - | en
+U: Four developers. We tried git flow and it feels heavy. What do small teams usually do?
+A: Most small teams do trunk-based development: short-lived feature branches (a day or two), pull requests into main, main is always deployable, and releases are tags. Unfinished features hide behind flags instead of living on long branches. You lose the separate develop/release branches of git flow, but you also lose most of the painful merges.
+
+=== t052 | Pre-commit hooks for formatting | git-devops | - | en
+U: How do I make sure nobody commits unformatted code? We use prettier and eslint.
+A: Use husky with lint-staged so only staged files are checked:
+
+```json
+"lint-staged": { "*.{ts,tsx,js}": ["eslint --fix", "prettier --write"] }
+```
+
+and `npx husky init` with `npx lint-staged` in `.husky/pre-commit`. Hooks can be skipped with `--no-verify`, so run the same checks in CI as the real gate.
+
+=== t053 | Nginx som reverse proxy for to apper | git-devops | - | no
+U: Jeg har to apper på samme server, en på port 3000 og en på 4000. Jeg vil at app.mittdomene.no og api.mittdomene.no skal gå til hver sin. Hvordan setter jeg opp nginx?
+A: Lag én server-blokk per domene:
+
+```nginx
+server {
+  server_name app.mittdomene.no;
+  location / { proxy_pass http://127.0.0.1:3000; proxy_set_header Host $host; }
+}
+server {
+  server_name api.mittdomene.no;
+  location / { proxy_pass http://127.0.0.1:4000; proxy_set_header Host $host; }
+}
+```
+
+Kjør `sudo certbot --nginx` etterpå for gratis HTTPS-sertifikater på begge domenene; certbot legger inn 443-blokkene for deg.
+
+=== t054 | Ускорить сборку Docker-образа | git-devops | - | ru
+U: Каждая сборка образа занимает 8 минут, даже если поменяла одну строчку в коде.
+A: Скорее всего, слой с установкой зависимостей пересобирается каждый раз. Порядок в Dockerfile важен: сначала копируйте только файлы зависимостей и ставьте их, потом остальной код:
+
+```dockerfile
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
+```
+
+Тогда при изменении кода слой с `npm ci` берётся из кэша. Ещё добавьте `.dockerignore` с `node_modules` и `.git` — иначе их копирование тоже сбрасывает кэш и раздувает контекст сборки.
+
+=== t055 | Window function: running total per customer | sql | - | en
+U: I need a running total of payments per customer ordered by date in Postgres.
+A: Use `SUM` as a window function partitioned by customer:
+
+```sql
+SELECT customer_id, paid_at, amount,
+       SUM(amount) OVER (PARTITION BY customer_id ORDER BY paid_at
+                         ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS running_total
+FROM payments
+ORDER BY customer_id, paid_at;
+```
+
+The explicit `ROWS` frame matters when two payments share a timestamp; the default `RANGE` frame would give them the same running total.
+
+=== t056 | Slow query with LIKE '%term%' | sql | - | en
+U: Searching product names with LIKE '%term%' takes seconds on 2 million rows. Index on name doesn't help.
+A: A B-tree index can't help with a leading wildcard. In Postgres, add a trigram index:
+
+```sql
+CREATE EXTENSION IF NOT EXISTS pg_trgm;
+CREATE INDEX products_name_trgm ON products USING gin (name gin_trgm_ops);
+```
+
+After that, `ILIKE '%term%'` uses the index and typically drops to milliseconds. If you need ranking or stemming, look at full-text search (`tsvector`) instead.
+
+=== t057 | Finn kunder som ikke har handlet i år | sql | - | no
+U: Jeg trenger en spørring som finner alle kunder som har handlet før, men ikke i 2024.
+A: Bruk `NOT EXISTS`, som håndterer NULL-verdier riktig og ofte er raskest:
+
+```sql
+SELECT k.*
+FROM kunder k
+WHERE EXISTS (SELECT 1 FROM ordrer o WHERE o.kunde_id = k.id)
+  AND NOT EXISTS (
+    SELECT 1 FROM ordrer o
+    WHERE o.kunde_id = k.id AND o.dato >= DATE '2024-01-01'
+  );
+```
+
+Unngå `NOT IN (SELECT kunde_id ...)`: hvis én rad har NULL i kunde_id, returnerer den ingenting i det hele tatt.
+
+=== t058 | Database design for tags | sql | - | en
+U: Articles can have many tags. Should I store tags as a comma-separated column?
+A: Use a join table instead: `tags(id, name)` and `article_tags(article_id, tag_id)` with a composite primary key. A comma-separated column can't be indexed properly, makes "articles with tag X" queries slow and error-prone, and lets typos create near-duplicate tags. If you're on Postgres and want something lighter, a `text[]` column with a GIN index is a reasonable alternative.
+
+=== t059 | EXPLAIN shows a sequential scan | sql | - | en
+U: I have an index on orders(created_at) but EXPLAIN still shows Seq Scan for WHERE created_at > now() - interval '1 year'
+A: That may be the right choice. If a year of orders is a large part of the table (say more than 10–20%), reading the whole table sequentially is cheaper than jumping around via the index, so the planner skips it. Check with `EXPLAIN ANALYZE` how many rows match. If the planner's estimate is far from the actual count, run `ANALYZE orders;` to refresh statistics.
+
+=== t060 | Удалить дубликаты из таблицы | sql | - | ru
+U: В таблице users появились дубли по email. Как удалить лишние, оставив самую раннюю запись?
+A: В PostgreSQL удобно через оконную функцию:
+
+```sql
+DELETE FROM users
+WHERE id IN (
+  SELECT id FROM (
+    SELECT id, ROW_NUMBER() OVER (PARTITION BY lower(email) ORDER BY created_at) AS rn
+    FROM users
+  ) t WHERE rn > 1
+);
+```
+
+Сначала выполните внутренний SELECT без DELETE и посмотрите, что попадёт под удаление. А потом добавьте уникальный индекс `CREATE UNIQUE INDEX ON users (lower(email));`, чтобы дубли больше не появлялись.
+
+=== t061 | SQLite or Postgres for a side project | sql | - | en
+U: Building a small web app for my running club, maybe 200 users. SQLite or Postgres?
+A: SQLite is plenty for 200 users and far simpler: one file, no server to run, trivial backups. Turn on WAL mode for better concurrency. Postgres is worth it once you have several app servers writing at the same time, need its extensions, or your host gives you a managed instance for free. You can switch later if you keep to standard SQL and use migrations from day one.
+
+=== t062 | Pivot rows into columns in SQL | sql | - | en
+U: monthly revenue per product as columns jan..dec, mysql
+A: MySQL has no PIVOT, so use conditional aggregation:
+
+```sql
+SELECT product,
+  SUM(CASE WHEN MONTH(sold_at) = 1 THEN amount ELSE 0 END) AS jan,
+  SUM(CASE WHEN MONTH(sold_at) = 2 THEN amount ELSE 0 END) AS feb,
+  -- ... through dec
+  SUM(CASE WHEN MONTH(sold_at) = 12 THEN amount ELSE 0 END) AS `dec`
+FROM sales
+WHERE YEAR(sold_at) = 2024
+GROUP BY product;
+```
+
+`dec` needs backticks because it's a reserved word.
+
+=== t063 | Deadlock between two transactions | sql | web-backend | en
+U: We get "deadlock detected" a few times a day when two requests transfer money between the same accounts in opposite directions.
+A: Each transaction locks the first account, then waits for the second, which the other transaction already holds. Fix it by always locking accounts in the same order, for example by id:
+
+```sql
+SELECT * FROM accounts WHERE id IN ($1, $2) ORDER BY id FOR UPDATE;
+```
+
+Then do both updates. Also retry the whole transaction once on a deadlock error; occasional deadlocks are normal in busy systems and a retry is the standard handling.
+
+=== t064 | Script to rename hundreds of photos by date | automation | - | en
+U: I have 800 photos named IMG_xxxx.jpg. I'd like them renamed to the date they were taken, like 2023-07-14_153201.jpg.
+A: Python with Pillow can read the EXIF date:
+
+```python
+from pathlib import Path
+from PIL import Image
+
+for p in Path("photos").glob("*.jpg"):
+    exif = Image.open(p).getexif()
+    taken = exif.get(36867) or exif.get(306)  # DateTimeOriginal or DateTime
+    if not taken:
+        continue
+    new = taken.replace(":", "-", 2).replace(" ", "_").replace(":", "") + ".jpg"
+    target = p.with_name(new)
+    if not target.exists():
+        p.rename(target)
+```
+
+Run it on a copy first. Photos taken in the same second keep their old name rather than overwriting each other.
+
+=== t065 | Cron job that doesn't run | automation | - | en
+U: My backup script works when I run it manually but the cron job never does anything.
+A: Cron runs with a minimal environment, so the usual suspects are:
+- `PATH`: commands like `pg_dump` aren't found; use full paths or set `PATH=` at the top of the crontab.
+- Working directory: cron starts in your home directory, so relative paths break.
+- No output visible: add `>> /tmp/backup.log 2>&1` to the line to see the error.
+Test with `* * * * *` and watch the log, then set the real schedule.
+
+=== t066 | Automatisk sende rapport på e-post | automation | - | no
+U: Hver mandag lager jeg en Excel-rapport og sender den på e-post til sjefen. Kan dette automatiseres med Python?
+A: Ja. Grovt sett:
+1. Et skript som henter tallene og lager filen med pandas (`to_excel`).
+2. Sende e-posten med `smtplib` og `email.message.EmailMessage`, med filen som vedlegg. Bruk et app-passord, ikke ditt vanlige passord.
+3. Kjøre skriptet hver mandag kl. 07 med Oppgaveplanlegging i Windows eller cron på Mac/Linux.
+Hvis dere bruker Microsoft 365, kan Power Automate gjøre det samme uten kode, men da må dataene ligge i SharePoint eller OneDrive.
+
+=== t067 | Bash: loop over files with spaces in the name | automation | - | en
+U: for f in $(ls *.pdf) breaks on file names with spaces
+A: Don't parse `ls`. Let the shell expand the glob and quote the variable:
+
+```bash
+for f in *.pdf; do
+  echo "Processing: $f"
+  pdftotext "$f" "${f%.pdf}.txt"
+done
+```
+
+`"${f%.pdf}"` strips the extension. For recursive searches use `find . -name '*.pdf' -print0 | while IFS= read -r -d '' f; do ...; done`.
+
+=== t068 | Скрипт для выгрузки курсов валют | automation | - | ru
+U: Нужно каждый день сохранять курс евро и доллара с сайта ЦБ в таблицу. Как это сделать скриптом?
+A: У ЦБ есть открытый XML: `https://www.cbr.ru/scripts/XML_daily.asp`. Скрипт на Python:
+
+```python
+import csv, datetime, requests, xml.etree.ElementTree as ET
+
+root = ET.fromstring(requests.get("https://www.cbr.ru/scripts/XML_daily.asp", timeout=10).content)
+rates = {v.find("CharCode").text: v.find("Value").text.replace(",", ".") for v in root.findall("Valute")}
+with open("rates.csv", "a", newline="") as f:
+    csv.writer(f).writerow([datetime.date.today(), rates["USD"], rates["EUR"]])
+```
+
+Запускайте его раз в день через cron или планировщик Windows.
+
+=== t069 | Automate filling a web form | automation | - | en
+U: Every week I have to enter the same 30 timesheet rows into a clunky web portal. Can I automate that?
+A: Yes, Playwright is the most reliable tool for this. Record the steps with `npx playwright codegen https://portal.example.com`, which writes the script while you click. Then replace the hard-coded values with a loop over a CSV. Check the portal's terms of use first, keep your password in an environment variable rather than in the script, and run it with the browser visible the first few times so you can watch what it does.
+
+=== t070 | Keyboard macro to paste a signature | automation | - | en
+U: Is there a simple way on Windows to type my long email signature by pressing a shortcut?
+A: AutoHotkey does this in two lines:
+
+```
+::;sig::
+SendText "Best regards,`nMaria Olsen`nProject Manager, Nordlys AS`n+47 400 00 000"
+```
+
+Typing `;sig` then expands into the full signature anywhere. On a Mac, the built-in Text Replacements (System Settings → Keyboard) do the same without installing anything.

@@ -1,0 +1,222 @@
+[
+ {
+  "id": "LQ01",
+  "rank": 3,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 210,
+  "bestUnitExcerpt": "Working at home needs boundaries more than furniture. Keep a routine with a fixed start, a closed door that means you are working, and a short shutdown ritual a",
+  "offsets": [
+   2718,
+   3586
+  ]
+ },
+ {
+  "id": "LQ02",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 257,
+  "bestUnitExcerpt": "University cloud storage plus an external drive is enough. Losing a chapter a month before the deadline is more common than people think.\n\nShare drafts early, e",
+  "offsets": [
+   2047,
+   3246
+  ]
+ },
+ {
+  "id": "LQ03",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 164,
+  "bestUnitExcerpt": "Without a clear finish line, hobby projects tend to grow forever.\n\nMusic and sound can come from free libraries with permissive licences. Keep a text file with ",
+  "offsets": [
+   2089,
+   2822
+  ]
+ },
+ {
+  "id": "LQ04",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 124,
+  "bestUnitExcerpt": "Skrap bort løs maling, vask med såpe og la treet tørke godt før dere starter. Når hytta er ferdig, kan dere lage en enkel felles kalender på nett der hele famil",
+  "offsets": [
+   2471,
+   2969
+  ]
+ },
+ {
+  "id": "LQ05",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 209,
+  "bestUnitExcerpt": "Hvis du kjenner smerte på innsiden eller utsiden av kneet som ikke går over, er det bedre å ta en ekstra time hos fysioterapeuten enn å presse på. Små justering",
+  "offsets": [
+   1610,
+   2476
+  ]
+ },
+ {
+  "id": "LQ06",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 151,
+  "bestUnitExcerpt": "Snakk med andre bakere. De fleste er hyggelige og deler gjerne erfaringer med en som ikke åpner rett ved siden av dem.\n\nMarkedsføring kan være enkel. Bilder av ",
+  "offsets": [
+   1928,
+   2534
+  ]
+ },
+ {
+  "id": "LQ07",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 226,
+  "bestUnitExcerpt": "Посмотрите квартиры вживую, проедьтесь по районам в час пик и загляните в школу.\n\nПодумайте, что делать с квартирой в Самаре: продать, сдать или оставить. Сдача",
+  "offsets": [
+   1807,
+   2643
+  ]
+ },
+ {
+  "id": "LQ08",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 113,
+  "bestUnitExcerpt": "Читайте текст ошибки целиком, ищите его в интернете и учитесь пользоваться отладчиком. Например, можно написать бота, который каждое утро присылает расписание э",
+  "offsets": [
+   1915,
+   2395
+  ]
+ },
+ {
+  "id": "LQ09",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 175,
+  "bestUnitExcerpt": "По ним удобно ходить после дождя, и сорняки растут меньше.\n\nУзнайте у соседей, какие сорта хорошо растут в вашей местности. Под Тверью лето короткое, и ранние с",
+  "offsets": [
+   1634,
+   2273
+  ]
+ },
+ {
+  "id": "LQ10",
+  "rank": 10,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 124,
+  "bestUnitExcerpt": "Skrap bort løs maling, vask med såpe og la treet tørke godt før dere starter. Når hytta er ferdig, kan dere lage en enkel felles kalender på nett der hele famil",
+  "offsets": [
+   2471,
+   2969
+  ]
+ },
+ {
+  "id": "LQ11",
+  "rank": 35,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 25,
+  "bestUnitExcerpt": "Мы с семьёй переезжаем из Самары в Новосибирск через два месяца. С чего начать?",
+  "offsets": [
+   0,
+   79
+  ]
+ },
+ {
+  "id": "LQ12",
+  "rank": 15,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 113,
+  "bestUnitExcerpt": "Читайте текст ошибки целиком, ищите его в интернете и учитесь пользоваться отладчиком. Например, можно написать бота, который каждое утро присылает расписание э",
+  "offsets": [
+   1915,
+   2395
+  ]
+ },
+ {
+  "id": "LQ13",
+  "rank": 15,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 151,
+  "bestUnitExcerpt": "Snakk med andre bakere. De fleste er hyggelige og deler gjerne erfaringer med en som ikke åpner rett ved siden av dem.\n\nMarkedsføring kan være enkel. Bilder av ",
+  "offsets": [
+   1928,
+   2534
+  ]
+ },
+ {
+  "id": "LQ14",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 30,
+  "bestUnitExcerpt": "Thanks. Separate question: our garden shed is full of junk. Could it become a small woodworking workshop?",
+  "offsets": [
+   0,
+   105
+  ]
+ },
+ {
+  "id": "LQ15",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 107,
+  "bestUnitExcerpt": "Twelve minutes is about ten slides. Choose one main message you want the audience to remember and build the talk around it: the question, why it matters, what y",
+  "offsets": [
+   0,
+   431
+  ]
+ },
+ {
+  "id": "LQ16",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 105,
+  "bestUnitExcerpt": "For en hytte uten strøm er et frittstående solcelleanlegg med batteribank vanlig. Start med å regne ut forbruket: lys, kjøleskap, lading og kanskje en vannpumpe",
+  "offsets": [
+   0,
+   412
+  ]
+ },
+ {
+  "id": "LQ17",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 20,
+  "bestUnitExcerpt": "И ещё вопрос: стоит ли продавать машину или перегонять её самим?",
+  "offsets": [
+   0,
+   64
+  ]
+ },
+ {
+  "id": "LQ18",
+  "rank": 3,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 241,
+  "bestUnitExcerpt": "Skriv en enkel forretningsplan først. Hvem er kundene, hva skal du selge, hvor mange brød må du selge hver dag for å gå i null, og hvor mye penger trenger du fø",
+  "offsets": [
+   0,
+   1009
+  ]
+ },
+ {
+  "id": "LQ19",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 243,
+  "bestUnitExcerpt": "Start with light, because it decides where everything else goes. Put the desk at a right angle to the window rather than facing it or with your back to it: faci",
+  "offsets": [
+   0,
+   983
+  ]
+ },
+ {
+  "id": "LQ20",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 259,
+  "bestUnitExcerpt": "Сначала расчистите участок: скосите траву, уберите мусор и старые постройки, которые нельзя восстановить. Не торопитесь выкорчёвывать все деревья — старая яблон",
+  "offsets": [
+   0,
+   934
+  ]
+ }
+]

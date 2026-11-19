@@ -1,0 +1,291 @@
+=== t120 | Waking at 3am every night | sleep | stress | en
+U: For a month I've been waking at 3 or 4 every night and my mind starts racing about work. Then I can't fall asleep again.
+A: That pattern — falling asleep fine but waking early with racing thoughts — is very common under stress. Things that help many people:
+- keep the same wake-up time every day, even after a bad night;
+- if you're awake for more than about 20 minutes, get up, sit somewhere dim and do something dull until you feel sleepy;
+- write down tomorrow's worries in the early evening, with one next step for each, so your brain doesn't rehearse them at 3am;
+- cut caffeine after noon and alcohol in the evening, which both fragment sleep.
+If it goes on for more than three months, CBT for insomnia (CBT-I) works better than sleeping pills and is available as guided programs.
+U: the writing things down part actually helped
+A: Good — it's surprisingly effective. Keep it short and finish it well before bed, so the notebook doesn't become a new bedtime worry session.
+U: and work is still crazy. my manager keeps adding projects
+A: Then the sleep problem may keep coming back until the workload changes. It's worth having a concrete conversation with your manager: list your current projects with rough hours per week and ask which one should be paused or moved when something new comes in. Framing it as a priority question rather than a complaint usually gets a better response.
+
+=== t121 | Søvnrytme etter nattskift | sleep | - | no
+U: Jeg jobber tre nattevakter i uka som sykepleier. Hvordan får jeg sove på dagtid?
+A: Gjør soverommet så likt natt som mulig: blendingsgardiner eller sovemaske, øreplugger eller hvit støy, og kjølig rom. Bruk solbriller på vei hjem fra vakt, så lyset ikke vekker kroppen. Sov gjerne i to deler: en lengre søvn rett etter vakt og en kort lur før neste vakt. På fridagene etter siste vakt kan du sove noen timer om morgenen og så holde deg våken til normal leggetid. Og fortell familien når du sover — telefonen på lydløs og en lapp på døra hjelper mer enn man tror.
+
+=== t122 | Shifting a late sleep schedule | sleep | - | ru
+U: Ложусь в 12, но засыпаю только к 2–3 часам. Утром вставать в 7 — мука.
+A: Похоже на сдвинутый биоритм. Что помогает его сдвинуть обратно:
+- вставать в одно и то же время каждый день, включая выходные;
+- сразу после подъёма — яркий свет: прогулка 15–20 минут или лампа 10 000 люкс;
+- вечером за 2 часа до сна приглушить свет и экраны;
+- не ложиться, пока не хочется спать, — лежание в кровати без сна закрепляет бессонницу.
+Сдвигать режим лучше постепенно, по 15–30 минут в несколько дней.
+
+=== t123 | Melatonin dose | sleep | - | en
+U: how much melatonin should i take for jet lag
+A: Low doses work as well as high ones: 0.5–3 mg taken 30–60 minutes before your target bedtime at the destination, for a few days. Higher doses mostly cause grogginess the next morning. It helps most when flying east. Check with a doctor if you take other medication or are pregnant.
+
+=== t124 | Snorking og dårlig søvn | sleep | - | no
+U: Samboeren min sier jeg snorker kraftig og noen ganger slutter å puste. Jeg er alltid trøtt på dagtid.
+A: Kraftig snorking med pustestopp og trøtthet på dagtid er typiske tegn på søvnapné. Det bør undersøkes av fastlegen, som kan henvise til en søvnregistrering hjemme. Søvnapné er vanlig, kan behandles godt (for eksempel med CPAP eller en bittskinne), og ubehandlet øker den risikoen for høyt blodtrykk og ulykker på grunn av trøtthet. Ikke vent med å bestille time.
+
+=== t125 | Kids bedtime takes two hours | sleep | parenting | en
+U: Bedtime for our 5-year-old takes two hours every night. Endless requests, getting up, crying.
+A: A predictable routine with clear limits usually shortens it within a couple of weeks:
+- the same steps in the same order every night (bath, pyjamas, two books, song, lights out), shown on a picture chart;
+- give choices within the routine ("this book or that one?") so they feel some control;
+- a "bedtime pass": one ticket per night for one extra request, which they hand in;
+- if they get up, walk them back calmly with as little talk as possible, every time.
+Also check the timing: a child who isn't tired yet will fight bedtime, so a later start sometimes helps.
+
+=== t126 | Healthy breakfast that keeps me full | nutrition | - | en
+U: I get hungry by 10am even after breakfast. I usually have toast with jam and coffee.
+A: Toast and jam is mostly fast carbohydrate, which digests quickly. Add protein and fibre:
+- Greek yoghurt with oats, berries and nuts;
+- eggs on wholegrain bread with some vegetables;
+- porridge cooked with milk and a spoon of peanut butter.
+Aim for 20–30 g of protein at breakfast. Most people notice they last until lunch without snacking.
+
+=== t127 | Spise mindre sukker | nutrition | - | no
+U: Jeg spiser mye godteri på kveldene foran TV-en og vil kutte ned. Tips?
+A: Det er sjelden viljestyrke alene som funker. Endre omgivelsene:
+- Ikke ha godteri liggende hjemme; kjøp heller en liten pose på fredag.
+- Ha et alternativ klart: frukt i bolle, nøtter, eller te.
+- Spis et ordentlig middagsmåltid med nok protein, så er du mindre sulten om kvelden.
+- Finn noe å gjøre med hendene foran TV-en, for eksempel strikking eller et puslespill.
+Sukkersuget avtar gjerne merkbart etter to–tre uker med mindre sukker.
+
+=== t128 | Питание при повышенном холестерине | nutrition | - | ru
+U: У меня повышен ЛПНП, врач сказал пересмотреть питание. С чего начать?
+A: Наибольший эффект дают такие шаги:
+- заменить насыщенные жиры (сливочное масло, жирное мясо, колбасы, выпечку) на растительные: оливковое и рапсовое масло, орехи;
+- больше растворимой клетчатки: овсянка, бобовые, яблоки, ячмень;
+- рыба 2 раза в неделю;
+- меньше переработанного мяса.
+Яйца для большинства людей в умеренном количестве допустимы. Через 2–3 месяца стоит пересдать анализ и обсудить результат с врачом.
+
+=== t129 | Vegan and iron levels | nutrition | - | en
+U: Went vegan six months ago and my last blood test showed low ferritin. What should I eat?
+A: Plant iron is absorbed less well, so combine iron-rich foods with vitamin C at the same meal: lentils or chickpeas with peppers or tomatoes, fortified cereals with orange juice, tofu with broccoli. Avoid tea and coffee within an hour of iron-rich meals; they block absorption. With a low ferritin result, ask your doctor whether a supplement is needed for a few months, and get re-tested afterwards.
+
+=== t130 | Hvor mye vann bør jeg drikke | nutrition | - | no
+U: Er det sant at man skal drikke to liter vann om dagen?
+A: Nei, det er ingen fast regel. Mat inneholder også mye vann, og kaffe og te teller med. For de fleste friske voksne er tørste en god guide, og lys gul urin et tegn på at man får nok. Man trenger mer ved trening, varme og feber. Å presse i seg mye vann uten tørste gir ingen helsegevinst.
+
+=== t131 | Calorie counting for weight loss | nutrition | - | en
+U: Trying to lose 8 kg. Do I really need to count calories?
+A: Not necessarily, but you need some way to eat a bit less than you use. Counting works well for people who like numbers. Others do better with simple rules: half the plate vegetables, a palm of protein, a fist of carbohydrates, water instead of sugary drinks, and no eating after dinner. Either way, aim for about 0.5 kg per week; faster loss is hard to keep off. Weigh yourself a few times a week and look at the trend, not single days.
+
+=== t132 | Snacks for a long hike | nutrition | hiking | en
+U: Doing a 25 km hike next weekend. What food should I pack?
+A: Plan on eating something small every hour rather than one big lunch: a mix of nuts and dried fruit, a couple of sandwiches with cheese or ham, chocolate or energy bars, and something salty like crackers. Bring more water than you think (2–3 litres in summer) and electrolyte tablets if it's warm. Eat before you feel hungry; by the time you're hungry, energy is already low.
+
+=== t133 | Anxiety before presentations | stress | workplace | en
+U: My heart races and my voice shakes every time I present at work, even in small meetings. How do people deal with this?
+A: Physical symptoms like these are the body's normal stress response, and some tricks reduce them:
+- slow breathing for two minutes before you start, with the exhale longer than the inhale (4 in, 6 out);
+- rehearse the first minute word for word; once you're past it, nerves usually drop;
+- look at friendly faces;
+- reframe the racing heart as energy rather than danger — studies show this actually helps performance.
+Presenting more often, in low-stakes settings, is what makes it fade over time.
+
+=== t134 | Følelsen av å aldri strekke til | stress | - | no
+U: Jeg har to små barn og full jobb og føler at jeg aldri gjør noe skikkelig. Alltid dårlig samvittighet.
+A: Det du beskriver er veldig vanlig i småbarnsfasen, og det betyr ikke at du gjør det dårlig. Noen ting som hjelper mange:
+- Senk standarden bevisst på noen områder (middag, rengjøring) så det blir rom for det som betyr mest.
+- Del ansvaret konkret med partner: hvem har ansvar for hva, ikke bare hvem som hjelper.
+- Gi deg selv små pauser uten mål, 15 minutter for deg selv i løpet av dagen.
+Hvis følelsen blir til konstant nedstemthet, søvnproblemer eller at du ikke klarer å glede deg over noe, snakk med fastlegen.
+
+=== t135 | Выгорание на работе | stress | workplace | ru
+U: Кажется, я выгорела. Ничего не хочется, работа раздражает, по утрам тяжело вставать. Отпуск был месяц назад и не помог.
+A: То, что отдых не помог, — важный сигнал: при выгорании одного отпуска обычно мало, нужно менять то, что к нему привело. Попробуйте понять, что именно истощает: объём работы, отсутствие контроля над задачами, конфликты, ощущение бессмысленности. От этого зависит, что менять — нагрузку, роль или место работы. Параллельно важно восстановить базовое: сон, движение, общение вне работы. Если вам постоянно плохо, нарушен сон и аппетит, обратитесь к врачу или психотерапевту: похожие симптомы бывают при депрессии, и её лечат.
+
+=== t136 | Breathing exercise for panic | stress | - | en
+U: quick breathing technique when i feel panic coming on
+A: Try box breathing: in for 4 counts, hold for 4, out for 4, hold for 4, repeated for a few minutes. Or simply make the exhale longer than the inhale (in 4, out 6–8). Naming five things you can see and four you can hear also helps pull attention away from the panic. If panic attacks happen often, CBT is very effective for them.
+
+=== t137 | Digital detox weekend | stress | - | en
+U: I check my phone constantly and feel scattered. Thinking about a phone-free weekend. Good idea?
+A: A weekend off can be a nice reset, but the habits come back on Monday unless you change the setup. Longer-lasting changes: turn off all non-essential notifications, move social apps off the home screen, charge the phone outside the bedroom, and use grayscale mode in the evening. Try the weekend too, and notice which apps you actually missed — that tells you what to keep.
+
+=== t138 | Meditasjon for nybegynnere | stress | - | no
+U: Jeg har prøvd meditasjonsapper, men klarer ikke å sitte stille i ti minutter. Tips?
+A: Begynn med to–tre minutter, ikke ti. Det viktige er å gjøre det hver dag, ikke lenge. Prøv også å kombinere med noe kroppen gjør: en rolig gåtur der du bare legger merke til føttene og pusten, eller fem dype pust før du starter bilen. Tankene kommer til å vandre, og å merke det og vende tilbake er selve øvelsen — ikke et tegn på at du gjør det feil.
+
+=== t139 | Bathroom renovation order of work | renovation | - | en
+U: We're gutting our bathroom. In what order should the trades come in?
+A: Roughly:
+1. Demolition and checking the floor and walls for water damage.
+2. Plumbing rough-in and electrical first fix (new pipes, drain positions, wiring for lights, fan and heated floor).
+3. Walls and floor prepared, with the slope towards the drain checked.
+4. Waterproofing membrane — the most important step; have it inspected and photographed before tiling.
+5. Tiling and grouting.
+6. Fitting the toilet, sink, shower and lights; final plumbing and electrical.
+7. Silicone joints last.
+Book the plumber and electrician early; they're usually the bottleneck.
+U: how long should the waterproofing cure before tiling
+A: It depends on the product, usually 24 hours between coats and then 24–48 hours before tiling. Follow the manufacturer's data sheet exactly and keep the receipt and photos; insurers in many countries ask for proof of an approved membrane system if there's ever a leak.
+U: also what fan size do we need, it's 5 m2
+A: For a 5 m² bathroom, a fan that moves at least 15 l/s (about 54 m³/h) during showers is a common requirement, with continuous low-speed ventilation the rest of the time. A humidity-controlled fan that speeds up automatically is worth the extra cost; people forget to switch fans on.
+
+=== t140 | Pusse opp kjøkken på budsjett | renovation | - | no
+U: Kjøkkenet er fra 90-tallet. Vi har 60 000 kroner. Hva gir mest for pengene?
+A: Behold skrogene hvis de er i god stand, og bytt det som synes:
+- Nye fronter og håndtak, eller mal de gamle med riktig grunning og lakk.
+- Ny benkeplate, gjerne laminat eller heltre.
+- Ny vask og blandebatteri.
+- Bedre belysning under overskapene.
+- Fliser eller en plate bak benken.
+Det spiser fort budsjettet å flytte vann og avløp, så la vasken stå der den står.
+
+=== t141 | Ремонт в съёмной квартире | renovation | renting | ru
+U: Снимаю квартиру надолго, хочу освежить: покрасить стены, поменять светильники. Нужно ли спрашивать хозяина?
+A: Да, обязательно и лучше письменно. По закону и по большинству договоров изменения в квартире делаются с согласия собственника, иначе при выезде он может потребовать вернуть всё как было или удержать залог. Опишите, что именно хотите сделать, и предложите варианты: нейтральные цвета, сохранить старые светильники и вернуть их при выезде. Многие хозяева соглашаются, особенно если вы платите за материалы сами.
+
+=== t142 | Insulating an attic | renovation | - | en
+U: Our 1960s house has almost no insulation in the attic. DIY job or contractor?
+A: Loose-fill or roll insulation laid between and over the joists in an unheated attic is a reasonable DIY job: 25–30 cm of mineral wool is typical today. Keep the eaves ventilated so the roof can breathe, don't cover recessed lights unless they're rated for it, and put boards on top only where you need storage. Hire a contractor if you want to use the attic as a room, because then the insulation goes in the roof slope and condensation control is much more critical.
+
+=== t143 | Male panel i stua | renovation | - | no
+U: Vi skal male furupanelet i stua hvitt. Må vi slipe alt?
+A: Du trenger ikke slipe ned til bart treverk, men overflaten må mattes og være ren. Vask med et malervask-middel, slip lett med fint papir, og støv av. Bruk en heftgrunning som sperrer kvist, ellers kommer gule flekker gjennom etter noen måneder. Deretter to strøk vegg- eller panelmaling. Mal bordene i hele lengden, så slipper du skjøter.
+
+=== t144 | Adding a window to a wall | renovation | - | en
+U: Is it possible to add a new window to an exterior wall of our timber house?
+A: Usually yes, but it's structural work: an opening needs a header (lintel) sized for the load above, and the new window has to be sealed properly against rain. Many places also require a building application if the facade changes. Get a carpenter to look at it; the cost depends mostly on what runs inside that wall — pipes and wiring add up quickly.
+
+=== t145 | Новый пол на кухне | renovation | - | ru
+U: Какой пол лучше на кухню: ламинат, плитка или винил?
+A: Для кухни чаще всего выбирают плитку или кварцвинил:
+- плитка самая стойкая к воде и царапинам, но холодная (решается тёплым полом) и всё, что упало, разбивается;
+- кварцвинил тёплый, тихий, влагостойкий и хорошо выглядит, но боится тяжёлой мебели на ножках и острых предметов;
+- ламинат на кухне рискован: от воды набухают стыки.
+Если хотите единое покрытие с гостиной, кварцвинил — самый удобный компромисс.
+
+=== t146 | Garage conversion to home office | renovation | - | en
+U: We want to turn our single garage into a home office. What's involved?
+A: The main jobs are insulating the floor, walls and ceiling, replacing the garage door with a wall and window, adding heating and enough sockets, and sorting ventilation. Check the rules first: some areas treat it as a change of use and need permission, and you may lose a required parking space. Budget for the floor — garage slabs are usually lower and uninsulated, so a raised insulated floor is often needed.
+
+=== t147 | Kitchen tap dripping | repairs | - | en
+U: The kitchen mixer tap drips constantly from the spout. Single lever. Can I fix it myself?
+A: Yes. Single-lever taps drip when the ceramic cartridge wears out. Turn off the water under the sink, pop the cap on the lever, unscrew the handle and the retaining nut, and pull out the cartridge. Take it to a plumbing shop to match the size, or order by the tap's model number. Fitting the new one takes ten minutes. Open the water slowly afterwards and check for leaks under the handle.
+
+=== t148 | Sikringen går hele tiden | repairs | - | no
+U: Sikringen for kjøkkenet går når vi bruker vannkokeren og oppvaskmaskinen samtidig.
+A: Da er kursen sannsynligvis overbelastet: en vannkoker trekker rundt 2000 W og en oppvaskmaskin i oppvarmingsfasen like mye, til sammen mer enn en 10 A-kurs tåler. Midlertidig: ikke bruk dem samtidig. Varig løsning er at en elektriker legger opp en egen kurs til oppvaskmaskinen. Hvis sikringen går også når bare én ting er på, kan det være en feil i et apparat eller i anlegget, og da bør det sjekkes snart.
+
+=== t149 | Door won't close properly | repairs | - | en
+U: Interior door rubs at the top corner and won't latch since winter.
+A: Houses move with the seasons. First tighten the top hinge screws; if they spin, replace one with a 70 mm screw that reaches the frame stud — that pulls the door back up. If it still rubs, mark the spot with chalk, take the door off and plane a millimetre or two, then seal the planed edge with paint so it doesn't absorb moisture.
+
+=== t150 | Течёт бачок унитаза | repairs | - | ru
+U: Вода постоянно подтекает в унитаз из бачка, слышно журчание. Что менять?
+A: Скорее всего, изношена прокладка сливного клапана или неправильно настроен поплавок. Проверьте:
+1. Снимите крышку и посмотрите, не переливается ли вода через переливную трубку. Если да — опустите поплавок ниже.
+2. Если уровень нормальный, но вода всё равно уходит — меняйте прокладку (мембрану) сливного клапана. Её продают в строительных магазинах под модель арматуры.
+Перед работой перекройте воду и слейте бачок.
+
+=== t151 | Mould around the shower | repairs | - | en
+U: Black mould keeps coming back in the silicone around our shower.
+A: Once mould grows into silicone, cleaning only bleaches the surface. Cut out the old silicone, clean the joint with a mould remover, let it dry completely (24 hours), and apply new sanitary silicone with fungicide. To stop it coming back, ventilate better: run the fan during and 20 minutes after showers, and squeegee the walls.
+
+=== t152 | Radiator stays cold at the top | repairs | - | en
+U: Radiator warm at the bottom, cold at the top.
+A: Air in the radiator. Turn the heating off, hold a cloth under the bleed valve at the top corner and open it with a radiator key until water comes out instead of air, then close it. If you have a sealed boiler system, check the pressure gauge afterwards and top it up to about 1–1.5 bar.
+
+=== t153 | Fryseren lager is på veggene | repairs | - | no
+U: Fryseren lager tykt lag med is på veggene og døra lukker dårlig.
+A: Isdannelse skyldes nesten alltid at fuktig luft kommer inn. Sjekk tettelisten rundt døra: lukk døra over et papirark — glir arket lett ut, er listen lekk. Den kan ofte varmes opp med hårføner så den former seg igjen, ellers kan den byttes. Avrim fryseren helt først, ellers lukker døra seg ikke ordentlig på grunn av isen.
+
+=== t154 | Fixing a wobbly chair | repairs | crafts | en
+U: Wooden dining chair wobbles, one of the joints is loose.
+A: Don't just add screws — reglue the joint. Gently knock it apart with a rubber mallet, scrape out the old glue, apply fresh wood glue, and clamp it overnight (a ratchet strap works as a clamp). If the joint is very loose, glue a thin wood shaving into it to fill the gap before reassembly.
+
+=== t155 | Declutter a small apartment | organising | - | en
+U: Our 2-room apartment feels chaotic. Where do I start decluttering?
+A: Start where you'll see results fast, like the entrance or a kitchen counter, and work one area at a time. For each item: keep, give away, or throw out — decide quickly. Give everything that's kept a fixed home, close to where it's used. Then set rules that stop the pile-up: one in, one out for clothes, and a 10-minute tidy every evening.
+
+=== t156 | Organisere boden | organising | - | no
+U: Boden vår er full av esker vi ikke vet hva inneholder. Hvordan får jeg orden?
+A: Ta det i én omgang på en helg: ta ut alt, sorter i kategorier (sport, jul, barneklær, verktøy), og kast eller gi bort det dere ikke har brukt på to år. Bruk like, gjennomsiktige bokser med etiketter, og sett ofte brukte ting nærmest døra. En enkel liste i telefonen over hva som er i hver boks sparer mye leting senere.
+
+=== t157 | Как приучить семью к порядку | organising | parenting | ru
+U: Я одна убираю за всеми. Муж и двое подростков разбрасывают вещи. Как это изменить?
+A: Перестаньте убирать за ними молча — это закрепляет привычку. Сядьте вместе и договоритесь о правилах: у каждого свои зоны и обязанности, например, кухня по вечерам — по очереди, своя комната — своя ответственность. Повесьте график на холодильник. Договоритесь о последствиях: вещи, оставленные в общих комнатах, убираются в корзину, откуда их нужно забрать самому. Первое время придётся напоминать, но через несколько недель это обычно работает.
+
+=== t158 | Paperwork system at home | organising | budgeting | en
+U: Bills, warranties and tax papers are everywhere. What's a simple system?
+A: Use three places:
+- an inbox tray where all new paper goes;
+- a small set of folders: bills (current year), tax, insurance, warranties and manuals, house, health;
+- a scanner app on your phone for anything you might need later, then shred the paper unless you're required to keep originals.
+Empty the inbox once a week. In January, archive last year's bills and tax folder.
+
+=== t159 | Tomatoes on the balcony split | vegetables | - | en
+U: My balcony tomatoes keep splitting just before they're ripe.
+A: Splitting happens when the plant gets a lot of water after a dry spell; the fruit swells faster than the skin can stretch. Water deeply and regularly, ideally at the same time every day, and mulch the pots so the soil doesn't dry out as fast. Pick fruit when they're just starting to colour and let them finish ripening indoors if heavy rain is forecast.
+
+=== t160 | Potato late blight | vegetables | - | no
+U: Potetriset ble brunt og visnet på en uke i august. Er det tørråte? Kan jeg spise potetene?
+A: Det høres ut som tørråte. Klipp ned og fjern riset med en gang, ikke legg det på komposten. Vent to–tre uker før du tar opp potetene, så skallet herder og smitten fra riset ikke når knollene. Potetene kan spises, men sorter ut alle med brune, råtne flekker; de holder seg ikke på lager. Neste år: velg en sort med god resistens og ikke plant poteter på samme sted.
+
+=== t161 | Огурцы горчат | vegetables | - | ru
+U: Огурцы в теплице в этом году горькие. Почему?
+A: Горечь даёт вещество кукурбитацин, которого становится больше при стрессе: резкие перепады температуры, полив холодной водой, пересыхание почвы, сильная жара. Поливайте тёплой водой регулярно, проветривайте теплицу в жару и не давайте земле пересыхать. Горечь обычно сосредоточена у плодоножки и в кожуре — их можно срезать. В следующий раз выбирайте гибриды, у которых в описании указано «без горечи».
+
+=== t162 | Raised bed soil mix | vegetables | - | en
+U: Building two raised beds 120 × 240 cm, 40 cm deep. What do I fill them with?
+A: Fill the bottom third with coarse organic material (branches, leaves) if you want to save on soil, then a mix of roughly 60% topsoil, 30% compost and 10% something for drainage and structure, like coarse sand or perlite. For your two beds that's about 2.3 m³ in total. Top up with a few centimetres of compost every spring as the level sinks.
+
+=== t163 | When to plant garlic | vegetables | - | en
+U: when do i plant garlic in norway
+A: In autumn, about 3–6 weeks before the ground freezes — usually late September to October in southern Norway. Plant cloves 5 cm deep, pointy end up, 15 cm apart, and cover with leaves or straw. They root before winter and you harvest in July.
+
+=== t164 | Grønnsakshage for nybegynnere | vegetables | - | no
+U: Vi har fått en kolonihage. Hva er lettest å dyrke første året?
+A: Velg det som vokser fort og tåler litt feil: reddiker, salat, sukkererter, squash, poteter og grønnkål. Squash gir enormt mye fra én plante, så to holder. Urter som persille og gressløk er også enkle. Vent med det som krever mye stell, som tomater i friluft og blomkål, til neste år. Og ikke så alt på én gang — så salat og reddiker hver tredje uke, så har dere avling hele sommeren.
+
+=== t165 | Squash plants with white powder | vegetables | houseplants | en
+U: White powdery coating on my courgette leaves, spreading fast.
+A: That's powdery mildew, very common on courgettes late in summer. Remove the worst leaves, water at the base rather than over the leaves, and give the plants more space for airflow. A spray of 1 part milk to 9 parts water once a week slows it down. It rarely kills the plant before the season ends, so keep harvesting.
+
+=== t166 | Monstera leaves turning yellow | houseplants | - | en
+U: Lower leaves on my monstera are yellowing one after another.
+A: The most common cause is overwatering. Check the soil 5 cm down: if it's still damp, wait. Water only when the top third of the pot is dry, and make sure the pot drains. One old leaf yellowing now and then is normal; several in a row with wet soil points to roots sitting in water. If the roots smell sour or are mushy, repot into fresh, airy soil and cut away the rotten parts.
+
+=== t167 | Orkideen blomstrer ikke igjen | houseplants | - | no
+U: Orkideen fikk jeg i gave i fjor. Bladene er fine, men den blomstrer ikke.
+A: Phalaenopsis trenger et temperaturfall for å sette nye blomsterstengler: noen uker med netter rundt 15–17 grader om høsten, for eksempel i et kjølig vindu. Gi den mye lys, men ikke direkte middagssol, vann ved å dyppe potten i ti minutter når røttene er sølvgrå, og gjødsle svakt annenhver vanning. Ofte kommer en ny stengel etter et par måneder.
+
+=== t168 | Мошки в цветочных горшках | houseplants | - | ru
+U: В квартире завелись мелкие чёрные мошки, летают вокруг цветов. Как избавиться?
+A: Это сциариды (грибные комары). Их личинки живут в постоянно влажной земле. Что делать:
+- дайте земле просохнуть на 2–3 см между поливами — это главное;
+- повесьте жёлтые клеевые ловушки для взрослых мошек;
+- насыпьте сверху слой песка или мелкого керамзита, чтобы самки не откладывали яйца;
+- при сильном заражении пролейте землю препаратом на основе бактерий Bti.
+Через 2–3 недели мошек обычно не остаётся.
+
+=== t169 | Plants for a dark bathroom | houseplants | - | en
+U: Which plants survive in a bathroom with a tiny window?
+A: Snake plant, ZZ plant, pothos and cast-iron plant handle low light best, and ferns like the humidity if there's at least some daylight. With almost no light, nothing thrives long-term; rotate plants to a brighter room every few weeks, or add a small LED grow light on a timer.
+
+=== t170 | Repot a cactus without getting stabbed | houseplants | - | en
+U: How do I repot a big spiky cactus?
+A: Wrap it in a folded newspaper or a strip of cardboard as a collar, and hold it with that. Use cactus soil with extra grit, a pot only slightly bigger than the root ball, and don't water for a week after repotting so damaged roots can heal.
+
+=== t171 | Stueplanter når vi er på ferie | houseplants | - | no
+U: Vi skal på tre ukers ferie i juli. Hvordan overlever plantene?
+A: Samle dem i et rom uten direkte sol, vann godt rett før dere drar, og sett de største i en balje med et par centimeter vann. Vanningskjegler eller en bomullstråd fra en bøtte med vann ned i jorda fungerer også. Sukkulenter og kaktus klarer seg fint alene i tre uker. Det tryggeste er likevel en nabo som vanner én gang i uka.
+
+=== t172 | Fiddle leaf fig dropping leaves | houseplants | - | en
+U: My fiddle leaf fig drops a leaf every few days since I moved it.
+A: Fiddle leaf figs hate being moved; leaf drop after a change of place is a stress reaction. Put it in the brightest spot you have without hot afternoon sun, away from drafts and radiators, and then leave it alone. Water only when the top few centimetres are dry. It usually settles within a month or two and starts new growth at the top.
+
+=== t173 | Lawn full of moss | vegetables | - | en
+U: Half our lawn is moss. How do I get grass back?
+A: Moss wins where grass struggles: shade, compacted soil, low pH, or too much moisture. Rake out the moss in spring, aerate the soil, spread lime if a soil test shows it's acidic, and overseed with a shade-tolerant grass mix. Fertilise lightly and mow higher (5–6 cm). In deep shade, accept moss or plant ground cover instead.

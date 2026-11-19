@@ -1,0 +1,143 @@
+=== t298 | Laptop for a design student | devices | - | en
+U: My daughter starts a graphic design degree. Budget 1,500 euros. Mac or Windows?
+A: Ask the school first — some programmes assume a Mac. Otherwise both work for Adobe and Figma. Priorities: at least 16 GB RAM, a colour-accurate screen (close to 100% sRGB, ideally P3), and 512 GB storage. In that budget, a MacBook Air with 16 GB is a strong pick; on Windows, look at an ASUS ProArt or a Dell XPS. Add an external drive for backups.
+U: she also wants to game a bit
+A: Then a Windows laptop with a mid-range graphics card (RTX 4060 class) covers both, though battery life and weight suffer. If gaming is occasional, the Mac plus a console or cloud gaming is a calmer setup for studying.
+U: ok she went with the asus. how do we set up backups?
+A: Turn on Windows' File History to an external drive and sync her school folders to OneDrive or Google Drive, so work is protected both locally and in the cloud. The rule of thumb is three copies, two different media, one off-site — that setup gives her exactly that.
+
+=== t299 | Telefonen blir varm og batteriet tømmes | devices | - | no
+U: Mobilen (Samsung, to år gammel) blir varm i lomma og batteriet varer bare til lunsj.
+A: Sjekk Innstillinger → Batteri → bruk per app; ofte er det én app som går i bakgrunnen. Oppdater alle apper og systemet, og start telefonen på nytt. Skru av posisjon for apper som ikke trenger den. Har batteriet under 80 prosent kapasitet (se i Samsung Members-appen), er det på tide å bytte batteri — det er langt billigere enn ny telefon.
+U: det var en app for treningsklokka som brukte 40 prosent
+A: Da har du funnet synderen. Begrens bakgrunnsbruken for den appen, eller la den bare synkronisere når du åpner den. Sjekk også om klokka har en ny fastvare; synk-feil er en vanlig årsak.
+
+=== t300 | Noisy laptop fan | devices | - | ru
+U: Ноутбуку три года, вентилятор воет даже в браузере. Что делать?
+A: Скорее всего, система охлаждения забита пылью и высохла термопаста. Почистить радиатор и заменить пасту можно в сервисе за умеренные деньги — шум и температура обычно сильно падают. До этого проверьте диспетчер задач: нет ли процесса, который грузит процессор (обновления, антивирус, вкладка с тяжёлым сайтом). Работайте на твёрдой поверхности, не на кровати.
+
+=== t301 | iPhone storage full | devices | - | en
+U: iphone says storage full, 128 gb. what eats it
+A: Settings → General → iPhone Storage shows it per app. The usual culprits are Photos (turn on iCloud Photos with "Optimise iPhone Storage"), WhatsApp or Messages attachments (delete large videos in the app's storage manager) and offline downloads in Spotify or Netflix. "System Data" sometimes balloons; a restart often shrinks it.
+
+=== t302 | Which e-reader | devices | - | en
+U: Kindle or Kobo? I borrow a lot of library ebooks.
+A: For library loans, Kobo is easier in most countries: OverDrive/Libby is built in, so you borrow directly on the device. Kindle supports library loans mainly in the US. Kobo also reads EPUB natively. If you mostly buy from Amazon, Kindle's store is the bigger draw.
+
+=== t303 | Bytte fra Android til iPhone | devices | - | no
+U: Jeg går fra Android til iPhone. Hvordan flytter jeg bilder, kontakter og WhatsApp?
+A: Bruk appen «Flytt til iOS» på Android når du setter opp iPhonen; den flytter kontakter, meldinger, bilder og kalendere. WhatsApp-historikken kan flyttes i samme prosess i nyere versjoner — du får spørsmål om det underveis. Ha begge telefonene ladet og på samme wifi. Musikk og apper må lastes ned på nytt. Kjøpte Android-apper følger dessverre ikke med.
+
+=== t304 | Old laptop: Linux? | devices | - | en
+U: I have a 2014 laptop that's too slow for Windows 10. Is Linux a good idea for browsing and documents?
+A: Yes, it's a great use for it. Linux Mint (Xfce edition) or Lubuntu run well on older hardware and feel familiar. Swap the hard drive for a cheap SSD first if it still has a spinning disk — that's the biggest speed boost. Try Linux from a USB stick before installing to check wifi and the touchpad work.
+
+=== t305 | Wifi slow upstairs | network | - | en
+U: Router is in the basement, upstairs bedrooms get barely any wifi.
+A: Move the router as high and central as you can; basements are the worst place. If that's not possible, a mesh system (2–3 units) is the most reliable fix, ideally with a cable between units. Powerline adapters work if the wiring is good. Range extenders are cheap but halve speed. Check whether your provider offers a mesh upgrade; many do for a small fee.
+
+=== t306 | Sette opp gjestenett hjemme | network | - | no
+U: Hvordan lager jeg et eget wifi for gjester så de ikke kommer inn på det vanlige nettet vårt?
+A: De fleste rutere har en innstilling for gjestenett. Logg inn på ruteren (adressen står ofte på klistremerket, f.eks. 192.168.1.1, eller bruk leverandørens app), slå på gjestenett, gi det et eget navn og passord, og sørg for at «tilgang til lokalt nettverk» er av. Da kommer gjestene på internett, men ser ikke skrivere, NAS eller andre enheter hos dere.
+
+=== t307 | Почему падает скорость интернета вечером | network | - | ru
+U: По тарифу 300 Мбит, днём так и есть, а вечером 30. Провайдер говорит, у них всё нормально.
+A: Проверьте скорость по кабелю, подключив компьютер напрямую к роутеру, в разное время. Если по кабелю вечером тоже 30 — это перегрузка сети провайдера, и стоит писать официальную претензию с результатами замеров. Если по кабелю нормально, а по Wi-Fi плохо — дело в эфире: вечером соседи включают свои сети. Переключитесь на 5 ГГц и выберите свободный канал.
+
+=== t308 | VPN at home: needed? | network | - | en
+U: Do I need a VPN at home for security?
+A: For most people, no. Your home connection is already protected by HTTPS for banking, email and most sites. A VPN mainly hides your traffic from your internet provider and changes your apparent location. It's useful on public wifi or for privacy reasons, but it doesn't protect against phishing or malware. Keeping your router's firmware updated and using a strong wifi password matters more.
+
+=== t309 | Port forwarding for a game server | network | - | en
+U: Trying to host a Minecraft server for friends. They can't connect.
+A: Three things need to line up: forward TCP port 25565 on your router to the local IP of the computer running the server (give that PC a fixed IP first), allow Java through your computer's firewall, and give friends your public IP. If your provider uses CGNAT (your router's WAN IP differs from what whatismyip shows), port forwarding won't work; a service like Playit.gg or a cheap hosted server is easier then.
+
+=== t310 | Smart lights that work without the cloud | smart-home | - | en
+U: I want smart lights but I don't want everything to stop working when some company's server is down.
+A: Choose Zigbee or Matter-over-Thread bulbs with a local hub. Philips Hue works locally with its bridge, IKEA's Dirigera hub too, and Home Assistant can control almost everything locally. Avoid wifi bulbs that only work through the manufacturer's app and cloud. Matter is making this easier, but check that the devices support local control explicitly.
+
+=== t311 | Smarthus for en eldre forelder | smart-home | elderly | no
+U: Mamma bor alene. Finnes det smarte løsninger som varsler oss hvis noe er galt, uten kamera?
+A: Ja, flere:
+- bevegelsessensorer som varsler hvis det ikke er aktivitet om morgenen;
+- dørsensor som varsler ved åpning om natten;
+- vannlekkasje- og røykvarslere som sender varsel til mobilen;
+- en smartklokke eller trygghetsalarm med fallvarsling.
+Kommunen tilbyr ofte trygghetsalarm og velferdsteknologi gratis eller billig — sjekk det først. Snakk med henne om hvilke løsninger hun er komfortabel med.
+
+=== t312 | Термостат и отопление по расписанию | smart-home | budgeting | ru
+U: Есть ли смысл ставить умный термостат в квартире с электрическим отоплением?
+A: Да, если вы днём не дома: снижение температуры на 3–4 градуса на время отсутствия и ночью экономит 10–15% на отоплении. Умные термостаты или терморегуляторы для радиаторов позволяют задать расписание и включать тепло заранее перед приходом. Окупается обычно за один-два сезона. Убедитесь, что термостат совместим с вашими нагревателями по мощности.
+
+=== t313 | Home Assistant on a Raspberry Pi | smart-home | automation | en
+U: Worth running Home Assistant on a Raspberry Pi 4?
+A: Yes, it's the classic setup. Use Home Assistant OS on an SSD rather than an SD card — SD cards wear out from database writes. Add a Zigbee USB stick to control sensors and lights locally. Set up automatic backups to another machine or cloud from day one. If you later have many devices and add-ons, a small mini PC is more comfortable, but the Pi handles a typical home fine.
+
+=== t314 | Robot vacuum worth it? | smart-home | organising | en
+U: Are robot vacuums actually good or just a toy?
+A: Good ones genuinely keep floors clean day to day if your home is reasonably clear of cables and clutter. Lidar navigation, a self-emptying base and good app maps make a big difference. They don't replace deep cleaning of corners and stairs. Combos with mopping are fine for light dirt, not for sticky spills.
+
+=== t315 | Moving checklist with kids | moving | parenting | en
+U: Moving to another city in 6 weeks with two school-age kids. Help me make a plan.
+A: Here's a rough timeline:
+- Week 6: register the kids at the new school, book movers, start decluttering.
+- Week 5: notify employer, landlord or buyer; arrange the end date for utilities and internet, and new contracts at the new address.
+- Week 4: change address with authorities, bank, insurance; transfer medical records.
+- Week 3: pack non-essentials, label boxes by room, and let the kids pack a box of their own things.
+- Week 2: confirm movers, use up the freezer, plan the first days (who watches the kids on moving day).
+- Moving week: an "open first" box with bedding, kettle, chargers, toilet paper, and the kids' favourite things.
+Visit the new school and neighbourhood with the kids before the move if you can; it reduces anxiety a lot.
+U: our son is really upset about leaving his friends
+A: That's very common. Let him say goodbye properly — a small farewell party, swapping addresses or gaming usernames. Set up video calls or a visit back in the first months. At the new place, sign him up quickly for an activity he already likes, since that's where new friendships form fastest.
+
+=== t316 | Flyttebyrå eller gjøre det selv | moving | - | no
+U: Vi flytter fra en treroms i Oslo til Trondheim. Lønner det seg med flyttebyrå?
+A: For en så lang flytting er byrå ofte verdt det: de har forsikring, riktige biler og folk som bærer. Be om befaring og fast pris fra minst tre byråer — prisene varierer mye. Alternativet er å leie en stor varebil eller en flyttecontainer som fraktes for deg, og pakke selv. Sjekk om arbeidsgiveren dekker flyttekostnader hvis flyttingen skyldes jobb.
+
+=== t317 | Переезд в другую страну с котом | moving | cats | ru
+U: Переезжаем из России в Норвегию, берём кошку. Какие документы нужны?
+A: Для ввоза кошки в Норвегию обычно требуются: микрочип, прививка от бешенства, сделанная после чипирования, анализ на антитела к бешенству (титр) не ранее чем через 30 дней после прививки и ожидание 3 месяца после взятия крови, ветеринарный сертификат и обработка от паразитов. Правила меняются, поэтому заранее проверьте актуальные требования на сайте норвежской продовольственной инспекции Mattilsynet — подготовка может занять 4 месяца.
+
+=== t318 | Change of address checklist | moving | bureaucracy | en
+U: Who do I need to tell when I move?
+A: The usual list: the national population register, your bank and card issuers, your employer and payroll, insurance companies, your doctor and dentist, your mobile and internet providers, subscriptions and online shops, your children's school, your car registration and parking permits, and friends and family. Set up mail forwarding for a few months to catch anyone you forget.
+
+=== t319 | Pakke kjøkkenet | moving | - | no
+U: Hvordan pakker jeg glass og tallerkener så ingenting går i stykker?
+A: Pakk tallerkener på høykant i esken, som i et oppvaskstativ, med papir mellom hver. Glass pakkes enkeltvis i papir og settes med åpningen ned i esker med skillevegger. Fyll tomrom med håndklær eller sammenkrøllet papir slik at ingenting rister. Bruk små esker til tunge ting, og merk «skjørt — denne vei opp».
+
+=== t320 | Deposit not returned | renting | - | en
+U: Moved out 6 weeks ago, landlord won't return the deposit and keeps finding new "damages".
+A: Ask in writing for an itemised list of deductions with evidence (photos, invoices), and point to your move-out condition — normal wear and tear can't be charged. Compare with the move-in report and your photos. Most places have a deadline by which the landlord must return the deposit or justify keeping it. If you can't agree, a tenancy dispute body or small claims process is usually cheap; mention that you'll use it, which often resolves things.
+
+=== t321 | Leieavtale: kan utleier øke husleia? | renting | - | no
+U: Utleier vil øke husleia med 15 prosent etter et år. Er det lov?
+A: I Norge kan husleia i løpende leieforhold justeres etter konsumprisindeksen én gang i året, med en måneds skriftlig varsel. Større økninger til «gjengs leie» kan kreves først når leieforholdet har vart minst to år og 6 måneders varsel er gitt. En økning på 15 prosent etter ett år er sannsynligvis ikke lov hvis prisstigningen var lavere. Sjekk leiekontrakten og kontakt Leieboerforeningen eller Husleietvistutvalget hvis dere er uenige.
+
+=== t322 | Сосед сверху затопил | renting | repairs | ru
+U: Снимаю квартиру, сосед сверху залил ванную, на потолке пятно и отходит краска. Кто должен платить?
+A: Сначала сразу сообщите хозяину квартиры и сфотографируйте повреждения. Вызовите представителя управляющей компании, чтобы составить акт о заливе с указанием причины — это главный документ. Ремонт по закону оплачивает виновник залива (сосед) или его страховая, а договариваться с ним будет собственник квартиры. Если пострадали ваши вещи, ущерб за них вы можете требовать с соседа сами.
+
+=== t323 | Subletting my room for the summer | renting | - | en
+U: Can I sublet my rented room while I'm away for the summer?
+A: Usually only with your landlord's written permission — check your lease. Subletting without consent can be grounds for termination. If allowed, write a short agreement with the subtenant covering dates, rent, deposit and house rules, and remember you remain responsible to the landlord for rent and damage.
+
+=== t324 | Mould in a rental flat | renting | repairs | en
+U: There's mould on the bedroom wall of our rental. The landlord says it's because we don't ventilate.
+A: Both can be true. Ventilate daily and keep furniture a few centimetres from outside walls, but persistent mould often comes from cold bridges, leaks or poor insulation, which are the landlord's responsibility. Document it with dated photos and a humidity meter (aim for 40–60%). Send a written request for an inspection. If it's affecting health, the local environmental health office can assess the flat.
+
+=== t325 | NAV unemployment benefits | bureaucracy | - | no
+U: Jeg ble sagt opp og slutter om en måned. Når søker jeg dagpenger?
+A: Søk så snart du vet siste arbeidsdag, men tidligst sju dager før du står uten jobb. Registrer deg som arbeidssøker hos NAV samme dag som du søker. Du må sende meldekort hver fjortende dag for å få utbetalt. Ha arbeidsavtale, oppsigelsesbrev og lønnsslipper klare. Saksbehandlingen kan ta noen uker, så søk tidlig.
+
+=== t326 | Как получить норвежский D-номер | bureaucracy | - | ru
+U: Я приехала на работу в Норвегию на полгода. Работодатель говорит, нужен D-номер. Как его получить?
+A: D-номер выдают иностранцам, которые находятся в Норвегии временно. Обычно его запрашивает работодатель или вы сами при подаче заявления на налоговую карточку (skattekort) в Skatteetaten. Нужно лично прийти в налоговый офис или сервисный центр для иностранных работников (SUA) с паспортом и трудовым договором для проверки личности. Номер приходит по почте через несколько недель.
+
+=== t327 | Renewing a passport for a child | bureaucracy | parenting | en
+U: What do I need to renew my 6-year-old's passport?
+A: Typically: book an appointment at the passport office, bring the child (they must be present for the photo and identity check), the old passport, and both parents' consent — either both present or a signed consent form from the absent parent with a copy of their ID. Check processing times well before travel; summer queues are long.
+
+=== t328 | Appealing a parking fine | bureaucracy | - | en
+U: Got a parking fine even though I paid in the app. The app shows the payment.
+A: Appeal in writing within the deadline on the ticket. Attach a screenshot of the app payment showing the zone, plate number and time, and your bank statement if possible. Check the plate number in the app — a typo is the most common reason. Keep it short and factual; these appeals are usually granted when the payment is clear.

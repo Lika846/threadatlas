@@ -1,0 +1,366 @@
+# Follow-up turns appended to earlier conversations ("+++ id | topic2 or -").
++++ t002 | -
+U: the x axis labels are all squashed together
+A: With monthly bars, label every third month: `ax.set_xticks(range(0, len(s), 3))` and `ax.set_xticklabels(s.index[::3].strftime("%b %Y"), rotation=45, ha="right")`.
+
++++ t004 | budgeting
+U: nice. now can you show me how to export this to a google sheet that my boss can see
+A: The simplest way is `summary.to_csv("regions.csv")` and import it into Sheets. For automatic updates, the `gspread` library writes a DataFrame straight into a sheet with a service account — share the sheet with the service account's email first.
+U: actually unrelated, but my boss also asked me to plan the department budget for next year. any template?
+A: Start from last year's actuals per cost line, then add three columns: known changes (new hires, contracts), inflation adjustment, and a short justification. Keep a separate tab for assumptions so the numbers can be challenged without digging through formulas.
+
++++ t007 | -
+U: thanks!!
+A: You're welcome.
+
++++ t009 | -
+U: and the bottom 3?
+A: Same thing with `ascending=True`, or `.nsmallest(3, "sales")` inside a `groupby(...).apply(...)`.
+
++++ t011 | -
+U[no]: kan du forklare melt også? altså motsatt vei
+A[no]: `melt` gjør bred tabell lang igjen: `lang = wide.reset_index().melt(id_vars="date", var_name="city", value_name="temperature")`. Hver by-kolonne blir rader med navnet i «city»-kolonnen.
+
++++ t014 | -
+U: what's multiple imputation in simple terms
+A: You fill in the missing values several times, each time with plausible random values based on the other columns, run your analysis on each completed dataset, and combine the results. The spread between the runs shows how uncertain the missing values make your conclusion.
+
++++ t016 | -
+U: ok
+A: 👍
+
++++ t019 | -
+U: where should the refresh token be stored on mobile?
+A: In the platform's secure storage: Keychain on iOS and EncryptedSharedPreferences or the Keystore on Android. Never in plain local storage.
+U: and if the phone is stolen?
+A: Give each device its own refresh token, list active sessions in the user's account settings, and let them revoke a device. Revoked tokens fail at the next refresh, so the thief is locked out within minutes.
+
++++ t022 | -
+U: takk, vi går for PATCH
+A: Godt valg. Husk å validere at feltene som sendes faktisk kan endres av brukeren.
+
++++ t027 | -
+U: what's tRPC, someone mentioned it
+A: tRPC lets a TypeScript frontend call backend functions with full type safety and no schema files, as long as both sides are TypeScript in the same repo. Great for small full-stack TS apps; less suitable if other languages or external clients need the API.
+
++++ t032 | -
+U: and just horizontally?
+A: `margin-inline: auto` on the box with a set width, or `justify-content: center` on a flex parent.
+
++++ t035 | -
+U: thank you, the template literal trick is neat
+A: Glad it helps. It's especially handy for ids like `user_${number}`.
+
++++ t037 | -
+U: it was the content path. works now
+A: Great.
+
++++ t040 | -
+U: how do we handle dark mode with shadcn?
+A: shadcn uses CSS variables for colours, with a `.dark` class on the root. Add next-themes to toggle the class and follow the system setting; the components switch automatically.
+
++++ t044 | -
+U: what's the npm merge driver exactly
+A: A small tool registered in `.gitattributes` that git calls when package-lock.json conflicts; it runs `npm install` to rebuild the file instead of leaving conflict markers. Install with `npx npm-merge-driver install --global`.
+
++++ t047 | -
+U: it was npm start with & in my script, thanks
+A: That explains it. Run the server in the foreground and Docker will keep the container alive.
+
++++ t051 | -
+U: how short is short-lived?
+A: Ideally merged within one or two days. If a feature takes longer, merge it in pieces behind a feature flag.
+U: we don't have feature flags
+A: Start with something simple: a config value or environment variable per flag, checked in code. Move to a flag service only when you need per-user rollouts.
+
++++ t056 | -
+U: is pg_trgm available on RDS?
+A: Yes, it's on the list of supported extensions for Amazon RDS for PostgreSQL. Run `CREATE EXTENSION pg_trgm;` as a user with the rds_superuser role.
+
++++ t058 | -
+U: makes sense, thanks
+A: You're welcome!
+
++++ t061 | -
+U: ok sqlite it is. what about backups?
+A: Use SQLite's online backup (`sqlite3 db.sqlite ".backup backup.sqlite"`) or Litestream, which streams changes continuously to S3-compatible storage. Never just copy the file while the app is writing.
+
++++ t065 | -
+U: it was PATH, pg_dump is in /usr/local/bin
+A: That's the classic one. Use the full path in the script and you're set.
+
++++ t067 | -
+U: perfect thx
+A: Happy scripting.
+
++++ t072 | -
+U: Hvor lenge skal brødet heve første gang?
+A: Til deigen har økt med omtrent 50–75 prosent, ikke nødvendigvis dobbel. I romtemperatur tar det ofte 1–2 timer med gjær, lengre med surdeig.
+
++++ t073 | -
+U: Can I add olives and cherry tomatoes?
+A: Yes, press them into the dough right before baking so they don't sink and burn. Pat the tomatoes dry first.
+
++++ t077 | -
+U: even baguettes?
+A: Baguettes are thin, so 20–30 minutes is enough.
+
++++ t079 | -
+U: made it, kids actually ate it!
+A: That's a win. Next time try adding coconut milk for a creamier version.
+
++++ t081 | -
+U: Получилось, но рис немного разварился
+A: Значит, воды было многовато или рис мягкий. В следующий раз берите длиннозёрный рис для плова, промывайте до прозрачной воды и наливайте воду на 1–1,5 см выше риса.
+
++++ t083 | -
+U: can i use frozen salmon?
+A: Yes, thaw it in the fridge overnight, or roast from frozen for about 18–20 minutes and add the glaze halfway.
+
++++ t085 | -
+U: going with the aubergine. dessert idea that works for everyone?
+A: A lemon posset with berries: cream, sugar and lemon juice, set in the fridge for a few hours. Vegetarian, no gelatine, and it can be made the day before.
+
++++ t087 | desserts
+U: thank you. also my kids want to bake cookies this weekend, easy recipe?
+A: Basic chocolate chip: 125 g soft butter, 100 g brown sugar, 50 g white sugar, 1 egg, 175 g flour, half a teaspoon baking soda, a pinch of salt, 150 g chocolate chips. Scoop onto a tray and bake at 180 °C for 10–12 minutes. They'll look underdone when they come out — that's right.
+
++++ t093 | -
+U: went finer, much better
+A: Nice. Note the grind setting so you can repeat it with the next bag.
+
++++ t096 | -
+U: which grinder specifically?
+A: In that range, look at the Eureka Mignon series or the Niche Zero (slightly above budget). Both have stepless or fine adjustment and are easy to dial in for espresso.
+
++++ t100 | -
+U: Har du tips til refleks som ikke er stygg?
+A: Det finnes løpejakker og tights med innebygde refleksdetaljer, og refleksbånd i fine farger til armer og ankler. Bevegelige refleksdetaljer (ankler, armer) synes best.
+
++++ t101 | -
+U: Спасибо, попробую. А какие кроссовки нужны новичку?
+A: Идите в беговой магазин, где посмотрят вашу постановку стопы и дадут пробежаться. Берите удобные, с достаточной амортизацией, на полразмера больше обычной обуви. Дорогие модели не обязательны.
+
++++ t106 | -
+U: how long until I see results?
+A: Strength increases noticeably within 4–6 weeks, mostly from your nervous system learning the movements. Visible muscle changes usually take 2–3 months of consistent training and enough protein.
+
++++ t110 | -
+U: got my first pull up!!! 7 weeks
+A: Congratulations! Now work towards sets of 3, then 5. Keep the negatives in your routine.
+
++++ t114 | -
+U: what about winter, ice?
+A: Studded tyres are the main thing in icy cities — they make winter cycling surprisingly safe. Add proper lights, lobster gloves and a buff.
+
++++ t123 | -
+U: thanks. flying tokyo to oslo next week
+A: That's a westward flight, which is easier on the body. Get daylight in the afternoon after arriving and try to stay up until 22:00 local time. Melatonin at bedtime for the first 2–3 nights can help.
+
++++ t126 | -
+U: I don't like yoghurt
+A: Try cottage cheese with fruit, an omelette with vegetables, or a smoothie with milk, oats and protein powder.
+
++++ t130 | -
+U: Hva med kaffe, dehydrerer det ikke?
+A: Bare marginalt. Hos folk som drikker kaffe jevnlig er den vanndrivende effekten liten, så kaffe teller med i væskeinntaket.
+
++++ t131 | -
+U: what about intermittent fasting
+A: It works for some people simply because it limits the eating window, so they eat less. Studies show similar results to ordinary calorie reduction. Try it if it suits your routine; skip it if it makes you overeat in the evening.
+
++++ t136 | -
+U: thanks that helped
+A: Glad to hear it. Take care.
+
++++ t137 | -
+U: what apps do you recommend for screen time?
+A: The built-in tools are usually enough: Screen Time on iPhone and Digital Wellbeing on Android, with app limits and downtime. If you need more friction, apps like one sec add a pause before opening chosen apps.
+
++++ t142 | -
+U: is a vapour barrier needed?
+A: In a cold attic with insulation laid on the ceiling, a vapour barrier belongs on the warm side, under the ceiling. In older houses without one, sealing gaps around lights, hatches and pipes from below gives most of the benefit.
+
++++ t145 | -
+U: А под кварцвинил нужна подложка?
+A: Зависит от модели: у многих подложка уже приклеена. Основание должно быть очень ровным — перепады больше 2 мм на 2 метра проступят. Отдельная подложка допускается только тонкая и рекомендованная производителем.
+
++++ t147 | -
+U: fixed it! new cartridge was 25 euros
+A: Much cheaper than a new tap. Nicely done.
+
++++ t149 | -
+U: the long screw trick worked
+A: It's a great trick. If the door sticks again next winter, you know where to start.
+
++++ t152 | -
+U: pressure is at 0.5
+A: Top it up through the filling loop under the boiler (usually two small taps) until the gauge shows about 1.2 bar, then close the taps. If the pressure keeps dropping, there's a small leak somewhere; call a plumber.
+
++++ t159 | -
+U: what variety splits less?
+A: Cherry types like 'Sungold' are prone to it, while 'Sweet Million' and many plum tomatoes are more resistant. Look for "crack resistant" on the seed packet.
+
++++ t163 | -
+U: can i use garlic from the supermarket?
+A: It can work, but supermarket garlic is often from warmer climates and may not handle Norwegian winters. Seed garlic from a garden centre is adapted and disease-free.
+
++++ t166 | -
+U: soil was wet. i'll wait
+A: Good call. Let it dry out, and you'll likely see the yellowing stop.
+
++++ t170 | -
+U: lol the newspaper trick works
+A: Every cactus owner's secret weapon.
+
++++ t174 | -
+U: how much should go to savings?
+A: A common target is 10–20% of take-home pay, but start with what you can sustain — even 5% automatically is better than 20% in theory. Increase it every time you get a raise.
+
++++ t180 | -
+U: cancelled 5, saving 63 euros a month
+A: That's over 750 a year. Nice work.
+
++++ t183 | -
+U: Справка из клиники — это просто чек?
+A: Нет, это отдельная справка установленной формы для налоговой, её выдаёт клиника по запросу. Чеки и договор прикладываются дополнительно.
+
++++ t188 | -
+U: what happens if the market crashes right after I start
+A: Your fund will drop, maybe by a lot, but with monthly purchases you keep buying at lower prices. Over long periods markets have recovered from every crash so far, though recovery can take years. That's why money needed soon shouldn't be invested.
+
++++ t192 | -
+U: ok, maybe just 100 euros to try
+A: That's a sensible way to learn. Use a regulated exchange and turn on two-factor authentication.
+
++++ t198 | -
+U: thanks, updated it
+A: Nice. Recruiters often notice a clear headline within the first seconds of a search result.
+
++++ t202 | -
+U: can you give an example for a junior developer
+A: "I'm a junior developer at a fintech startup, where I've built the payment confirmation emails that now go to 40,000 customers a month. I came into programming from a chemistry degree, where I started writing Python scripts to automate lab data, and I loved it so much I did a bootcamp. Now I'm looking for a team where I can grow into backend work, which is why this role caught my eye."
+
++++ t207 | -
+U: is it ok to ask about remote work?
+A: Yes, especially if it matters to you. Ask neutrally: "How does the team usually split office and remote days?"
+
++++ t211 | -
+U: my manager agreed to the focus mornings
+A: Great outcome. Protect them consistently for a few weeks so it becomes the norm.
+
++++ t220 | -
+U: what about ready-made decks?
+A: They're fine for a frequency list (the top 2,000 words), but cards you make yourself from your own encounters are remembered much better.
+
++++ t224 | -
+U: merci!
+A: De rien !
+
++++ t229 | -
+U: I'll try handwriting this semester
+A: Good experiment. Compare how much you remember at the midterms.
+
++++ t234 | -
+U: installing zotero, thanks
+A: Add the browser connector too; it saves references with one click.
+
++++ t236 | -
+U: any good restaurant that isn't crazy expensive?
+A: Try the smørrebrød places for lunch (Aamanns or similar), street food at Reffen, and the natural wine bars in Vesterbro, which often serve small plates at reasonable prices. Book dinner ahead on weekends.
+
++++ t241 | -
+U: any good apps for finding food?
+A: Tabelog is the local review site; scores above 3.5 are very good. Google Maps works well too. Many cheap places don't take reservations — just queue.
+
++++ t247 | -
+U: my mat is a cheap foam one
+A: That's most likely the problem. Add a second foam mat or upgrade to an insulated inflatable mat with R-value 4+.
+
++++ t252 | -
+U: card covers 60 days, my trip is 70
+A: Then you're uninsured for the last 10 days. Buy a separate policy for the whole trip, or check whether your card lets you buy an extension.
+
++++ t255 | -
+U: Han sier alle vennene spiller mer
+A: Det er nesten alltid det barn sier. Snakk gjerne med foreldrene til vennene; ofte har de lignende regler, og det gjør det lettere å stå på sitt.
+
++++ t257 | -
+U: they fight over who sits in the front seat lol
+A: Use a simple rule they can't argue with: odd days for one, even days for the other. Put it on the fridge.
+
++++ t261 | -
+U: harness recommendation?
+A: Look for a Y-shaped harness with a front clip that doesn't restrict the shoulders. Avoid tight-across-the-chest designs for daily use.
+
++++ t264 | -
+U: she hides under the table all day
+A: Let her. Put a blanket and water nearby, sit in the room calmly without forcing contact, and toss treats near her. Most shy dogs come out on their own when they feel safe.
+
++++ t267 | -
+U: she ignores the scratching post
+A: Try a different type: some cats prefer horizontal cardboard scratchers or sisal mats. Height and stability also matter — a wobbly post gets ignored.
+
++++ t270 | -
+U: it's been 2 weeks and they still hiss
+A: Hissing alone is fine if there's no chasing or fighting. Keep meals and play sessions together at a distance, and give them more time. Some cats take a couple of months.
+
++++ t280 | -
+U: I like Hrimmark. ideas for the capital city?
+A: Isvik, Kaldborg, Vinterstad or Frostholm. For something older-sounding: Hrimborg, matching the kingdom.
+
++++ t282 | -
+U: what about ending the speech?
+A: Turn to the couple and raise your glass: "Emma, thank you for making my brother the happiest I've ever seen him. Jonas, drain the pasta. To Emma and Jonas!"
+
++++ t288 | -
+U: should I learn to read music?
+A: Not necessary for most guitar styles; chord charts and tabs cover a lot. Learn a bit of rhythm notation though — it helps with strumming patterns.
+
++++ t293 | -
+U: what yarn for my first?
+A: A smooth, light-coloured wool or wool blend in worsted weight, so you can see the stitches. Avoid mohair and very dark yarns for a first sweater.
+
++++ t301 | -
+U: whatsapp was 30 gb
+A: That's usually videos in group chats. In WhatsApp → Settings → Storage and Data → Manage Storage, sort by size and clear the big ones. Turn off auto-download for media in groups.
+
++++ t305 | -
+U: which mesh system?
+A: TP-Link Deco, Eero and Asus ZenWiFi are reliable. Pick a WiFi 6 system with at least two units, and use cable between units if you can.
+
++++ t308 | -
+U: ok, skipping it for now
+A: Sensible. If you start using public wifi a lot, revisit it.
+
++++ t316 | -
+U: Vi tok byrå, fast pris 38 000
+A: Høres rimelig ut for den distansen. Sjekk at forsikringen dekker hele flyttelasset og at de gjør en befaring av inngangen der dere skal bo.
+
++++ t319 | -
+U: takk!
+A: Lykke til med flyttingen!
+
++++ t323 | -
+U: landlord said yes
+A: Great. Put the agreement in writing and keep a copy of the subtenant's ID.
+
++++ t328 | -
+U: they cancelled it
+A: Good result. Keep the screenshot for a while in case of follow-ups.
+
++++ t143 | -
+U: Kan vi bruke vanlig veggmaling?
+A: Ja, men velg en slitesterk maling med glans 10 eller høyere på panel; det tåler vask bedre.
+
++++ t156 | organising
+U: Barna har også fryktelig mange leker. Samme metode?
+A: Ja, men involver barna: la dem velge favoritter, ha et begrenset antall leker framme og bytt ut med en kasse fra boden hver måned. Da føles lekene nye.
+
++++ t175 | -
+U: Kan jeg jobbe mer om sommeren uten at det påvirker stipendet?
+A: Inntektsgrensen gjelder hele kalenderåret, så det er samlet inntekt som teller. Sjekk Lånekassens kalkulator før du takker ja til mye sommerjobb.
+
++++ t189 | -
+U: Kan jeg flytte fondene jeg har fra før inn på ASK?
+A: Ja, i overgangsperioder har det vært mulig å flytte uten skatt; ellers kan du overføre fond til en aksjesparekonto i samme bank ved å spørre banken om overføring. Sjekk hva som gjelder nå med banken din.

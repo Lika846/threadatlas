@@ -1,0 +1,71 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: three regenerated answers, middle one selected",
+    "create_time": 1767830400,
+    "update_time": 1767830700,
+    "conversation_id": "00000000-0000-4000-8000-00000000g001",
+    "current_node": "node-g001-answer-2",
+    "mapping": {
+      "node-g001-root": { "id": "node-g001-root", "message": null, "parent": null, "children": ["node-g001-user"] },
+      "node-g001-user": {
+        "id": "node-g001-user",
+        "message": { "id": "node-g001-user", "author": { "role": "user" }, "create_time": 1767830410, "content": { "content_type": "text", "parts": ["Synthetic canary: name a fictional lighthouse."] } },
+        "parent": "node-g001-root",
+        "children": ["node-g001-answer-1", "node-g001-answer-2", "node-g001-answer-3"]
+      },
+      "node-g001-answer-1": {
+        "id": "node-g001-answer-1",
+        "message": { "id": "node-g001-answer-1", "author": { "role": "assistant" }, "create_time": 1767830420, "content": { "content_type": "text", "parts": ["Synthetic canary answer one: Gull Point."] } },
+        "parent": "node-g001-user",
+        "children": []
+      },
+      "node-g001-answer-2": {
+        "id": "node-g001-answer-2",
+        "message": { "id": "node-g001-answer-2", "author": { "role": "assistant" }, "create_time": 1767830430, "content": { "content_type": "text", "parts": ["Synthetic canary answer two: Amber Rock."] } },
+        "parent": "node-g001-user",
+        "children": []
+      },
+      "node-g001-answer-3": {
+        "id": "node-g001-answer-3",
+        "message": { "id": "node-g001-answer-3", "author": { "role": "assistant" }, "create_time": 1767830440, "content": { "content_type": "text", "parts": ["Synthetic canary answer three: Fog Bell."] } },
+        "parent": "node-g001-user",
+        "children": []
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: regenerated answers without current_node",
+    "create_time": 1767830800,
+    "update_time": 1767831000,
+    "conversation_id": "00000000-0000-4000-8000-00000000g002",
+    "mapping": {
+      "node-g002-root": { "id": "node-g002-root", "message": null, "parent": null, "children": ["node-g002-user"] },
+      "node-g002-user": {
+        "id": "node-g002-user",
+        "message": { "id": "node-g002-user", "author": { "role": "user" }, "create_time": 1767830810, "content": { "content_type": "text", "parts": ["Synthetic canary: suggest a colour for a fictional door."] } },
+        "parent": "node-g002-root",
+        "children": ["node-g002-answer-1", "node-g002-answer-2", "node-g002-answer-3"]
+      },
+      "node-g002-answer-1": {
+        "id": "node-g002-answer-1",
+        "message": { "id": "node-g002-answer-1", "author": { "role": "assistant" }, "create_time": 1767830820, "content": { "content_type": "text", "parts": ["Synthetic canary: teal."] } },
+        "parent": "node-g002-user",
+        "children": []
+      },
+      "node-g002-answer-2": {
+        "id": "node-g002-answer-2",
+        "message": { "id": "node-g002-answer-2", "author": { "role": "assistant" }, "create_time": 1767830840, "content": { "content_type": "text", "parts": ["Synthetic canary: ochre (the latest answer)."] } },
+        "parent": "node-g002-user",
+        "children": []
+      },
+      "node-g002-answer-3": {
+        "id": "node-g002-answer-3",
+        "message": { "id": "node-g002-answer-3", "author": { "role": "assistant" }, "create_time": 1767830830, "content": { "content_type": "text", "parts": ["Synthetic canary: plum."] } },
+        "parent": "node-g002-user",
+        "children": []
+      }
+    }
+  }
+]

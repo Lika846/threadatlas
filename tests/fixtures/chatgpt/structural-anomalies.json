@@ -1,0 +1,106 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: dangling parent",
+    "conversation_id": "00000000-0000-4000-8000-00000000e001",
+    "current_node": "node-e001-orphan",
+    "mapping": {
+      "node-e001-root": { "id": "node-e001-root", "message": null, "parent": null, "children": [] },
+      "node-e001-orphan": {
+        "id": "node-e001-orphan",
+        "message": {
+          "id": "node-e001-orphan",
+          "author": { "role": "user" },
+          "content": { "content_type": "text", "parts": ["Synthetic canary: my parent is not in the mapping."] }
+        },
+        "parent": "node-e001-missing-parent",
+        "children": []
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: cycle",
+    "conversation_id": "00000000-0000-4000-8000-00000000e002",
+    "current_node": "node-e002-b",
+    "mapping": {
+      "node-e002-a": {
+        "id": "node-e002-a",
+        "message": {
+          "id": "node-e002-a",
+          "author": { "role": "user" },
+          "content": { "content_type": "text", "parts": ["Synthetic canary cycle node A."] }
+        },
+        "parent": "node-e002-b",
+        "children": ["node-e002-b"]
+      },
+      "node-e002-b": {
+        "id": "node-e002-b",
+        "message": {
+          "id": "node-e002-b",
+          "author": { "role": "assistant" },
+          "content": { "content_type": "text", "parts": ["Synthetic canary cycle node B."] }
+        },
+        "parent": "node-e002-a",
+        "children": ["node-e002-a"]
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: child missing from mapping",
+    "conversation_id": "00000000-0000-4000-8000-00000000e003",
+    "current_node": "node-e003-user",
+    "mapping": {
+      "node-e003-root": { "id": "node-e003-root", "message": null, "parent": null, "children": ["node-e003-user"] },
+      "node-e003-user": {
+        "id": "node-e003-user",
+        "message": {
+          "id": "node-e003-user",
+          "author": { "role": "user" },
+          "content": { "content_type": "text", "parts": ["Synthetic canary: one of my children does not exist."] }
+        },
+        "parent": "node-e003-root",
+        "children": ["node-e003-ghost"]
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: mapping key differs from node id",
+    "conversation_id": "00000000-0000-4000-8000-00000000e004",
+    "current_node": "node-e004-key",
+    "mapping": {
+      "node-e004-key": {
+        "id": "node-e004-different-id",
+        "message": {
+          "id": "node-e004-different-id",
+          "author": { "role": "user" },
+          "content": { "content_type": "text", "parts": ["Synthetic canary: key and id disagree."] }
+        },
+        "parent": null,
+        "children": []
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: parent and children disagree; two roots",
+    "conversation_id": "00000000-0000-4000-8000-00000000e005",
+    "current_node": "node-e005-child",
+    "mapping": {
+      "node-e005-root-1": { "id": "node-e005-root-1", "message": null, "parent": null, "children": ["node-e005-child"] },
+      "node-e005-root-2": { "id": "node-e005-root-2", "message": null, "parent": null, "children": [] },
+      "node-e005-child": {
+        "id": "node-e005-child",
+        "message": {
+          "id": "node-e005-child",
+          "author": { "role": "user" },
+          "content": { "content_type": "text", "parts": ["Synthetic canary: I claim root-2 as parent, but root-1 lists me."] }
+        },
+        "parent": "node-e005-root-2",
+        "children": []
+      }
+    }
+  }
+]

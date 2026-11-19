@@ -1,0 +1,162 @@
+[
+ {
+  "id": "LQ01",
+  "rank": 5,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Start with light, because it decides where everything else goes. Put the desk at a right angle to the window rather than facing it or with your back to it: faci",
+  "offsets": null
+ },
+ {
+  "id": "LQ02",
+  "rank": 7,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Work backwards from the submission date. Mark the final deadline, then the date your supervisor needs a full draft, usually four to six weeks earlier, then the ",
+  "offsets": null
+ },
+ {
+  "id": "LQ03",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 41,
+  "bestUnitExcerpt": "Two years ago I started a small puzzle game in Godot about a train conductor. I built a level editor and twelve levels, then stopped. Should I pick it back up?",
+  "offsets": null
+ },
+ {
+  "id": "LQ04",
+  "rank": 5,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 105,
+  "bestUnitExcerpt": "For en hytte uten strøm er et frittstående solcelleanlegg med batteribank vanlig. Start med å regne ut forbruket: lys, kjøleskap, lading og kanskje en vannpumpe",
+  "offsets": null
+ },
+ {
+  "id": "LQ05",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Avklar først med fysioterapeuten eller legen at kneet er klart for løpebelastning. Mange får en enkel test: hoppe på ett bein, gå ned trapper og stå på ett bein",
+  "offsets": null
+ },
+ {
+  "id": "LQ06",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Skriv en enkel forretningsplan først. Hvem er kundene, hva skal du selge, hvor mange brød må du selge hver dag for å gå i null, og hvor mye penger trenger du fø",
+  "offsets": null
+ },
+ {
+  "id": "LQ07",
+  "rank": 6,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Начните с работы и сроков. Если новая работа уже есть, узнайте точную дату выхода и помогает ли работодатель с переездом: некоторые компании оплачивают билеты, ",
+  "offsets": null
+ },
+ {
+  "id": "LQ08",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Начните с основ: переменные, списки, словари, циклы и функции. Хватит одного бесплатного курса или книги для начинающих; не пытайтесь проходить сразу несколько,",
+  "offsets": null
+ },
+ {
+  "id": "LQ09",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Сначала расчистите участок: скосите траву, уберите мусор и старые постройки, которые нельзя восстановить. Не торопитесь выкорчёвывать все деревья — старая яблон",
+  "offsets": null
+ },
+ {
+  "id": "LQ10",
+  "rank": 28,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Begynn med en grundig tilstandsvurdering før dere kjøper en eneste boks maling. Sjekk bunnsvillene og de nederste kledningsbordene for råte, se etter sprekker i",
+  "offsets": null
+ },
+ {
+  "id": "LQ11",
+  "rank": 32,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 25,
+  "bestUnitExcerpt": "Мы с семьёй переезжаем из Самары в Новосибирск через два месяца. С чего начать?",
+  "offsets": null
+ },
+ {
+  "id": "LQ12",
+  "rank": 24,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Начните с основ: переменные, списки, словари, циклы и функции. Хватит одного бесплатного курса или книги для начинающих; не пытайтесь проходить сразу несколько,",
+  "offsets": null
+ },
+ {
+  "id": "LQ13",
+  "rank": 30,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Skriv en enkel forretningsplan først. Hvem er kundene, hva skal du selge, hvor mange brød må du selge hver dag for å gå i null, og hvor mye penger trenger du fø",
+  "offsets": null
+ },
+ {
+  "id": "LQ14",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 30,
+  "bestUnitExcerpt": "Thanks. Separate question: our garden shed is full of junk. Could it become a small woodworking workshop?",
+  "offsets": null
+ },
+ {
+  "id": "LQ15",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 107,
+  "bestUnitExcerpt": "Twelve minutes is about ten slides. Choose one main message you want the audience to remember and build the talk around it: the question, why it matters, what y",
+  "offsets": null
+ },
+ {
+  "id": "LQ16",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 105,
+  "bestUnitExcerpt": "For en hytte uten strøm er et frittstående solcelleanlegg med batteribank vanlig. Start med å regne ut forbruket: lys, kjøleskap, lading og kanskje en vannpumpe",
+  "offsets": null
+ },
+ {
+  "id": "LQ17",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 20,
+  "bestUnitExcerpt": "И ещё вопрос: стоит ли продавать машину или перегонять её самим?",
+  "offsets": null
+ },
+ {
+  "id": "LQ18",
+  "rank": 2,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Skriv en enkel forretningsplan først. Hvem er kundene, hva skal du selge, hvor mange brød må du selge hver dag for å gå i null, og hvor mye penger trenger du fø",
+  "offsets": null
+ },
+ {
+  "id": "LQ19",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Start with light, because it decides where everything else goes. Put the desk at a right angle to the window rather than facing it or with your back to it: faci",
+  "offsets": null
+ },
+ {
+  "id": "LQ20",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Сначала расчистите участок: скосите траву, уберите мусор и старые постройки, которые нельзя восстановить. Не торопитесь выкорчёвывать все деревья — старая яблон",
+  "offsets": null
+ }
+]

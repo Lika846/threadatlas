@@ -1,0 +1,68 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: no current node",
+    "create_time": 1767398400,
+    "update_time": 1767398500,
+    "conversation_id": "00000000-0000-4000-8000-00000000c001",
+    "mapping": {
+      "node-c001-root": { "id": "node-c001-root", "message": null, "parent": null, "children": ["node-c001-user"] },
+      "node-c001-user": {
+        "id": "node-c001-user",
+        "message": {
+          "id": "node-c001-user",
+          "author": { "role": "user" },
+          "content": { "content_type": "text", "parts": ["Synthetic canary: this conversation has no current_node."] }
+        },
+        "parent": "node-c001-root",
+        "children": []
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "conversation_id": "00000000-0000-4000-8000-00000000c002",
+    "current_node": "node-c002-user",
+    "mapping": {
+      "node-c002-user": {
+        "id": "node-c002-user",
+        "message": {
+          "id": "node-c002-user",
+          "author": { "role": "user" },
+          "content": { "content_type": "text", "parts": ["Synthetic canary: no title and no timestamps here."] }
+        },
+        "parent": null,
+        "children": []
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": 42,
+    "create_time": { "unexpected": "object" },
+    "update_time": "not-a-date",
+    "current_node": 7,
+    "conversation_id": "00000000-0000-4000-8000-00000000c003",
+    "mapping": {
+      "node-c003-user": {
+        "id": "node-c003-user",
+        "message": {
+          "id": "node-c003-user",
+          "author": { "role": "user" },
+          "content": { "content_type": "text", "parts": ["Synthetic canary: optional fields with the wrong types."] }
+        },
+        "parent": null,
+        "children": []
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": null,
+    "create_time": null,
+    "update_time": null,
+    "current_node": null,
+    "conversation_id": "00000000-0000-4000-8000-00000000c004",
+    "mapping": {}
+  }
+]

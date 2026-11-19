@@ -1,0 +1,16 @@
+{
+ "n": 100,
+ "batch": 16,
+ "tokensTarget": 256,
+ "tokensMean": 260.1,
+ "dims": 384,
+ "importMs": 134,
+ "loadMs": 1420,
+ "embedMs": 10450,
+ "chunksPerSec": 9.6,
+ "tokensPerSec": 2489,
+ "rssAfterLoadMb": 827,
+ "peakRssMb": 1214,
+ "vectorBytesFloat32": 153600,
+ "tripwireAttempts": 0
+}

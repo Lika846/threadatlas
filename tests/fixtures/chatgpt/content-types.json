@@ -1,0 +1,85 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: mixed content types",
+    "create_time": 1767484800,
+    "update_time": 1767485400,
+    "conversation_id": "00000000-0000-4000-8000-00000000d001",
+    "current_node": "node-d001-assistant-unknown",
+    "mapping": {
+      "node-d001-root": { "id": "node-d001-root", "message": null, "parent": null, "children": ["node-d001-system"] },
+      "node-d001-system": {
+        "id": "node-d001-system",
+        "message": {
+          "id": "node-d001-system",
+          "author": { "role": "system" },
+          "content": { "content_type": "text", "parts": ["Synthetic canary hidden system instruction."] },
+          "metadata": { "is_visually_hidden_from_conversation": true }
+        },
+        "parent": "node-d001-root",
+        "children": ["node-d001-user-image"]
+      },
+      "node-d001-user-image": {
+        "id": "node-d001-user-image",
+        "message": {
+          "id": "node-d001-user-image",
+          "author": { "role": "user" },
+          "create_time": 1767484810,
+          "content": {
+            "content_type": "multimodal_text",
+            "parts": [
+              {
+                "content_type": "image_asset_pointer",
+                "asset_pointer": "file-service://synthetic-file-0001",
+                "size_bytes": 1234,
+                "width": 16,
+                "height": 16
+              },
+              "Synthetic canary: what is in this (fictional) picture?"
+            ]
+          },
+          "metadata": {}
+        },
+        "parent": "node-d001-system",
+        "children": ["node-d001-assistant-code"]
+      },
+      "node-d001-assistant-code": {
+        "id": "node-d001-assistant-code",
+        "message": {
+          "id": "node-d001-assistant-code",
+          "author": { "role": "assistant" },
+          "create_time": 1767484820,
+          "content": { "content_type": "code", "language": "python", "text": "print('synthetic canary')" },
+          "recipient": "python",
+          "metadata": {}
+        },
+        "parent": "node-d001-user-image",
+        "children": ["node-d001-tool"]
+      },
+      "node-d001-tool": {
+        "id": "node-d001-tool",
+        "message": {
+          "id": "node-d001-tool",
+          "author": { "role": "tool", "name": "python" },
+          "create_time": 1767484830,
+          "content": { "content_type": "execution_output", "text": "synthetic canary" },
+          "metadata": {}
+        },
+        "parent": "node-d001-assistant-code",
+        "children": ["node-d001-assistant-unknown"]
+      },
+      "node-d001-assistant-unknown": {
+        "id": "node-d001-assistant-unknown",
+        "message": {
+          "id": "node-d001-assistant-unknown",
+          "author": { "role": "assistant" },
+          "create_time": 1767484840,
+          "content": { "content_type": "synthetic_future_type", "payload": { "note": "synthetic canary payload" } },
+          "metadata": {}
+        },
+        "parent": "node-d001-tool",
+        "children": []
+      }
+    }
+  }
+]

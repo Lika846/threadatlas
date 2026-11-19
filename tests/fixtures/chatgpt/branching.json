@@ -1,0 +1,103 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: naming a fictional sailboat",
+    "create_time": 1767312000,
+    "update_time": 1767312600,
+    "conversation_id": "00000000-0000-4000-8000-00000000b001",
+    "id": "00000000-0000-4000-8000-00000000b001",
+    "current_node": "node-b001-assistant-3",
+    "mapping": {
+      "node-b001-root": {
+        "id": "node-b001-root",
+        "message": null,
+        "parent": null,
+        "children": ["node-b001-user-1", "node-b001-user-1-edit"]
+      },
+      "node-b001-user-1": {
+        "id": "node-b001-user-1",
+        "message": {
+          "id": "node-b001-user-1",
+          "author": { "role": "user" },
+          "create_time": 1767312010,
+          "content": { "content_type": "text", "parts": ["Synthetic canary: suggest a name for a small blue sailboat."] },
+          "metadata": {}
+        },
+        "parent": "node-b001-root",
+        "children": ["node-b001-assistant-1", "node-b001-assistant-2"]
+      },
+      "node-b001-assistant-1": {
+        "id": "node-b001-assistant-1",
+        "message": {
+          "id": "node-b001-assistant-1",
+          "author": { "role": "assistant" },
+          "create_time": 1767312020,
+          "content": { "content_type": "text", "parts": ["Synthetic canary reply A: how about Little Wave?"] },
+          "metadata": {}
+        },
+        "parent": "node-b001-user-1",
+        "children": []
+      },
+      "node-b001-assistant-2": {
+        "id": "node-b001-assistant-2",
+        "message": {
+          "id": "node-b001-assistant-2",
+          "author": { "role": "assistant" },
+          "create_time": 1767312030,
+          "content": { "content_type": "text", "parts": ["Synthetic canary reply B (regenerated): how about Blue Heron?"] },
+          "metadata": {}
+        },
+        "parent": "node-b001-user-1",
+        "children": ["node-b001-user-2"]
+      },
+      "node-b001-user-2": {
+        "id": "node-b001-user-2",
+        "message": {
+          "id": "node-b001-user-2",
+          "author": { "role": "user" },
+          "create_time": 1767312040,
+          "content": { "content_type": "text", "parts": ["Synthetic canary: something shorter, please."] },
+          "metadata": {}
+        },
+        "parent": "node-b001-assistant-2",
+        "children": ["node-b001-assistant-3"]
+      },
+      "node-b001-assistant-3": {
+        "id": "node-b001-assistant-3",
+        "message": {
+          "id": "node-b001-assistant-3",
+          "author": { "role": "assistant" },
+          "create_time": 1767312050,
+          "content": { "content_type": "text", "parts": ["Synthetic canary reply: Skiff."] },
+          "metadata": {}
+        },
+        "parent": "node-b001-user-2",
+        "children": []
+      },
+      "node-b001-user-1-edit": {
+        "id": "node-b001-user-1-edit",
+        "message": {
+          "id": "node-b001-user-1-edit",
+          "author": { "role": "user" },
+          "create_time": 1767312060,
+          "content": { "content_type": "text", "parts": ["Synthetic canary (edited): suggest a name for a small red sailboat."] },
+          "metadata": {}
+        },
+        "parent": "node-b001-root",
+        "children": ["node-b001-assistant-edit-1"]
+      },
+      "node-b001-assistant-edit-1": {
+        "id": "node-b001-assistant-edit-1",
+        "message": {
+          "id": "node-b001-assistant-edit-1",
+          "author": { "role": "assistant" },
+          "create_time": 1767312070,
+          "content": { "content_type": "text", "parts": ["Synthetic canary reply: Ember."] },
+          "metadata": {}
+        },
+        "parent": "node-b001-user-1-edit",
+        "children": []
+      }
+    }
+  }
+]

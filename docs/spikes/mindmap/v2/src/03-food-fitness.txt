@@ -1,0 +1,308 @@
+=== t071 | Sourdough starter smells like nail polish | bread | - | en
+U: My starter smells sharply of acetone. Is it ruined?
+A: No, it's hungry. That smell comes from the yeast and bacteria running out of food. Discard all but a spoonful and feed it at a higher ratio, for example 1 part starter to 5 parts flour and 5 parts water, twice a day for two or three days. Keep it somewhere around 24–26 °C. Once it doubles reliably within 6 hours and smells yoghurty again, it's ready to bake with.
+
+=== t072 | Dense whole wheat bread | bread | - | no
+U: Grovbrødet mitt blir kompakt og tungt hver gang. Jeg bruker halvparten sammalt hvete.
+A: Sammalt mel trekker mye vann og har kli som kutter glutenet, så deigen trenger mer tid og væske enn du tror. Prøv dette:
+- Øk vannmengden med 5–10 prosent, deigen skal være klissete.
+- La det sammalte melet trekke i vannet 30 minutter før du tilsetter resten (autolyse).
+- Elt lenger, eller bruk strekk-og-brett tre ganger i løpet av hevingen.
+- La brødet etterheve til det har blitt tydelig større og et fingertrykk sakte fyller seg igjen.
+Et steketermometer hjelper også: brødet er ferdig ved omtrent 96 grader i kjernen.
+
+=== t073 | Focaccia overnight in the fridge | bread | - | en
+U: Can I make focaccia dough the night before and bake it the next evening?
+A: Yes, and it tastes better that way. Mix the dough with a little less yeast (about 3 g instant per 500 g flour), let it sit 1 hour at room temperature, then put it in an oiled container in the fridge for 12–24 hours. Next day, tip it into an oiled tin, let it warm and relax for 2–3 hours until puffy, dimple it with oily fingers, add salt and rosemary, and bake at 230 °C for about 20 minutes.
+
+=== t074 | Почему корка у хлеба мягкая | bread | - | ru
+U: Пеку дома пшеничный хлеб в духовке. Внутри хорошо, но корка мягкая и бледная. Что не так?
+A: Обычно не хватает жара и пара в начале выпечки. Попробуйте:
+- разогреть духовку с противнем или чугунной кастрюлей минимум 40 минут при 240–250 °C;
+- первые 15–20 минут печь с паром (кастрюля с крышкой или миска кипятка на дно), потом пар убрать;
+- допекать до тёмно-золотистого цвета, не вынимать слишком рано;
+- остужать на решётке, а не на доске — снизу корка размокает от конденсата.
+Бледная корка ещё бывает от слишком долгой расстойки: дрожжи «съели» сахара, которые дают румянец.
+
+=== t075 | Baguettes keep spreading flat | bread | - | en
+U: My baguettes spread sideways in the oven instead of rising up. Dough seems fine.
+A: Flat baguettes are almost always a shaping or proofing issue. The surface needs tension: when you roll them out, fold the top third down, seal, fold again and seal with the heel of your hand, so a tight skin forms. Proof them seam-side up in a floured couche or a folded tea towel so the sides are supported. And don't over-proof — they should still spring back slowly when poked. Score at a shallow angle, almost parallel to the surface.
+U: the couche made a huge difference
+A: It's the cheapest upgrade in baguette baking. Next step is steam in the first 10 minutes if you haven't got that yet.
+
+=== t076 | Rugbrød med surdeig | bread | - | no
+U: Har du en enkel oppskrift på rugbrød med surdeig? Jeg har en aktiv rugsurdeig.
+A: En enkel variant som gir to små formbrød:
+- 200 g aktiv rugsurdeig
+- 500 g sammalt rugmel
+- 450 g lunkent vann
+- 12 g salt
+- 150 g solsikkekjerner eller knuste rugkjerner
+Rør alt sammen til en tykk grøt (rug eltes ikke), fordel i to smurte former og glatt overflaten med en våt skje. La heve 3–5 timer til det har sprukket litt på toppen. Stek på 200 grader i 60–70 minutter. Vent minst et døgn før du skjærer; rugbrød er klissete når det er ferskt.
+
+=== t077 | New chat | bread | - | en
+U: how long should bread cool before slicing
+A: At least an hour for a normal loaf, and two or more for large or rye loaves. The inside keeps cooking while it cools, and the crumb sets as steam escapes. Cut it hot and it'll be gummy and squash under the knife.
+
+=== t078 | Pizza dough in a home oven | bread | dinners | en
+U: What's the best pizza dough for a normal oven that only goes to 250 °C?
+A: At 250 °C you want a dough with a bit of oil and sugar so it browns before it dries out:
+- 500 g bread flour, 325 g water, 10 g salt, 15 g olive oil, 5 g sugar, 2 g instant yeast.
+Let it rise in the fridge for 1–3 days, then divide into balls 3 hours before baking. Bake on a steel or stone preheated for 45 minutes on the top shelf, and switch to the grill for the last minute to blister the top.
+
+=== t079 | Quick dinner with chickpeas and spinach | dinners | - | en
+U: I've got a can of chickpeas, a bag of spinach, onions and some spices. 20 minutes. Ideas?
+A: Make a quick chickpea and spinach curry:
+1. Soften a chopped onion in oil for 5 minutes, add two garlic cloves, a teaspoon each of cumin and garam masala, and half a teaspoon of turmeric.
+2. Add the drained chickpeas and a can of tomatoes (or a few spoons of tomato paste and water). Simmer 10 minutes.
+3. Stir in the spinach until it wilts, finish with lemon juice and salt.
+Serve with rice or flatbread. A spoon of yoghurt on top rounds it off.
+
+=== t080 | Middag til fem barn på en hverdag | dinners | parenting | no
+U: Jeg har ansvaret for middag til fem barn mellom 6 og 12 i morgen. Noe enkelt som alle spiser?
+A: Hjemmelaget taco er nesten alltid trygt: alle bygger sin egen, og de kresne kan droppe det de ikke liker. Stek kjøttdeig med taco-krydder (eller bruk kyllingbiter), sett frem lefser, revet ost, mais, agurk, tomat og rømme. Alternativt ovnsbakt pasta med kjøttsaus og ost på toppen, som kan lages ferdig før de kommer. Ha en skål med gulrotstaver og agurk på bordet uansett, det spiser de fleste.
+
+=== t081 | Chicken plov recipe | dinners | - | ru
+U: Есть куриные бёдра, рис, морковь и лук. Хочется чего-то нового, не просто курица с рисом.
+A: Сделайте плов с курицей в одной кастрюле:
+1. Обжарьте бёдра кусками до корочки, добавьте лук полукольцами и морковь соломкой, жарьте 10 минут.
+2. Посыпьте зирой, барбарисом (если есть), солью, положите целую головку чеснока.
+3. Высыпьте промытый рис ровным слоем, не перемешивая, и залейте кипятком на палец выше риса.
+4. Варите на сильном огне, пока вода не уйдёт с поверхности, потом накройте крышкой и томите на минимальном огне 25 минут.
+Перемешайте только перед подачей.
+
+=== t082 | Meal prep for the work week | dinners | nutrition | en
+U: I want to cook on Sunday and have lunches for Monday to Friday. Which dishes keep well for five days?
+A: Five days is at the edge of safe for most cooked food in the fridge, so plan to freeze two portions and move them to the fridge midweek. Dishes that hold up well:
+- chili or lentil stew (better on day 3 than day 1);
+- roasted vegetables with grains like farro or bulgur, dressing kept separate;
+- baked chicken thighs with a marinade, sliced as needed;
+- pasta salad with a vinaigrette rather than mayonnaise.
+Avoid rice dishes for the late-week portions unless frozen; cooked rice is the riskiest leftover.
+U: what about fish?
+A: Cooked fish is best within two days. Use it for Monday and Tuesday, or bake salmon fresh on Wednesday evening — it takes 15 minutes.
+
+=== t083 | One-pan salmon and potatoes | dinners | - | en
+U: Easy oven dinner with salmon fillets and baby potatoes?
+A: Halve the potatoes, toss with oil and salt and roast at 220 °C for 20 minutes. Push them to the sides, add the salmon skin-side down, brush with a mix of mustard, honey and lemon zest, and add green beans or broccoli around it. Roast another 10–12 minutes until the salmon flakes. Everything is ready at once and there's one tray to wash.
+
+=== t084 | Fiskesuppe som bergensere liker | dinners | - | no
+U: Svigerforeldrene kommer fra Bergen og jeg vil lage fiskesuppe. Hvordan får jeg den riktig?
+A: Bergensk fiskesuppe er en kremet, lys suppe. Lag en god kraft (gjerne av fiskeskrog), kok opp med kremfløte og melk og jevn den forsiktig. Tilsett strimlet gulrot, purre og selleri, og la det småkoke til grønnsakene er møre. Til slutt legger du i fiskebiter (sei eller torsk) og eventuelt fiskeboller, og trekker til de akkurat er ferdige. Smak til med salt, pepper, litt sukker og en skvett eddik — den syrlig-søte smaken er det mange bergensere savner hvis den mangler.
+
+=== t085 | Vegetarian dinner guests | dinners | - | en
+U: Two of my four dinner guests are vegetarian. I don't want to cook two separate mains.
+A: Pick a main that is vegetarian and feels like a centrepiece, so nobody is eating the "side" option:
+- a big tray of roasted aubergine with tahini, pomegranate and herbs, served with flatbreads and a lentil salad;
+- mushroom and chestnut wellington;
+- a rich risotto with roasted squash and sage.
+If the meat-eaters will miss meat, add something on the side they can take, like grilled sausages, without making the vegetarians feel like guests at someone else's dinner.
+
+=== t086 | Ужин за 15 минут после работы | dinners | - | ru
+U: Прихожу домой в восемь и сил нет. Дайте 3 варианта ужина минут на 15.
+A: Вот три, которые реально укладываются в 15 минут:
+1. Паста с тунцом: пока варятся спагетти, разогрейте оливковое масло с чесноком и перцем, добавьте консервированный тунец, каперсы и лимонную цедру.
+2. Шакшука: лук и перец 5 минут, банка томатов, сделать лунки и разбить яйца, накрыть на 5–6 минут.
+3. Лапша с овощами: замороженная овощная смесь, соевый соус, яйцо и готовая лапша на сковороде.
+Держите дома банки томатов, тунец, яйца и замороженные овощи — тогда такой ужин всегда возможен.
+
+=== t087 | Cheesecake cracked on top | desserts | - | en
+U: My baked cheesecake always cracks across the top. How do people get it smooth?
+A: Cracks come from the cheesecake rising too much and then shrinking fast. To prevent it:
+- mix on low speed and don't whip air into it, especially after adding eggs;
+- bake in a water bath, or put a tray of hot water on the shelf below;
+- bake low, around 150 °C, until the edges are set but the centre still wobbles;
+- turn the oven off and leave it inside with the door ajar for an hour;
+- run a knife around the edge once out, so it can shrink without tearing.
+
+=== t088 | Kanelboller som blir tørre | desserts | - | no
+U: Kanelbollene mine er gode første dag, men tørre allerede neste morgen.
+A: Tre grep hjelper:
+- Bruk litt mer smør i deigen og ha deigen myk, nesten klissete.
+- Stek kortere og varmere: 225 grader i 8–10 minutter, til de så vidt er gylne.
+- Pensle med sukkerlake (like deler sukker og vann kokt opp) rett etter steking; det holder på fuktigheten.
+Det som ikke spises første dag, kan fryses straks de er avkjølt. Ti sekunder i mikrobølgeovnen, så er de som nybakte.
+
+=== t089 | Chocolate mousse without raw eggs | desserts | - | en
+U: Pregnant friend coming for dinner. Can I make chocolate mousse without raw eggs?
+A: Yes, use aquafaba or whipped cream:
+- Melt 200 g dark chocolate, cool slightly, and fold in 400 ml softly whipped cream in two batches. Chill for 3 hours.
+- For a lighter version, whip the liquid from a can of chickpeas (aquafaba) with a pinch of cream of tartar to stiff peaks and fold it into the melted chocolate.
+Both set well and nobody will miss the eggs. Check that any liqueur you add is fine for her too.
+
+=== t090 | Медовик в домашних условиях | desserts | - | ru
+U: Хочу испечь медовик на день рождения мамы. Это очень сложно?
+A: Не сложно, но долго — заложите полдня и ночь в холодильнике. Основа: на водяной бане смешайте мёд, сахар и масло, добавьте яйца и соду, потом муку, чтобы вышло мягкое тесто. Разделите на 8 частей, раскатайте каждую тонко и пеките по 3–4 минуты. Обрезки высушите и измельчите в крошку. Крем — сметана со сгущёнкой или сметана с сахаром. Соберите торт, обмажьте кремом, посыпьте крошкой и оставьте на ночь: коржи пропитаются и станут мягкими.
+
+=== t091 | Lemon tart filling too runny | desserts | - | en
+U: The lemon curd filling in my tart didn't set and ran everywhere when I cut it.
+A: The curd wasn't cooked enough or the tart wasn't baked long enough. For a cooked curd, keep stirring over low heat until it coats a spoon thickly and reaches about 80 °C, then chill it fully before filling. For a baked filling, bake until the edges are set and the centre has only a slight wobble, then cool and chill for at least 4 hours. Cutting a lemon tart warm almost always ends in a puddle.
+
+=== t092 | Is brown sugar the same as white plus molasses | desserts | - | en
+U: Out of brown sugar. Can I just use white sugar in cookies?
+A: Yes, but the cookies will be crisper and paler, since brown sugar's molasses adds moisture and caramel flavour. If you have molasses or golden syrup, mix 1 tablespoon into each 200 g of white sugar to get close to light brown sugar.
+
+=== t093 | Pour-over coffee tastes sour | coffee-tea | - | en
+U: My V60 coffee tastes sour and thin. Beans are fresh, light roast.
+A: Sour and thin means under-extraction, which is common with light roasts. Adjust one thing at a time:
+- grind finer, until the total brew time is around 3 minutes for 15 g coffee and 250 g water;
+- use hotter water, 94–96 °C, close to boiling for light roasts;
+- bloom for 45 seconds with twice the coffee's weight in water;
+- pour in a few slow stages so the bed stays flat.
+If it turns bitter and dry, you've gone too far; go one step coarser.
+
+=== t094 | Kaffe i presskanne blir grumsete | coffee-tea | - | no
+U: Kaffen fra presskanna mi har alltid grums i bunnen av koppen. Er det noe jeg gjør feil?
+A: Litt grums er normalt med presskanne, men du kan redusere det:
+- Bruk grovere malt kaffe, omtrent som grovt havsalt.
+- Etter fire minutter: rør forsiktig i skorpen øverst, la grumset synke et par minutter til, og skum av det som flyter.
+- Press stempelet bare så vidt ned, helt til overflaten, ikke helt til bunns.
+- Hell rolig og la den siste skvetten stå igjen i kanna.
+
+=== t095 | Чай пуэр как заваривать | coffee-tea | - | ru
+U: Подарили прессованный пуэр блином. Как его правильно заваривать?
+A: Отломите 5–7 г ножом для пуэра, стараясь отделять слои, а не крошить. Сначала промойте чай: залейте кипятком на 5–10 секунд и слейте воду. Потом заваривайте проливами в маленьком чайнике или гайвани: первые проливы по 10–15 секунд, каждый следующий чуть дольше. Шу пуэр заваривают крутым кипятком, шэн — водой около 90 °C. Один и тот же чай выдерживает 6–10 проливов.
+
+=== t096 | Espresso machine for beginners | coffee-tea | - | en
+U: I want to start making espresso at home, budget around 600 euros including grinder. Where should the money go?
+A: Spend at least as much on the grinder as on the machine, ideally more. A good espresso grinder with fine adjustment matters more for taste than the machine does. A sensible split is a grinder around 300–350 euros and a single-boiler machine around 250–300. Add a scale (20–30 euros) — weighing dose and output is how you'll make progress. Expect a week of mediocre shots while you dial in; that's normal.
+
+=== t097 | Cold brew ratio | coffee-tea | - | en
+U: ratio for cold brew concentrate?
+A: About 1:5 coffee to water by weight for a concentrate (e.g. 200 g coarse ground coffee to 1 litre water), steeped 14–18 hours in the fridge, then filtered. Dilute roughly 1:1 with water or milk to drink.
+
+=== t098 | Matcha klumper seg | coffee-tea | - | no
+U: Matchaen min blir full av klumper uansett hvor mye jeg rører.
+A: Sikt pulveret gjennom en tesil først, og lag en pasta med litt vann før du heller på resten. Bruk vann på rundt 75–80 grader, ikke kokende, og visp i et sikksakk-mønster med en bambusvisp til det skummer. Matcha løser seg aldri helt opp, den skal blandes ut, så en sil og en visp gjør mer enn lang røring.
+
+=== t099 | First 10K training plan | running | - | en
+U: I can run 5K in about 32 minutes. I'd like to do a 10K race in 10 weeks. How should I train?
+A: Ten weeks is a comfortable timeline. A simple structure with three runs a week:
+- one easy run, conversational pace, 30–45 minutes;
+- one session with intervals, e.g. 6 × 3 minutes a bit faster than your 5K pace with 2 minutes walking or jogging between;
+- one long run that grows by about 1 km per week, from 6 km to 11 km by week 8.
+Weeks 9–10, cut volume by about a third so you start the race fresh. Most of the gain comes from the long run, so don't skip it.
+U: my knees hurt a little after the long runs
+A: Mild aching that's gone by the next day is common when distance increases. Slow the long runs down, keep the increases small, and check your shoes aren't worn out. If the pain is sharp, located at one spot, or still there the next morning, take a few days off and see a physiotherapist before it becomes an injury.
+
+=== t100 | Løpe om vinteren på glatte veier | running | - | no
+U: Hvordan løper jeg trygt ute når fortauene er dekket av is?
+A: Med brodder. Enten løpesko med piggsåle eller slip-on-brodder som festes på vanlige sko. Ellers:
+- Ta kortere steg og land under kroppen, ikke foran.
+- Velg ruter som strøs eller brøytes, gjerne gangveier i stedet for fortau.
+- Kle deg i lag og ha refleksvest, det er mørkt det meste av dagen.
+- Hopp over intervaller på is; gjør dem på mølle eller i en innendørs hall.
+
+=== t101 | Как не задыхаться при беге | running | - | ru
+U: Начала бегать, через 3 минуты уже задыхаюсь и приходится идти. Это нормально?
+A: Да, на старте почти все бегут слишком быстро. Попробуйте:
+- бегать в таком темпе, чтобы можно было говорить предложениями — даже если это кажется медленнее ходьбы;
+- чередовать: 1 минута бега, 2 минуты шага, 8 повторов, и каждую неделю немного увеличивать бег;
+- дышать ртом и носом одновременно, глубоко, не «верхушками».
+Через 6–8 недель такой схемы большинство спокойно пробегает 20–30 минут без остановки.
+
+=== t102 | Should I run with a heart rate monitor | running | devices | en
+U: My watch says I'm in zone 4 on every easy run. Should I slow down even more?
+A: Possibly, but first check the reading. Wrist sensors often lock onto your cadence instead of your pulse in the first minutes, which shows up as a sudden jump to around 160–170. A chest strap is far more reliable. If the strap confirms it, slow down to the pace where you can talk comfortably; many new runners need to walk on hills at first. Also check that the zones are based on your own max heart rate rather than the 220-minus-age default, which is wrong for many people.
+
+=== t103 | Shin splints after starting to run | running | - | en
+U: Pain along the inside of my shins after two weeks of running every day.
+A: That's a classic overload pattern for new runners — the bones and muscles haven't adapted yet. Running every day is too much at the start. Take 5–7 days off running (cycling or swimming are fine), then restart with every other day and shorter distances. Calf raises and running on softer surfaces help. If one specific spot on the bone is very tender to press, see a doctor, since that can be a stress fracture rather than shin splints.
+
+=== t104 | Halvmaraton i Oslo | running | - | no
+U: Jeg vil løpe Oslo halvmaraton i september. Jeg løper rundt 25 km i uka nå. Er det realistisk?
+A: Ja, med fire måneder igjen er det godt innenfor rekkevidde. Øk ukemengden gradvis til 35–40 km, med én langtur i uka som vokser til 18–19 km tre uker før løpet. Legg inn én økt med tempo eller intervaller, resten rolig. Løypa har noen bakker i sentrum, så ta med noen bakkeintervaller. Siste to uker trapper du ned, og på løpsdagen: start roligere enn du tror du bør.
+
+=== t105 | Trail running shoes or road shoes | running | hiking | en
+U: I mostly run on gravel paths and forest trails. Do I need trail shoes?
+A: For packed gravel, road shoes are fine. For forest trails with roots, mud and rocks, trail shoes are worth it: deeper lugs for grip, a tougher upper and often a rock plate under the forefoot. If you mix both, a "hybrid" trail shoe with lower lugs works on both without feeling clumsy on hard surfaces.
+
+=== t106 | Beginner strength routine | strength | - | en
+U: I've never lifted weights. Gym 3 times a week, 45 minutes. What should I do?
+A: A full-body routine is best at the start. Each session, do three sets of 8–12 reps of:
+- a squat (goblet squat with a dumbbell is easiest to learn);
+- a hinge (Romanian deadlift with dumbbells);
+- a push (dumbbell bench press or push-ups);
+- a pull (lat pulldown or seated row);
+- a carry or plank for the core.
+Pick a weight where the last two reps are hard but your form holds. When you can do 12 good reps in all sets, go up a little. Write it down; progress is easy to see in a notebook and hard to remember.
+
+=== t107 | Styrketrening hjemme uten utstyr | strength | - | no
+U: Kan jeg bli sterkere med bare kroppsvekt hjemme? Har ikke tid til treningssenter.
+A: Ja, særlig i starten. Nøkkelen er å gjøre øvelsene tyngre etter hvert:
+- Knebøy → bulgarske utfall med baksiden på en stol.
+- Armhevinger → armhevinger med føttene høyt.
+- Ro-øvelse under et solid bord, eller med et håndkle rundt et dørhåndtak.
+- Hoftehev på ett bein.
+- Planke med benløft.
+Tre runder, to–tre ganger i uka. Et par justerbare manualer eller en strikk gjør det mye lettere å fortsette å øke belastningen senere.
+
+=== t108 | Deadlift lower back pain | strength | - | en
+U: My lower back aches after deadlifts but not my legs. I think my form is off.
+A: That usually means the back is doing the lifting instead of the hips and legs. Common fixes:
+- bar over mid-foot and touching the shins at the start;
+- push the floor away with your legs first, keep the bar dragging up your legs;
+- brace hard before each rep — big breath into the belly, then tighten as if expecting a punch;
+- don't let the hips shoot up before the bar moves.
+Lower the weight by about 20% and film yourself from the side. Romanian deadlifts with lighter weight are a good way to learn the hip hinge.
+U: video shows my hips rising first
+A: Then the weight is probably too heavy for your leg strength right now. Pause briefly just after the bar leaves the floor for a few weeks; that teaches you to keep your chest and hips rising together.
+
+=== t109 | Сколько белка нужно для роста мышц | strength | nutrition | ru
+U: Хожу в зал полгода. Сколько белка в день нужно, чтобы набирать мышцы?
+A: Для набора мышечной массы обычно рекомендуют 1,6–2,2 г белка на килограмм веса в день. Для человека весом 70 кг это 110–150 г. Распределите его на 3–4 приёма пищи по 25–40 г. Источники: творог, яйца, курица, рыба, бобовые, при необходимости протеин. Больше 2,2 г/кг обычно не даёт дополнительного эффекта. Важнее стабильные тренировки с прогрессией нагрузки и достаточный сон.
+
+=== t110 | Pull-up progression | strength | - | en
+U: Can't do a single pull-up. How do I get my first one?
+A: Train the pieces:
+- negatives: jump to the top, lower yourself as slowly as you can (aim for 5 seconds), 3 sets of 3–5;
+- dead hangs to build grip, 3 × 20–30 seconds;
+- band-assisted pull-ups or the assisted machine, 3 × 6–8;
+- rows for back strength.
+Two or three sessions a week, and most people get their first full pull-up within 6–10 weeks.
+
+=== t111 | Treningsprogram for 50-åringer | strength | - | no
+U: Jeg er 54 og har aldri trent styrke. Er det for sent å begynne?
+A: Nei, og det er nettopp i den alderen styrketrening gir mest: den bremser tap av muskelmasse og beintetthet og gjør hverdagen lettere. Begynn med to økter i uka med lette vekter og fokus på teknikk, gjerne med en personlig trener de første gangene. Øvelser som knebøy til en stol, roing, benkpress med manualer og markløft med lett vekt dekker det meste. Øk belastningen gradvis, og regn med å merke forskjell etter 6–8 uker.
+
+=== t112 | Sore for days after leg day | strength | - | en
+U: After my first leg day in years I can barely walk down the stairs, three days later.
+A: That's DOMS, delayed onset muscle soreness, and it peaks 24–72 hours after unfamiliar exercise. Light movement helps more than rest: walking, an easy bike ride, gentle squats with no weight. It'll fade within a few more days, and the next session with the same exercises will hurt far less. Start the following weeks with fewer sets and build up.
+
+=== t113 | Creatine — worth it? | strength | nutrition | en
+U: Is creatine actually useful or just marketing?
+A: It's one of the best-studied supplements and does work for strength training: a few percent more strength and a bit more muscle over months, mostly by letting you do slightly more work in each set. Take 3–5 g of creatine monohydrate daily, any time of day; loading phases aren't needed. You may gain 1–2 kg of water weight at first. Expensive versions offer nothing over plain monohydrate.
+
+=== t114 | Commuting by bike in the rain | cycling | - | en
+U: Starting to commute 12 km by bike. How do I not arrive soaked?
+A: Fenders are the single biggest upgrade — full-length ones with a mudflap keep road spray off your back and feet. Add a breathable rain jacket, rain trousers or a rain cape, and overshoes for heavy days. Keep a change of socks and a towel at work. Panniers instead of a backpack mean less sweat on your back.
+
+=== t115 | Sykkel med el-motor til jobb | cycling | - | no
+U: Vurderer el-sykkel for å sykle 18 km til jobb. Hva bør jeg se etter?
+A: For en så lang pendlerdistanse:
+- Midtmotor gir naturlig følelse og takler bakker best.
+- Batteri på minst 500 Wh, så du klarer tur–retur med marginer om vinteren.
+- Skivebremser, skjermer, bagasjebrett og lys som drives av batteriet.
+- Mulighet for piggdekk hvis du vil sykle hele vinteren.
+Sjekk også om arbeidsgiveren har sykkelparkering med lading og om du har rett på el-sykkeltilskudd i kommunen.
+
+=== t116 | Велосипед скрипит при педалировании | cycling | - | ru
+U: При каждом обороте педалей что-то скрипит. Где искать?
+A: Чаще всего скрип от педалей или каретки. Проверяйте по порядку:
+1. Снимите педали, смажьте резьбу и закрутите обратно.
+2. Проверьте затяжку шатунов.
+3. Смажьте цепь и посмотрите, не скрипит ли при этом.
+4. Если не помогло — каретка: её нужно снять, почистить и смазать, а при износе заменить.
+Попробуйте крутить педали стоя и сидя: если сидя скрипа нет, виновато седло или подседельный штырь.
+
+=== t117 | Bike fit: knee pain on longer rides | cycling | - | en
+U: After 40 km my knee hurts at the front. Bike is new.
+A: Pain at the front of the knee usually means the saddle is too low or too far forward. With your heel on the pedal at the bottom of the stroke, your leg should be straight; then, with the ball of your foot on the pedal, you'll have a slight bend. Raise the saddle in small steps (5 mm), and check the cleats if you use clipless pedals — toes pointing the wrong way can twist the knee. A professional bike fit is worth it if you ride a lot.
+
+=== t118 | First gravel ride | cycling | hiking | en
+U: Planning a 60 km gravel ride with some forest roads. What should I bring?
+A: For a ride that length: two bottles or a hydration pack, snacks every 45 minutes, a spare tube even if you run tubeless, a mini pump, tyre levers, a multitool with a chain breaker, a quick link, and your phone with an offline map. Tell someone your route. On loose gravel, lower tyre pressure (2–2.5 bar for 40 mm tyres) helps grip and comfort more than anything else.
+
+=== t119 | Indoor trainer winter plan | cycling | - | en
+U: I have a smart trainer for the winter. How do I stay motivated for 4 months?
+A: Structure helps more than willpower. Pick a goal for spring (a sportive, a time), follow a plan with two short interval sessions and one longer easy ride per week, and keep sessions under an hour on weekdays. Zwift or similar apps help with group rides, and a fan pointed at you matters more than people expect — overheating is the main reason indoor rides feel awful.

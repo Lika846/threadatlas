@@ -1,0 +1,222 @@
+[
+ {
+  "id": "LQ01",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 61,
+  "bestUnitExcerpt": "One idea for the empty corner by the door: set up a small book-swap shelf for the neighbours in your building, with a notebook where people write down what they",
+  "offsets": [
+   3031,
+   3268
+  ]
+ },
+ {
+  "id": "LQ02",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 57,
+  "bestUnitExcerpt": "Since you have hundreds of plankton photos from your fieldwork, one side idea is to turn them into a simple online identification key that first-year students c",
+  "offsets": [
+   2882,
+   3117
+  ]
+ },
+ {
+  "id": "LQ03",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 52,
+  "bestUnitExcerpt": "If finishing the whole game still feels too big, there is another option: release the level editor on its own, with your twelve levels as examples, so that othe",
+  "offsets": [
+   2332,
+   2546
+  ]
+ },
+ {
+  "id": "LQ04",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 47,
+  "bestUnitExcerpt": "Når hytta er ferdig, kan dere lage en enkel felles kalender på nett der hele familien reserverer helgene og feriene sine, så slipper dere krangel om hvem som sk",
+  "offsets": [
+   2549,
+   2738
+  ]
+ },
+ {
+  "id": "LQ05",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 60,
+  "bestUnitExcerpt": "Siden du kjenner flere som også har vært skadet, kan du starte en liten løpegruppe på søndager for folk som er på vei tilbake etter skade, med rolig tempo og en",
+  "offsets": [
+   2139,
+   2383
+  ]
+ },
+ {
+  "id": "LQ06",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 65,
+  "bestUnitExcerpt": "En idé er et abonnement der kundene får et surdeigsbrød levert med sykkel hver fredag morgen, slik at du vet på forhånd hvor mye du skal bake og får faste innte",
+  "offsets": [
+   2183,
+   2445
+  ]
+ },
+ {
+  "id": "LQ07",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 52,
+  "bestUnitExcerpt": "Перед отъездом можно сделать фотокнигу о вашем старом дворе и соседях, чтобы дети взяли с собой память о Самаре и им было легче привыкнуть к новому месту.\n\nДайт",
+  "offsets": [
+   2346,
+   2533
+  ]
+ },
+ {
+  "id": "LQ08",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 68,
+  "bestUnitExcerpt": "Например, можно написать бота, который каждое утро присылает расписание электричек до вашей станции: маленький проект, на котором удобно научиться работать с ин",
+  "offsets": [
+   2002,
+   2276
+  ]
+ },
+ {
+  "id": "LQ09",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 60,
+  "bestUnitExcerpt": "Можно договориться с соседями и устроить весной обмен семенами и рассадой прямо у ворот товарищества, тогда у всех будут новые сорта почти бесплатно.\n\nИз инстру",
+  "offsets": [
+   1981,
+   2205
+  ]
+ },
+ {
+  "id": "LQ10",
+  "rank": 3,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 47,
+  "bestUnitExcerpt": "Når hytta er ferdig, kan dere lage en enkel felles kalender på nett der hele familien reserverer helgene og feriene sine, så slipper dere krangel om hvem som sk",
+  "offsets": [
+   2549,
+   2738
+  ]
+ },
+ {
+  "id": "LQ11",
+  "rank": 3,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 52,
+  "bestUnitExcerpt": "Перед отъездом можно сделать фотокнигу о вашем старом дворе и соседях, чтобы дети взяли с собой память о Самаре и им было легче привыкнуть к новому месту.\n\nДайт",
+  "offsets": [
+   2346,
+   2533
+  ]
+ },
+ {
+  "id": "LQ12",
+  "rank": 7,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 68,
+  "bestUnitExcerpt": "Например, можно написать бота, который каждое утро присылает расписание электричек до вашей станции: маленький проект, на котором удобно научиться работать с ин",
+  "offsets": [
+   2002,
+   2276
+  ]
+ },
+ {
+  "id": "LQ13",
+  "rank": 15,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 65,
+  "bestUnitExcerpt": "En idé er et abonnement der kundene får et surdeigsbrød levert med sykkel hver fredag morgen, slik at du vet på forhånd hvor mye du skal bake og får faste innte",
+  "offsets": [
+   2183,
+   2445
+  ]
+ },
+ {
+  "id": "LQ14",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 30,
+  "bestUnitExcerpt": "Thanks. Separate question: our garden shed is full of junk. Could it become a small woodworking workshop?",
+  "offsets": [
+   0,
+   105
+  ]
+ },
+ {
+  "id": "LQ15",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 61,
+  "bestUnitExcerpt": "Twelve minutes is about ten slides. Choose one main message you want the audience to remember and build the talk around it: the question, why it matters, what y",
+  "offsets": [
+   0,
+   242
+  ]
+ },
+ {
+  "id": "LQ16",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 46,
+  "bestUnitExcerpt": "For en hytte uten strøm er et frittstående solcelleanlegg med batteribank vanlig. Start med å regne ut forbruket: lys, kjøleskap, lading og kanskje en vannpumpe",
+  "offsets": [
+   0,
+   161
+  ]
+ },
+ {
+  "id": "LQ17",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 20,
+  "bestUnitExcerpt": "И ещё вопрос: стоит ли продавать машину или перегонять её самим?",
+  "offsets": [
+   0,
+   64
+  ]
+ },
+ {
+  "id": "LQ18",
+  "rank": 4,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 57,
+  "bestUnitExcerpt": "Du må registrere deg i Merverdiavgiftsregisteret når omsetningen passerer 50 000 kroner i løpet av tolv måneder. En regnskapsfører koster noen tusen kroner i må",
+  "offsets": [
+   138,
+   355
+  ]
+ },
+ {
+  "id": "LQ19",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 66,
+  "bestUnitExcerpt": "Next, ergonomics. A fixed desk should be 72 to 75 cm high for most adults; if you can afford it, a sit-stand frame is worth more than a fancy desktop. The top o",
+  "offsets": [
+   455,
+   701
+  ]
+ },
+ {
+  "id": "LQ20",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 68,
+  "bestUnitExcerpt": "Сделайте капельный полив. Бочка на подставке и шланги с капельницами экономят воду и время, особенно если вы приезжаете только на выходные. Таймер на кране позв",
+  "offsets": [
+   569,
+   801
+  ]
+ }
+]

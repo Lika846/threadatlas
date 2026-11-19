@@ -1,0 +1,50 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: duplicate, older copy",
+    "update_time": 1767571200,
+    "conversation_id": "dup-0001",
+    "mapping": { "n1": { "id": "n1", "message": { "id": "n1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary older."] } }, "parent": null, "children": [] } }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: duplicate, newer copy",
+    "update_time": 1767571300,
+    "conversation_id": "dup-0001",
+    "mapping": { "n1": { "id": "n1", "message": { "id": "n1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary newer."] } }, "parent": null, "children": [] } }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: tie A",
+    "update_time": 1767571400,
+    "conversation_id": "dup-0002",
+    "mapping": { "n1": { "id": "n1", "message": { "id": "n1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary tie A."] } }, "parent": null, "children": [] } }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: tie B",
+    "update_time": 1767571400,
+    "conversation_id": "dup-0002",
+    "mapping": { "n1": { "id": "n1", "message": { "id": "n1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary tie B."] } }, "parent": null, "children": [] } }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: no update time",
+    "conversation_id": "dup-0003",
+    "mapping": { "n1": { "id": "n1", "message": { "id": "n1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary missing time."] } }, "parent": null, "children": [] } }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: with update time",
+    "update_time": 1767571500,
+    "conversation_id": "dup-0003",
+    "mapping": { "n1": { "id": "n1", "message": { "id": "n1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary with time."] } }, "parent": null, "children": [] } }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: unique",
+    "update_time": 1767571600,
+    "conversation_id": "unique-0004",
+    "mapping": { "n1": { "id": "n1", "message": { "id": "n1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary unique."] } }, "parent": null, "children": [] } }
+  }
+]

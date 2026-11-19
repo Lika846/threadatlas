@@ -1,0 +1,6 @@
+{"importMs":118,"loadMs":1130,"firstQueryMs":14.7,"secondQueryMs":4.3,"rssAfterLoadMb":803,"peakRssMb":805,"tripwireAttempts":0}
+[tripwire] network attempts: 0
+{"importMs":113,"loadMs":1169,"firstQueryMs":9.8,"secondQueryMs":5.7,"rssAfterLoadMb":799,"peakRssMb":800,"tripwireAttempts":0}
+[tripwire] network attempts: 0
+{"importMs":118,"loadMs":1153,"firstQueryMs":16.2,"secondQueryMs":6.7,"rssAfterLoadMb":838,"peakRssMb":839,"tripwireAttempts":0}
+[tripwire] network attempts: 0

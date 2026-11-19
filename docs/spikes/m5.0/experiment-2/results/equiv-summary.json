@@ -1,0 +1,36 @@
+{
+ "texts": 267,
+ "over512": 6,
+ "tokenIdsIdentical": true,
+ "idMismatches": [],
+ "tfjs_b16_vs_direct_b16": {
+  "minCosine": 0.9999994932813037,
+  "maxAbsDiff": 1.341104507446289e-7
+ },
+ "tfjs_b1_vs_direct_b1": {
+  "minCosine": 0.9999995823045313,
+  "maxAbsDiff": 1.341104507446289e-7
+ },
+ "tfjs_b16_vs_tfjs_b1": {
+  "minCosine": 0.9425827365707895,
+  "maxAbsDiff": 0.05164564307779074
+ },
+ "direct_b16_vs_direct_b1": {
+  "minCosine": 0.9425827166017609,
+  "maxAbsDiff": 0.051645657513290644
+ },
+ "truncation_tfjs_vs_reference_on_long": {
+  "minCosine": 0.9747812454305403,
+  "maxAbsDiff": 0.035702262073755264
+ },
+ "lastTokenOnLong": [
+  {
+   "tfjs": 51169,
+   "reference": 2
+  },
+  {
+   "tfjs": 123055,
+   "reference": 2
+  }
+ ]
+}

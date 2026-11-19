@@ -1,0 +1,1222 @@
+# Edges: max | mutual k=5 (generic)
+
+Each edge: similarity, titles, labels (primary topic / second topic), and the best-matching pair of passages.
+
+
+## Cross-theme links the labels support (16)
+
+- **0.89** “Window function: running total per customer” (sql, en) ↔ “Spreadsheet for tracking shared flat costs” (budgeting+py-data, en)
+  - "Use `SUM` as a window function partitioned by customer: ```sql SELECT customer_id, paid_at, amount, SUM(amount"
+  - "Make one table with columns Date, Paid by, Amount, Description. Then a summary block: - total spent: `=SUM(C:C"
+- **1.00** “Middag til fem barn på en hverdag” (dinners+parenting, no) ↔ “Fjelltur med barn” (hiking+parenting, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **0.90** “Trail running shoes or road shoes” (running+hiking, en) ↔ “Hiking boots or trail runners” (hiking+running, en)
+  - "For packed gravel, road shoes are fine. For forest trails with roots, mud and rocks, trail shoes are worth it:"
+  - "On well-marked trails with a light pack, many hikers now prefer trail runners: lighter, dry faster and cause f"
+- **0.91** “Styrketrening hjemme uten utstyr” (strength, no) ↔ “Søvn og trening om kvelden” (sleep+strength, no)
+  - "Kan jeg bli sterkere med bare kroppsvekt hjemme? Har ikke tid til treningssenter."
+  - "Jeg trener styrke kl. 21 fordi det er eneste ledige tid. Etterpå klarer jeg ikke sove før kl. 1."
+- **0.89** “Сколько белка нужно для роста мышц” (strength+nutrition, ru) ↔ “Питание при повышенном холестерине” (nutrition, ru)
+  - "Распределите его на 3–4 приёма пищи по 25–40 г. Источники: творог, яйца, курица, рыба, бобовые, при необходимо"
+  - "- больше растворимой клетчатки: овсянка, бобовые, яблоки, ячмень; - рыба 2 раза в неделю; - меньше переработан"
+- **0.90** “Treningsprogram for 50-åringer” (strength, no) ↔ “Søvn og trening om kvelden” (sleep+strength, no)
+  - "Jeg er 54 og har aldri trent styrke. Er det for sent å begynne?"
+  - "Jeg trener styrke kl. 21 fordi det er eneste ledige tid. Etterpå klarer jeg ikke sove før kl. 1."
+- **0.89** “Kids bedtime takes two hours” (sleep+parenting, en) ↔ “Toddler tantrums in the supermarket” (parenting, en)
+  - "- if they get up, walk them back calmly with as little talk as possible, every time. Also check the timing: a "
+  - "Afterwards, reconnect without a lecture. To prevent them: shop after naps and meals, give a job (holding the l"
+- **1.00** “Vegan and iron levels” (nutrition, en) ↔ “Dog food: grain-free?” (dogs+nutrition, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Snacks for a long hike” (nutrition+hiking, en) ↔ “Packing for a hut-to-hut hike in Jotunheimen” (hiking+logistics, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **0.91** “Ремонт в съёмной квартире” (renovation+renting, ru) ↔ “Сосед сверху затопил” (renting+repairs, ru)
+  - "Снимаю квартиру надолго, хочу освежить: покрасить стены, поменять светильники. Нужно ли спрашивать хозяина?"
+  - "Снимаю квартиру, сосед сверху залил ванную, на потолке пятно и отходит краска. Кто должен платить?"
+- **0.89** “Ремонт в съёмной квартире” (renovation+renting, ru) ↔ “Плохо сплю после переезда” (sleep+moving, ru)
+  - "Опишите, что именно хотите сделать, и предложите варианты: нейтральные цвета, сохранить старые светильники и в"
+  - "Тогда можно поговорить с хозяином — иногда соглашаются, если вы готовы разделить расходы. Временное решение: п"
+- **1.00** “Hvordan lese til eksamen i statsvitenskap” (exams, no) ↔ “Stress før eksamen og jobbsøking samtidig” (stress+exams, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **0.89** “Hiking boots or trail runners” (hiking+running, en) ↔ “Training for a trail race” (running+hiking, en)
+  - "On well-marked trails with a light pack, many hikers now prefer trail runners: lighter, dry faster and cause f"
+  - "Most trail runners hike the steep sections — it's often as fast and saves energy. Practise power-hiking with h"
+- **1.00** “Fjelltur med barn” (hiking+parenting, no) ↔ “Skjermtid for 10-åringen” (parenting, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **0.88** “Adopting a rescue dog” (dogs, en) ↔ “Moving checklist with kids” (moving+parenting, en)
+  - "Keep the first weeks quiet and predictable: a crate or bed in a calm corner, the same feeding and walk times, "
+  - "- Moving week: an \"open first\" box with bedding, kettle, chargers, toilet paper, and the kids' favourite thing"
+- **1.00** “Помогите с эссе на английском для поступления” (applications+languages, ru) ↔ “Мой сын не хочет читать” (parenting+exams, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+
+## Cross-topic links within a theme (via a second topic) (10)
+
+- **0.89** “Postgres connection pool exhausted” (web-backend+sql, en) ↔ “SQLite or Postgres for a side project” (sql, en)
+  - "8 instances × 20 connections = 160, and Postgres defaults to `max_connections = 100`. Each instance is allowed"
+  - "Turn on WAL mode for better concurrency. Postgres is worth it once you have several app servers writing at the"
+- **1.00** “Rate limiting a public endpoint” (web-backend, en) ↔ “Deploying a small app cheaply” (git-devops+web-backend, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **0.91** “Database design for tags” (sql, en) ↔ “Debugging a slow Django page” (web-backend+sql, en)
+  - "A comma-separated column can't be indexed properly, makes \"articles with tag X\" queries slow and error-prone, "
+  - "Look at the slowest remaining query in the toolbar and run `EXPLAIN ANALYZE` on it. Probably a missing index o"
+- **0.89** “Kitchen tap dripping” (repairs, en) ↔ “Renovating an old bathroom floor” (renovation+repairs, en)
+  - "Take it to a plumbing shop to match the size, or order by the tap's model number. Fitting the new one takes te"
+  - "When you refit it on the new floor, use a new seal, make sure the flange is level and screwed down, and use sh"
+- **0.88** “Door won't close properly” (repairs, en) ↔ “Renovating an old bathroom floor” (renovation+repairs, en)
+  - "If it still rubs, mark the spot with chalk, take the door off and plane a millimetre or two, then seal the pla"
+  - "Good news. Cut out the rotten boards back to the nearest joists, let the area dry fully (a fan for a few days)"
+- **0.89** “Mould around the shower” (repairs, en) ↔ “Renovating an old bathroom floor” (renovation+repairs, en)
+  - "Cut out the old silicone, clean the joint with a mould remover, let it dry completely (24 hours), and apply ne"
+  - "Good news. Cut out the rotten boards back to the nearest joists, let the area dry fully (a fan for a few days)"
+- **0.89** “Fixing a wobbly chair” (repairs+crafts, en) ↔ “Renovating an old bathroom floor” (renovation+repairs, en)
+  - "Don't just add screws — reglue the joint. Gently knock it apart with a rubber mallet, scrape out the old glue,"
+  - "Good news. Cut out the rotten boards back to the nearest joists, let the area dry fully (a fan for a few days)"
+- **0.90** “Emergency fund size” (budgeting+investing, en) ↔ “Index funds for a beginner” (investing, en)
+  - "Go toward 6 if your income is irregular, you're the only earner, or you own a home. Keep it in a high-interest"
+  - "Set up a monthly automatic purchase so you keep investing regardless of the news. Expect the value to drop 20–"
+- **0.89** “Emergency fund size” (budgeting+investing, en) ↔ “Crypto: worth putting money in?” (investing, en)
+  - "Go toward 6 if your income is irregular, you're the only earner, or you own a home. Keep it in a high-interest"
+  - "If you want exposure, treat it like a lottery-style bet: a small amount you can afford to lose completely (man"
+- **0.90** “Index funds for a beginner” (investing, en) ↔ “Monthly budget for a couple saving for a house” (budgeting+investing, en)
+  - "Your fund will drop, maybe by a lot, but with monthly purchases you keep buying at lower prices. Over long per"
+  - "With a three-year horizon, mostly no — a stock market drop could delay your purchase. High-interest savings or"
+
+## False by the labels (shares neither topic nor theme) (309)
+
+- **1.00** “Plot monthly sales with a rolling average” (py-data, en) ↔ “Pull-up progression” (strength, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Plot monthly sales with a rolling average” (py-data, en) ↔ “Tax deduction for home office” (taxes, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Plot monthly sales with a rolling average” (py-data, en) ↔ “Anki deck for vocabulary” (languages, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **0.89** “Fix SettingWithCopyWarning” (py-data, no) ↔ “Telefonen blir varm og batteriet tømmes” (devices, no)
+  - "Advarselen kommer fordi `aktive` kan være en kopi av en del av `df`, og da er det uklart om du vil endre origi"
+  - "Da har du funnet synderen. Begrens bakgrunnsbruken for den appen, eller la den bare synkronisere når du åpner "
+- **0.89** “Jupyter kernel keeps dying” (py-data, en) ↔ “Kitchen tap dripping” (repairs, en)
+  - "Nice. Saving it as Parquet now will make every later load take seconds instead of minutes."
+  - "Much cheaper than a new tap. Nicely done."
+- **1.00** “Разбор дат в разных форматах” (py-data, ru) ↔ “Новый пол на кухне” (renovation, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Разбор дат в разных форматах” (py-data, ru) ↔ “Что посмотреть в Стамбуле за 3 дня” (city-trips, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Разбор дат в разных форматах” (py-data, ru) ↔ “Как работает GPS” (one-off, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Rens telefonnumre i et regneark med Python” (py-data, no) ↔ “Kaffe i presskanne blir grumsete” (coffee-tea, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **1.00** “Rens telefonnumre i et regneark med Python” (py-data, no) ↔ “Katten tisser utenfor kassen” (cats, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **1.00** “Rens telefonnumre i et regneark med Python” (py-data, no) ↔ “Stress før eksamen og jobbsøking samtidig” (stress+exams, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **1.00** “Seaborn heatmap of correlations” (py-data, en) ↔ “Rome with a toddler” (city-trips+parenting, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Seaborn heatmap of correlations” (py-data, en) ↔ “Deposit not returned” (renting, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Seaborn heatmap of correlations” (py-data, en) ↔ “Mushroom identification” (one-off, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Seaborn heatmap of correlations” (py-data, en) ↔ “Hike Trolltunga safely” (hiking, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Missing values: fill or drop?” (py-data, en) ↔ “Shin splints after starting to run” (running, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Missing values: fill or drop?” (py-data, en) ↔ “Train from Oslo to Stockholm” (logistics, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Missing values: fill or drop?” (py-data, en) ↔ “Rebuilding a bike's rear wheel” (cycling+repairs, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Express API returns 404 for every route” (web-backend, en) ↔ “Digital detox weekend” (stress, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Express API returns 404 for every route” (web-backend, en) ↔ “Indoor cat bored” (cats, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Express API returns 404 for every route” (web-backend, en) ↔ “Robot vacuum worth it?” (smart-home+organising, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Rate limiting a public endpoint” (web-backend, en) ↔ “Choosing a thesis topic” (thesis, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **0.90** “Background jobs in a web app” (web-backend, en) ↔ “Monthly budget for a couple saving for a house” (budgeting+investing, en)
+  - "and if the worker crashes halfway?"
+  - "and if one of us loses their job?"
+- **0.90** “Hvordan logge riktig i en Node-tjeneste” (web-backend, no) ↔ “Organisere boden” (organising+organising, no)
+  - "- Bruk nivåer konsekvent: `error` når noe må fikses, `warn` for ting som går bra men er rare, `info` for vikti"
+  - "Bruk like, gjennomsiktige bokser med etiketter, og sett ofte brukte ting nærmest døra. En enkel liste i telefo"
+- **0.89** “Hvordan logge riktig i en Node-tjeneste” (web-backend, no) ↔ “Sette opp gjestenett hjemme” (network, no)
+  - "Loggene våre er bare console.log overalt og helt umulige å søke i. Hva er god praksis?"
+  - "Hvordan lager jeg et eget wifi for gjester så de ikke kommer inn på det vanlige nettet vårt?"
+- **0.90** “Websocket disconnects every 60 seconds” (web-backend, en) ↔ “New chat” (network+devices, en)
+  - "Two fixes, ideally both: - send a ping from the server every 25–30 seconds so the connection is never idle;"
+  - "Great. If it happens again after a router restart, the fixed IP will stop it for good."
+- **1.00** “Хранить файлы в базе или на диске” (web-backend, ru) ↔ “Что посмотреть в Стамбуле за 3 дня” (city-trips, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Form state in React getting messy” (frontend, en) ↔ “Cold brew ratio” (coffee-tea, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Tailwind classes not applied” (frontend, en) ↔ “Tax deduction for home office” (taxes, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Tailwind classes not applied” (frontend, en) ↔ “Anki deck for vocabulary” (languages, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Tailwind classes not applied” (frontend, en) ↔ “Dog pulls on the leash” (dogs, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Tailwind classes not applied” (frontend, en) ↔ “Applying for a residence permit for my partner” (bureaucracy, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Accessible modal dialog” (frontend, en) ↔ “Quitting a job gracefully” (workplace, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Liste i React blir treg med 5000 rader” (frontend, no) ↔ “Middag til fem barn på en hverdag” (dinners+parenting, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Liste i React blir treg med 5000 rader” (frontend, no) ↔ “Potato late blight” (vegetables, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Liste i React blir treg med 5000 rader” (frontend, no) ↔ “Hjemmekontor og ensomhet” (workplace+stress, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Liste i React blir treg med 5000 rader” (frontend, no) ↔ “Novelle om en gammel båt” (fiction, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Component library or build our own?” (frontend, en) ↔ “Shin splints after starting to run” (running, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Component library or build our own?” (frontend, en) ↔ “Calorie counting for weight loss” (nutrition, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Component library or build our own?” (frontend, en) ↔ “Short story about a lighthouse” (fiction, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Component library or build our own?” (frontend, en) ↔ “Explain inflation like I'm 12” (one-off, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Component library or build our own?” (frontend, en) ↔ “Rebuilding a bike's rear wheel” (cycling+repairs, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Undo the last commit but keep my changes” (git-devops, en) ↔ “Shin splints after starting to run” (running, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Undo the last commit but keep my changes” (git-devops, en) ↔ “Calorie counting for weight loss” (nutrition, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Undo the last commit but keep my changes” (git-devops, en) ↔ “Short story about a lighthouse” (fiction, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Undo the last commit but keep my changes” (git-devops, en) ↔ “Change of address checklist” (moving+bureaucracy, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Merge conflict in package-lock.json” (git-devops, en) ↔ “Beginner strength routine” (strength, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Merge conflict in package-lock.json” (git-devops, en) ↔ “Garage conversion to home office” (renovation, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Merge conflict in package-lock.json” (git-devops, en) ↔ “Origami crane instructions” (one-off, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **0.90** “Commit-melding på engelsk” (git-devops, no) ↔ “Unfinished fantasy novel” (fiction+stress, en)
+  - "Store the token first, then update the session. Add a regression test. ```"
+  - "Keep a \"fix later\" document where you note what you want to change. Set a modest daily target, like 300 words,"
+- **1.00** “GitHub Actions: cache node_modules” (git-devops, en) ↔ “Creatine — worth it?” (strength+nutrition, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “GitHub Actions: cache node_modules” (git-devops, en) ↔ “Which e-reader” (devices, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “GitHub Actions: cache node_modules” (git-devops, en) ↔ “Origin of the word "salary"” (one-off, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “GitHub Actions: cache node_modules” (git-devops, en) ↔ “Help with a crossword clue” (one-off, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Как настроить автодеплой на VPS” (git-devops+web-backend, ru) ↔ “Течёт бачок унитаза” (repairs, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **1.00** “Как настроить автодеплой на VPS” (git-devops+web-backend, ru) ↔ “Math exam preparation” (exams, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **1.00** “Как настроить автодеплой на VPS” (git-devops+web-backend, ru) ↔ “Кошка не ест сухой корм” (cats, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **1.00** “Как настроить автодеплой на VPS” (git-devops+web-backend, ru) ↔ “Лучшее время посетить Байкал” (one-off, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **0.88** “Kubernetes pod in CrashLoopBackOff” (git-devops, en) ↔ “iPhone storage full” (devices, en)
+  - "A probe that starts too early is a common cause after a deploy that made startup slower."
+  - "\"System Data\" sometimes balloons; a restart often shrinks it."
+- **1.00** “Pre-commit hooks for formatting” (git-devops, en) ↔ “Dog food: grain-free?” (dogs+nutrition, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Pre-commit hooks for formatting” (git-devops, en) ↔ “Elderly father refuses help at home” (elderly, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Ускорить сборку Docker-образа” (git-devops, ru) ↔ “Виза в Японию для граждан России” (logistics, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **1.00** “Ускорить сборку Docker-образа” (git-devops, ru) ↔ “Подросток не хочет разговаривать” (parenting, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **1.00** “Ускорить сборку Docker-образа” (git-devops, ru) ↔ “Noisy laptop fan” (devices, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **1.00** “Ускорить сборку Docker-образа” (git-devops, ru) ↔ “Помогите с эссе на английском для поступления” (applications+languages, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **1.00** “Ускорить сборку Docker-образа” (git-devops, ru) ↔ “Мой сын не хочет читать” (parenting+exams, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **1.00** “EXPLAIN shows a sequential scan” (sql, en) ↔ “Fiddle leaf fig dropping leaves” (houseplants, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “EXPLAIN shows a sequential scan” (sql, en) ↔ “Receipts for VAT as a small business” (taxes, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “EXPLAIN shows a sequential scan” (sql, en) ↔ “The Monty Hall problem” (one-off, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Cron job that doesn't run” (automation, en) ↔ “Beginner strength routine” (strength, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Cron job that doesn't run” (automation, en) ↔ “Rome with a toddler” (city-trips+parenting, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Automatisk sende rapport på e-post” (automation, no) ↔ “Meditasjon for nybegynnere” (stress, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **1.00** “Automatisk sende rapport på e-post” (automation, no) ↔ “Grønnsakshage for nybegynnere” (vegetables, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **1.00** “Automatisk sende rapport på e-post” (automation, no) ↔ “Stueplanter når vi er på ferie” (houseplants, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **1.00** “Automatisk sende rapport på e-post” (automation, no) ↔ “Kan katter drikke melk” (cats, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **1.00** “Automatisk sende rapport på e-post” (automation, no) ↔ “Hvordan lage et godt passord” (devices, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **0.89** “Скрипт для выгрузки курсов валют” (automation, ru) ↔ “Слишком много подписок и денег не хватает” (budgeting, ru)
+  - "``` Запускайте его раз в день через cron или планировщик Windows."
+  - "Удалите приложения доставки с главного экрана, держите дома замороженные готовые блюда на «ленивый» вечер и ра"
+- **1.00** “Sourdough starter smells like nail polish” (bread, en) ↔ “Rome with a toddler” (city-trips+parenting, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **0.88** “Почему корка у хлеба мягкая” (bread, ru) ↔ “Shifting a late sleep schedule” (sleep, ru)
+  - "- допекать до тёмно-золотистого цвета, не вынимать слишком рано; - остужать на решётке, а не на доске — снизу "
+  - "- сразу после подъёма — яркий свет: прогулка 15–20 минут или лампа 10 000 люкс; - вечером за 2 часа до сна при"
+- **0.89** “Почему корка у хлеба мягкая” (bread, ru) ↔ “Как убрать пятно от красного вина” (organising, ru)
+  - "- допекать до тёмно-золотистого цвета, не вынимать слишком рано; - остужать на решётке, а не на доске — снизу "
+  - "Действуйте сразу: промокните (не трите!) бумажными полотенцами, затем посыпьте пятно солью или содой, чтобы вп"
+- **0.88** “Почему корка у хлеба мягкая” (bread, ru) ↔ “Как выбрать арбуз” (one-off, ru)
+  - "- допекать до тёмно-золотистого цвета, не вынимать слишком рано; - остужать на решётке, а не на доске — снизу "
+  - "При постукивании звук звонкий, глуховатый. Корка блестящая и плотная, ногтем не продавливается."
+- **1.00** “Rugbrød med surdeig” (bread, no) ↔ “Sykkel med el-motor til jobb” (cycling, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **1.00** “Middag til fem barn på en hverdag” (dinners+parenting, no) ↔ “Potato late blight” (vegetables, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Middag til fem barn på en hverdag” (dinners+parenting, no) ↔ “Hjemmekontor og ensomhet” (workplace+stress, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Middag til fem barn på en hverdag” (dinners+parenting, no) ↔ “Matteangst” (exams, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Fiskesuppe som bergensere liker” (dinners, no) ↔ “Tale til pappas 70-årsdag” (speeches, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “Fiskesuppe som bergensere liker” (dinners, no) ↔ “Hvordan komme i gang med indeksfond” (investing+budgeting, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “Fiskesuppe som bergensere liker” (dinners, no) ↔ “Hvordan fungerer nordlys” (one-off, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “Fiskesuppe som bergensere liker” (dinners, no) ↔ “Bursdagsleken til 6-åring” (one-off, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “Ужин за 15 минут после работы” (dinners, ru) ↔ “Огурцы горчат” (vegetables, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Ужин за 15 минут после работы” (dinners, ru) ↔ “Инвестиции: вклад или облигации” (investing, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Ужин за 15 минут после работы” (dinners, ru) ↔ “Как работает GPS” (one-off, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Ужин за 15 минут после работы” (dinners, ru) ↔ “Пересдача экзамена в университете” (exams, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **0.89** “Kanelboller som blir tørre” (desserts, no) ↔ “Spise mindre sukker” (nutrition, no)
+  - "- Pensle med sukkerlake (like deler sukker og vann kokt opp) rett etter steking; det holder på fuktigheten. De"
+  - "- Finn noe å gjøre med hendene foran TV-en, for eksempel strikking eller et puslespill. Sukkersuget avtar gjer"
+- **0.89** “Kanelboller som blir tørre” (desserts, no) ↔ “Strømregningen er altfor høy” (budgeting+repairs, no)
+  - "- Stek kortere og varmere: 225 grader i 8–10 minutter, til de så vidt er gylne. - Pensle med sukkerlake (like "
+  - "Senk temperaturen én–to grader (hver grad sparer rundt fem prosent av oppvarmingen), skru ned i soverom og rom"
+- **0.88** “Медовик в домашних условиях” (desserts, ru) ↔ “Сколько белка нужно для роста мышц” (strength+nutrition, ru)
+  - "Хочу испечь медовик на день рождения мамы. Это очень сложно?"
+  - "Хожу в зал полгода. Сколько белка в день нужно, чтобы набирать мышцы?"
+- **0.86** “Is brown sugar the same as white plus molasses” (desserts, en) ↔ “When to plant garlic” (vegetables, en)
+  - "Out of brown sugar. Can I just use white sugar in cookies?"
+  - "can i use garlic from the supermarket?"
+- **0.89** “Pour-over coffee tastes sour” (coffee-tea, en) ↔ “Appealing a parking fine” (bureaucracy, en)
+  - "Nice. Note the grind setting so you can repeat it with the next bag."
+  - "Good result. Keep the screenshot for a while in case of follow-ups."
+- **1.00** “Kaffe i presskanne blir grumsete” (coffee-tea, no) ↔ “Student monthly budget” (budgeting, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **1.00** “Kaffe i presskanne blir grumsete” (coffee-tea, no) ↔ “Helg i Berlin med tenåringer” (city-trips+parenting, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **1.00** “Kaffe i presskanne blir grumsete” (coffee-tea, no) ↔ “Bestige Galdhøpiggen” (hiking, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **1.00** “Kaffe i presskanne blir grumsete” (coffee-tea, no) ↔ “Katten tisser utenfor kassen” (cats, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **0.88** “Чай пуэр как заваривать” (coffee-tea, ru) ↔ “Как убрать пятно от красного вина” (organising, ru)
+  - "Отломите 5–7 г ножом для пуэра, стараясь отделять слои, а не крошить. Сначала промойте чай: залейте кипятком н"
+  - "бумажными полотенцами, затем посыпьте пятно солью или содой, чтобы впитать остатки. Потом смешайте ложку средс"
+- **0.90** “Matcha klumper seg” (coffee-tea, no) ↔ “Snorking og dårlig søvn” (sleep, no)
+  - "Matchaen min blir full av klumper uansett hvor mye jeg rører."
+  - "Samboeren min sier jeg snorker kraftig og noen ganger slutter å puste. Jeg er alltid trøtt på dagtid."
+- **0.90** “First 10K training plan” (running, en) ↔ “Overwhelmed and can't switch off” (stress+sleep, en)
+  - "Slow the long runs down, keep the increases small, and check your shoes aren't worn out. If the pain is sharp,"
+  - "If it doesn't ease, a physiotherapist or massage therapist can loosen it and show you exercises."
+- **0.91** “Løpe om vinteren på glatte veier” (running, no) ↔ “Pakke kjøkkenet” (moving, no)
+  - "Har du tips til refleks som ikke er stygg?"
+  - "Hvordan pakker jeg glass og tallerkener så ingenting går i stykker?"
+- **0.91** “Как не задыхаться при беге” (running, ru) ↔ “Выгорание на работе” (stress+workplace, ru)
+  - "Начала бегать, через 3 минуты уже задыхаюсь и приходится идти. Это нормально?"
+  - "Кажется, я выгорела. Ничего не хочется, работа раздражает, по утрам тяжело вставать. Отпуск был месяц назад и "
+- **0.91** “Как не задыхаться при беге” (running, ru) ↔ “Плохо сплю после переезда” (sleep+moving, ru)
+  - "Начала бегать, через 3 минуты уже задыхаюсь и приходится идти. Это нормально?"
+  - "Месяц назад переехали в новую квартиру, и я стала плохо спать. Раньше такого не было."
+- **0.91** “Как не задыхаться при беге” (running, ru) ↔ “Как справиться с боязнью полётов” (one-off, ru)
+  - "Начала бегать, через 3 минуты уже задыхаюсь и приходится идти. Это нормально?"
+  - "Боюсь летать, а через месяц длинный перелёт. Что поможет?"
+- **0.90** “Как не задыхаться при беге” (running, ru) ↔ “Как научиться жонглировать” (one-off, ru)
+  - "- чередовать: 1 минута бега, 2 минуты шага, 8 повторов, и каждую неделю немного увеличивать бег; - дышать ртом"
+  - "Потом три: начинаете с руки, где два мяча, и повторяете тот же ритм. Тренируйтесь над кроватью, чтобы не нагиб"
+- **0.91** “Как не задыхаться при беге” (running, ru) ↔ “Гитара: как перестать бросать” (music, ru)
+  - "Начала бегать, через 3 минуты уже задыхаюсь и приходится идти. Это нормально?"
+  - "Третий раз начинаю учиться играть на гитаре и через месяц бросаю. Как не бросить?"
+- **1.00** “Shin splints after starting to run” (running, en) ↔ “Short story about a lighthouse” (fiction, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Shin splints after starting to run” (running, en) ↔ “Change of address checklist” (moving+bureaucracy, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **0.89** “Trail running shoes or road shoes” (running+hiking, en) ↔ “Pottery wheel or hand building” (crafts, en)
+  - "If you mix both, a \"hybrid\" trail shoe with lower lugs works on both without feeling clumsy on hard surfaces."
+  - "If you join a studio, try the wheel there; it has a steeper learning curve but is very satisfying. Most people"
+- **1.00** “Beginner strength routine” (strength, en) ↔ “Salary question in the interview” (interviews+workplace, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Beginner strength routine” (strength, en) ↔ “Origami crane instructions” (one-off, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Pull-up progression” (strength, en) ↔ “Dog pulls on the leash” (dogs, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Pull-up progression” (strength, en) ↔ “Applying for a residence permit for my partner” (bureaucracy, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Creatine — worth it?” (strength+nutrition, en) ↔ “Which e-reader” (devices, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **0.90** “Commuting by bike in the rain” (cycling, en) ↔ “Sleeping bag for cold nights” (hiking, en)
+  - "Add a breathable rain jacket, rain trousers or a rain cape, and overshoes for heavy days. Keep a change of soc"
+  - "Wear a warm hat and dry socks, eat something fatty before bed, and don't breathe inside the bag — the moisture"
+- **0.89** “Commuting by bike in the rain” (cycling, en) ↔ “Moving checklist with kids” (moving+parenting, en)
+  - "Starting to commute 12 km by bike. How do I not arrive soaked?"
+  - "Moving to another city in 6 weeks with two school-age kids. Help me make a plan."
+- **0.89** “Велосипед скрипит при педалировании” (cycling, ru) ↔ “Как научиться петь чисто” (music, ru)
+  - "При каждом обороте педалей что-то скрипит. Где искать?"
+  - "Мне говорят, что я фальшивлю. Можно ли научиться петь чисто во взрослом возрасте?"
+- **1.00** “First gravel ride” (cycling+hiking, en) ↔ “Citation manager recommendation” (thesis, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **0.90** “Waking at 3am every night” (sleep+stress, en) ↔ “Negotiating a 4-day week” (workplace, en)
+  - "It's worth having a concrete conversation with your manager: list your current projects with rough hours per w"
+  - "It's increasingly common, especially for experienced employees. Make a concrete proposal: which day you'd be o"
+- **0.90** “Melatonin dose” (sleep, en) ↔ “Sleeping bag for cold nights” (hiking, en)
+  - "That's a westward flight, which is easier on the body. Get daylight in the afternoon after arriving and try to"
+  - "Wear a warm hat and dry socks, eat something fatty before bed, and don't breathe inside the bag — the moisture"
+- **1.00** “Vegan and iron levels” (nutrition, en) ↔ “Radiator stays cold at the top” (repairs, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Vegan and iron levels” (nutrition, en) ↔ “Packing for a hut-to-hut hike in Jotunheimen” (hiking+logistics, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Vegan and iron levels” (nutrition, en) ↔ “Moving abroad for a job” (moving+applications, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **0.89** “Hvor mye vann bør jeg drikke” (nutrition, no) ↔ “Hvorfor er sjøvann salt” (one-off, no)
+  - "Hva med kaffe, dehydrerer det ikke?"
+  - "Hvorfor er havet salt, men ikke innsjøene?"
+- **0.90** “Hvor mye vann bør jeg drikke” (nutrition, no) ↔ “Klage på manglende vedlikehold” (renting+repairs, no)
+  - "Hva med kaffe, dehydrerer det ikke?"
+  - "Hva om han ikke gjør noe innen fristen?"
+- **1.00** “Calorie counting for weight loss” (nutrition, en) ↔ “Short story about a lighthouse” (fiction, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Calorie counting for weight loss” (nutrition, en) ↔ “Grocery spending app for my household” (py-data+budgeting, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Snacks for a long hike” (nutrition+hiking, en) ↔ “Citation manager recommendation” (thesis, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Snacks for a long hike” (nutrition+hiking, en) ↔ “Moving abroad for a job” (moving+applications, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Følelsen av å aldri strekke til” (stress, no) ↔ “NAV unemployment benefits” (bureaucracy, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “Følelsen av å aldri strekke til” (stress, no) ↔ “Hvordan komme i gang med indeksfond” (investing+budgeting, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **0.90** “Выгорание на работе” (stress+workplace, ru) ↔ “Как преодолеть кризис в середине романа” (fiction, ru)
+  - "Кажется, я выгорела. Ничего не хочется, работа раздражает, по утрам тяжело вставать. Отпуск был месяц назад и "
+  - "Пишу роман, дошла до середины и застряла. Сюжет кажется скучным, хочется бросить."
+- **0.91** “Выгорание на работе” (stress+workplace, ru) ↔ “Слишком много подписок и денег не хватает” (budgeting, ru)
+  - "Кажется, я выгорела. Ничего не хочется, работа раздражает, по утрам тяжело вставать. Отпуск был месяц назад и "
+  - "Зарплата приходит, а к концу месяца ничего не остаётся. Не понимаю, куда уходят деньги."
+- **1.00** “Digital detox weekend” (stress, en) ↔ “Indoor cat bored” (cats, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Digital detox weekend” (stress, en) ↔ “Robot vacuum worth it?” (smart-home+organising, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Digital detox weekend” (stress, en) ↔ “New chat” (py-data+automation, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Digital detox weekend” (stress, en) ↔ “Origin of the word "salary"” (one-off, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Meditasjon for nybegynnere” (stress, no) ↔ “Grønnsakshage for nybegynnere” (vegetables, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **1.00** “Meditasjon for nybegynnere” (stress, no) ↔ “Hva er forskjellen på vær og klima” (one-off, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **0.89** “Bathroom renovation order of work” (renovation, en) ↔ “Tomatoes on the balcony split” (vegetables, en)
+  - "Roughly: 1. Demolition and checking the floor and walls for water damage. 2. Plumbing rough-in and electrical "
+  - "Water deeply and regularly, ideally at the same time every day, and mulch the pots so the soil doesn't dry out"
+- **1.00** “Pusse opp kjøkken på budsjett” (renovation, no) ↔ “Hvordan lese til eksamen i statsvitenskap” (exams, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **1.00** “Pusse opp kjøkken på budsjett” (renovation, no) ↔ “Bestige Galdhøpiggen” (hiking, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **0.89** “Ремонт в съёмной квартире” (renovation+renting, ru) ↔ “Как вести семейный бюджет вдвоём” (budgeting, ru)
+  - "Снимаю квартиру надолго, хочу освежить: покрасить стены, поменять светильники. Нужно ли спрашивать хозяина?"
+  - "Мы с мужем живём вместе год, деньги то общие, то раздельные, постоянные споры. Как лучше устроить?"
+- **1.00** “Новый пол на кухне” (renovation, ru) ↔ “Инвестиции: вклад или облигации” (investing, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Новый пол на кухне” (renovation, ru) ↔ “Письмо на норвежском в коммуну” (languages+bureaucracy, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Новый пол на кухне” (renovation, ru) ↔ “Что посмотреть в Стамбуле за 3 дня” (city-trips, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Новый пол на кухне” (renovation, ru) ↔ “Как работает GPS” (one-off, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Garage conversion to home office” (renovation, en) ↔ “Deploying a small app cheaply” (git-devops+web-backend, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Garage conversion to home office” (renovation, en) ↔ “Mushroom identification” (one-off, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Garage conversion to home office” (renovation, en) ↔ “Tipping in the US” (one-off, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Течёт бачок унитаза” (repairs, ru) ↔ “Math exam preparation” (exams, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **1.00** “Течёт бачок унитаза” (repairs, ru) ↔ “Кошка не ест сухой корм” (cats, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **1.00** “Течёт бачок унитаза” (repairs, ru) ↔ “Перевести письмо на английский официально” (languages, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **1.00** “Radiator stays cold at the top” (repairs, en) ↔ “Dog food: grain-free?” (dogs+nutrition, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Radiator stays cold at the top” (repairs, en) ↔ “Packing for a hut-to-hut hike in Jotunheimen” (hiking+logistics, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Radiator stays cold at the top” (repairs, en) ↔ “Moving abroad for a job” (moving+applications, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Fryseren lager is på veggene” (repairs, no) ↔ “Helg i Berlin med tenåringer” (city-trips+parenting, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **0.89** “Declutter a small apartment” (organising, en) ↔ “Tomatoes on the balcony split” (vegetables, en)
+  - "Give everything that's kept a fixed home, close to where it's used. Then set rules that stop the pile-up: one "
+  - "Water deeply and regularly, ideally at the same time every day, and mulch the pots so the soil doesn't dry out"
+- **0.90** “Organisere boden” (organising+organising, no) ↔ “Pakke kjøkkenet” (moving, no)
+  - "Boden vår er full av esker vi ikke vet hva inneholder. Hvordan får jeg orden?"
+  - "Hvordan pakker jeg glass og tallerkener så ingenting går i stykker?"
+- **0.89** “Как приучить семью к порядку” (organising+parenting, ru) ↔ “Как вести семейный бюджет вдвоём” (budgeting, ru)
+  - "Я одна убираю за всеми. Муж и двое подростков разбрасывают вещи. Как это изменить?"
+  - "Мы с мужем живём вместе год, деньги то общие, то раздельные, постоянные споры. Как лучше устроить?"
+- **0.89** “Paperwork system at home” (organising+budgeting, en) ↔ “Home Assistant on a Raspberry Pi” (smart-home+automation, en)
+  - "- a small set of folders: bills (current year), tax, insurance, warranties and manuals, house, health; - a sca"
+  - "Set up automatic backups to another machine or cloud from day one. If you later have many devices and add-ons,"
+- **1.00** “Potato late blight” (vegetables, no) ↔ “Hjemmekontor og ensomhet” (workplace+stress, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Potato late blight” (vegetables, no) ↔ “Matteangst” (exams, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Potato late blight” (vegetables, no) ↔ “Valp og alenetid” (dogs, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Огурцы горчат” (vegetables, ru) ↔ “Инвестиции: вклад или облигации” (investing, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Огурцы горчат” (vegetables, ru) ↔ “Конфликт между двумя сотрудниками в команде” (workplace, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Огурцы горчат” (vegetables, ru) ↔ “Письмо на норвежском в коммуну” (languages+bureaucracy, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Огурцы горчат” (vegetables, ru) ↔ “Как работает GPS” (one-off, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Grønnsakshage for nybegynnere” (vegetables, no) ↔ “Kan katter drikke melk” (cats, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **1.00** “Grønnsakshage for nybegynnere” (vegetables, no) ↔ “Hvordan lage et godt passord” (devices, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **0.89** “Мошки в цветочных горшках” (houseplants, ru) ↔ “Как убрать пятно от красного вина” (organising, ru)
+  - "- повесьте жёлтые клеевые ловушки для взрослых мошек; - насыпьте сверху слой песка или мелкого керамзита, чтоб"
+  - "Действуйте сразу: промокните (не трите!) бумажными полотенцами, затем посыпьте пятно солью или содой, чтобы вп"
+- **1.00** “Stueplanter når vi er på ferie” (houseplants, no) ↔ “Fondssparing for barna” (investing+parenting, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **1.00** “Stueplanter når vi er på ferie” (houseplants, no) ↔ “Hva er forskjellen på vær og klima” (one-off, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **1.00** “Stueplanter når vi er på ferie” (houseplants, no) ↔ “Hvordan lage et godt passord” (devices, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **1.00** “Fiddle leaf fig dropping leaves” (houseplants, en) ↔ “The Monty Hall problem” (one-off, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **0.90** “Strømregningen er altfor høy” (budgeting+repairs, no) ↔ “Flyttebyrå eller gjøre det selv” (moving, no)
+  - "Strømregningen var 4 800 i januar for en treroms leilighet. Hva kan vi gjøre?"
+  - "Vi flytter fra en treroms i Oslo til Trondheim. Lønner det seg med flyttebyrå?"
+- **0.89** “Strømregningen er altfor høy” (budgeting+repairs, no) ↔ “Leieavtale: kan utleier øke husleia?” (renting, no)
+  - "Strømregningen var 4 800 i januar for en treroms leilighet. Hva kan vi gjøre?"
+  - "Utleier vil øke husleia med 15 prosent etter et år. Er det lov?"
+- **1.00** “Tax deduction for home office” (taxes, en) ↔ “Dog pulls on the leash” (dogs, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Tax deduction for home office” (taxes, en) ↔ “Applying for a residence permit for my partner” (bureaucracy, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Skattemeldingen og utleie av hybel” (taxes+renting, no) ↔ “Jobbintervju på engelsk” (interviews+languages, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “Skattemeldingen og utleie av hybel” (taxes+renting, no) ↔ “Tale til pappas 70-årsdag” (speeches, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “Skattemeldingen og utleie av hybel” (taxes+renting, no) ↔ “Hvordan fungerer nordlys” (one-off, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “Receipts for VAT as a small business” (taxes, en) ↔ “Laptop for a design student” (devices, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Инвестиции: вклад или облигации” (investing, ru) ↔ “Письмо на норвежском в коммуну” (languages+bureaucracy, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Инвестиции: вклад или облигации” (investing, ru) ↔ “Как работает GPS” (one-off, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **0.90** “Junior QA resume tips” (applications, ru) ↔ “Переход с Windows на Mac для работы” (devices, ru)
+  - "Закончила курсы по тестированию, опыта работы в IT нет. Что писать в резюме?"
+  - "На работе дали MacBook, всю жизнь сидела на Windows. С чего начать?"
+- **0.90** “LinkedIn headline” (applications, en) ↔ “Appealing a parking fine” (bureaucracy, en)
+  - "Nice. Recruiters often notice a clear headline within the first seconds of a search result."
+  - "Good result. Keep the screenshot for a while in case of follow-ups."
+- **0.90** “LinkedIn headline” (applications, en) ↔ “Unfinished fantasy novel” (fiction+stress, en)
+  - "Keep it scannable, avoid buzzwords like \"passionate\" and \"guru\", and make sure the same keywords appear in you"
+  - "Keep a \"fix later\" document where you note what you want to change. Set a modest daily target, like 300 words,"
+- **0.90** “Writing a portfolio case study” (applications, en) ↔ “Thesis outline in marine biology” (thesis, en)
+  - "Structure: the problem and your role in one paragraph, two or three key decisions with the evidence behind the"
+  - "Then structure the outline around it: background that leads only to that question, methods that answer it, res"
+- **0.90** “"Tell me about yourself" answer” (interviews, en) ↔ “Shadowing technique” (languages, en)
+  - "Practise it out loud until it's natural but not memorised word for word. End by connecting to the job, which h"
+  - "Use clips of 1–2 minutes with a transcript, repeat each one many times over a week, and record yourself to com"
+- **0.90** “"Tell me about yourself" answer” (interviews, en) ↔ “Toddler tantrums in the supermarket” (parenting, en)
+  - "Practise it out loud until it's natural but not memorised word for word. End by connecting to the job, which h"
+  - "If you can, move to a quieter spot and wait it out. Afterwards, reconnect without a lecture."
+- **0.90** “"Tell me about yourself" answer” (interviews, en) ↔ “Writing believable dialogue” (fiction, en)
+  - "Practise it out loud until it's natural but not memorised word for word. End by connecting to the job, which h"
+  - "Real people interrupt, avoid questions and say less than they mean. Read your dialogue aloud; cut greetings an"
+- **1.00** “Как отвечать про слабые стороны” (interviews, ru) ↔ “Как выучить английские времена” (languages, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Как отвечать про слабые стороны” (interviews, ru) ↔ “Почему падает скорость интернета вечером” (network, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Как отвечать про слабые стороны” (interviews, ru) ↔ “Почему люди боятся пауков” (one-off, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Как отвечать про слабые стороны” (interviews, ru) ↔ “Сколько стоит содержание лошади” (one-off, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Как отвечать про слабые стороны” (interviews, ru) ↔ “Стресс из-за ремонта соседей” (stress, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Salary question in the interview” (interviews+workplace, en) ↔ “Choosing a thesis topic” (thesis, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Salary question in the interview” (interviews+workplace, en) ↔ “Weekly dinner plan for a family of four” (dinners+budgeting, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **0.91** “Første gang som leder” (workplace, no) ↔ “Løpe raskere på 5 km” (running, no)
+  - "Jeg har nettopp blitt teamleder for de jeg jobbet sammen med i fem år. Hvordan håndterer jeg overgangen?"
+  - "Jeg løper 5 km på 27 minutter og vil under 25. Hvordan trener jeg?"
+- **0.90** “Too many meetings” (workplace, en) ↔ “Sibling fights” (parenting, en)
+  - "Then act on each group: decline or ask for notes for the third group, suggest a written update instead of the "
+  - "What could work?\"). Avoid deciding who's to blame — you rarely see how it started. Give each child some one-on"
+- **0.89** “Too many meetings” (workplace, en) ↔ “Subletting my room for the summer” (renting, en)
+  - "Great outcome. Protect them consistently for a few weeks so it becomes the norm."
+  - "Great. Put the agreement in writing and keep a copy of the subtenant's ID."
+- **0.91** “Too many meetings” (workplace, en) ↔ “Appealing a parking fine” (bureaucracy, en)
+  - "Great outcome. Protect them consistently for a few weeks so it becomes the norm."
+  - "Good result. Keep the screenshot for a while in case of follow-ups."
+- **0.90** “Too many meetings” (workplace, en) ↔ “New chat” (network+devices, en)
+  - "Great outcome. Protect them consistently for a few weeks so it becomes the norm."
+  - "Great. If it happens again after a router restart, the fixed IP will stop it for good."
+- **0.90** “Giving negative feedback to a team member” (workplace, en) ↔ “Unfinished fantasy novel” (fiction+stress, en)
+  - "they told me they've been overwhelmed and didn't want to say no"
+  - "ok I think she has to give up the magic to save the city"
+- **1.00** “Hjemmekontor og ensomhet” (workplace+stress, no) ↔ “Matteangst” (exams, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Hjemmekontor og ensomhet” (workplace+stress, no) ↔ “Fjelltur med barn” (hiking+parenting, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Quitting a job gracefully” (workplace, en) ↔ “Robot vacuum worth it?” (smart-home+organising, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Quitting a job gracefully” (workplace, en) ↔ “Translate a sentence into Japanese” (languages, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Конфликт между двумя сотрудниками в команде” (workplace, ru) ↔ “Письмо на норвежском в коммуну” (languages+bureaucracy, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Как выучить английские времена” (languages, ru) ↔ “Как получить норвежский D-номер” (bureaucracy, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Как выучить английские времена” (languages, ru) ↔ “Почему люди боятся пауков” (one-off, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Anki deck for vocabulary” (languages, en) ↔ “Laptop for a design student” (devices, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Anki deck for vocabulary” (languages, en) ↔ “Applying for a residence permit for my partner” (bureaucracy, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Exam stress and procrastination” (exams+stress, en) ↔ “Speed of a sneeze” (one-off, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Hvordan lese til eksamen i statsvitenskap” (exams, no) ↔ “Bestige Galdhøpiggen” (hiking, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **1.00** “Hvordan lese til eksamen i statsvitenskap” (exams, no) ↔ “Mamma med begynnende demens” (elderly, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **1.00** “Hvordan lese til eksamen i statsvitenskap” (exams, no) ↔ “Bytte fra Android til iPhone” (devices, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **1.00** “Math exam preparation” (exams, ru) ↔ “Кошка не ест сухой корм” (cats, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **1.00** “Math exam preparation” (exams, ru) ↔ “Лучшее время посетить Байкал” (one-off, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **0.89** “Note-taking: by hand or laptop” (exams, en) ↔ “Appealing a parking fine” (bureaucracy, en)
+  - "Good experiment. Compare how much you remember at the midterms."
+  - "Good result. Keep the screenshot for a while in case of follow-ups."
+- **0.89** “Note-taking: by hand or laptop” (exams, en) ↔ “Trolley problem” (one-off, en)
+  - "Good experiment. Compare how much you remember at the midterms."
+  - "It's a thought experiment, not a realistic scenario. It isolates a question philosophers disagree about: is it"
+- **1.00** “Matteangst” (exams, no) ↔ “Fjelltur med barn” (hiking+parenting, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Citation manager recommendation” (thesis, en) ↔ “Packing for a hut-to-hut hike in Jotunheimen” (hiking+logistics, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Citation manager recommendation” (thesis, en) ↔ “Moving abroad for a job” (moving+applications, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Choosing a thesis topic” (thesis, en) ↔ “Weekly dinner plan for a family of four” (dinners+budgeting, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Helg i Berlin med tenåringer” (city-trips+parenting, no) ↔ “Stress før eksamen og jobbsøking samtidig” (stress+exams, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **1.00** “Rome with a toddler” (city-trips+parenting, en) ↔ “Mushroom identification” (one-off, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Rome with a toddler” (city-trips+parenting, en) ↔ “Origami crane instructions” (one-off, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Bestige Galdhøpiggen” (hiking, no) ↔ “Katten tisser utenfor kassen” (cats, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **1.00** “Bestige Galdhøpiggen” (hiking, no) ↔ “Stress før eksamen og jobbsøking samtidig” (stress+exams, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **0.89** “Sleeping bag for cold nights” (hiking, en) ↔ “Potty training in a week” (parenting, en)
+  - "Wear a warm hat and dry socks, eat something fatty before bed, and don't breathe inside the bag — the moisture"
+  - "Stay home, skip the nappy during the day, offer the potty often, and stay calm about accidents. Night dryness "
+- **1.00** “Солнце и горы: как не сгореть” (hiking, ru) ↔ “Перевести письмо на английский официально” (languages, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **1.00** “Солнце и горы: как не сгореть” (hiking, ru) ↔ “Лучшее время посетить Байкал” (one-off, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **0.89** “Packing light for two weeks” (logistics, en) ↔ “Potty training in a week” (parenting, en)
+  - "Two weeks in Southeast Asia with only carry-on. Is that realistic?"
+  - "Is it realistic to potty train a 2.5-year-old in a long weekend?"
+- **1.00** “Виза в Японию для граждан России” (logistics, ru) ↔ “Подросток не хочет разговаривать” (parenting, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **1.00** “Виза в Японию для граждан России” (logistics, ru) ↔ “Noisy laptop fan” (devices, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **1.00** “Виза в Японию для граждан России” (logistics, ru) ↔ “Помогите с эссе на английском для поступления” (applications+languages, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **1.00** “Виза в Японию для граждан России” (logistics, ru) ↔ “Мой сын не хочет читать” (parenting+exams, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **1.00** “Train from Oslo to Stockholm” (logistics, en) ↔ “Grocery spending app for my household” (py-data+budgeting, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Train from Oslo to Stockholm” (logistics, en) ↔ “Rebuilding a bike's rear wheel” (cycling+repairs, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Подросток не хочет разговаривать” (parenting, ru) ↔ “Noisy laptop fan” (devices, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **1.00** “Подросток не хочет разговаривать” (parenting, ru) ↔ “Помогите с эссе на английском для поступления” (applications+languages, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **0.90** “Lommepenger: hvor mye?” (parenting+budgeting, no) ↔ “Leieavtale: kan utleier øke husleia?” (renting, no)
+  - "Hvor mye lommepenger bør en 12-åring få, og skal det være koblet til husarbeid?"
+  - "Utleier vil øke husleia med 15 prosent etter et år. Er det lov?"
+- **1.00** “Dog pulls on the leash” (dogs, en) ↔ “Applying for a residence permit for my partner” (bureaucracy, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **0.93** “Hunden bjeffer på andre hunder” (dogs, no) ↔ “Klage på nabohundens bjeffing” (one-off, no)
+  - "Hunden vår bjeffer og kaster seg mot andre hunder på tur. Hva gjør vi?"
+  - "Naboens hund bjeffer i timevis når de er på jobb. Hva gjør jeg?"
+- **1.00** “Dog food: grain-free?” (dogs+nutrition, en) ↔ “Speed of a sneeze” (one-off, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Valp og alenetid” (dogs, no) ↔ “Teamet mitt er overarbeidet” (workplace+stress, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **1.00** “Cat scratching the sofa” (cats, en) ↔ “Short story about a lighthouse” (fiction, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Cat scratching the sofa” (cats, en) ↔ “Grocery spending app for my household” (py-data+budgeting, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Кошка не ест сухой корм” (cats, ru) ↔ “Перевести письмо на английский официально” (languages, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **1.00** “Кошка не ест сухой корм” (cats, ru) ↔ “Лучшее время посетить Байкал” (one-off, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **1.00** “Indoor cat bored” (cats, en) ↔ “Robot vacuum worth it?” (smart-home+organising, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Indoor cat bored” (cats, en) ↔ “New chat” (py-data+automation, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Indoor cat bored” (cats, en) ↔ “Origin of the word "salary"” (one-off, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Mamma med begynnende demens” (elderly, no) ↔ “Stress før eksamen og jobbsøking samtidig” (stress+exams, no) **[generic passage]**
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+  - "Godt spørsmål! Si fra hvis du vil at jeg skal gå mer i detalj på noen av stegene, eller om det er noe annet je"
+- **0.90** “Fanfiction og opphavsrett” (fiction, no) ↔ “Sette opp gjestenett hjemme” (network, no)
+  - "Kan jeg publisere fanfiction på nettet uten å bryte opphavsretten?"
+  - "Hvordan lager jeg et eget wifi for gjester så de ikke kommer inn på det vanlige nettet vårt?"
+- **1.00** “Tale til pappas 70-årsdag” (speeches, no) ↔ “NAV unemployment benefits” (bureaucracy, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “Tale til pappas 70-årsdag” (speeches, no) ↔ “Hvordan komme i gang med indeksfond” (investing+budgeting, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “Tale til pappas 70-årsdag” (speeches, no) ↔ “Bursdagsleken til 6-åring” (one-off, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **0.91** “Takketale ved avskjed på jobb” (speeches+workplace, no) ↔ “Gave til sjefen som slutter” (one-off, no)
+  - "Jeg slutter etter 14 år og skal si noen ord på avskjeden. Hva sier jeg?"
+  - "Sjefen vår går av med pensjon. Vi er 12 i avdelingen. Gaveidé?"
+- **0.90** “Learning guitar as an adult” (music, en) ↔ “Fastest way to learn to type” (one-off, en)
+  - "Practise switching between pairs of chords for a minute at a time, and a simple strumming pattern. Fifteen min"
+  - "Spend 15 minutes daily on a site like Keybr or TypingClub for a few weeks, and force yourself to use proper fi"
+- **0.90** “Pianoøving for barn” (music+parenting, no) ↔ “Gave til sjefen som slutter” (one-off, no)
+  - "Datteren vår på 8 går på pianotimer, men vil ikke øve. Skal vi presse?"
+  - "Sjefen vår går av med pensjon. Vi er 12 i avdelingen. Gaveidé?"
+- **1.00** “Home recording setup” (music+devices, en) ↔ “Speed of a sneeze” (one-off, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **0.87** “Music theory for songwriting” (music, en) ↔ “Sudoku strategy” (one-off, en)
+  - "I write songs by ear but always end up with the same four chords. How do I get more variety?"
+  - "I'm stuck on hard sudokus. What technique comes after finding singles?"
+- **0.89** “Telefonen blir varm og batteriet tømmes” (devices, no) ↔ “Bil som ikke starter i kulda” (one-off, no)
+  - "Sjekk Innstillinger → Batteri → bruk per app; ofte er det én app som går i bakgrunnen. Oppdater alle apper og "
+  - "Klikking betyr nesten alltid for lite strøm fra batteriet; kulde svekker batteriet kraftig. Prøv å starte med "
+- **1.00** “Noisy laptop fan” (devices, ru) ↔ “Помогите с эссе на английском для поступления” (applications+languages, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **1.00** “Noisy laptop fan” (devices, ru) ↔ “Мой сын не хочет читать” (parenting+exams, ru) **[generic passage]**
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+  - "Надеюсь, это поможет! Если у вас есть другие вопросы или нужно больше пояснений по какому-либо пункту, просто "
+- **1.00** “Which e-reader” (devices, en) ↔ “Origin of the word "salary"” (one-off, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Почему падает скорость интернета вечером” (network, ru) ↔ “Как получить норвежский D-номер” (bureaucracy, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Почему падает скорость интернета вечером” (network, ru) ↔ “Почему люди боятся пауков” (one-off, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Почему падает скорость интернета вечером” (network, ru) ↔ “Стресс из-за ремонта соседей” (stress, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Почему падает скорость интернета вечером” (network, ru) ↔ “Переезд с детьми в новый город” (moving+parenting, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Robot vacuum worth it?” (smart-home+organising, en) ↔ “Translate a sentence into Japanese” (languages, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **0.89** “Moving checklist with kids” (moving+parenting, en) ↔ “Weekend in Prague on a budget” (city-trips+budgeting, en)
+  - "Moving to another city in 6 weeks with two school-age kids. Help me make a plan."
+  - "Planning 3 days in Prague with my partner in March. Budget is tight. Tips?"
+- **1.00** “Deposit not returned” (renting, en) ↔ “Hike Trolltunga safely” (hiking, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Mould in a rental flat” (renting+repairs, en) ↔ “Kitchen garden on a north-facing balcony” (vegetables+houseplants, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “NAV unemployment benefits” (bureaucracy, no) ↔ “Hvordan komme i gang med indeksfond” (investing+budgeting, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “NAV unemployment benefits” (bureaucracy, no) ↔ “Bursdagsleken til 6-åring” (one-off, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “Как получить норвежский D-номер” (bureaucracy, ru) ↔ “Почему люди боятся пауков” (one-off, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Как получить норвежский D-номер” (bureaucracy, ru) ↔ “Стресс из-за ремонта соседей” (stress, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Weekly dinner plan for a family of four” (dinners+budgeting, en) ↔ “Kitchen garden on a north-facing balcony” (vegetables+houseplants, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Hvordan komme i gang med indeksfond” (investing+budgeting, no) ↔ “Bursdagsleken til 6-åring” (one-off, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **1.00** “Kitchen garden on a north-facing balcony” (vegetables+houseplants, en) ↔ “Mushroom identification” (one-off, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **0.89** “Сменить профессию в 40 лет” (applications+stress, ru) ↔ “Мама не хочет переезжать к нам” (elderly+moving, ru)
+  - "Мне 40, работаю юристом 15 лет и больше не могу. Хочу в IT, но страшно. Это реально?"
+  - "Маме 80, живёт одна в другом городе. Мы зовём её к себе, а она отказывается. Как убедить?"
+- **1.00** “Packing for a hut-to-hut hike in Jotunheimen” (hiking+logistics, en) ↔ “Moving abroad for a job” (moving+applications, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **1.00** “Deploying a small app cheaply” (git-devops+web-backend, en) ↔ “Origami crane instructions” (one-off, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **0.88** “Why is the sky blue” (one-off, en) ↔ “Black hole in simple words” (one-off, en)
+  - "When sunlight comes into the air, the tiny bits of air bump the blue light around much more than the red and y"
+  - "Far from it, nothing special. As you approach, gravity pulls harder on your feet than your head; near a small "
+- **0.86** “Hvem var Harald Hårfagre” (one-off, no) ↔ “Fakta om elg” (one-off, no)
+  - "Hvem var egentlig Harald Hårfagre, og samlet han virkelig Norge?"
+  - "Hvor mange elg finnes det i Norge?"
+- **1.00** “(untitled)” (one-off, en) ↔ “Thesis data analysis in R or Python” (thesis+py-data, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **0.87** “Хорошая книга для отпуска” (one-off, ru) ↔ “Что подарить коллеге на 50 лет” (one-off, ru)
+  - "Посоветуйте лёгкую, но не глупую книгу для отпуска на море."
+  - "Варианты: хорошая книга по военной или местной истории в подарочном издании плюс что-то для рыбалки (качествен"
+- **1.00** “Hvordan fungerer nordlys” (one-off, no) ↔ “Bursdagsleken til 6-åring” (one-off, no) **[generic passage]**
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+  - "Så fint at det fungerte! Hvis du får andre problemer eller vil se nærmere på dette, er det bare å si fra, så g"
+- **0.87** “How do noise cancelling headphones work” (one-off, en) ↔ “Black hole in simple words” (one-off, en)
+  - "Small microphones on the headphones pick up the sound around you, and a chip creates the opposite sound wave —"
+  - "Once inside, every path leads to the centre, and no signal can get out. To an outside observer you'd appear to"
+- **0.89** “How do noise cancelling headphones work” (one-off, en) ↔ “Home studio acoustic treatment” (music+renovation, en)
+  - "Played through the speakers, the two waves cancel out. It works best for steady low sounds like engines and ai"
+  - "Treat the first reflection points: put absorption panels on the side walls at ear height between you and the s"
+- **1.00** “Tipping in the US” (one-off, en) ↔ “Origami crane instructions” (one-off, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **1.00** “Explain inflation like I'm 12” (one-off, en) ↔ “Rebuilding a bike's rear wheel” (cycling+repairs, en) **[generic passage]**
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+  - "You're welcome! Feel free to come back anytime if you have more questions. Good luck, and I hope everything go"
+- **1.00** “Перевести письмо на английский официально” (languages, ru) ↔ “Лучшее время посетить Байкал” (one-off, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **1.00** “Как помириться с подругой” (one-off, ru) ↔ “Переезд с детьми в новый город” (moving+parenting, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Почему люди боятся пауков” (one-off, ru) ↔ “Стресс из-за ремонта соседей” (stress, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Hva er forskjellen på vær og klima” (one-off, no) ↔ “Hvordan lage et godt passord” (devices, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **0.89** “Fastest way to learn to type” (one-off, en) ↔ “Learning piano as an adult with little time” (music, en)
+  - "Yes, it's a skill you use every day. Spend 15 minutes daily on a site like Keybr or TypingClub for a few weeks"
+  - "Yes, 20 focused minutes daily beats long irregular sessions. Split it: 5 minutes of scales or technique, 10 on"
+- **1.00** “Сколько стоит содержание лошади” (one-off, ru) ↔ “Переезд с детьми в новый город” (moving+parenting, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **1.00** “Hvordan lage et godt passord” (devices, no) ↔ “Flytte hjem til foreldrene for å spare” (budgeting+moving, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **1.00** “Стресс из-за ремонта соседей” (stress, ru) ↔ “Переезд с детьми в новый город” (moving+parenting, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+
+## Same theme, different topic (67)
+
+- **1.00** “Plot monthly sales with a rolling average” (py-data, en) ↔ “Tailwind classes not applied” (frontend, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **1.00** “Plot monthly sales with a rolling average” (py-data, en) ↔ “EXPLAIN shows a sequential scan” (sql, en) **[generic passage]**
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+  - "I hope this helps! If you have any other questions or need further clarification on any of these points, feel "
+- **0.91** “Jupyter kernel keeps dying” (py-data, en) ↔ “Debugging a slow Django page” (web-backend+sql, en)
+  - "usecols + category got it down to 3 GB, works now"
+  - "added an index on created_at, now 300ms"
+- **0.90** “New chat” (py-data, en) ↔ “Debugging a slow Django page” (web-backend+sql, en)
+  - "Same thing with `ascending=True`, or `.nsmallest(3, \"sales\")` inside a `groupby(...).apply(...)`."
+  - "Great result. Add a test that asserts the number of queries for this view (`assertNumQueries`) so an N+1 doesn"
+- **1.00** “Seaborn heatmap of correlations” (py-data, en) ↔ “Cron job that doesn't run” (automation, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **0.89** “Как ускорить apply по строкам” (py-data, ru) ↔ “Удалить дубликаты из таблицы” (sql, ru)
+  - "df[\"discount\"] = np.select( [df[\"type\"].eq(\"vip\"), df[\"amount\"].gt(1000)], [0.15, 0.05], default=0.0, ) ```"
+  - "SELECT id, ROW_NUMBER() OVER (PARTITION BY lower(email) ORDER BY created_at) AS rn FROM users ) t WHERE rn > 1"
+- **1.00** “Read Excel file with several sheets” (py-data, en) ↔ “Branching strategy for a small team” (git-devops, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **0.89** “Datavisualisering for styremøtet” (py-data, no) ↔ “Mørk modus på nettsiden” (frontend, no)
+  - "- Fremhev én eller to linjer med farge og gjør resten grå, så blir budskapet tydelig. - Skriv navnet rett ved "
+  - "Definer fargene som CSS-variabler og bytt dem: ```css :root { --bg: #fff; --tekst: #111; }"
+- **1.00** “Express API returns 404 for every route” (web-backend, en) ↔ “New chat” (py-data+automation, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **0.91** “CORS error from my React app” (web-backend+frontend, en) ↔ “Nginx som reverse proxy for to apper” (git-devops, no)
+  - "app.add_middleware( CORSMiddleware, allow_origins=[\"http://localhost:5173\"], allow_methods=[\"*\"], allow_header"
+  - "server { server_name api.mittdomene.no; location / { proxy_pass http://127.0.0.1:4000; proxy_set_header Host $"
+- **0.89** “JWT token expires too fast” (web-backend, en) ↔ “Automate filling a web form” (automation, en)
+  - "Users get logged out every 15 minutes. Should I just make the JWT valid for a week?"
+  - "Every week I have to enter the same 30 timesheet rows into a clunky web portal. Can I automate that?"
+- **0.90** “Webhook from Stripe fails signature check” (web-backend, en) ↔ “useEffect runs twice” (frontend, en)
+  - "```js app.post(\"/webhook\", express.raw({ type: \"application/json\" }), (req, res) => {"
+  - "fetch(url, { signal: ctrl.signal }).then(r => r.json()).then(setData).catch(() => {}); return () => ctrl.abort"
+- **0.89** “Background jobs in a web app” (web-backend, en) ↔ “Script to rename hundreds of photos by date” (automation, en)
+  - "Make the job safe to run twice: write thumbnails to a temporary name and rename at the end, and mark the job \""
+  - "p.rename(target) ``` Run it on a copy first. Photos taken in the same second keep their old name rather than o"
+- **0.88** “GraphQL vs REST for a small app” (web-backend, en) ↔ “Animate a list when items are removed” (frontend, en)
+  - "Starting a small app with a React frontend. Is GraphQL worth it or should I just do REST?"
+  - "When I delete an item from a list it just vanishes. How can I make it fade and slide out in React?"
+- **0.89** “GraphQL vs REST for a small app” (web-backend, en) ↔ “SQLite or Postgres for a side project” (sql, en)
+  - "For a small app with one frontend, REST is usually less work: fewer moving parts, simple caching, easy to debu"
+  - "SQLite is plenty for 200 users and far simpler: one file, no server to run, trivial backups. Turn on WAL mode "
+- **0.89** “Websocket disconnects every 60 seconds” (web-backend, en) ↔ “Nginx som reverse proxy for to apper” (git-devops, no)
+  - "- raise the proxy timeout for the websocket location (`proxy_read_timeout 3600s;`) and make sure the `Upgrade`"
+  - "server { server_name api.mittdomene.no; location / { proxy_pass http://127.0.0.1:4000; proxy_set_header Host $"
+- **1.00** “Accessible modal dialog” (frontend, en) ↔ “New chat” (py-data+automation, en) **[generic passage]**
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+  - "Great question! Let me know if you would like me to go into more detail on any of these steps, or if there is "
+- **1.00** “Merge conflict in package-lock.json” (git-devops, en) ↔ “Keyboard macro to paste a signature” (automation, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **0.89** “Slow query with LIKE '%term%'” (sql, en) ↔ “Automate filling a web form” (automation, en)
+  - "Searching product names with LIKE '%term%' takes seconds on 2 million rows. Index on name doesn't help."
+  - "Every week I have to enter the same 30 timesheet rows into a clunky web portal. Can I automate that?"
+- **1.00** “Cron job that doesn't run” (automation, en) ↔ “Deploying a small app cheaply” (git-devops+web-backend, en) **[generic passage]**
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+  - "Glad that worked for you! If you run into any other problems or want to explore this further, just let me know"
+- **0.90** “Dense whole wheat bread” (bread, no) ↔ “Kanelboller som blir tørre” (desserts, no)
+  - "- Elt lenger, eller bruk strekk-og-brett tre ganger i løpet av hevingen. - La brødet etterheve til det har bli"
+  - "- Stek kortere og varmere: 225 grader i 8–10 minutter, til de så vidt er gylne. - Pensle med sukkerlake (like "
+- **0.90** “Focaccia overnight in the fridge” (bread, en) ↔ “One-pan salmon and potatoes” (dinners, en)
+  - "Yes, and it tastes better that way. Mix the dough with a little less yeast (about 3 g instant per 500 g flour)"
+  - "Yes, thaw it in the fridge overnight, or roast from frozen for about 18–20 minutes and add the glaze halfway."
+- **0.89** “Focaccia overnight in the fridge” (bread, en) ↔ “Lemon tart filling too runny” (desserts, en)
+  - "Next day, tip it into an oiled tin, let it warm and relax for 2–3 hours until puffy, dimple it with oily finge"
+  - "For a baked filling, bake until the edges are set and the centre has only a slight wobble, then cool and chill"
+- **0.91** “Focaccia overnight in the fridge” (bread, en) ↔ “Can I freeze cooked rice” (dinners, en)
+  - "Yes, and it tastes better that way. Mix the dough with a little less yeast (about 3 g instant per 500 g flour)"
+  - "Yes. Cool it quickly (spread on a tray), freeze within an hour or two in portions, and keep up to a month. Reh"
+- **0.90** “Почему корка у хлеба мягкая” (bread, ru) ↔ “Chicken plov recipe” (dinners, ru)
+  - "Обычно не хватает жара и пара в начале выпечки. Попробуйте: - разогреть духовку с противнем или чугунной кастр"
+  - "4. Варите на сильном огне, пока вода не уйдёт с поверхности, потом накройте крышкой и томите на минимальном ог"
+- **0.89** “Baguettes keep spreading flat” (bread, en) ↔ “Quick dinner with chickpeas and spinach” (dinners, en)
+  - "My baguettes spread sideways in the oven instead of rising up. Dough seems fine."
+  - "Serve with rice or flatbread. A spoon of yoghurt on top rounds it off."
+- **0.88** “Baguettes keep spreading flat” (bread, en) ↔ “Vegetarian dinner guests” (dinners, en)
+  - "My baguettes spread sideways in the oven instead of rising up. Dough seems fine."
+  - "Two of my four dinner guests are vegetarian. I don't want to cook two separate mains."
+- **0.89** “New chat” (bread, en) ↔ “Can I freeze cooked rice” (dinners, en)
+  - "At least an hour for a normal loaf, and two or more for large or rye loaves. The inside keeps cooking while it"
+  - "Reheat until piping hot all the way through. Don't leave cooked rice at room temperature for long, since bacte"
+- **0.90** “Pizza dough in a home oven” (bread+dinners, en) ↔ “Cheesecake cracked on top” (desserts+desserts, en)
+  - "Let it rise in the fridge for 1–3 days, then divide into balls 3 hours before baking. Bake on a steel or stone"
+  - "Scoop onto a tray and bake at 180 °C for 10–12 minutes. They'll look underdone when they come out — that's rig"
+- **0.88** “Chicken plov recipe” (dinners, ru) ↔ “Медовик в домашних условиях” (desserts, ru)
+  - "Сделайте плов с курицей в одной кастрюле: 1. Обжарьте бёдра кусками до корочки, добавьте лук полукольцами и мо"
+  - "Основа: на водяной бане смешайте мёд, сахар и масло, добавьте яйца и соду, потом муку, чтобы вышло мягкое тест"
+- **0.92** “Chicken plov recipe” (dinners, ru) ↔ “Чай пуэр как заваривать” (coffee-tea, ru)
+  - "4. Варите на сильном огне, пока вода не уйдёт с поверхности, потом накройте крышкой и томите на минимальном ог"
+  - "Сначала промойте чай: залейте кипятком на 5–10 секунд и слейте воду. Потом заваривайте проливами в маленьком ч"
+- **0.90** “One-pan salmon and potatoes” (dinners, en) ↔ “Cheesecake cracked on top” (desserts+desserts, en)
+  - "Roast another 10–12 minutes until the salmon flakes. Everything is ready at once and there's one tray to wash."
+  - "Scoop onto a tray and bake at 180 °C for 10–12 minutes. They'll look underdone when they come out — that's rig"
+- **0.90** “Kanelboller som blir tørre” (desserts, no) ↔ “Matcha klumper seg” (coffee-tea, no)
+  - "- Stek kortere og varmere: 225 grader i 8–10 minutter, til de så vidt er gylne. - Pensle med sukkerlake (like "
+  - "Sikt pulveret gjennom en tesil først, og lag en pasta med litt vann før du heller på resten. Bruk vann på rund"
+- **0.88** “Медовик в домашних условиях” (desserts, ru) ↔ “Чай пуэр как заваривать” (coffee-tea, ru)
+  - "Не сложно, но долго — заложите полдня и ночь в холодильнике. Основа: на водяной бане смешайте мёд, сахар и мас"
+  - "Сначала промойте чай: залейте кипятком на 5–10 секунд и слейте воду. Потом заваривайте проливами в маленьком ч"
+- **0.89** “First 10K training plan” (running, en) ↔ “Deadlift lower back pain” (strength, en)
+  - "Slow the long runs down, keep the increases small, and check your shoes aren't worn out. If the pain is sharp,"
+  - "Then the weight is probably too heavy for your leg strength right now. Pause briefly just after the bar leaves"
+- **0.88** “Should I run with a heart rate monitor” (running+devices, en) ↔ “Indoor trainer winter plan” (cycling, en)
+  - "My watch says I'm in zone 4 on every easy run. Should I slow down even more?"
+  - "I have a smart trainer for the winter. How do I stay motivated for 4 months?"
+- **0.91** “Styrketrening hjemme uten utstyr” (strength, no) ↔ “Løpe raskere på 5 km” (running, no)
+  - "Tre runder, to–tre ganger i uka. Et par justerbare manualer eller en strikk gjør det mye lettere å fortsette å"
+  - "Tre økter i uka: én intervalløkt (for eksempel 5 × 1000 m i målfart for 25-minutter, rundt 5:00/km, med 2 minu"
+- **0.90** “Deadlift lower back pain” (strength, en) ↔ “Bike fit: knee pain on longer rides” (cycling, en)
+  - "My lower back aches after deadlifts but not my legs. I think my form is off."
+  - "After 40 km my knee hurts at the front. Bike is new."
+- **0.91** “Treningsprogram for 50-åringer” (strength, no) ↔ “Løpe raskere på 5 km” (running, no)
+  - "Begynn med to økter i uka med lette vekter og fokus på teknikk, gjerne med en personlig trener de første gange"
+  - "Tre økter i uka: én intervalløkt (for eksempel 5 × 1000 m i målfart for 25-minutter, rundt 5:00/km, med 2 minu"
+- **0.90** “Bike fit: knee pain on longer rides” (cycling, en) ↔ “Training for a trail race” (running+hiking, en)
+  - "After 40 km my knee hurts at the front. Bike is new."
+  - "Signed up for a 30 km trail race with 1,500 m of climbing in four months. I've only run on roads."
+- **0.91** “Выгорание на работе” (stress+workplace, ru) ↔ “Плохо сплю после переезда” (sleep+moving, ru)
+  - "Кажется, я выгорела. Ничего не хочется, работа раздражает, по утрам тяжело вставать. Отпуск был месяц назад и "
+  - "Месяц назад переехали в новую квартиру, и я стала плохо спать. Раньше такого не было."
+- **0.90** “Bathroom renovation order of work” (renovation, en) ↔ “Mould around the shower” (repairs, en)
+  - "6. Fitting the toilet, sink, shower and lights; final plumbing and electrical. 7. Silicone joints last. Book t"
+  - "Cut out the old silicone, clean the joint with a mould remover, let it dry completely (24 hours), and apply ne"
+- **0.90** “Bathroom renovation order of work” (renovation, en) ↔ “Declutter a small apartment” (organising, en)
+  - "Roughly: 1. Demolition and checking the floor and walls for water damage. 2. Plumbing rough-in and electrical "
+  - "Give everything that's kept a fixed home, close to where it's used. Then set rules that stop the pile-up: one "
+- **0.89** “Bathroom renovation order of work” (renovation, en) ↔ “Paperwork system at home” (organising+budgeting, en)
+  - "Roughly: 1. Demolition and checking the floor and walls for water damage. 2. Plumbing rough-in and electrical "
+  - "- a small set of folders: bills (current year), tax, insurance, warranties and manuals, house, health; - a sca"
+- **0.89** “Insulating an attic” (renovation, en) ↔ “Door won't close properly” (repairs, en)
+  - "In a cold attic with insulation laid on the ceiling, a vapour barrier belongs on the warm side, under the ceil"
+  - "Interior door rubs at the top corner and won't latch since winter."
+- **1.00** “Adding a window to a wall” (renovation, en) ↔ “Radiator stays cold at the top” (repairs, en) **[generic passage]**
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+  - "Of course! To summarise, the key points are above. If you want, I can also give you a short checklist or more "
+- **0.89** “Tomatoes on the balcony split” (vegetables, en) ↔ “Repot a cactus without getting stabbed” (houseplants, en)
+  - "Water deeply and regularly, ideally at the same time every day, and mulch the pots so the soil doesn't dry out"
+  - "Use cactus soil with extra grit, a pot only slightly bigger than the root ball, and don't water for a week aft"
+- **1.00** “Grønnsakshage for nybegynnere” (vegetables, no) ↔ “Stueplanter når vi er på ferie” (houseplants, no) **[generic passage]**
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+  - "Bare hyggelig! Kom gjerne tilbake hvis du har flere spørsmål. Lykke til, og jeg håper alt går greit videre for"
+- **0.90** “Cover letter for a career change” (applications, en) ↔ “Giving negative feedback to a team member” (workplace, en)
+  - "- Keep it to three short paragraphs: why this company, what you bring (with evidence), and a confident close. "
+  - "Describe the behaviour and its impact, not their character: \"The last two reports came in three days late, and"
+- **0.89** “Junior QA resume tips” (applications, ru) ↔ “Как попросить повышение зарплаты” (workplace, ru)
+  - "- навыки конкретно: тест-кейсы, Postman, SQL-запросы, Jira, основы автотестов; - предыдущий опыт переформулиру"
+  - "Подготовьтесь заранее: 1. Соберите факты: какие задачи добавились, какие результаты вы дали (цифры, проекты, с"
+- **0.90** “LinkedIn headline” (applications, en) ↔ “"Tell me about yourself" answer” (interviews, en)
+  - "Keep it scannable, avoid buzzwords like \"passionate\" and \"guru\", and make sure the same keywords appear in you"
+  - "Practise it out loud until it's natural but not memorised word for word. End by connecting to the job, which h"
+- **0.89** “Questions to ask the interviewer” (interviews, en) ↔ “Negotiating a 4-day week” (workplace, en)
+  - "is it ok to ask about remote work?"
+  - "Is it realistic to ask my employer for a 4-day week at 80% pay?"
+- **0.90** “Как попросить повышение зарплаты” (workplace, ru) ↔ “Сменить профессию в 40 лет” (applications+stress, ru)
+  - "Подготовьтесь заранее: 1. Соберите факты: какие задачи добавились, какие результаты вы дали (цифры, проекты, с"
+  - "Сначала попробуйте направление на практике: курс, небольшой проект, общение с людьми из профессии. Посмотрите,"
+- **0.89** “Shadowing technique” (languages, en) ↔ “Memorising anatomy” (exams, en)
+  - "Use clips of 1–2 minutes with a transcript, repeat each one many times over a week, and record yourself to com"
+  - "Turn lectures into questions (flashcards or blank diagrams to label), test yourself daily with spaced repetiti"
+- **1.00** “Письмо на норвежском в коммуну” (languages+bureaucracy, ru) ↔ “Пересдача экзамена в университете” (exams, ru) **[generic passage]**
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+  - "Отличный вопрос! Дайте знать, если хотите, чтобы я подробнее объяснил какой-то из шагов, или если я могу помоч"
+- **1.00** “Math exam preparation” (exams, ru) ↔ “Перевести письмо на английский официально” (languages, ru) **[generic passage]**
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+  - "Пожалуйста! Возвращайтесь в любое время, если появятся вопросы. Удачи, и надеюсь, дальше всё пойдёт гладко."
+- **0.91** “Masteroppgave: skrivesperre” (thesis+stress, no) ↔ “Eksamen i matte R1” (exams, no)
+  - "Senk kravet til første utkast. Skriv det dårlig først; teksten skal forbedres senere. Begynn med metodekapitte"
+  - "Ta tidligere eksamener på tid, rett dem selv med løsningsforslag, og lag en liste over feil du gjør flere gang"
+- **1.00** “Skjermtid for 10-åringen” (parenting, no) ↔ “Valp og alenetid” (dogs, no) **[generic passage]**
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+  - "Håper dette hjelper! Hvis du har flere spørsmål eller trenger mer forklaring på noen av punktene, er det bare "
+- **0.88** “Adopting a rescue dog” (dogs, en) ↔ “Introducing a second cat” (cats, en)
+  - "Keep the first weeks quiet and predictable: a crate or bed in a calm corner, the same feeding and walk times, "
+  - "Slowly, over one to three weeks. Keep the kitten in a separate room at first, swap bedding so they learn each "
+- **0.88** “Pottery wheel or hand building” (crafts, en) ↔ “Learning piano as an adult with little time” (music, en)
+  - "Taking up pottery. Should I start with the wheel or hand building?"
+  - "what's the first piece I should aim for?"
+- **0.88** “Old laptop: Linux?” (devices, en) ↔ “Smart lights that work without the cloud” (smart-home, en)
+  - "Swap the hard drive for a cheap SSD first if it still has a spinning disk — that's the biggest speed boost. Tr"
+  - "Avoid wifi bulbs that only work through the manufacturer's app and cloud. Matter is making this easier, but ch"
+- **0.89** “Old laptop: Linux?” (devices, en) ↔ “Home Assistant on a Raspberry Pi” (smart-home+automation, en)
+  - "Yes, it's a great use for it. Linux Mint (Xfce edition) or Lubuntu run well on older hardware and feel familia"
+  - "Yes, it's the classic setup. Use Home Assistant OS on an SSD rather than an SD card — SD cards wear out from d"
+- **0.90** “Sette opp gjestenett hjemme” (network, no) ↔ “Smarthus for en eldre forelder” (smart-home+elderly, no)
+  - "Hvordan lager jeg et eget wifi for gjester så de ikke kommer inn på det vanlige nettet vårt?"
+  - "Mamma bor alene. Finnes det smarte løsninger som varsler oss hvis noe er galt, uten kamera?"
+- **0.88** “VPN at home: needed?” (network, en) ↔ “Smart lights that work without the cloud” (smart-home, en)
+  - "Sensible. If you start using public wifi a lot, revisit it."
+  - "Avoid wifi bulbs that only work through the manufacturer's app and cloud. Matter is making this easier, but ch"
+- **0.88** “VPN at home: needed?” (network, en) ↔ “Home Assistant on a Raspberry Pi” (smart-home+automation, en)
+  - "Do I need a VPN at home for security?"
+  - "Worth running Home Assistant on a Raspberry Pi 4?"
+- **1.00** “Как получить норвежский D-номер” (bureaucracy, ru) ↔ “Переезд с детьми в новый город” (moving+parenting, ru) **[generic passage]**
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+  - "Рад, что получилось! Если возникнут другие проблемы или захотите разобраться глубже, напишите, и мы пройдём вс"
+- **0.88** “St Petersburg white nights trip” (city-trips, ru) ↔ “Как выбрать рюкзак для похода” (hiking, ru)
+  - "Едем в Петербург в конце июня на 4 дня. Что обязательно посмотреть?"
+  - "Нужен рюкзак для походов на 3–5 дней. На что смотреть?"

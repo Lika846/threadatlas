@@ -1,0 +1,221 @@
+=== t174 | Budget that actually sticks | budgeting | - | en
+U: I've tried budgeting apps three times and always give up after a month. Any approach that's less work?
+A: Try a "pay yourself first" setup instead of tracking every purchase:
+1. On payday, automatic transfers move fixed amounts to savings and a bills account.
+2. Whatever is left in your main account is free to spend, no tracking needed.
+3. Once a month, spend 15 minutes checking that bills and savings went where they should.
+It works because the decisions happen once, not at every purchase. Start with modest amounts so the spending account doesn't run dry, then increase.
+
+=== t175 | Student monthly budget | budgeting | - | no
+U: Jeg får 13 000 i måneden fra Lånekassen og husleia er 6 500. Hvordan får jeg pengene til å holde?
+A: Etter husleia har du 6 500 til alt annet. En grov fordeling:
+- Mat: 3 000 (handle etter ukemeny, lage matpakke, kjøp storpakninger med venner)
+- Transport: 500 (studentrabatt på månedskort)
+- Mobil og strømming: 400
+- Klær og annet: 800
+- Fritid: 1 000
+- Buffer: 800
+Sett bufferen på en egen konto så den ikke forsvinner. Mange klarer seg bedre med en jobb på 8–10 timer i uka, men pass på inntektsgrensen så stipendet ikke blir gjort om til lån.
+
+=== t176 | Как вести семейный бюджет вдвоём | budgeting | - | ru
+U: Мы с мужем живём вместе год, деньги то общие, то раздельные, постоянные споры. Как лучше устроить?
+A: Многим парам подходит схема «общий счёт плюс личные»: каждый переводит на общий счёт одинаковый процент от дохода, с него оплачиваются квартира, продукты, коммунальные и общие цели. Остаток у каждого — личные деньги, за которые не нужно отчитываться. Раз в месяц садитесь на 20 минут и смотрите общие траты и цели. Пропорциональный взнос справедливее равного, если доходы сильно различаются.
+
+=== t177 | Emergency fund size | budgeting | investing | en
+U: How big should an emergency fund be before I start investing?
+A: The common guideline is 3–6 months of essential expenses (rent, food, bills, transport — not your full spending). Go toward 6 if your income is irregular, you're the only earner, or you own a home. Keep it in a high-interest savings account, not in stocks. You can start investing small amounts before it's full, as long as you keep building it.
+
+=== t178 | Spreadsheet for tracking shared flat costs | budgeting | py-data | en
+U: Four of us share a flat. I need a spreadsheet where everyone logs what they paid and it shows who owes whom.
+A: Make one table with columns Date, Paid by, Amount, Description. Then a summary block:
+- total spent: `=SUM(C:C)`;
+- fair share per person: total / 4;
+- for each person: `=SUMIF(B:B, "Anna", C:C) - fair_share`.
+Positive means they're owed money, negative means they owe. To settle with few transfers, the person who owes the most pays the one owed the most, and you repeat. If you want it automatic, apps like Splitwise do exactly this.
+
+=== t179 | Strømregningen er altfor høy | budgeting | repairs | no
+U: Strømregningen var 4 800 i januar for en treroms leilighet. Hva kan vi gjøre?
+A: Begynn med de store postene: oppvarming og varmtvann. Senk temperaturen én–to grader (hver grad sparer rundt fem prosent av oppvarmingen), skru ned i soverom og rom dere ikke bruker, og ta kortere dusjer. Sjekk at varmtvannsberederen ikke står på mer enn 65–70 grader. Vurder om en spotprisavtale med strømstøtte passer, og flytt vask og oppvask til billige timer på natta. En luft-til-luft-varmepumpe er den investeringen som gir mest hvis dere eier.
+
+=== t180 | Subscriptions eating my money | budgeting | - | en
+U: I just realised I pay for 11 subscriptions. how do i decide which to cancel
+A: List each with its monthly cost and when you last used it. Cancel anything unused in the past month without thinking twice. For the rest, rotate: keep one streaming service at a time and switch every couple of months. Set calendar reminders before free trials end. Most people cut a third without missing anything.
+
+=== t181 | Tax deduction for home office | taxes | - | en
+U: I work from home three days a week as an employee. Can I deduct anything?
+A: It depends heavily on your country. In many places employees can't deduct home office costs unless the employer requires it and doesn't provide a desk, while self-employed people can. Where it's allowed, there's often a simple flat-rate option per day worked from home instead of calculating rent and electricity shares. Tell me which country and I can be more specific.
+U: norway
+A: In Norway, employees generally can't deduct home office costs; the rules are strict and mostly apply to self-employed people. Your main deductions as an employee are the minimum deduction (minstefradrag, applied automatically) and travel between home and work above the threshold. Check the pre-filled tax return for the commuting deduction, which is often missed.
+
+=== t182 | Skattemeldingen og utleie av hybel | taxes | renting | no
+U: Jeg leier ut en hybel i kjelleren for 6 000 i måneden. Må jeg skatte av det?
+A: Det avhenger av hvor stor del av boligen du leier ut. Bor du selv i boligen og leier ut mindre enn halvparten av utleieverdien, er leieinntekten skattefri. Leier du ut mer enn halvparten, blir hele leieinntekten skattepliktig. Hybelen i kjelleren er ofte under halvparten, men regn etter med utleieverdien, ikke kvadratmeter. Er den skattepliktig, fører du inntekten i skattemeldingen og kan trekke fra kostnader til vedlikehold av utleiedelen.
+
+=== t183 | Налоговый вычет за лечение | taxes | - | ru
+U: В прошлом году лечила зубы на 180 тысяч. Можно ли получить вычет?
+A: Да, если вы официально работаете и платите НДФЛ 13%. Социальный вычет на лечение позволяет вернуть 13% от расходов, но не более чем со 150 тысяч в год (для обычных услуг лимит установлен законом), то есть до 19,5 тысячи. Понадобятся справка об оплате медицинских услуг для налоговой от клиники, копия лицензии клиники и договор. Подать можно через личный кабинет на сайте ФНС в течение трёх лет после года лечения.
+
+=== t184 | Freelancer: setting money aside for taxes | taxes | budgeting | en
+U: First year freelancing. How much of each invoice should I put aside for tax?
+A: A safe rule of thumb is 30–35% of every payment into a separate tax account the day it arrives, until you know your real rate. It's far better to have money left over than to owe a lump sum you've spent. Keep every receipt for business costs, since they reduce the taxable amount, and find out whether you need to pay tax in advance during the year — many countries require quarterly prepayments for the self-employed.
+
+=== t185 | Selling shares and capital gains | taxes | investing | en
+U: If I sell shares I've held for 5 years, do I pay tax on the whole amount?
+A: No, only on the gain: the sale price minus what you paid (including fees). How the gain is taxed depends on your country and account type; some countries have lower rates for long-held shares, and tax-advantaged accounts often defer the tax until you withdraw. Keep the purchase records — the original price is what your gain is calculated from.
+
+=== t186 | Fradrag for reisevei | taxes | - | no
+U: Jeg kjører 55 km hver vei til jobb. Får jeg fradrag?
+A: Ja, reisefradrag gis for avstanden mellom hjem og jobb, uansett transportmiddel, når de samlede reisekostnadene overstiger en årlig bunnsum. Med 110 km per arbeidsdag og vanlig antall arbeidsdager får du sannsynligvis et betydelig fradrag. Avstanden beregnes etter korteste vei. Sjekk at det står riktig i skattemeldingen; det er ofte forhåndsutfylt, men ikke alltid riktig hvis du har byttet jobb eller adresse.
+
+=== t187 | Receipts for VAT as a small business | taxes | - | en
+U: Do I need to keep paper receipts or are photos enough for my small business accounts?
+A: In most countries, digital copies are accepted if they're complete, readable and stored safely for the required period (often 5–10 years). Photograph or scan receipts as you get them and store them in your accounting software or a dated folder structure. Check your country's rules for invoices from abroad and for cash sales, which sometimes have extra requirements.
+
+=== t188 | Index funds for a beginner | investing | - | en
+U: I'm 28 and have 2,000 euros. Everyone says index funds. Which one and how?
+A: For most beginners, a broad global index fund is enough: it holds thousands of companies across many countries in one product. Look for low fees (under 0.3% per year) and buy through a low-cost broker or your bank's fund platform. Set up a monthly automatic purchase so you keep investing regardless of the news. Expect the value to drop 20–30% sometimes; the plan only works if you don't sell when that happens. Keep money you need within five years out of it.
+
+=== t189 | Aksjesparekonto eller fondskonto | investing | - | no
+U: Hva er forskjellen på aksjesparekonto og vanlig fondskonto? Jeg vil spare i indeksfond.
+A: På en aksjesparekonto (ASK) kan du kjøpe og selge fond og aksjer inne på kontoen uten å skatte av gevinsten før du tar pengene ut av kontoen. Du kan også ta ut det du har satt inn skattefritt. På en vanlig fondskonto skattlegges gevinsten hver gang du selger. For langsiktig sparing i aksjefond er ASK nesten alltid best. Rentefond kan ikke ligge på ASK.
+
+=== t190 | Инвестиции: вклад или облигации | investing | - | ru
+U: Есть 500 тысяч рублей, нужны через 2 года на первый взнос по ипотеке. Куда положить?
+A: Для цели через 2 года главное — не потерять деньги, а не заработать максимум. Подойдут вклад в надёжном банке в пределах страховки АСВ или короткие облигации федерального займа (ОФЗ) с погашением к нужному сроку. Акции на таком горизонте рискованны: за два года они могут упасть на 20–30%. Разделите сумму между двумя–тремя банками, если она выше лимита страхования.
+
+=== t191 | Should I pay off my student loan or invest | investing | budgeting | en
+U: Student loan at 2.5% interest. Pay it off faster or invest the extra 300 a month?
+A: At 2.5%, investing has historically come out ahead over long periods, since diversified stock funds have averaged more than that. But paying off the loan is a guaranteed return with zero risk. A reasonable middle: keep paying the loan as scheduled, build your emergency fund first, then invest the extra. If the debt bothers you, splitting 50/50 is a perfectly fine choice.
+
+=== t192 | Crypto: worth putting money in? | investing | - | en
+U: Friends keep telling me to buy crypto. Is it smart to put part of my savings in?
+A: Crypto is highly speculative: prices have dropped 70–80% several times, and there are no earnings or cash flows to anchor its value. If you want exposure, treat it like a lottery-style bet: a small amount you can afford to lose completely (many people say at most 5% of investments), bought through a regulated exchange, never with borrowed money. Don't let it replace your core savings.
+
+=== t193 | Dollar-cost averaging vs lump sum | investing | - | en
+U: Got a 20k inheritance. Invest it all at once or spread it over a year?
+A: Statistically, investing all at once wins about two thirds of the time, since markets rise more often than they fall. Spreading it out reduces the regret if the market drops right after you invest. If a big drop would make you panic and sell, spreading it over 6–12 months is worth the small expected cost. Either way, decide the plan in advance and automate it.
+
+=== t194 | Fondssparing for barna | investing | parenting | no
+U: Vi vil spare til barna. Bør fondene stå i deres navn eller vårt?
+A: Begge deler har fordeler. I barnets navn tilhører pengene barnet, og ved 18 år bestemmer barnet selv over dem — det synes ikke alle foreldre er greit. I foreldrenes navn beholder dere kontrollen og kan gi pengene når dere mener tiden er inne, og dere kan bruke aksjesparekonto. Mange velger å spare i eget navn og øremerke kontoen. Uansett: indeksfond med lave kostnader og fast månedlig beløp.
+
+=== t195 | Cover letter for a career change | applications | - | en
+U: I've been a teacher for 8 years and want to move into UX research. How do I write a cover letter that doesn't scream "no experience"?
+A: Lead with what transfers, in their language:
+- Teaching is user research in disguise: you observe how people learn, notice where they get stuck, and iterate on materials. Give one concrete example with a result.
+- Show proof of the new direction: a course, a portfolio case study, a usability test you ran for a local organisation.
+- Keep it to three short paragraphs: why this company, what you bring (with evidence), and a confident close.
+Don't apologise for the switch; frame it as a deliberate move with a clear reason.
+U: can you draft the middle paragraph? my case study was redesigning a school's parent portal
+A: Here's a draft: "In my last project I redesigned the parent portal at Lindeberg School. I interviewed twelve parents, ran usability tests on the old portal, and found that most of them couldn't find absence reporting without help. After two rounds of prototyping and testing, the new design cut the average time to report an absence from four minutes to under one, and calls to the school office dropped noticeably. It taught me how much careful listening and small, tested changes can matter — the approach I'd bring to your research team."
+
+=== t196 | Søknad på sommerjobb | applications | - | no
+U: Jeg er 17 og skal søke sommerjobb i butikk for første gang. Hva skriver jeg når jeg ikke har erfaring?
+A: Skriv om det du faktisk har gjort: dugnad, fotballtrening du har hjulpet til med, barnevakt, skoleprosjekter. Arbeidsgivere i butikk ser etter at du er pålitelig, blid og lærer fort. En kort søknad holder:
+- hvem du er og hvilken jobb du søker;
+- to–tre eksempler som viser at du møter opp og tar ansvar;
+- når du kan jobbe og at du gjerne kommer på et intervju.
+Lever gjerne søknaden personlig i butikken — det gjør inntrykk.
+
+=== t197 | Junior QA resume tips | applications | - | ru
+U: Закончила курсы по тестированию, опыта работы в IT нет. Что писать в резюме?
+A: Сделайте упор на практику:
+- раздел «Проекты»: дипломный проект курсов, тестирование реальных сайтов или приложений с баг-репортами (ссылки на GitHub или документы);
+- навыки конкретно: тест-кейсы, Postman, SQL-запросы, Jira, основы автотестов;
+- предыдущий опыт переформулируйте под новую роль: внимательность к деталям, работа с документами, коммуникация с клиентами.
+Одна страница, без лишних слов. И сопроводительное письмо под каждую вакансию — для джунов это сильно повышает отклик.
+
+=== t198 | LinkedIn headline | applications | - | en
+U: My LinkedIn headline just says "Marketing Coordinator at XYZ". How do I make it better?
+A: Use the headline to say what you do and for whom, with keywords recruiters search for. For example: "Marketing coordinator | B2B content, email campaigns and HubSpot automation | Turning product launches into pipeline". Keep it scannable, avoid buzzwords like "passionate" and "guru", and make sure the same keywords appear in your About and Experience sections.
+
+=== t199 | Tailoring a CV to each job | applications | - | en
+U: Do I really need to rewrite my CV for every application?
+A: Not rewrite, but adjust the top third: the summary and the first bullets of your most recent job. Mirror the key requirements from the job ad in your own words, and move the most relevant achievements to the top. It takes 15 minutes per application and noticeably increases callbacks, especially where applicant tracking systems filter on keywords.
+
+=== t200 | Hvordan følge opp en søknad | applications | - | no
+U: Jeg søkte på en jobb for tre uker siden og har ikke hørt noe. Kan jeg ringe?
+A: Ja, det er helt vanlig i Norge og viser interesse. Ring kontaktpersonen i annonsen, presenter deg kort, si at du søkte på stillingen og spør hvor i prosessen de er. Ha gjerne ett spørsmål om stillingen klart. Hold det kort og vennlig. Har søknadsfristen nettopp gått ut, kan de fortsatt være i gang med å lese søknader.
+
+=== t201 | Writing a portfolio case study | applications | - | en
+U: How long should a design case study be for my portfolio?
+A: Long enough to show your thinking, short enough to skim: most reviewers spend 2–3 minutes. Structure: the problem and your role in one paragraph, two or three key decisions with the evidence behind them, the outcome with numbers if you have them, and what you'd do differently. Lead with the final design image so they know where it's going.
+
+=== t202 | "Tell me about yourself" answer | interviews | - | en
+U: I always ramble when they ask "tell me about yourself". How should I answer?
+A: Use present–past–future in about 90 seconds: what you do now and one achievement, how you got here (only the relevant steps), and why this role is the logical next step. Practise it out loud until it's natural but not memorised word for word. End by connecting to the job, which hands the conversation back to them.
+
+=== t203 | Jobbintervju på engelsk | interviews | languages | no
+U: Jeg har intervju hos et internasjonalt selskap på fredag og det skal være på engelsk. Jeg er nervøs for språket.
+A: Forbered svarene på de vanligste spørsmålene og øv dem høyt på engelsk: fortell om deg selv, hvorfor denne stillingen, en utfordring du har løst, styrker og svakheter.
+U[en]: Can you give me a good English answer for "why do you want to work here"? It's a logistics software company.
+A[en]: Sure — adjust the details to match the company: "I've spent four years planning deliveries for a wholesaler, so I know first-hand how much time poor planning tools cost. Your software is built for exactly that problem, and I'd love to help improve it from the inside. I'm also drawn to the fact that your teams work closely with customers — that's where I've done my best work."
+
+=== t204 | Как отвечать про слабые стороны | interviews | - | ru
+U: На собеседовании всегда спрашивают о слабых сторонах. Что отвечать, чтобы не навредить себе?
+A: Назовите реальную, но не критичную для этой роли слабость и покажите, что вы с ней работаете. Например: «Раньше мне было сложно делегировать, я пыталась всё сделать сама. Сейчас я заранее делю задачи в команде и договариваюсь о промежуточных проверках — это помогло мне вести проект из пяти человек». Избегайте шаблонных ответов вроде «я перфекционист» — интервьюеры их слышали тысячи раз.
+
+=== t205 | Technical interview prep plan | interviews | py-data | en
+U: I have a data analyst technical interview in 10 days: SQL test and a take-home in Python. How should I prepare?
+A: Split the days:
+- Days 1–4: SQL daily — joins, GROUP BY with HAVING, window functions (ROW_NUMBER, running totals), and date handling. Practise on LeetCode or StrataScratch, timing yourself.
+- Days 5–7: a mini take-home on a public dataset: clean it with pandas, answer three business questions, make two clear charts, and write a short summary.
+- Days 8–9: review your past projects so you can explain decisions and trade-offs.
+- Day 10: rest, prepare questions for them.
+In the take-home, clarity beats complexity: state assumptions and keep the notebook readable.
+
+=== t206 | Salary question in the interview | interviews | workplace | en
+U: They'll ask my salary expectations in the first interview. What do I say?
+A: Research the range for the role first (salary surveys, union statistics, sites like Glassdoor). Then give a range whose bottom is a number you'd be happy with: "Based on the role and market data, I'm looking at 620–680k, depending on the overall package." If you can, ask what range they've budgeted first. Avoid naming your current salary if you're switching to a better-paid market.
+
+=== t207 | Questions to ask the interviewer | interviews | - | en
+U: what should i ask at the end of an interview
+A: Ask things that help you judge the job: "What would a great first six months look like?", "What's the biggest challenge the team is facing right now?", "How do you give feedback and support development?" and "What do people who've left this team say was hardest?" Avoid questions you could have answered from their website.
+
+=== t208 | Difficult conversation with a colleague | workplace | - | en
+U: A colleague keeps taking credit for my work in meetings. I don't want a war but it has to stop.
+A: Address it directly with them first, privately and factually: "In yesterday's meeting the analysis I did was presented as yours. I'd like us to agree how we credit each other's work." Often that's enough. Meanwhile make your work visible: send short written summaries to the team or manager when you finish something, and present your own results where possible. If it continues, talk to your manager with specific examples and dates, focusing on the work rather than the person.
+
+=== t209 | Første gang som leder | workplace | - | no
+U: Jeg har nettopp blitt teamleder for de jeg jobbet sammen med i fem år. Hvordan håndterer jeg overgangen?
+A: Det er en av de vanskeligste lederovergangene. Noen råd:
+- Snakk med hver enkelt én-til-én de første ukene: hva fungerer, hva vil de endre, hvordan vil de ha det med oppfølging.
+- Vær åpen om at rollen er ny og at forholdet endrer seg litt — du kan ikke være med på baksnakk om ledelsen lenger.
+- Ikke gjør store endringer den første måneden; lytt først.
+- Få deg en mentor eller en annen leder du kan sparre med, for det blir ensomt innimellom.
+Ta tak i vanskelige saker tidlig; det er lettere å etablere forventninger nå enn senere.
+
+=== t210 | Как попросить повышение зарплаты | workplace | - | ru
+U: Работаю в компании два года, обязанностей стало больше, зарплата та же. Как поднять разговор о повышении?
+A: Подготовьтесь заранее:
+1. Соберите факты: какие задачи добавились, какие результаты вы дали (цифры, проекты, сэкономленное время).
+2. Узнайте рыночную вилку для вашей роли.
+3. Попросите отдельную встречу, а не обсуждайте это между делом.
+4. Начните с результатов, затем назовите конкретную сумму или процент.
+Если сейчас отказ, спросите, какие условия нужны для повышения и когда вернуться к разговору, и зафиксируйте это письменно.
+
+=== t211 | Too many meetings | workplace | - | en
+U: I'm in meetings 6 hours a day and do my actual work in the evening. How do I fix this without looking lazy?
+A: Look at your calendar for the last two weeks and sort meetings into: essential, could be async, and not needed for me. Then act on each group: decline or ask for notes for the third group, suggest a written update instead of the second, and block two mornings a week as focus time. Tell your manager what you're doing and why, framed around output: "I want to protect time for the roadmap, so I'm stepping out of these three recurring meetings."
+
+=== t212 | Giving negative feedback to a team member | workplace | - | en
+U: One of my reports keeps missing deadlines and it's affecting the team. How do I give feedback without crushing them?
+A: Be specific, early and private. Describe the behaviour and its impact, not their character: "The last two reports came in three days late, and the client meeting had to be moved." Then ask what's going on — there may be a reason you don't know about, like unclear priorities or something personal. Agree on concrete next steps and a check-in date, and follow up. Kind feedback is clear feedback; vague hints are harder on people in the long run.
+U: they told me they've been overwhelmed and didn't want to say no
+A: Then part of the fix is on your side: make it safe to push back. Go through their current tasks together, decide what to drop or delay, and agree they'll flag it early when a deadline is at risk. Thank them when they do — that's how the habit forms.
+
+=== t213 | Hjemmekontor og ensomhet | workplace | stress | no
+U: Etter at vi ble helt digitale føler jeg meg isolert fra kollegene. Noen tips?
+A: Lag struktur for det uformelle som forsvant: en fast «kaffeprat» på video et par ganger i uka uten agenda, chatkanaler for annet enn jobb, og møt kolleger fysisk når det er mulig. Jobb gjerne fra et kontorfellesskap eller bibliotek én dag i uka. Og si fra til lederen — sannsynligvis er du ikke den eneste som føler det slik.
+
+=== t214 | Quitting a job gracefully | workplace | - | en
+U: I've accepted a new offer. How do I resign without burning bridges?
+A: Tell your manager in person or on a call first, before anyone else, then follow up in writing with your last day. Keep the reason short and positive. Offer a solid handover: a document of your ongoing work, contacts and where things are stored. Work properly through the notice period, and say thanks to the people who helped you. Industries are smaller than they seem.
+
+=== t215 | Конфликт между двумя сотрудниками в команде | workplace | - | ru
+U: Двое в моей команде постоянно спорят на созвонах, остальные уже устали. Как руководителю это решить?
+A: Сначала поговорите с каждым отдельно: выясните, в чём суть конфликта — в задачах, ролях или личном. Часто это неясные границы ответственности. Затем проведите встречу втроём с правилами: обсуждаем факты и решения, не личности. Договоритесь, кто за что отвечает и как принимаются спорные решения. На общих созвонах сразу останавливайте переход на личности. Если не помогает — подключайте HR.
+
+=== t216 | Negotiating a 4-day week | workplace | - | en
+U: Is it realistic to ask my employer for a 4-day week at 80% pay?
+A: It's increasingly common, especially for experienced employees. Make a concrete proposal: which day you'd be off, how you'll handle urgent matters, which responsibilities you'll keep and what can be handed over. Suggest a trial of three months with a review. Check how it affects your pension contributions and holiday pay before you sign.

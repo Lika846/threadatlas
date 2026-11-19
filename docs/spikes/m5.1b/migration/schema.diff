@@ -1,0 +1,81 @@
+80a81,83
+>   /// Semantic index (M5.1b): derived data, removed with the conversation
+>   embeddingStatus     EmbeddingStatus?
+>   embeddingChunks     EmbeddingChunk[]
+121a125,200
+> 
+> /// Semantic index configuration and counters (M5.1b). At most one row (id "main"),
+> /// created at the first Start, never by the migration. Kept by delete-all: it
+> /// holds versions and counters only, no imported data.
+> model EmbeddingIndex {
+>   /// Always "main" (one row)
+>   id               String   @id
+>   /// Incremented by delete-all and by every configuration change; never decreases
+>   epoch            Int
+>   /// EMBEDDING_VERSION (model, revision, prefixes, truncation, pooling, batching, windows)
+>   embeddingVersion String
+>   /// CHUNKER_VERSION
+>   chunkerVersion   String
+>   chunkTokens      Int
+>   /// QUANTIZATION_VERSION
+>   quantization     String
+>   dimensions       Int
+>   /// Incremented by every commit or deletion of chunks (M5.2 cache invalidation)
+>   changeCounter    Int
+>   /// Last run-level error code (static codes only)
+>   lastErrorCode    String?
+>   updatedAt        DateTime
+> }
+> 
+> /// Indexing state of one conversation (M5.1b). Kept after success, so a
+> /// conversation with zero eligible messages is not queued again.
+> model EmbeddingStatus {
+>   conversationId String       @id
+>   conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+>   /// The conversation version this row refers to: (contentHash, parserVersion)
+>   contentHash    String
+>   parserVersion  String
+>   /// Index epoch when queued; for "indexed", the epoch of the commit
+>   epoch          Int
+>   /// pending | running | indexed | failed
+>   state          String
+>   /// Random 128-bit hex while running; cleared by any re-queue
+>   claimToken     String?
+>   attempts       Int
+>   /// Number of chunks committed; set only when indexed (0 is valid)
+>   chunkCount     Int?
+>   /// Static error code, e.g. INFERENCE_FAILED, CONVERSATION_TOO_LARGE
+>   lastErrorCode  String?
+>   queuedAt       DateTime
+>   updatedAt      DateTime
+> 
+>   @@index([state, queuedAt])
+> }
+> 
+> /// One chunk vector (M5.1b). No text: the chunk is
+> /// Message.contentText.slice(start, end) of (conversationId, sourceNodeId).
+> model EmbeddingChunk {
+>   conversationId String
+>   conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+>   /// The conversation version embedded
+>   contentHash    String
+>   parserVersion  String
+>   /// Index epoch at commit
+>   epoch          Int
+>   /// Message provenance (A62)
+>   sourceNodeId   String
+>   /// Position within the message
+>   chunkIndex     Int
+>   /// UTF-16 offsets into Message.contentText
+>   start          Int
+>   end            Int
+>   /// At most 64
+>   tokenCount     Int
+>   /// The chunker's content-addressed id (32 hex)
+>   chunkKey       String
+>   /// int8-absmax-v1, 388 bytes
+>   vector         Bytes
+> 
+>   @@id([conversationId, sourceNodeId, chunkIndex])
+>   @@index([epoch])
+> }

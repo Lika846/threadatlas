@@ -1,0 +1,12 @@
+{
+  "name": "m5-exp1-runtime",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@huggingface/transformers": "3.8.1",
+    "onnxruntime-node": "1.23.2"
+  },
+  "overrides": {
+    "onnxruntime-node": "1.23.2"
+  }
+}

@@ -1,0 +1,214 @@
+{
+ "sqlite": "3.53.2",
+ "loadExtensionSql": "refused: not authorized",
+ "sizes": {
+  "5000": {
+   "float32": {
+    "insertMs": 56,
+    "insertPerSec": 88939,
+    "bytes": 10338304,
+    "bytesPerVector": 2068,
+    "coldScanMs": {
+     "p50": 14.96,
+     "max": 17.97
+    },
+    "cacheLoadMs": 25,
+    "cacheMb": 7.3,
+    "warmScanMs": {
+     "p50": 3.71,
+     "p95": 7.43
+    },
+    "sqlFunctionMs": {
+     "p50": 5.27,
+     "p95": 6.56
+    },
+    "deleteOneConversationMs": 1.6,
+    "canaryResidueAfterDelete": 17664,
+    "canaryResidueAfterSecureDeleteVacuum": 0,
+    "deleteAllMs": 60,
+    "bytesAfterDeleteAllVacuum": 12288
+   },
+   "int8": {
+    "insertMs": 63,
+    "insertPerSec": 79139,
+    "bytes": 2359296,
+    "bytesPerVector": 472,
+    "coldScanMs": {
+     "p50": 34.05,
+     "max": 73.01
+    },
+    "cacheLoadMs": 8,
+    "cacheMb": 1.9,
+    "warmScanMs": {
+     "p50": 3.52,
+     "p95": 7.85
+    },
+    "deleteOneConversationMs": 1.5,
+    "canaryResidueAfterDelete": 0,
+    "canaryResidueAfterSecureDeleteVacuum": 0,
+    "deleteAllMs": 16,
+    "bytesAfterDeleteAllVacuum": 12288
+   },
+   "vec0": {
+    "insertMs": 106,
+    "insertPerSec": 47330,
+    "bytes": 8151040,
+    "bytesPerVector": 1630,
+    "knnMs": {
+     "p50": 5.05,
+     "p95": 6.29
+    },
+    "deleteOneConversationMs": 2.9,
+    "canaryResidueAfterDelete": 382,
+    "canaryResidueAfterSecureDeleteVacuum": 0,
+    "deleteAllMs": 135,
+    "bytesAfterDeleteAllVacuum": 40960,
+    "extraSchemaObjects": [
+     "v_info",
+     "v_chunks",
+     "v_rowids",
+     "v_vector_chunks00"
+    ]
+   }
+  },
+  "50000": {
+   "float32": {
+    "insertMs": 621,
+    "insertPerSec": 80506,
+    "bytes": 103337984,
+    "bytesPerVector": 2067,
+    "coldScanMs": {
+     "p50": 219.68,
+     "max": 255.76
+    },
+    "cacheLoadMs": 301,
+    "cacheMb": 73.2,
+    "warmScanMs": {
+     "p50": 36.65,
+     "p95": 79.49
+    },
+    "sqlFunctionMs": {
+     "p50": 90.25,
+     "p95": 114.44
+    },
+    "deleteOneConversationMs": 1.7,
+    "canaryResidueAfterDelete": 17664,
+    "canaryResidueAfterSecureDeleteVacuum": 0,
+    "deleteAllMs": 817,
+    "bytesAfterDeleteAllVacuum": 12288
+   },
+   "int8": {
+    "insertMs": 714,
+    "insertPerSec": 70029,
+    "bytes": 23502848,
+    "bytesPerVector": 470,
+    "coldScanMs": {
+     "p50": 368.09,
+     "max": 393.04
+    },
+    "cacheLoadMs": 143,
+    "cacheMb": 18.5,
+    "warmScanMs": {
+     "p50": 36.03,
+     "p95": 82.27
+    },
+    "deleteOneConversationMs": 1.6,
+    "canaryResidueAfterDelete": 0,
+    "canaryResidueAfterSecureDeleteVacuum": 0,
+    "deleteAllMs": 180,
+    "bytesAfterDeleteAllVacuum": 12288
+   },
+   "vec0": {
+    "insertMs": 1092,
+    "insertPerSec": 45774,
+    "bytes": 79728640,
+    "bytesPerVector": 1595,
+    "knnMs": {
+     "p50": 54.73,
+     "p95": 58.4
+    },
+    "deleteOneConversationMs": 2.7,
+    "canaryResidueAfterDelete": 355,
+    "canaryResidueAfterSecureDeleteVacuum": 0,
+    "deleteAllMs": 1542,
+    "bytesAfterDeleteAllVacuum": 40960,
+    "extraSchemaObjects": [
+     "v_info",
+     "v_chunks",
+     "v_rowids",
+     "v_vector_chunks00"
+    ]
+   }
+  },
+  "100000": {
+   "float32": {
+    "insertMs": 1291,
+    "insertPerSec": 77472,
+    "bytes": 206766080,
+    "bytesPerVector": 2068,
+    "coldScanMs": {
+     "p50": 521.88,
+     "max": 544.88
+    },
+    "cacheLoadMs": 678,
+    "cacheMb": 146.5,
+    "warmScanMs": {
+     "p50": 76.82,
+     "p95": 153.3
+    },
+    "sqlFunctionMs": {
+     "p50": 198.93,
+     "p95": 215.51
+    },
+    "deleteOneConversationMs": 1.5,
+    "canaryResidueAfterDelete": 17664,
+    "canaryResidueAfterSecureDeleteVacuum": 0,
+    "deleteAllMs": 1703,
+    "bytesAfterDeleteAllVacuum": 12288
+   },
+   "int8": {
+    "insertMs": 1329,
+    "insertPerSec": 75269,
+    "bytes": 47087616,
+    "bytesPerVector": 471,
+    "coldScanMs": {
+     "p50": 757.66,
+     "max": 867.98
+    },
+    "cacheLoadMs": 296,
+    "cacheMb": 37,
+    "warmScanMs": {
+     "p50": 73.44,
+     "p95": 166.77
+    },
+    "deleteOneConversationMs": 1.3,
+    "canaryResidueAfterDelete": 0,
+    "canaryResidueAfterSecureDeleteVacuum": 0,
+    "deleteAllMs": 397,
+    "bytesAfterDeleteAllVacuum": 12288
+   },
+   "vec0": {
+    "insertMs": 2298,
+    "insertPerSec": 43507,
+    "bytes": 159596544,
+    "bytesPerVector": 1596,
+    "knnMs": {
+     "p50": 116.84,
+     "p95": 175.3
+    },
+    "deleteOneConversationMs": 3.4,
+    "canaryResidueAfterDelete": 325,
+    "canaryResidueAfterSecureDeleteVacuum": 0,
+    "deleteAllMs": 3349,
+    "bytesAfterDeleteAllVacuum": 40960,
+    "extraSchemaObjects": [
+     "v_info",
+     "v_chunks",
+     "v_rowids",
+     "v_vector_chunks00"
+    ]
+   }
+  }
+ },
+ "sqliteVec": "v0.1.9"
+}

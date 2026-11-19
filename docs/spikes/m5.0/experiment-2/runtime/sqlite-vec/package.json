@@ -1,0 +1,9 @@
+{
+  "name": "m5-exp2-sqlite-vec",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "sqlite-vec": "0.1.9",
+    "sqlite-vec-darwin-x64": "0.1.9"
+  }
+}

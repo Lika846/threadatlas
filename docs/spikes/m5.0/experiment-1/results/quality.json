@@ -1,0 +1,128 @@
+{
+ "ortVersion": "1.23.2",
+ "importMs": 113.49246200000002,
+ "loadMs": 1259.869584,
+ "reps": {
+  "message": {
+   "units": 216,
+   "tokensMean": 38.2,
+   "tokensMax": 350,
+   "truncatedUnits": 0,
+   "indexMs": 6872,
+   "unitsPerSec": 31.4,
+   "latencyMs": {
+    "embed": {
+     "p50": 5.87,
+     "p95": 19.75,
+     "max": 20.83
+    },
+    "retrieve": {
+     "p50": 0.95,
+     "p95": 4.37,
+     "max": 9.07
+    },
+    "keyword": {
+     "p50": 0.32,
+     "p95": 1.15,
+     "max": 1.63
+    },
+    "fuse": {
+     "p50": 0.03,
+     "p95": 0.24,
+     "max": 0.28
+    },
+    "total": {
+     "p50": 7.58,
+     "p95": 21.06,
+     "max": 22.71
+    }
+   }
+  },
+  "chunk": {
+   "units": 222,
+   "tokensMean": 38.2,
+   "tokensMax": 260,
+   "truncatedUnits": 0,
+   "indexMs": 6508,
+   "unitsPerSec": 34.1,
+   "latencyMs": {
+    "embed": {
+     "p50": 5.49,
+     "p95": 28.92,
+     "max": 32.89
+    },
+    "retrieve": {
+     "p50": 0.98,
+     "p95": 1.35,
+     "max": 1.65
+    },
+    "keyword": {
+     "p50": 0.31,
+     "p95": 0.53,
+     "max": 0.61
+    },
+    "fuse": {
+     "p50": 0.03,
+     "p95": 0.06,
+     "max": 0.13
+    },
+    "total": {
+     "p50": 6.77,
+     "p95": 30.42,
+     "max": 34.43
+    }
+   }
+  },
+  "turn": {
+   "units": 108,
+   "tokensMean": 72.4,
+   "tokensMax": 368,
+   "truncatedUnits": 0,
+   "indexMs": 5183,
+   "unitsPerSec": 20.8,
+   "latencyMs": {
+    "embed": {
+     "p50": 7.52,
+     "p95": 19.04,
+     "max": 28.41
+    },
+    "retrieve": {
+     "p50": 0.51,
+     "p95": 1.67,
+     "max": 3.7
+    },
+    "keyword": {
+     "p50": 0.33,
+     "p95": 1.42,
+     "max": 5.4
+    },
+    "fuse": {
+     "p50": 0.03,
+     "p95": 0.28,
+     "max": 0.34
+    },
+    "total": {
+     "p50": 8.48,
+     "p95": 20.04,
+     "max": 32.45
+    }
+   }
+  }
+ },
+ "scanMs": {
+  "5000": {
+   "p50": 4.32,
+   "p95": 11.17
+  },
+  "50000": {
+   "p50": 39.12,
+   "p95": 41.05
+  },
+  "100000": {
+   "p50": 75.44,
+   "p95": 189.38
+  }
+ },
+ "peakRssMb": 1475,
+ "tripwireAttempts": 0
+}

@@ -1,0 +1,95 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: malformed messages on the visible path",
+    "create_time": 1768003200,
+    "update_time": 1768003500,
+    "conversation_id": "00000000-0000-4000-8000-00000000i001",
+    "current_node": "node-i001-end",
+    "mapping": {
+      "node-i001-root": { "id": "node-i001-root", "message": null, "parent": null, "children": ["node-i001-string"] },
+      "node-i001-string": {
+        "id": "node-i001-string",
+        "message": "Synthetic canary: a message stored as a bare string.",
+        "parent": "node-i001-root",
+        "children": ["node-i001-number"]
+      },
+      "node-i001-number": {
+        "id": "node-i001-number",
+        "message": 7,
+        "parent": "node-i001-string",
+        "children": ["node-i001-empty"]
+      },
+      "node-i001-empty": {
+        "id": "node-i001-empty",
+        "message": {},
+        "parent": "node-i001-number",
+        "children": ["node-i001-content-string"]
+      },
+      "node-i001-content-string": {
+        "id": "node-i001-content-string",
+        "message": { "id": "node-i001-content-string", "author": { "role": "user" }, "content": "Synthetic canary: content is a bare string." },
+        "parent": "node-i001-empty",
+        "children": ["node-i001-no-type"]
+      },
+      "node-i001-no-type": {
+        "id": "node-i001-no-type",
+        "message": { "id": "node-i001-no-type", "author": { "role": "assistant" }, "content": { "parts": ["Synthetic canary: parts without a content type."] } },
+        "parent": "node-i001-content-string",
+        "children": ["node-i001-text-no-parts"]
+      },
+      "node-i001-text-no-parts": {
+        "id": "node-i001-text-no-parts",
+        "message": { "id": "node-i001-text-no-parts", "author": { "role": "user" }, "content": { "content_type": "text", "text": "Synthetic canary: a text field instead of parts." } },
+        "parent": "node-i001-no-type",
+        "children": ["node-i001-no-role"]
+      },
+      "node-i001-no-role": {
+        "id": "node-i001-no-role",
+        "message": { "id": "node-i001-no-role", "author": {}, "content": { "content_type": "text", "parts": ["Synthetic canary: the author has no role."] } },
+        "parent": "node-i001-text-no-parts",
+        "children": ["node-i001-author-string"]
+      },
+      "node-i001-author-string": {
+        "id": "node-i001-author-string",
+        "message": { "id": "node-i001-author-string", "author": "user", "content": { "content_type": "text", "parts": ["Synthetic canary: the author is a string."] } },
+        "parent": "node-i001-no-role",
+        "children": ["node-i001-unknown-role"]
+      },
+      "node-i001-unknown-role": {
+        "id": "node-i001-unknown-role",
+        "message": { "id": "node-i001-unknown-role", "author": { "role": "critic" }, "content": { "content_type": "text", "parts": ["Synthetic canary: an unknown role, kept exactly."] } },
+        "parent": "node-i001-author-string",
+        "children": ["node-i001-end"]
+      },
+      "node-i001-end": {
+        "id": "node-i001-end",
+        "message": { "id": "node-i001-end", "author": { "role": "assistant" }, "content": { "content_type": "text", "parts": ["Synthetic canary: a normal final answer."] } },
+        "parent": "node-i001-unknown-role",
+        "children": []
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: malformed node structure",
+    "conversation_id": "00000000-0000-4000-8000-00000000i002",
+    "current_node": "node-i002-user",
+    "mapping": {
+      "node-i002-bad": 5,
+      "node-i002-root": { "id": "node-i002-root", "message": null, "parent": null, "children": ["node-i002-user", 9] },
+      "node-i002-user": {
+        "id": "node-i002-user",
+        "message": { "id": "node-i002-user", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary: my children list is not a list."] } },
+        "parent": "node-i002-root",
+        "children": "oops"
+      },
+      "node-i002-weird-parent": {
+        "id": "node-i002-weird-parent",
+        "message": { "id": "node-i002-weird-parent", "author": { "role": "assistant" }, "content": { "content_type": "text", "parts": ["Synthetic canary: my parent reference is a number."] } },
+        "parent": 42,
+        "children": []
+      }
+    }
+  }
+]

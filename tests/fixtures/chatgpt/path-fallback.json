@@ -1,0 +1,134 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: current_node points to a missing node",
+    "conversation_id": "00000000-0000-4000-8000-00000000h001",
+    "current_node": "node-h001-gone",
+    "mapping": {
+      "node-h001-root": { "id": "node-h001-root", "message": null, "parent": null, "children": ["node-h001-a", "node-h001-b"] },
+      "node-h001-a": {
+        "id": "node-h001-a",
+        "message": { "id": "node-h001-a", "author": { "role": "user" }, "create_time": 1767916850, "content": { "content_type": "text", "parts": ["Synthetic canary: the later leaf."] } },
+        "parent": "node-h001-root",
+        "children": []
+      },
+      "node-h001-b": {
+        "id": "node-h001-b",
+        "message": { "id": "node-h001-b", "author": { "role": "user" }, "create_time": 1767916840, "content": { "content_type": "text", "parts": ["Synthetic canary: the earlier leaf."] } },
+        "parent": "node-h001-root",
+        "children": []
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: no current_node and no timestamps",
+    "conversation_id": "00000000-0000-4000-8000-00000000h002",
+    "mapping": {
+      "node-h002-root": { "id": "node-h002-root", "message": null, "parent": null, "children": ["node-h002-u1", "node-h002-u2"] },
+      "node-h002-u1": {
+        "id": "node-h002-u1",
+        "message": { "id": "node-h002-u1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary: first version of the question."] } },
+        "parent": "node-h002-root",
+        "children": ["node-h002-a1"]
+      },
+      "node-h002-a1": {
+        "id": "node-h002-a1",
+        "message": { "id": "node-h002-a1", "author": { "role": "assistant" }, "content": { "content_type": "text", "parts": ["Synthetic canary: answer to the first version."] } },
+        "parent": "node-h002-u1",
+        "children": []
+      },
+      "node-h002-u2": {
+        "id": "node-h002-u2",
+        "message": { "id": "node-h002-u2", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary: edited version of the question."] } },
+        "parent": "node-h002-root",
+        "children": ["node-h002-a2"]
+      },
+      "node-h002-a2": {
+        "id": "node-h002-a2",
+        "message": { "id": "node-h002-a2", "author": { "role": "assistant" }, "content": { "content_type": "text", "parts": ["Synthetic canary: answer to the edited version."] } },
+        "parent": "node-h002-u2",
+        "children": []
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: leaf timestamps are invalid",
+    "conversation_id": "00000000-0000-4000-8000-00000000h003",
+    "mapping": {
+      "node-h003-root": { "id": "node-h003-root", "message": null, "parent": null, "children": ["node-h003-a1", "node-h003-a2"] },
+      "node-h003-a1": {
+        "id": "node-h003-a1",
+        "message": { "id": "node-h003-a1", "author": { "role": "assistant" }, "create_time": "yesterday", "content": { "content_type": "text", "parts": ["Synthetic canary: time is a word."] } },
+        "parent": "node-h003-root",
+        "children": []
+      },
+      "node-h003-a2": {
+        "id": "node-h003-a2",
+        "message": { "id": "node-h003-a2", "author": { "role": "assistant" }, "create_time": 1e300, "content": { "content_type": "text", "parts": ["Synthetic canary: time is not representable."] } },
+        "parent": "node-h003-root",
+        "children": []
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: tied leaf timestamps",
+    "conversation_id": "00000000-0000-4000-8000-00000000h004",
+    "mapping": {
+      "node-h004-root": { "id": "node-h004-root", "message": null, "parent": null, "children": ["node-h004-y", "node-h004-x"] },
+      "node-h004-x": {
+        "id": "node-h004-x",
+        "message": { "id": "node-h004-x", "author": { "role": "assistant" }, "create_time": 1767917000, "content": { "content_type": "text", "parts": ["Synthetic canary: tie, earlier in the mapping."] } },
+        "parent": "node-h004-root",
+        "children": []
+      },
+      "node-h004-y": {
+        "id": "node-h004-y",
+        "message": { "id": "node-h004-y", "author": { "role": "assistant" }, "create_time": 1767917000, "content": { "content_type": "text", "parts": ["Synthetic canary: tie, later in the mapping."] } },
+        "parent": "node-h004-root",
+        "children": []
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: only a cycle, no current_node",
+    "conversation_id": "00000000-0000-4000-8000-00000000h005",
+    "mapping": {
+      "node-h005-a": {
+        "id": "node-h005-a",
+        "message": { "id": "node-h005-a", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary cycle A."] } },
+        "parent": "node-h005-b",
+        "children": ["node-h005-b"]
+      },
+      "node-h005-b": {
+        "id": "node-h005-b",
+        "message": { "id": "node-h005-b", "author": { "role": "assistant" }, "content": { "content_type": "text", "parts": ["Synthetic canary cycle B."] } },
+        "parent": "node-h005-a",
+        "children": ["node-h005-a"]
+      }
+    }
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: ISO and numeric leaf timestamps",
+    "conversation_id": "00000000-0000-4000-8000-00000000h006",
+    "mapping": {
+      "node-h006-root": { "id": "node-h006-root", "message": null, "parent": null, "children": ["node-h006-iso", "node-h006-num"] },
+      "node-h006-iso": {
+        "id": "node-h006-iso",
+        "message": { "id": "node-h006-iso", "author": { "role": "assistant" }, "create_time": "2026-01-01T00:00:10Z", "content": { "content_type": "text", "parts": ["Synthetic canary: ISO time, ten seconds after midnight."] } },
+        "parent": "node-h006-root",
+        "children": []
+      },
+      "node-h006-num": {
+        "id": "node-h006-num",
+        "message": { "id": "node-h006-num", "author": { "role": "assistant" }, "create_time": 1767225605, "content": { "content_type": "text", "parts": ["Synthetic canary: epoch time, five seconds after midnight."] } },
+        "parent": "node-h006-root",
+        "children": []
+      }
+    }
+  }
+]

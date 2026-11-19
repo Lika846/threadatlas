@@ -1,0 +1,91 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: unsupported and partly supported content",
+    "create_time": 1768089600,
+    "update_time": 1768090200,
+    "conversation_id": "00000000-0000-4000-8000-00000000j001",
+    "current_node": "node-j001-exec",
+    "mapping": {
+      "node-j001-root": { "id": "node-j001-root", "message": null, "parent": null, "children": ["node-j001-payload"] },
+      "node-j001-payload": {
+        "id": "node-j001-payload",
+        "message": { "id": "node-j001-payload", "author": { "role": "assistant" }, "content": { "content_type": "x_future_widget", "payload": { "note": "Synthetic canary payload only." } } },
+        "parent": "node-j001-root",
+        "children": ["node-j001-quote"]
+      },
+      "node-j001-quote": {
+        "id": "node-j001-quote",
+        "message": { "id": "node-j001-quote", "author": { "role": "tool" }, "content": { "content_type": "tether_quote", "title": "Synthetic canary quote title", "url": "https://example.invalid/canary", "text": "Synthetic canary quoted text." } },
+        "parent": "node-j001-payload",
+        "children": ["node-j001-future-parts"]
+      },
+      "node-j001-future-parts": {
+        "id": "node-j001-future-parts",
+        "message": { "id": "node-j001-future-parts", "author": { "role": "assistant" }, "content": { "content_type": "x_future_parts", "parts": ["Synthetic canary part one.", "Synthetic canary part two."] } },
+        "parent": "node-j001-quote",
+        "children": ["node-j001-text-object-part"]
+      },
+      "node-j001-text-object-part": {
+        "id": "node-j001-text-object-part",
+        "message": { "id": "node-j001-text-object-part", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary text before an object part.", { "x_note": "Synthetic canary object part." }] } },
+        "parent": "node-j001-future-parts",
+        "children": ["node-j001-multimodal"]
+      },
+      "node-j001-multimodal": {
+        "id": "node-j001-multimodal",
+        "message": {
+          "id": "node-j001-multimodal",
+          "author": { "role": "user" },
+          "content": {
+            "content_type": "multimodal_text",
+            "parts": [
+              { "content_type": "image_asset_pointer", "asset_pointer": "file-service://placeholder-0002", "width": 8, "height": 8 },
+              { "content_type": "audio_transcription", "text": "Synthetic canary transcript." },
+              "Synthetic canary caption."
+            ]
+          }
+        },
+        "parent": "node-j001-text-object-part",
+        "children": ["node-j001-image-only"]
+      },
+      "node-j001-image-only": {
+        "id": "node-j001-image-only",
+        "message": {
+          "id": "node-j001-image-only",
+          "author": { "role": "user" },
+          "content": {
+            "content_type": "multimodal_text",
+            "parts": [{ "content_type": "image_asset_pointer", "asset_pointer": "file-service://placeholder-0003" }, "Synthetic canary image caption."]
+          }
+        },
+        "parent": "node-j001-multimodal",
+        "children": ["node-j001-code-plain"]
+      },
+      "node-j001-code-plain": {
+        "id": "node-j001-code-plain",
+        "message": { "id": "node-j001-code-plain", "author": { "role": "assistant" }, "content": { "content_type": "code", "text": "  indented canary()\n\tline two  \n" } },
+        "parent": "node-j001-image-only",
+        "children": ["node-j001-code-html"]
+      },
+      "node-j001-code-html": {
+        "id": "node-j001-code-html",
+        "message": { "id": "node-j001-code-html", "author": { "role": "assistant" }, "content": { "content_type": "code", "language": "html", "text": "<script>alert('canary')</script><b>bold canary</b>" } },
+        "parent": "node-j001-code-plain",
+        "children": ["node-j001-odd-type"]
+      },
+      "node-j001-odd-type": {
+        "id": "node-j001-odd-type",
+        "message": { "id": "node-j001-odd-type", "author": { "role": "assistant" }, "content": { "content_type": "<b>odd</b>", "payload": "Synthetic canary odd type." } },
+        "parent": "node-j001-code-html",
+        "children": ["node-j001-exec"]
+      },
+      "node-j001-exec": {
+        "id": "node-j001-exec",
+        "message": { "id": "node-j001-exec", "author": { "role": "tool", "name": "python" }, "content": { "content_type": "execution_output", "text": "Synthetic canary output\n42" } },
+        "parent": "node-j001-odd-type",
+        "children": []
+      }
+    }
+  }
+]

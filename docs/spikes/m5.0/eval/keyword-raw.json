@@ -1,0 +1,2224 @@
+[
+ {
+  "id": "p01",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 3.0221619999999803,
+  "or": [
+   {
+    "sid": "c11",
+    "num": 1
+   },
+   {
+    "sid": "d01",
+    "num": 4
+   },
+   {
+    "sid": "f03",
+    "num": 2
+   },
+   {
+    "sid": "c19",
+    "num": 1
+   },
+   {
+    "sid": "c07",
+    "num": 4
+   },
+   {
+    "sid": "d03",
+    "num": 2
+   },
+   {
+    "sid": "c16",
+    "num": 2
+   },
+   {
+    "sid": "c04",
+    "num": 2
+   },
+   {
+    "sid": "c22",
+    "num": 2
+   }
+  ],
+  "orMs": 1.3653249999999844,
+  "terms": [
+   "watering",
+   "potted",
+   "plants",
+   "with",
+   "collected",
+   "rainwater"
+  ]
+ },
+ {
+  "id": "p02",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.7617860000000292,
+  "or": [
+   {
+    "sid": "c01",
+    "num": 2
+   },
+   {
+    "sid": "c10",
+    "num": 2
+   }
+  ],
+  "orMs": 0.7334730000000036,
+  "terms": [
+   "insomnia",
+   "early",
+   "morning",
+   "awakening"
+  ]
+ },
+ {
+  "id": "p03",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.8627640000000838,
+  "or": [],
+  "orMs": 0.6538610000000062,
+  "terms": [
+   "separasjonsangst",
+   "hos",
+   "hunden"
+  ]
+ },
+ {
+  "id": "p04",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 1.2291779999999335,
+  "or": [
+   {
+    "sid": "c18",
+    "num": 0
+   },
+   {
+    "sid": "c25",
+    "num": 4
+   }
+  ],
+  "orMs": 0.7697390000000723,
+  "terms": [
+   "переговоры",
+   "о",
+   "повышении",
+   "оплаты",
+   "труда"
+  ]
+ },
+ {
+  "id": "p05",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.634371000000101,
+  "or": [
+   {
+    "sid": "c13",
+    "num": 4
+   }
+  ],
+  "orMs": 0.6568230000000312,
+  "terms": [
+   "smartwatch",
+   "battery",
+   "drains",
+   "fast"
+  ]
+ },
+ {
+  "id": "p06",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.790081999999984,
+  "or": [
+   {
+    "sid": "n01",
+    "num": 3
+   },
+   {
+    "sid": "f04",
+    "num": 4
+   },
+   {
+    "sid": "f03",
+    "num": 2
+   },
+   {
+    "sid": "c22",
+    "num": 6
+   },
+   {
+    "sid": "c24",
+    "num": 6
+   },
+   {
+    "sid": "c21",
+    "num": 2
+   },
+   {
+    "sid": "c01",
+    "num": 2
+   },
+   {
+    "sid": "c19",
+    "num": 4
+   },
+   {
+    "sid": "c04",
+    "num": 2
+   },
+   {
+    "sid": "f01",
+    "num": 1
+   },
+   {
+    "sid": "f06",
+    "num": 1
+   },
+   {
+    "sid": "c10",
+    "num": 4
+   },
+   {
+    "sid": "f05",
+    "num": 4
+   },
+   {
+    "sid": "c07",
+    "num": 1
+   },
+   {
+    "sid": "c08",
+    "num": 2
+   },
+   {
+    "sid": "d02",
+    "num": 4
+   },
+   {
+    "sid": "c16",
+    "num": 1
+   },
+   {
+    "sid": "d03",
+    "num": 2
+   },
+   {
+    "sid": "c13",
+    "num": 2
+   },
+   {
+    "sid": "c05",
+    "num": 4
+   }
+  ],
+  "orMs": 0.9431540000000496,
+  "terms": [
+   "weekly",
+   "summary",
+   "of",
+   "production",
+   "outages",
+   "for",
+   "colleagues"
+  ]
+ },
+ {
+  "id": "x01",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.7012489999999616,
+  "or": [
+   {
+    "sid": "d02",
+    "num": 4
+   },
+   {
+    "sid": "f01",
+    "num": 1
+   },
+   {
+    "sid": "c11",
+    "num": 1
+   },
+   {
+    "sid": "c12",
+    "num": 3
+   },
+   {
+    "sid": "c10",
+    "num": 3
+   },
+   {
+    "sid": "c19",
+    "num": 4
+   },
+   {
+    "sid": "c16",
+    "num": 2
+   },
+   {
+    "sid": "c22",
+    "num": 2
+   },
+   {
+    "sid": "d03",
+    "num": 2
+   },
+   {
+    "sid": "c07",
+    "num": 3
+   },
+   {
+    "sid": "n01",
+    "num": 4
+   },
+   {
+    "sid": "c04",
+    "num": 4
+   },
+   {
+    "sid": "d01",
+    "num": 4
+   },
+   {
+    "sid": "f03",
+    "num": 2
+   },
+   {
+    "sid": "f05",
+    "num": 4
+   },
+   {
+    "sid": "c01",
+    "num": 1
+   },
+   {
+    "sid": "c13",
+    "num": 1
+   },
+   {
+    "sid": "c26",
+    "num": 3
+   },
+   {
+    "sid": "f04",
+    "num": 2
+   },
+   {
+    "sid": "c05",
+    "num": 6
+   }
+  ],
+  "orMs": 1.0072129999999788,
+  "terms": [
+   "cycling",
+   "to",
+   "work",
+   "in",
+   "winter",
+   "with",
+   "studded",
+   "tyres"
+  ]
+ },
+ {
+  "id": "x02",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.7405710000000454,
+  "or": [
+   {
+    "sid": "f05",
+    "num": 0
+   },
+   {
+    "sid": "c11",
+    "num": 1
+   },
+   {
+    "sid": "d01",
+    "num": 4
+   },
+   {
+    "sid": "f03",
+    "num": 2
+   },
+   {
+    "sid": "c19",
+    "num": 1
+   },
+   {
+    "sid": "c07",
+    "num": 4
+   },
+   {
+    "sid": "d03",
+    "num": 2
+   },
+   {
+    "sid": "c16",
+    "num": 2
+   },
+   {
+    "sid": "c04",
+    "num": 2
+   },
+   {
+    "sid": "c22",
+    "num": 2
+   }
+  ],
+  "orMs": 0.7928829999999607,
+  "terms": [
+   "learning",
+   "Japanese",
+   "vocabulary",
+   "with",
+   "flashcards"
+  ]
+ },
+ {
+  "id": "x03",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.6612099999999828,
+  "or": [
+   {
+    "sid": "f12",
+    "num": 4
+   },
+   {
+    "sid": "d04",
+    "num": 1
+   },
+   {
+    "sid": "c05",
+    "num": 5
+   },
+   {
+    "sid": "c02",
+    "num": 3
+   },
+   {
+    "sid": "f09",
+    "num": 4
+   },
+   {
+    "sid": "f11",
+    "num": 2
+   },
+   {
+    "sid": "f10",
+    "num": 1
+   },
+   {
+    "sid": "f08",
+    "num": 4
+   },
+   {
+    "sid": "n02",
+    "num": 1
+   },
+   {
+    "sid": "f07",
+    "num": 1
+   },
+   {
+    "sid": "c14",
+    "num": 1
+   },
+   {
+    "sid": "c21",
+    "num": 4
+   },
+   {
+    "sid": "c17",
+    "num": 1
+   },
+   {
+    "sid": "c08",
+    "num": 4
+   },
+   {
+    "sid": "c24",
+    "num": 4
+   }
+  ],
+  "orMs": 1.043768,
+  "terms": [
+   "samle",
+   "regnvann",
+   "til",
+   "tomatene",
+   "på",
+   "balkongen"
+  ]
+ },
+ {
+  "id": "x04",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.9047910000000456,
+  "or": [
+   {
+    "sid": "c15",
+    "num": 1
+   },
+   {
+    "sid": "f15",
+    "num": 4
+   },
+   {
+    "sid": "c23",
+    "num": 2
+   },
+   {
+    "sid": "f13",
+    "num": 1
+   },
+   {
+    "sid": "f16",
+    "num": 3
+   },
+   {
+    "sid": "f14",
+    "num": 2
+   },
+   {
+    "sid": "f17",
+    "num": 4
+   },
+   {
+    "sid": "c06",
+    "num": 3
+   },
+   {
+    "sid": "c25",
+    "num": 3
+   },
+   {
+    "sid": "c09",
+    "num": 4
+   },
+   {
+    "sid": "c20",
+    "num": 2
+   },
+   {
+    "sid": "c03",
+    "num": 2
+   },
+   {
+    "sid": "d05",
+    "num": 3
+   },
+   {
+    "sid": "c18",
+    "num": 2
+   }
+  ],
+  "orMs": 1.0354609999999411,
+  "terms": [
+   "просыпаюсь",
+   "в",
+   "четыре",
+   "утра",
+   "и",
+   "не",
+   "могу",
+   "уснуть"
+  ]
+ },
+ {
+  "id": "x05",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.8641739999999345,
+  "or": [
+   {
+    "sid": "d02",
+    "num": 4
+   },
+   {
+    "sid": "f06",
+    "num": 1
+   },
+   {
+    "sid": "c01",
+    "num": 4
+   },
+   {
+    "sid": "c13",
+    "num": 1
+   },
+   {
+    "sid": "c04",
+    "num": 6
+   },
+   {
+    "sid": "f05",
+    "num": 3
+   },
+   {
+    "sid": "f03",
+    "num": 1
+   },
+   {
+    "sid": "c21",
+    "num": 2
+   },
+   {
+    "sid": "c22",
+    "num": 4
+   },
+   {
+    "sid": "c12",
+    "num": 4
+   },
+   {
+    "sid": "n01",
+    "num": 2
+   },
+   {
+    "sid": "f18",
+    "num": 1
+   },
+   {
+    "sid": "c19",
+    "num": 1
+   },
+   {
+    "sid": "d01",
+    "num": 1
+   },
+   {
+    "sid": "c07",
+    "num": 1
+   },
+   {
+    "sid": "c16",
+    "num": 4
+   },
+   {
+    "sid": "c10",
+    "num": 4
+   },
+   {
+    "sid": "c11",
+    "num": 1
+   },
+   {
+    "sid": "c05",
+    "num": 6
+   },
+   {
+    "sid": "d03",
+    "num": 2
+   }
+  ],
+  "orMs": 1.1373419999999896,
+  "terms": [
+   "how",
+   "to",
+   "ask",
+   "my",
+   "boss",
+   "for",
+   "a",
+   "raise"
+  ]
+ },
+ {
+  "id": "x06",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.7111760000000231,
+  "or": [
+   {
+    "sid": "c16",
+    "num": 3
+   },
+   {
+    "sid": "d03",
+    "num": 4
+   },
+   {
+    "sid": "c19",
+    "num": 1
+   },
+   {
+    "sid": "c07",
+    "num": 4
+   }
+  ],
+  "orMs": 0.8430499999999483,
+  "terms": [
+   "puppy",
+   "barks",
+   "when",
+   "left",
+   "home",
+   "alone"
+  ]
+ },
+ {
+  "id": "b01",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.7476700000000847,
+  "or": [
+   {
+    "sid": "c13",
+    "num": 1
+   },
+   {
+    "sid": "f04",
+    "num": 3
+   },
+   {
+    "sid": "c04",
+    "num": 4
+   },
+   {
+    "sid": "d02",
+    "num": 1
+   },
+   {
+    "sid": "c11",
+    "num": 4
+   },
+   {
+    "sid": "c22",
+    "num": 3
+   },
+   {
+    "sid": "c01",
+    "num": 2
+   },
+   {
+    "sid": "d03",
+    "num": 2
+   },
+   {
+    "sid": "n01",
+    "num": 4
+   },
+   {
+    "sid": "c12",
+    "num": 3
+   },
+   {
+    "sid": "c16",
+    "num": 2
+   },
+   {
+    "sid": "c26",
+    "num": 3
+   },
+   {
+    "sid": "c19",
+    "num": 4
+   },
+   {
+    "sid": "c10",
+    "num": 4
+   },
+   {
+    "sid": "c07",
+    "num": 3
+   },
+   {
+    "sid": "c05",
+    "num": 6
+   }
+  ],
+  "orMs": 0.9929819999999836,
+  "terms": [
+   "idea",
+   "to",
+   "archive",
+   "paper",
+   "receipts",
+   "by",
+   "photographing",
+   "them"
+  ]
+ },
+ {
+  "id": "b02",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.6728829999999562,
+  "or": [
+   {
+    "sid": "c21",
+    "num": 4
+   },
+   {
+    "sid": "c02",
+    "num": 1
+   },
+   {
+    "sid": "c05",
+    "num": 1
+   },
+   {
+    "sid": "f07",
+    "num": 1
+   },
+   {
+    "sid": "c14",
+    "num": 1
+   },
+   {
+    "sid": "c24",
+    "num": 4
+   },
+   {
+    "sid": "c17",
+    "num": 4
+   },
+   {
+    "sid": "f08",
+    "num": 4
+   },
+   {
+    "sid": "c26",
+    "num": 2
+   },
+   {
+    "sid": "f12",
+    "num": 2
+   },
+   {
+    "sid": "c08",
+    "num": 2
+   },
+   {
+    "sid": "f10",
+    "num": 1
+   },
+   {
+    "sid": "d04",
+    "num": 2
+   },
+   {
+    "sid": "n02",
+    "num": 1
+   },
+   {
+    "sid": "f09",
+    "num": 2
+   }
+  ],
+  "orMs": 0.9405819999999494,
+  "terms": [
+   "starte",
+   "en",
+   "podkast",
+   "om",
+   "historien",
+   "til",
+   "nabolaget"
+  ]
+ },
+ {
+  "id": "b03",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.6769880000000512,
+  "or": [
+   {
+    "sid": "n01",
+    "num": 4
+   },
+   {
+    "sid": "c01",
+    "num": 4
+   },
+   {
+    "sid": "c22",
+    "num": 6
+   },
+   {
+    "sid": "f02",
+    "num": 2
+   },
+   {
+    "sid": "f05",
+    "num": 4
+   },
+   {
+    "sid": "d03",
+    "num": 1
+   },
+   {
+    "sid": "f01",
+    "num": 1
+   },
+   {
+    "sid": "d02",
+    "num": 1
+   },
+   {
+    "sid": "f03",
+    "num": 1
+   },
+   {
+    "sid": "c04",
+    "num": 1
+   },
+   {
+    "sid": "c10",
+    "num": 4
+   },
+   {
+    "sid": "c07",
+    "num": 3
+   },
+   {
+    "sid": "c19",
+    "num": 4
+   },
+   {
+    "sid": "c16",
+    "num": 2
+   },
+   {
+    "sid": "c13",
+    "num": 1
+   },
+   {
+    "sid": "c12",
+    "num": 3
+   },
+   {
+    "sid": "c26",
+    "num": 3
+   },
+   {
+    "sid": "f18",
+    "num": 4
+   },
+   {
+    "sid": "c11",
+    "num": 3
+   },
+   {
+    "sid": "d01",
+    "num": 3
+   }
+  ],
+  "orMs": 1.093375999999921,
+  "terms": [
+   "chat",
+   "bot",
+   "that",
+   "reminds",
+   "me",
+   "to",
+   "water",
+   "the",
+   "plants"
+  ]
+ },
+ {
+  "id": "b04",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.6486619999999448,
+  "or": [
+   {
+    "sid": "f17",
+    "num": 0
+   },
+   {
+    "sid": "f15",
+    "num": 1
+   },
+   {
+    "sid": "c09",
+    "num": 0
+   },
+   {
+    "sid": "c23",
+    "num": 4
+   },
+   {
+    "sid": "c20",
+    "num": 4
+   },
+   {
+    "sid": "c06",
+    "num": 6
+   }
+  ],
+  "orMs": 0.7480410000000575,
+  "terms": [
+   "карта",
+   "питьевых",
+   "фонтанчиков",
+   "для",
+   "бегунов"
+  ]
+ },
+ {
+  "id": "b05",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.6372029999999995,
+  "or": [
+   {
+    "sid": "c24",
+    "num": 3
+   },
+   {
+    "sid": "c05",
+    "num": 5
+   },
+   {
+    "sid": "c26",
+    "num": 1
+   },
+   {
+    "sid": "c02",
+    "num": 1
+   },
+   {
+    "sid": "f12",
+    "num": 2
+   },
+   {
+    "sid": "f10",
+    "num": 1
+   },
+   {
+    "sid": "d04",
+    "num": 2
+   },
+   {
+    "sid": "n02",
+    "num": 1
+   },
+   {
+    "sid": "f07",
+    "num": 1
+   },
+   {
+    "sid": "c17",
+    "num": 2
+   },
+   {
+    "sid": "c14",
+    "num": 1
+   },
+   {
+    "sid": "c21",
+    "num": 4
+   }
+  ],
+  "orMs": 0.8515479999999798,
+  "terms": [
+   "tørkede",
+   "blomster",
+   "som",
+   "takkegave",
+   "til",
+   "gjestene"
+  ]
+ },
+ {
+  "id": "b06",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.608506000000034,
+  "or": [
+   {
+    "sid": "c22",
+    "num": 3
+   },
+   {
+    "sid": "f18",
+    "num": 2
+   },
+   {
+    "sid": "c01",
+    "num": 1
+   },
+   {
+    "sid": "c16",
+    "num": 2
+   },
+   {
+    "sid": "c04",
+    "num": 6
+   }
+  ],
+  "orMs": 0.7686909999999898,
+  "terms": [
+   "newsletter",
+   "summarising",
+   "incidents",
+   "every",
+   "Friday"
+  ]
+ },
+ {
+  "id": "d01",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.988081999999963,
+  "or": [
+   {
+    "sid": "d01",
+    "num": 1
+   },
+   {
+    "sid": "c01",
+    "num": 1
+   },
+   {
+    "sid": "f02",
+    "num": 2
+   },
+   {
+    "sid": "c13",
+    "num": 1
+   },
+   {
+    "sid": "f01",
+    "num": 1
+   },
+   {
+    "sid": "c12",
+    "num": 3
+   },
+   {
+    "sid": "f05",
+    "num": 4
+   },
+   {
+    "sid": "f06",
+    "num": 1
+   },
+   {
+    "sid": "c19",
+    "num": 1
+   },
+   {
+    "sid": "c16",
+    "num": 1
+   },
+   {
+    "sid": "c22",
+    "num": 6
+   },
+   {
+    "sid": "f18",
+    "num": 4
+   },
+   {
+    "sid": "c11",
+    "num": 1
+   },
+   {
+    "sid": "n01",
+    "num": 4
+   },
+   {
+    "sid": "d02",
+    "num": 1
+   },
+   {
+    "sid": "c10",
+    "num": 1
+   },
+   {
+    "sid": "c02",
+    "num": 2
+   },
+   {
+    "sid": "f04",
+    "num": 2
+   },
+   {
+    "sid": "d03",
+    "num": 2
+   },
+   {
+    "sid": "c07",
+    "num": 3
+   }
+  ],
+  "orMs": 1.0577309999999898,
+  "terms": [
+   "my",
+   "python's",
+   "skin",
+   "is",
+   "peeling",
+   "off",
+   "in",
+   "bits"
+  ]
+ },
+ {
+  "id": "d02",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.6444420000000264,
+  "or": [
+   {
+    "sid": "c04",
+    "num": 4
+   },
+   {
+    "sid": "c11",
+    "num": 1
+   },
+   {
+    "sid": "d01",
+    "num": 1
+   },
+   {
+    "sid": "d02",
+    "num": 4
+   },
+   {
+    "sid": "f01",
+    "num": 1
+   },
+   {
+    "sid": "d03",
+    "num": 2
+   },
+   {
+    "sid": "f05",
+    "num": 4
+   },
+   {
+    "sid": "f03",
+    "num": 1
+   },
+   {
+    "sid": "c13",
+    "num": 2
+   },
+   {
+    "sid": "c10",
+    "num": 1
+   },
+   {
+    "sid": "c21",
+    "num": 2
+   },
+   {
+    "sid": "c07",
+    "num": 1
+   },
+   {
+    "sid": "c22",
+    "num": 4
+   },
+   {
+    "sid": "c16",
+    "num": 4
+   },
+   {
+    "sid": "c19",
+    "num": 3
+   },
+   {
+    "sid": "c24",
+    "num": 6
+   },
+   {
+    "sid": "c12",
+    "num": 3
+   },
+   {
+    "sid": "f06",
+    "num": 1
+   },
+   {
+    "sid": "c01",
+    "num": 1
+   },
+   {
+    "sid": "n01",
+    "num": 3
+   }
+  ],
+  "orMs": 1.060122999999976,
+  "terms": [
+   "python",
+   "totals",
+   "for",
+   "each",
+   "category",
+   "in",
+   "a",
+   "table"
+  ]
+ },
+ {
+  "id": "d03",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.820385999999985,
+  "or": [
+   {
+    "sid": "f02",
+    "num": 2
+   },
+   {
+    "sid": "d02",
+    "num": 1
+   },
+   {
+    "sid": "c10",
+    "num": 4
+   },
+   {
+    "sid": "c01",
+    "num": 2
+   },
+   {
+    "sid": "c12",
+    "num": 3
+   },
+   {
+    "sid": "f18",
+    "num": 4
+   },
+   {
+    "sid": "c19",
+    "num": 2
+   },
+   {
+    "sid": "f05",
+    "num": 4
+   },
+   {
+    "sid": "n01",
+    "num": 4
+   },
+   {
+    "sid": "c22",
+    "num": 2
+   },
+   {
+    "sid": "d01",
+    "num": 1
+   },
+   {
+    "sid": "c13",
+    "num": 1
+   },
+   {
+    "sid": "c07",
+    "num": 3
+   },
+   {
+    "sid": "c04",
+    "num": 4
+   },
+   {
+    "sid": "c16",
+    "num": 2
+   },
+   {
+    "sid": "f01",
+    "num": 2
+   },
+   {
+    "sid": "c11",
+    "num": 3
+   },
+   {
+    "sid": "f03",
+    "num": 2
+   },
+   {
+    "sid": "f04",
+    "num": 2
+   },
+   {
+    "sid": "c02",
+    "num": 2
+   }
+  ],
+  "orMs": 1.0299309999999195,
+  "terms": [
+   "the",
+   "bank",
+   "is",
+   "crumbling",
+   "into",
+   "the",
+   "water"
+  ]
+ },
+ {
+  "id": "d04",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.7308050000000321,
+  "or": [
+   {
+    "sid": "c12",
+    "num": 1
+   },
+   {
+    "sid": "c07",
+    "num": 3
+   },
+   {
+    "sid": "f07",
+    "num": 1
+   },
+   {
+    "sid": "d03",
+    "num": 2
+   },
+   {
+    "sid": "f05",
+    "num": 1
+   },
+   {
+    "sid": "c13",
+    "num": 2
+   },
+   {
+    "sid": "c24",
+    "num": 6
+   },
+   {
+    "sid": "c16",
+    "num": 1
+   },
+   {
+    "sid": "d02",
+    "num": 1
+   },
+   {
+    "sid": "c21",
+    "num": 2
+   },
+   {
+    "sid": "f01",
+    "num": 1
+   },
+   {
+    "sid": "f06",
+    "num": 1
+   },
+   {
+    "sid": "f03",
+    "num": 1
+   },
+   {
+    "sid": "d01",
+    "num": 3
+   },
+   {
+    "sid": "f02",
+    "num": 3
+   },
+   {
+    "sid": "f04",
+    "num": 3
+   },
+   {
+    "sid": "c10",
+    "num": 3
+   },
+   {
+    "sid": "c14",
+    "num": 2
+   },
+   {
+    "sid": "c04",
+    "num": 1
+   },
+   {
+    "sid": "n01",
+    "num": 1
+   }
+  ],
+  "orMs": 1.2007089999999607,
+  "terms": [
+   "which",
+   "bank",
+   "pays",
+   "most",
+   "for",
+   "money",
+   "I",
+   "put",
+   "aside"
+  ]
+ },
+ {
+  "id": "d05",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.8979879999999412,
+  "or": [
+   {
+    "sid": "c13",
+    "num": 1
+   },
+   {
+    "sid": "d03",
+    "num": 1
+   },
+   {
+    "sid": "c10",
+    "num": 2
+   },
+   {
+    "sid": "d02",
+    "num": 4
+   },
+   {
+    "sid": "f05",
+    "num": 4
+   },
+   {
+    "sid": "c07",
+    "num": 2
+   },
+   {
+    "sid": "c16",
+    "num": 1
+   },
+   {
+    "sid": "c22",
+    "num": 6
+   },
+   {
+    "sid": "c24",
+    "num": 6
+   },
+   {
+    "sid": "c21",
+    "num": 2
+   },
+   {
+    "sid": "f01",
+    "num": 1
+   },
+   {
+    "sid": "f06",
+    "num": 1
+   },
+   {
+    "sid": "c04",
+    "num": 6
+   },
+   {
+    "sid": "f03",
+    "num": 1
+   },
+   {
+    "sid": "c08",
+    "num": 2
+   },
+   {
+    "sid": "f02",
+    "num": 2
+   },
+   {
+    "sid": "f18",
+    "num": 4
+   },
+   {
+    "sid": "c01",
+    "num": 2
+   },
+   {
+    "sid": "c12",
+    "num": 2
+   },
+   {
+    "sid": "c11",
+    "num": 3
+   }
+  ],
+  "orMs": 0.9980150000000094,
+  "terms": [
+   "apple",
+   "dessert",
+   "for",
+   "the",
+   "oven"
+  ]
+ },
+ {
+  "id": "d06",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.6089950000000499,
+  "or": [
+   {
+    "sid": "c14",
+    "num": 1
+   },
+   {
+    "sid": "c08",
+    "num": 1
+   },
+   {
+    "sid": "c24",
+    "num": 6
+   },
+   {
+    "sid": "n02",
+    "num": 1
+   },
+   {
+    "sid": "d04",
+    "num": 1
+   },
+   {
+    "sid": "f10",
+    "num": 3
+   },
+   {
+    "sid": "c05",
+    "num": 2
+   },
+   {
+    "sid": "c02",
+    "num": 3
+   },
+   {
+    "sid": "c26",
+    "num": 1
+   },
+   {
+    "sid": "f07",
+    "num": 1
+   },
+   {
+    "sid": "f12",
+    "num": 2
+   },
+   {
+    "sid": "f09",
+    "num": 2
+   },
+   {
+    "sid": "c21",
+    "num": 4
+   },
+   {
+    "sid": "c17",
+    "num": 4
+   }
+  ],
+  "orMs": 0.8524780000000192,
+  "terms": [
+   "en",
+   "rett",
+   "med",
+   "fisk"
+  ]
+ },
+ {
+  "id": "d07",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.9035470000000032,
+  "or": [
+   {
+    "sid": "d05",
+    "num": 1
+   },
+   {
+    "sid": "f16",
+    "num": 3
+   },
+   {
+    "sid": "c15",
+    "num": 3
+   },
+   {
+    "sid": "f15",
+    "num": 4
+   },
+   {
+    "sid": "c23",
+    "num": 3
+   },
+   {
+    "sid": "c25",
+    "num": 3
+   }
+  ],
+  "orMs": 0.8195140000000265,
+  "terms": [
+   "ключ",
+   "потерялся,",
+   "не",
+   "попасть",
+   "домой"
+  ]
+ },
+ {
+  "id": "u01",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.6776830000000018,
+  "or": [
+   {
+    "sid": "n01",
+    "num": 1
+   },
+   {
+    "sid": "f07",
+    "num": 1
+   },
+   {
+    "sid": "f03",
+    "num": 1
+   },
+   {
+    "sid": "c07",
+    "num": 1
+   },
+   {
+    "sid": "d01",
+    "num": 3
+   },
+   {
+    "sid": "f02",
+    "num": 3
+   },
+   {
+    "sid": "f04",
+    "num": 3
+   },
+   {
+    "sid": "c10",
+    "num": 3
+   },
+   {
+    "sid": "c14",
+    "num": 2
+   },
+   {
+    "sid": "c16",
+    "num": 1
+   },
+   {
+    "sid": "d04",
+    "num": 3
+   },
+   {
+    "sid": "f10",
+    "num": 4
+   },
+   {
+    "sid": "f11",
+    "num": 3
+   },
+   {
+    "sid": "f18",
+    "num": 1
+   },
+   {
+    "sid": "c04",
+    "num": 3
+   },
+   {
+    "sid": "f12",
+    "num": 1
+   },
+   {
+    "sid": "n02",
+    "num": 4
+   },
+   {
+    "sid": "c11",
+    "num": 1
+   },
+   {
+    "sid": "c02",
+    "num": 1
+   },
+   {
+    "sid": "c22",
+    "num": 1
+   }
+  ],
+  "orMs": 0.9662529999999379,
+  "terms": [
+   "woodworking",
+   "project",
+   "I",
+   "never",
+   "finished"
+  ]
+ },
+ {
+  "id": "u02",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.8080779999999095,
+  "or": [
+   {
+    "sid": "f03",
+    "num": 1
+   }
+  ],
+  "orMs": 0.6805239999999912,
+  "terms": [
+   "knitting",
+   "project",
+   "left",
+   "half",
+   "done"
+  ]
+ },
+ {
+  "id": "u03",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.5956170000000611,
+  "or": [
+   {
+    "sid": "c19",
+    "num": 1
+   }
+  ],
+  "orMs": 0.6525940000000219,
+  "terms": [
+   "abandoned",
+   "expense",
+   "tracking",
+   "app"
+  ]
+ },
+ {
+  "id": "u04",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.7762629999999717,
+  "or": [
+   {
+    "sid": "c26",
+    "num": 1
+   },
+   {
+    "sid": "c24",
+    "num": 4
+   },
+   {
+    "sid": "d04",
+    "num": 1
+   },
+   {
+    "sid": "f12",
+    "num": 2
+   },
+   {
+    "sid": "c05",
+    "num": 3
+   },
+   {
+    "sid": "c17",
+    "num": 2
+   }
+  ],
+  "orMs": 0.742385000000013,
+  "terms": [
+   "romanprosjekt",
+   "som",
+   "stoppet",
+   "opp"
+  ]
+ },
+ {
+  "id": "u05",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.6495899999999892,
+  "or": [
+   {
+    "sid": "n01",
+    "num": 1
+   },
+   {
+    "sid": "f07",
+    "num": 1
+   },
+   {
+    "sid": "d01",
+    "num": 4
+   },
+   {
+    "sid": "c07",
+    "num": 1
+   },
+   {
+    "sid": "f02",
+    "num": 3
+   },
+   {
+    "sid": "f04",
+    "num": 3
+   },
+   {
+    "sid": "c10",
+    "num": 3
+   },
+   {
+    "sid": "c14",
+    "num": 2
+   },
+   {
+    "sid": "c16",
+    "num": 1
+   },
+   {
+    "sid": "d04",
+    "num": 3
+   },
+   {
+    "sid": "f10",
+    "num": 4
+   },
+   {
+    "sid": "f11",
+    "num": 3
+   },
+   {
+    "sid": "f18",
+    "num": 1
+   },
+   {
+    "sid": "c04",
+    "num": 3
+   },
+   {
+    "sid": "f12",
+    "num": 1
+   },
+   {
+    "sid": "n02",
+    "num": 4
+   },
+   {
+    "sid": "c11",
+    "num": 1
+   },
+   {
+    "sid": "c02",
+    "num": 1
+   },
+   {
+    "sid": "c22",
+    "num": 1
+   },
+   {
+    "sid": "f09",
+    "num": 2
+   }
+  ],
+  "orMs": 0.9865170000000489,
+  "terms": [
+   "projects",
+   "I",
+   "started",
+   "but",
+   "never",
+   "finished"
+  ]
+ },
+ {
+  "id": "u06",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.777027999999973,
+  "or": [
+   {
+    "sid": "n02",
+    "num": 1
+   },
+   {
+    "sid": "c26",
+    "num": 3
+   },
+   {
+    "sid": "c08",
+    "num": 3
+   },
+   {
+    "sid": "c02",
+    "num": 3
+   },
+   {
+    "sid": "c14",
+    "num": 1
+   },
+   {
+    "sid": "c21",
+    "num": 3
+   },
+   {
+    "sid": "f10",
+    "num": 3
+   },
+   {
+    "sid": "f07",
+    "num": 3
+   },
+   {
+    "sid": "f12",
+    "num": 3
+   },
+   {
+    "sid": "f08",
+    "num": 3
+   },
+   {
+    "sid": "f09",
+    "num": 1
+   },
+   {
+    "sid": "f11",
+    "num": 1
+   },
+   {
+    "sid": "c24",
+    "num": 3
+   },
+   {
+    "sid": "d04",
+    "num": 4
+   },
+   {
+    "sid": "c05",
+    "num": 3
+   }
+  ],
+  "orMs": 0.9308059999999614,
+  "terms": [
+   "prosjekter",
+   "jeg",
+   "aldri",
+   "ble",
+   "ferdig",
+   "med"
+  ]
+ },
+ {
+  "id": "u07",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.6489310000000614,
+  "or": [
+   {
+    "sid": "c23",
+    "num": 1
+   },
+   {
+    "sid": "c09",
+    "num": 3
+   },
+   {
+    "sid": "c18",
+    "num": 1
+   },
+   {
+    "sid": "c06",
+    "num": 3
+   }
+  ],
+  "orMs": 0.6848250000000462,
+  "terms": [
+   "незаконченные",
+   "проекты,",
+   "которые",
+   "я",
+   "забросил"
+  ]
+ },
+ {
+  "id": "k01",
+  "andStatus": "ok",
+  "andTotal": 1,
+  "and": [
+   {
+    "sid": "c19",
+    "num": 1
+   }
+  ],
+  "andMs": 6.255680999999981,
+  "or": [
+   {
+    "sid": "c19",
+    "num": 1
+   }
+  ],
+  "orMs": 0.6270929999999453,
+  "terms": [
+   "ECONNREFUSED",
+   "5432"
+  ]
+ },
+ {
+  "id": "k02",
+  "andStatus": "ok",
+  "andTotal": 0,
+  "and": [],
+  "andMs": 0.72443300000009,
+  "or": [
+   {
+    "sid": "c20",
+    "num": 1
+   }
+  ],
+  "orMs": 0.6252210000000105,
+  "terms": [
+   "Keenetic",
+   "гостевая",
+   "сеть"
+  ]
+ },
+ {
+  "id": "k03",
+  "andStatus": "ok",
+  "andTotal": 1,
+  "and": [
+   {
+    "sid": "c21",
+    "num": 1
+   }
+  ],
+  "andMs": 1.590011000000004,
+  "or": [
+   {
+    "sid": "c21",
+    "num": 1
+   }
+  ],
+  "orMs": 0.6007260000000088,
+  "terms": [
+   "Lånekassen",
+   "stipend"
+  ]
+ },
+ {
+  "id": "k04",
+  "andStatus": "ok",
+  "andTotal": 1,
+  "and": [
+   {
+    "sid": "c11",
+    "num": 4
+   }
+  ],
+  "andMs": 1.8247860000000173,
+  "or": [
+   {
+    "sid": "c11",
+    "num": 4
+   }
+  ],
+  "orMs": 0.7901950000000397,
+  "terms": [
+   "groupby"
+  ]
+ },
+ {
+  "id": "k05",
+  "andStatus": "ok",
+  "andTotal": 1,
+  "and": [
+   {
+    "sid": "c03",
+    "num": 2
+   }
+  ],
+  "andMs": 1.4364990000000262,
+  "or": [
+   {
+    "sid": "c03",
+    "num": 2
+   }
+  ],
+  "orMs": 0.5426559999999654,
+  "terms": [
+   "Anki"
+  ]
+ },
+ {
+  "id": "k06",
+  "andStatus": "ok",
+  "andTotal": 1,
+  "and": [
+   {
+    "sid": "d01",
+    "num": 1
+   }
+  ],
+  "andMs": 2.234059000000002,
+  "or": [
+   {
+    "sid": "d01",
+    "num": 1
+   },
+   {
+    "sid": "c11",
+    "num": 1
+   }
+  ],
+  "orMs": 0.7096850000000359,
+  "terms": [
+   "ball",
+   "python"
+  ]
+ }
+]

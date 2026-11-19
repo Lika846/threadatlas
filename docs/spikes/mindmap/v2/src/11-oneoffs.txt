@@ -1,0 +1,291 @@
+=== t353 | Why is the sky blue | oneoff:sky | - | en
+U: explain why the sky is blue to a 7 year old
+A: Sunlight looks white, but it's really all the colours mixed together. When sunlight comes into the air, the tiny bits of air bump the blue light around much more than the red and yellow light. So blue light gets bounced all over the sky, and wherever you look up, some of that bounced blue light reaches your eyes. At sunset the light travels through much more air, so most of the blue is bounced away before it reaches you, and you see oranges and reds.
+
+=== t354 | Hvem var Harald Hårfagre | oneoff:harald | - | no
+U: Hvem var egentlig Harald Hårfagre, og samlet han virkelig Norge?
+A: Harald Hårfagre var en konge på slutten av 800-tallet som ifølge sagaene samlet store deler av Norge etter slaget i Hafrsfjord, tradisjonelt datert rundt 872. Mye av det vi vet kommer fra sagaer skrevet flere hundre år senere, særlig Snorre, så historikere er forsiktige. Hans rike omfattet trolig mest Vestlandet og kysten; en samlet norsk stat kom først gradvis i århundrene etter.
+
+=== t355 | Сколько спутников у Юпитера | oneoff:jupiter | - | ru
+U: Сколько спутников у Юпитера?
+A: На сегодня у Юпитера известно более 90 спутников, и число растёт по мере новых наблюдений. Самые большие — галилеевы спутники: Ио, Европа, Ганимед и Каллисто. Ганимед больше планеты Меркурий.
+
+=== t356 | Wine with lamb | dinners | - | en
+U: What wine goes with slow-roasted lamb shoulder with rosemary?
+A: A medium- to full-bodied red with good acidity: Rioja Reserva, Côtes du Rhône, a Syrah from the northern Rhône, or a Chianti Classico. The herbs and fat pair well with savoury, slightly earthy reds. If someone prefers white, an oaked Chardonnay can hold up to it.
+
+=== t357 | Stoicism quick summary | oneoff:stoicism | - | en
+U: Give me the core idea of stoicism in a few sentences
+A: Stoicism teaches that we can't control most events, only our judgements and actions, so peace of mind comes from focusing effort on what's up to us and accepting the rest. Virtue — wisdom, courage, justice and self-control — is the only true good; wealth, health and reputation are "preferred" but not essential to a good life. Daily practice includes reflecting on your reactions, imagining losses to appreciate what you have, and acting for the common good.
+
+=== t358 |  | oneoff:bee | - | en
+U: do bees sleep
+A: Yes. Honeybees have sleep-like periods where they stay still, their antennae droop and they're harder to wake. Forager bees sleep more at night, and sleep-deprived bees perform their waggle dance less accurately — sleep seems to matter for their memory too.
+
+=== t359 | Хорошая книга для отпуска | oneoff:book-holiday | - | ru
+U: Посоветуйте лёгкую, но не глупую книгу для отпуска на море.
+A: Несколько вариантов разных жанров:
+- «Человек, который принял жену за шляпу» Оливера Сакса — истории о мозге, читаются как рассказы;
+- «Ночной цирк» Эрин Моргенштерн — атмосферная сказка для взрослых;
+- «Три товарища» Ремарка — если хочется классики;
+- «Тайная история» Донны Тартт — увлекательный роман о студентах.
+Что из этого ближе по настроению?
+
+=== t360 | Bil som ikke starter i kulda | oneoff:car-cold | - | no
+U: Bilen klikker bare når jeg vrir om nøkkelen. Det er minus 15.
+A: Klikking betyr nesten alltid for lite strøm fra batteriet; kulde svekker batteriet kraftig. Prøv å starte med startkabler fra en annen bil eller en startbooster. Hvis bilen starter, kjør minst 30 minutter for å lade. Er batteriet over fem år gammelt, bør det testes og sannsynligvis byttes før det blir enda kaldere.
+
+=== t361 | What happened to the Library of Alexandria | oneoff:alexandria | - | en
+U: Was the Library of Alexandria really destroyed in one fire?
+A: Probably not. The popular story of one catastrophic fire is a simplification. Julius Caesar's fire in 48 BC may have damaged part of the collection or warehouses near the harbour, but the library seems to have declined gradually over centuries — through reduced funding, political turmoil, the expulsion of scholars and later conflicts. By late antiquity it had largely faded, rather than burned in a single night.
+
+=== t362 | Dream about losing teeth | oneoff:dream | - | en
+U: I keep dreaming my teeth are falling out. Does it mean anything?
+A: It's one of the most common recurring dreams. There's no scientific evidence that dreams have fixed meanings, but people often report these dreams during periods of stress, worry about appearance, or feeling a loss of control. Some research also links it to jaw tension or teeth grinding during sleep. If you grind your teeth, a dentist can check.
+
+=== t363 | Как правильно ответить на свадебное приглашение | oneoff:rsvp | - | ru
+U: Пригласили на свадьбу дальних родственников, идти не хочу. Как вежливо отказаться?
+A: Ответьте заранее и коротко, с тёплыми пожеланиями, без длинных объяснений: «Спасибо большое за приглашение! К сожалению, не сможем присутствовать в этот день. От всей души поздравляем вас и желаем счастья». Можно отправить небольшой подарок или открытку — это сохранит хорошие отношения.
+
+=== t364 | Riddle for a treasure hunt | oneoff:riddle | - | en
+U: I need a riddle for a kids' treasure hunt where the clue is hidden in the washing machine.
+A: "I have a round window but you can't see the view, I spin and I tumble but never leave the room, I drink lots of water and make your clothes new — open my door, there's a clue waiting for you!"
+
+=== t365 | Hvordan fungerer nordlys | oneoff:aurora | - | no
+U: Hva er egentlig nordlys?
+A: Nordlys oppstår når elektrisk ladde partikler fra sola, solvinden, treffer jordas magnetfelt og ledes mot polområdene. Der kolliderer de med atomer og molekyler i den øvre atmosfæren, som da sender ut lys. Grønt lys kommer fra oksygen rundt 100–250 km høyde, rødt fra oksygen høyere oppe, og lilla og blått fra nitrogen.
+
+=== t366 | Chess: what to do after 1.e4 e5 | oneoff:chess | - | en
+U: I'm a beginner. After 1.e4 e5, what should I play as white?
+A: 2.Nf3 attacks the e5 pawn and develops a piece. Then common plans are 3.Bc4 (Italian Game) or 3.Bb5 (Ruy Lopez). For a beginner the Italian is great: develop knights and bishops, castle early, and fight for the centre with d4 at the right moment. Focus on principles rather than memorising lines.
+
+=== t367 | Translate a sentence into Japanese | languages | - | en
+U: how do you say "thank you for the delicious dinner" in japanese
+A: After a meal, the set phrase is "ごちそうさまでした" (gochisōsama deshita). To be more specific: "おいしい夕食をありがとうございました" (oishii yūshoku o arigatō gozaimashita).
+
+=== t368 | Шахматы или го для ребёнка | oneoff:go | - | ru
+U: Хочу научить сына 8 лет настольной стратегической игре. Шахматы или го?
+A: Обе игры хороши. Шахматы проще найти: кружки, приложения, партнёры. Правила го проще (камни ставятся на пересечения, окружаешь — захватываешь), но стратегия глубокая, и на маленькой доске 9×9 ребёнок быстро начинает играть настоящие партии. Попробуйте обе — дети обычно сами выбирают ту, что больше нравится.
+
+=== t369 | Mushroom identification | oneoff:mushroom | - | en
+U: Found mushrooms in the forest that look like chanterelles. How do I know for sure?
+A: Real chanterelles have false gills: blunt, forked ridges that run down the stem and can't be peeled off easily, a solid whitish interior, and a fruity, apricot-like smell. The jack-o'-lantern and false chanterelle have true, thin, knife-like gills. If you're not 100% sure, don't eat it — have it checked by a mushroom inspection service.
+
+=== t370 |  | oneoff:prime | - | en
+U: is 1001 a prime number
+A: No: 1001 = 7 × 11 × 13.
+
+=== t371 | Romerrikets fall | oneoff:rome-fall | - | no
+U: Hvorfor falt egentlig Romerriket?
+A: Det finnes ingen enkelt årsak, og historikere diskuterer fortsatt. Vanlige forklaringer er politisk ustabilitet med mange keiserskifter, økonomiske problemer og tung beskatning, press fra germanske folk og hunerne, avhengighet av leiesoldater, og delingen i et vestlig og østlig rike. Det vestromerske riket regnes som falt i 476, mens Østromerriket (Bysants) varte til 1453.
+
+=== t372 | How do noise cancelling headphones work | oneoff:anc | - | en
+U: how does noise cancelling actually work
+A: Small microphones on the headphones pick up the sound around you, and a chip creates the opposite sound wave — peaks where the noise has troughs. Played through the speakers, the two waves cancel out. It works best for steady low sounds like engines and air conditioning, and less well for sudden or high-pitched sounds like voices, which the ear cushions block physically instead.
+
+=== t373 | Что такое квантовая запутанность | oneoff:entanglement | - | ru
+U: Объясни простыми словами, что такое квантовая запутанность.
+A: Когда две частицы запутаны, их свойства описываются общим состоянием, а не по отдельности. Если измерить одну — например, получить «спин вверх», — то измерение второй даст согласованный результат, даже если она очень далеко. Важно: передать так сообщение нельзя, потому что результат первого измерения случаен. Эйнштейн называл это «жутким действием на расстоянии», но эксперименты подтвердили, что это реальное свойство природы.
+
+=== t374 | Tipping in the US | oneoff:tipping | - | en
+U: Going to New York for the first time. How much do I tip?
+A: In sit-down restaurants, 18–22% of the pre-tax bill is standard; 15% signals poor service. Bartenders: about 1–2 dollars per drink. Taxis and rideshares: 15–20%. Hotel housekeeping: a few dollars per night. Counter service and coffee shops show tip screens, but tipping there is optional.
+
+=== t375 | Gave til sjefen som slutter | oneoff:boss-gift | - | no
+U: Sjefen vår går av med pensjon. Vi er 12 i avdelingen. Gaveidé?
+A: Noe personlig fungerer best: et opplevelsesgavekort knyttet til en hobby hun har (golf, hagesenter, teater), en bok med hilsener og bilder fra alle i avdelingen, eller et godt kunstverk fra en lokal kunstner. Samle 200–300 kroner per person og kombiner en felles gave med et kort alle skriver i.
+
+=== t376 | Birdwatching for beginners | oneoff:birds | - | en
+U: I want to start birdwatching. What do I need?
+A: Binoculars (8×42 is the classic all-round choice), a field guide or the free Merlin Bird ID app, which also recognises songs, and a notebook. Start in your local park or a lake early in the morning. Learn the common birds well first; it makes the rare ones stand out.
+
+=== t377 | Как убрать пятно от красного вина | organising | - | ru
+U: Пролили красное вино на светлый диван. Что делать срочно?
+A: Действуйте сразу: промокните (не трите!) бумажными полотенцами, затем посыпьте пятно солью или содой, чтобы впитать остатки. Потом смешайте ложку средства для посуды, ложку перекиси водорода 3% и стакан воды, нанесите и промокайте. Проверьте раствор на незаметном участке ткани. Если обивка снимается, постирайте по инструкции.
+
+=== t378 | Explain inflation like I'm 12 | oneoff:inflation | - | en
+U: explain inflation like i'm 12
+A: Inflation means that prices in general go up over time, so the same money buys less. If a chocolate bar cost 10 kroner last year and 11 now, your 10 kroner is worth a bit less. It often happens when people and businesses have more money to spend than there are goods, or when things like energy get more expensive to produce. A little inflation is normal; a lot makes life harder because wages and savings don't keep up.
+
+=== t379 | Bursdagsleken til 6-åring | oneoff:party-games | - | no
+U: Trenger leker til bursdag for åtte seksåringer innendørs.
+A: Klassikere som funker: stoppdans, stolleken med puter i stedet for stoler, skattejakt med bilder i stedet for skrift, «Kims lek» med ting på et brett, og ballongstafett. Ha en rolig aktivitet mot slutten, for eksempel tegning eller høytlesning, så det ikke blir for vilt før de hentes.
+
+=== t380 | Как работает GPS | oneoff:gps | - | ru
+U: Как телефон узнаёт, где я нахожусь?
+A: Спутники GPS (и других систем — ГЛОНАСС, Galileo) постоянно передают сигналы с точным временем отправки. Телефон принимает сигналы от нескольких спутников и по задержке вычисляет расстояние до каждого. Зная расстояния хотя бы до четырёх спутников, он рассчитывает своё положение. В городе точность улучшают по Wi-Fi и сотовым вышкам.
+
+=== t381 | Plan a surprise anniversary weekend | oneoff:anniversary | - | en
+U: 10th anniversary next month. My wife loves nature and good food. Ideas for a surprise weekend nearby?
+A: Book a cabin or small lodge in the countryside with a restaurant known for local food, so you can hike during the day and have a long dinner in the evening. Add a personal touch: a printed photo book of ten years, or recreate your first date in a small way. Arrange childcare early and pack her bag secretly with a list from a friend so nothing important is forgotten.
+
+=== t382 | Kan katter drikke melk | cats | - | no
+U: Er det farlig å gi katten melk?
+A: De fleste voksne katter tåler laktose dårlig og kan få diaré av vanlig melk. Vann er det katten trenger. Vil du gi en godbit, finnes det laktosefri kattemelk.
+
+=== t383 | Origin of the word "salary" | oneoff:etymology | - | en
+U: Is it true that "salary" comes from salt?
+A: It comes from the Latin "salarium", which is related to "sal" (salt). The popular story that Roman soldiers were paid in salt isn't supported by evidence; "salarium" was a payment or allowance, perhaps originally connected to buying salt. The salt-pay story is a nice myth.
+
+=== t384 | Перевести письмо на английский официально | languages | - | ru
+U: Переведи официально: «Прошу перенести встречу на следующую неделю в связи с болезнью».
+A[en]: "I would like to request that our meeting be rescheduled to next week due to illness. I apologise for any inconvenience."
+
+=== t385 | Sudoku strategy | oneoff:sudoku | - | en
+U: I'm stuck on hard sudokus. What technique comes after finding singles?
+A: Next steps are naked and hidden pairs (two cells in a unit that can only contain the same two numbers, so those numbers can be removed elsewhere in the unit), pointing pairs (a candidate confined to one row within a box), and X-wing. Pencil marks for every candidate are essential at that level.
+
+=== t386 | Ord for "hygge" på engelsk | languages | - | no
+U: Hvordan forklarer jeg "kos" eller "hygge" for en amerikansk kollega?
+A[en]: You could say: "It's the feeling of being cosy and content with people you like — candles, something warm to drink, no rush. It's less about the things and more about the relaxed atmosphere."
+
+=== t387 | Black hole in simple words | oneoff:black-hole | - | en
+U: What actually happens if you fall into a black hole?
+A: Far from it, nothing special. As you approach, gravity pulls harder on your feet than your head; near a small black hole this stretches you apart ("spaghettification"), while near a supermassive one you could cross the event horizon without noticing anything at that moment. Once inside, every path leads to the centre, and no signal can get out. To an outside observer you'd appear to slow down and fade at the horizon.
+
+=== t388 | Почему кошки мурлычут | cats | - | ru
+U: Почему кошки мурлычут?
+A: Мурлыканье возникает от быстрого сокращения мышц гортани. Кошки мурлычут не только от удовольствия, но и при стрессе, боли или родах — вероятно, это способ успокоиться. Есть гипотеза, что вибрации на частоте 25–150 Гц помогают заживлению костей и тканей.
+
+=== t389 | Gift for a 10 year old who has everything | oneoff:gift-kid | - | en
+U: gift ideas for a 10 year old boy who has every toy
+A: Experiences work well: a climbing park session, a cooking class, tickets to a match. Or something that grows a hobby: a beginner electronics kit, a good knife and whittling set (with supervision), a telescope, or a subscription to a science or comic magazine.
+
+=== t390 | Hva betyr "ad hoc" | oneoff:adhoc | - | no
+U: Hva betyr ad hoc?
+A: «Ad hoc» er latin for «til dette». Det brukes om noe som lages eller gjøres for et bestemt formål eller en bestemt situasjon, ofte uten forhåndsplanlegging — for eksempel en ad hoc-gruppe som opprettes for å løse ett problem.
+
+=== t391 | The Monty Hall problem | oneoff:monty-hall | - | en
+U: I still don't get why switching doors in Monty Hall is better.
+A: Your first pick is right 1/3 of the time. The host, who knows where the car is, always opens a goat door from the other two. If your first pick was a goat (2/3 of the time), the only other closed door must have the car. So switching wins exactly when your first pick was wrong: 2/3. Picture 100 doors where the host opens 98 goats — switching is obviously better.
+
+=== t392 | Лучшее время посетить Байкал | oneoff:baikal | - | ru
+U: Когда лучше ехать на Байкал?
+A: Зависит от цели. Февраль–март — прозрачный лёд, ледяные гроты и поездки по льду. Июль–август — тёплая погода, походы, купание (вода холодная). Сентябрь — меньше туристов и красивые осенние краски. Летом бронируйте жильё на Ольхоне заранее.
+
+=== t393 | Help me name a cat | cats | - | en
+U: Black cat with one white sock. Name ideas?
+A: Sock, Domino, Pip, Mochi, Shadow, Tuxie, Mittens (classic), Licorice, or something literary like Poe or Salem.
+
+=== t394 | Klage på nabohundens bjeffing | oneoff:neighbour-dog | dogs | no
+U: Naboens hund bjeffer i timevis når de er på jobb. Hva gjør jeg?
+A: Snakk vennlig med naboen først — de vet ofte ikke at hunden bjeffer når de er borte. Foreslå at de filmer hunden en dag. Hvis det ikke hjelper og dere bor i borettslag eller sameie, ta det opp med styret med en enkel logg over tider. Kommunen eller politiet er siste utvei ved vedvarende støy.
+
+=== t395 | Как помириться с подругой | oneoff:friend-fight | - | ru
+U: Поругались с близкой подругой из-за пустяка, неделю не общаемся. Как первой сделать шаг?
+A: Напишите коротко и тепло, без разбора, кто прав: «Мне не хватает наших разговоров. Прости, что так вышло. Давай встретимся на кофе?» Встречу лучше провести вживую. Там можно спокойно обсудить, что задело каждую, используя «я-сообщения»: «я расстроилась, когда...» вместо «ты всегда...».
+
+=== t396 | Explain blockchain without hype | oneoff:blockchain | - | en
+U: explain blockchain in plain terms, no hype
+A: A blockchain is a shared record book that many computers keep copies of. New entries are grouped into blocks, each block contains a fingerprint (hash) of the previous one, so changing an old entry would break every later fingerprint and be noticed. Participants follow agreed rules to decide which new block gets added. It's useful when parties who don't trust each other need a common record without a central keeper; for most ordinary databases, a normal database is simpler and better.
+
+=== t397 | Hvor gammel kan en hummer bli | oneoff:lobster | - | no
+U: Er det sant at hummer kan leve evig?
+A: Nei, men de kan bli svært gamle — anslag på 50–100 år for amerikansk hummer. De vokser hele livet og produserer et enzym (telomerase) som reparerer DNA, derav myten. Men skallskiftene krever mer og mer energi, og til slutt dør mange av utmattelse eller sykdom.
+
+=== t398 | Help with a crossword clue | oneoff:crossword | - | en
+U: crossword clue: "Norse god of mischief" 4 letters
+A: LOKI.
+
+=== t399 | Что посмотреть из старых фильмов | oneoff:old-films | - | ru
+U: Хочу посмотреть хорошие старые фильмы, 50–70-х. С чего начать?
+A: Несколько очень разных: «12 разгневанных мужчин» (1957), «В джазе только девушки» (1959), «Иван Васильевич меняет профессию» (1973), «Сталкер» (1979), «Крёстный отец» (1972), «Римские каникулы» (1953). Начните с того, что ближе по жанру — комедии или драмы.
+
+=== t400 | Calculate tile quantity | renovation | - | en
+U: how many 30x60 tiles for a 2.4 x 3.1 m floor
+A: Area is 7.44 m². Each tile is 0.18 m², so about 42 tiles, plus 10% for cuts and breakage: buy 46–47. Tiles usually come in boxes, so round up to whole boxes.
+
+=== t401 | Fakta om elg | oneoff:moose | - | no
+U: Hvor mange elg finnes det i Norge?
+A: Bestanden er beregnet til omtrent 100 000–120 000 dyr om vinteren, og rundt 30 000 felles under jakta hvert år. Tallene varierer mellom år og regioner.
+
+=== t402 | Trolley problem | oneoff:trolley | - | en
+U: What's the point of the trolley problem? It seems silly.
+A: It's a thought experiment, not a realistic scenario. It isolates a question philosophers disagree about: is it the outcome that matters most (one death is better than five), or does it matter whether you actively cause harm? Variations — like pushing a person off a bridge to stop the trolley — reveal that most people's intuitions change even when the numbers don't. Today it's also discussed in relation to self-driving cars.
+
+=== t403 | Почему люди боятся пауков | oneoff:spiders | - | ru
+U: Почему так много людей боятся пауков, хотя большинство безопасны?
+A: Есть гипотеза, что у людей эволюционно закрепилась быстрая реакция на пауков и змей, потому что часть из них была опасна для наших предков. Дети учатся страху и у родителей. Страх усиливают непредсказуемые быстрые движения и необычная внешность. Сильную арахнофобию хорошо лечат постепенной экспозицией.
+
+=== t404 | Make a cocktail with gin and grapefruit | oneoff:cocktail | - | en
+U: cocktail with gin and grapefruit juice
+A: A Greyhound with a twist: 50 ml gin, 100 ml fresh grapefruit juice, ice, and a sprig of rosemary. Salt the rim for a Salty Dog. For something more elegant, add 15 ml elderflower liqueur and top with tonic.
+
+=== t405 | Hvorfor er sjøvann salt | oneoff:seawater | - | no
+U: Hvorfor er havet salt, men ikke innsjøene?
+A: Regn løser opp mineraler fra fjell, og elvene frakter dem til havet. Når vannet fordamper fra havet, blir saltet igjen, så det har hopet seg opp i millioner av år. Innsjøer med utløp skifter vann hele tiden, så saltet renner videre. Innsjøer uten utløp, som Dødehavet, blir derimot svært salte.
+
+=== t406 | Что подарить коллеге на 50 лет | oneoff:colleague-gift | - | ru
+U: Коллеге исполняется 50, скидываемся отделом. Он любит рыбалку и историю.
+A: Варианты: хорошая книга по военной или местной истории в подарочном издании плюс что-то для рыбалки (качественная катушка, термос, сертификат в рыболовный магазин). Или сертификат на рыболовный тур с гидом. Добавьте открытку с пожеланиями от всего отдела.
+
+=== t407 | Can I freeze cooked rice | dinners | - | en
+U: can i freeze cooked rice
+A: Yes. Cool it quickly (spread on a tray), freeze within an hour or two in portions, and keep up to a month. Reheat until piping hot all the way through. Don't leave cooked rice at room temperature for long, since bacteria spores in rice can produce toxins.
+
+=== t408 | Hvem skrev Peer Gynt | oneoff:peer-gynt | - | no
+U: Hvem skrev Peer Gynt og hva handler det om?
+A: Henrik Ibsen skrev Peer Gynt i 1867. Det handler om en løgnaktig, drømmende ung mann som flykter fra ansvar og reiser verden rundt i jakten på seg selv, mens Solveig venter hjemme. Stykket stiller spørsmål om hva det vil si å være seg selv. Edvard Grieg skrev den kjente musikken, blant annet «Morgenstemning» og «I Dovregubbens hall».
+
+=== t409 | Speed of a sneeze | oneoff:sneeze | - | en
+U: how fast is a sneeze
+A: Estimates vary a lot, but measurements suggest the air leaves at around 10–40 metres per second, and droplets can travel several metres. Claims of 160 km/h are exaggerated.
+
+=== t410 | Как справиться с боязнью полётов | oneoff:fear-flying | - | ru
+U: Боюсь летать, а через месяц длинный перелёт. Что поможет?
+A: Информация снижает страх: узнайте, как работает турбулентность (она неприятна, но безопасна для самолёта), и какие звуки нормальны при взлёте и посадке. Выберите место над крылом — там меньше трясёт. Используйте дыхание с длинным выдохом, отвлекайтесь фильмами или аудиокнигами. Есть курсы для боящихся летать, часто при авиакомпаниях. Если страх сильный, обсудите с врачом возможность лекарств на время полёта.
+
+=== t411 | Origami crane instructions | oneoff:origami | - | en
+U: how do i fold an origami crane
+A: Start with a square sheet. Fold it into a square base (preliminary base), then fold the lower edges of the top layer to the centre line and do a petal fold; repeat on the back to make a bird base. Narrow both "legs" by folding the edges to the centre, inside-reverse fold them up to make the neck and tail, inside-reverse fold the tip of the neck for the head, and pull the wings down. A video helps a lot for the petal fold.
+
+=== t412 | Hva er forskjellen på vær og klima | oneoff:weather-climate | - | no
+U: Hva er forskjellen på vær og klima?
+A: Vær er det som skjer i atmosfæren akkurat nå og de nærmeste dagene: temperatur, nedbør, vind. Klima er gjennomsnittet og variasjonen i været over lang tid, vanligvis 30 år. En kald uke sier lite om klimaet; trenden over tiår sier mye.
+
+=== t413 | Fastest way to learn to type | oneoff:typing | - | en
+U: I type with two fingers. Worth learning touch typing at 35?
+A: Yes, it's a skill you use every day. Spend 15 minutes daily on a site like Keybr or TypingClub for a few weeks, and force yourself to use proper finger positions even when it's slower at first. Most people overtake their old speed within a month and keep improving.
+
+=== t414 | Сколько стоит содержание лошади | oneoff:horse | - | ru
+U: Дочь мечтает о своей лошади. Сколько в среднем стоит содержание?
+A: Основные расходы ежемесячно: постой в конюшне (самая крупная статья, зависит от региона и уровня), корм и сено, ковка или расчистка копыт раз в 6–8 недель, ветеринар и прививки, страховка, амуниция. В сумме это обычно сопоставимо с арендой небольшой квартиры. Многие начинают с аренды лошади или полупансиона, прежде чем покупать.
+
+=== t415 |  | oneoff:convert | - | en
+U: 350 fahrenheit to celsius
+A: About 177 °C (usually rounded to 175–180 °C for baking).
+
+=== t416 | Hvordan lage et godt passord | devices | - | no
+U: Hva er et sikkert passord?
+A: Lengde er viktigst. Bruk en passordfrase på fire–fem tilfeldige ord, for eksempel «tannkrem-sykkel-fjell-kanel», og bruk aldri samme passord to steder. En passordbehandler gjør det enkelt å ha unike passord overalt, og skru på tofaktorautentisering der du kan.
+
+=== t417 | How much does a cloud weigh | oneoff:cloud-weight | - | en
+U: How much does a cloud weigh?
+A: A typical fluffy cumulus cloud of about one cubic kilometre holds roughly 500 tonnes of water droplets — about the weight of 100 elephants. It floats because the droplets are tiny and spread out, and rising warm air keeps them up.
+
+=== t418 | Как научиться жонглировать | oneoff:juggling | - | ru
+U: Как научиться жонглировать тремя мячами?
+A: Начните с одного мяча: бросайте из руки в руку по дуге до уровня глаз. Затем два: бросаете первый, когда он в верхней точке — бросаете второй, ловите оба. Потом три: начинаете с руки, где два мяча, и повторяете тот же ритм. Тренируйтесь над кроватью, чтобы не нагибаться. Обычно за неделю по 15 минут в день получается каскад.
+
+=== t419 | Why do cats knock things off tables | cats | - | en
+U: why does my cat push things off the table while looking at me
+A: Mostly attention and play. Batting small objects is hunting behaviour, and they quickly learn that it makes you react. More play sessions and a few toys on surfaces she likes usually reduce it.
+
+=== t420 | Skrive dikt til 17. mai | oneoff:may17-poem | - | no
+U: Kan du skrive et kort dikt til 17. mai for 3. klasse?
+A: Flagget vaier, korpset spiller,
+alle barna roper hurra.
+Is og pølser, sløyfer, smil,
+nasjonaldagen, den er bra!
+Vi går i tog i solskinnsdag,
+med stemmer klare som en vår —
+gratulerer, kjære Norge,
+nå er du enda et år!
+
+=== t421 | Life on Mars? | oneoff:mars-life | - | en
+U: has life ever been found on mars
+A: No confirmed life has been found. Rovers have found organic molecules, ancient lakebeds and seasonal methane variations, which show Mars was once habitable and keep the question open. Samples collected by Perseverance may eventually be returned to Earth for more detailed analysis.
+
+=== t422 | Как выбрать арбуз | oneoff:watermelon | - | ru
+U: Как выбрать спелый арбуз?
+A: Ищите жёлтое пятно на боку — где арбуз лежал на земле: чем оно ярче-жёлтое, тем спелее. Хвостик должен быть сухим. При постукивании звук звонкий, глуховатый. Корка блестящая и плотная, ногтем не продавливается.

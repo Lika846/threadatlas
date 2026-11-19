@@ -1,0 +1,109 @@
+{
+ "S1_fullIndex": {
+  "conversations": 60,
+  "chunks": 531,
+  "seconds": 7.4,
+  "workerLoadMs": 1017,
+  "progressEvents": 60,
+  "firstEvent": {
+   "total": 60,
+   "indexed": 1,
+   "remaining": 59,
+   "chunks": 4
+  },
+  "lastEvent": {
+   "total": 60,
+   "indexed": 60,
+   "remaining": 0,
+   "chunks": 531
+  },
+  "eventLoopDelayMs": {
+   "p50": 11.3,
+   "p99": 18.8,
+   "max": 31.7
+  },
+  "consistent": true
+ },
+ "S1_search": {
+  "top": [
+   "L04",
+   "c24",
+   "c05"
+  ],
+  "excerpt": "Når hytta er ferdig, kan dere lage en enkel felles kalender på nett der hele familien reserverer helgene og feriene sine"
+ },
+ "S1_expectedChunks": 531,
+ "S1b_inlineMainThread": {
+  "conversations": 15,
+  "eventLoopDelayMs": {
+   "p50": 89.5,
+   "p99": 289.9,
+   "max": 289.9
+  }
+ },
+ "S2_cancel": {
+  "afterCancel": {
+   "total": 60,
+   "indexed": 10,
+   "remaining": 50,
+   "chunks": 97,
+   "ok": true,
+   "running": 0
+  },
+  "afterResume": {
+   "total": 60,
+   "indexed": 60,
+   "remaining": 0,
+   "chunks": 531,
+   "ok": true,
+   "running": 0
+  }
+ },
+ "S3_reimportDuringInference": {
+  "staleCommitsDiscarded": 1,
+  "chunkGenerationsForL04": [
+   2
+  ],
+  "currentGeneration": 2,
+  "resultShowsNewText": true,
+  "resultShowsOldText": false,
+  "ok": true,
+  "running": 0
+ },
+ "S6_staleWindow": {
+  "L04InSemanticResultsBeforeReindex": false,
+  "pendingJobs": 1
+ },
+ "S4_deleteAllDuringInference": {
+  "total": 0,
+  "indexed": 0,
+  "remaining": 0,
+  "chunks": 0,
+  "staleCommitsDiscarded": 1,
+  "jobs": 0
+ },
+ "S5_crashRecovery": {
+  "killedAfterCommits": 12,
+  "atCrash": {
+   "total": 60,
+   "indexed": 12,
+   "remaining": 48,
+   "chunks": 139,
+   "ok": true,
+   "running": 0
+  },
+  "runningJobsReset": 0,
+  "afterRecovery": {
+   "total": 60,
+   "indexed": 60,
+   "remaining": 0,
+   "chunks": 531,
+   "ok": true,
+   "running": 0
+  },
+  "duplicateChunks": 0,
+  "chunksMatchFullIndex": true,
+  "integrity": "ok"
+ },
+ "tripwire": 0
+}

@@ -1,0 +1,55 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: hidden and visible messages",
+    "create_time": 1768176000,
+    "update_time": 1768176600,
+    "conversation_id": "00000000-0000-4000-8000-00000000k001",
+    "current_node": "node-k001-tool",
+    "mapping": {
+      "node-k001-root": { "id": "node-k001-root", "message": null, "parent": null, "children": ["node-k001-system-empty"] },
+      "node-k001-system-empty": {
+        "id": "node-k001-system-empty",
+        "message": { "id": "node-k001-system-empty", "author": { "role": "system" }, "content": { "content_type": "text", "parts": [""] } },
+        "parent": "node-k001-root",
+        "children": ["node-k001-system-content"]
+      },
+      "node-k001-system-content": {
+        "id": "node-k001-system-content",
+        "message": { "id": "node-k001-system-content", "author": { "role": "system" }, "content": { "content_type": "text", "parts": ["Synthetic canary system message with content, not marked hidden."] } },
+        "parent": "node-k001-system-empty",
+        "children": ["node-k001-user-hidden"]
+      },
+      "node-k001-user-hidden": {
+        "id": "node-k001-user-hidden",
+        "message": { "id": "node-k001-user-hidden", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary user context, explicitly hidden."] }, "metadata": { "is_visually_hidden_from_conversation": true } },
+        "parent": "node-k001-system-content",
+        "children": ["node-k001-user"]
+      },
+      "node-k001-user": {
+        "id": "node-k001-user",
+        "message": { "id": "node-k001-user", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary visible question."] }, "metadata": {} },
+        "parent": "node-k001-user-hidden",
+        "children": ["node-k001-flag-string"]
+      },
+      "node-k001-flag-string": {
+        "id": "node-k001-flag-string",
+        "message": { "id": "node-k001-flag-string", "author": { "role": "assistant" }, "content": { "content_type": "text", "parts": ["Synthetic canary: the hidden flag is the string \"true\", so I stay visible."] }, "metadata": { "is_visually_hidden_from_conversation": "true" } },
+        "parent": "node-k001-user",
+        "children": ["node-k001-flag-false"]
+      },
+      "node-k001-flag-false": {
+        "id": "node-k001-flag-false",
+        "message": { "id": "node-k001-flag-false", "author": { "role": "assistant" }, "content": { "content_type": "text", "parts": ["Synthetic canary: the hidden flag is false."] }, "metadata": { "is_visually_hidden_from_conversation": false } },
+        "parent": "node-k001-flag-string",
+        "children": ["node-k001-tool"]
+      },
+      "node-k001-tool": {
+        "id": "node-k001-tool",
+        "message": { "id": "node-k001-tool", "author": { "role": "tool", "name": "browser" }, "content": { "content_type": "text", "parts": ["Synthetic canary tool output."] } },
+        "parent": "node-k001-flag-false",
+        "children": []
+      }
+    }
+  }
+]

@@ -1,0 +1,7 @@
+/** M5.1b integration spike (temporary): registers the drain-on-shutdown handler. */
+export async function register(): Promise<void> {
+  if (process.env.NEXT_RUNTIME !== "nodejs") return;
+  if (process.env.THREADATLAS_SPIKE_SIGNALS !== "1") return;
+  const { installShutdown } = await import("@/lib/semantic/spike-host");
+  installShutdown();
+}

@@ -1,0 +1,162 @@
+[
+ {
+  "id": "LQ01",
+  "rank": 2,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "I'm finally turning the spare bedroom into a home office. Can you walk me through everything I should think about?\n\nStart with light, because it decides where e",
+  "offsets": null
+ },
+ {
+  "id": "LQ02",
+  "rank": 2,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "I have eight months left on my master's thesis in marine biology and I feel completely lost. How should I plan it?\n\nWork backwards from the submission date. Mar",
+  "offsets": null
+ },
+ {
+  "id": "LQ03",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Two years ago I started a small puzzle game in Godot about a train conductor. I built a level editor and twelve levels, then stopped. Should I pick it back up?\n",
+  "offsets": null
+ },
+ {
+  "id": "LQ04",
+  "rank": 2,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 122,
+  "bestUnitExcerpt": "Vi lurer også på solcellepanel, det er ikke strøm der i dag.\n\nFor en hytte uten strøm er et frittstående solcelleanlegg med batteribank vanlig. Start med å regn",
+  "offsets": null
+ },
+ {
+  "id": "LQ05",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Jeg ble operert i kneet for et halvt år siden og vil begynne å løpe igjen. Hvordan legger jeg det opp?\n\nAvklar først med fysioterapeuten eller legen at kneet er",
+  "offsets": null
+ },
+ {
+  "id": "LQ06",
+  "rank": 1,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Jeg drømmer om å åpne et lite bakeri i Trondheim. Hva må jeg tenke på?\n\nSkriv en enkel forretningsplan først. Hvem er kundene, hva skal du selge, hvor mange brø",
+  "offsets": null
+ },
+ {
+  "id": "LQ07",
+  "rank": 6,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Мы с семьёй переезжаем из Самары в Новосибирск через два месяца. С чего начать?\n\nНачните с работы и сроков. Если новая работа уже есть, узнайте точную дату выхо",
+  "offsets": null
+ },
+ {
+  "id": "LQ08",
+  "rank": 3,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Мне тридцать пять, я работаю бухгалтером и хочу выучить Python, чтобы автоматизировать отчёты. Как учиться?\n\nНачните с основ: переменные, списки, словари, циклы",
+  "offsets": null
+ },
+ {
+  "id": "LQ09",
+  "rank": 2,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Купили дачу под Тверью, участок шесть соток, всё заросло. Как его организовать?\n\nСначала расчистите участок: скосите траву, уберите мусор и старые постройки, ко",
+  "offsets": null
+ },
+ {
+  "id": "LQ10",
+  "rank": 20,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Vi har arvet en gammel hytte ved Femunden. Hvor begynner vi med oppussingen?\n\nBegynn med en grundig tilstandsvurdering før dere kjøper en eneste boks maling. Sj",
+  "offsets": null
+ },
+ {
+  "id": "LQ11",
+  "rank": 26,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Мы с семьёй переезжаем из Самары в Новосибирск через два месяца. С чего начать?\n\nНачните с работы и сроков. Если новая работа уже есть, узнайте точную дату выхо",
+  "offsets": null
+ },
+ {
+  "id": "LQ12",
+  "rank": 22,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Мне тридцать пять, я работаю бухгалтером и хочу выучить Python, чтобы автоматизировать отчёты. Как учиться?\n\nНачните с основ: переменные, списки, словари, циклы",
+  "offsets": null
+ },
+ {
+  "id": "LQ13",
+  "rank": 25,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Jeg drømmer om å åpne et lite bakeri i Trondheim. Hva må jeg tenke på?\n\nSkriv en enkel forretningsplan først. Hvem er kundene, hva skal du selge, hvor mange brø",
+  "offsets": null
+ },
+ {
+  "id": "LQ14",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 197,
+  "bestUnitExcerpt": "Thanks. Separate question: our garden shed is full of junk. Could it become a small woodworking workshop?\n\nProbably, if the structure is sound. Empty it complet",
+  "offsets": null
+ },
+ {
+  "id": "LQ15",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 134,
+  "bestUnitExcerpt": "Also, I've been invited to give a twelve-minute talk at a student conference in March. Any advice?\n\nTwelve minutes is about ten slides. Choose one main message ",
+  "offsets": null
+ },
+ {
+  "id": "LQ16",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 122,
+  "bestUnitExcerpt": "Vi lurer også på solcellepanel, det er ikke strøm der i dag.\n\nFor en hytte uten strøm er et frittstående solcelleanlegg med batteribank vanlig. Start med å regn",
+  "offsets": null
+ },
+ {
+  "id": "LQ17",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 107,
+  "bestUnitExcerpt": "И ещё вопрос: стоит ли продавать машину или перегонять её самим?\n\nПерегон своим ходом занимает три-четыре дня, плюс бензин, гостиницы и износ машины. Автовоз ст",
+  "offsets": null
+ },
+ {
+  "id": "LQ18",
+  "rank": 2,
+  "evidenceInBestUnit": false,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Jeg drømmer om å åpne et lite bakeri i Trondheim. Hva må jeg tenke på?\n\nSkriv en enkel forretningsplan først. Hvem er kundene, hva skal du selge, hvor mange brø",
+  "offsets": null
+ },
+ {
+  "id": "LQ19",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "I'm finally turning the spare bedroom into a home office. Can you walk me through everything I should think about?\n\nStart with light, because it decides where e",
+  "offsets": null
+ },
+ {
+  "id": "LQ20",
+  "rank": 1,
+  "evidenceInBestUnit": true,
+  "bestUnitTokens": 512,
+  "bestUnitExcerpt": "Купили дачу под Тверью, участок шесть соток, всё заросло. Как его организовать?\n\nСначала расчистите участок: скосите траву, уберите мусор и старые постройки, ко",
+  "offsets": null
+ }
+]

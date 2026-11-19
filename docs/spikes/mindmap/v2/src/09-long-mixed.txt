@@ -1,0 +1,297 @@
+=== t329 | Weekly dinner plan for a family of four | dinners | budgeting | en
+U: I'm tired of deciding what to cook every evening. Can you make a weekly dinner plan for two adults and two kids (7 and 10)? Nothing too spicy.
+A: Here's a week that reuses ingredients so shopping stays simple:
+- Monday: chicken and vegetable stir-fry with rice (make double rice).
+- Tuesday: fried rice with egg, peas and leftover chicken.
+- Wednesday: pasta bolognese (make a big pot; freeze half).
+- Thursday: baked salmon, potatoes and broccoli.
+- Friday: homemade pizza night — kids top their own.
+- Saturday: tacos with beans and mince.
+- Sunday: roast chicken with root vegetables; use the leftovers in Monday's wraps next week.
+U: can you turn that into a shopping list grouped by shop section
+A: Produce: 2 onions, 1 garlic bulb, 3 peppers, 2 carrots, 1 bag of peas (frozen), 2 heads of broccoli, 1.5 kg potatoes, 1 kg root vegetables, lettuce, tomatoes, cucumber, 1 lime.
+Meat and fish: 600 g chicken breast, 1 whole chicken, 800 g mince, 4 salmon fillets.
+Dairy: 12 eggs, grated cheese (400 g), mozzarella, sour cream, butter.
+Dry goods: rice (1 kg), spaghetti, canned tomatoes (3), tomato paste, kidney beans, taco shells, tortilla wraps, pizza flour, yeast, soy sauce, taco spice.
+U: how much will that cost roughly? we're trying to keep groceries under 1000 kr a week
+A: In a typical Norwegian supermarket this list lands around 950–1,150 kr, depending on the salmon and the chicken. To stay safely under 1,000: swap salmon for frozen fish fillets (saves around 100 kr), buy the store's own brands for canned goods and cheese, and use chicken thighs instead of breast. The freezer bolognese also saves a dinner next week.
+U: great. last thing, the 10 year old wants to cook one night. which dish?
+A: Friday's pizza is ideal: measuring and kneading the dough, spreading sauce and choosing toppings are all safe and fun, and you only need to handle the oven. Tacos on Saturday are a good second choice — she can fry the mince with supervision and set out the toppings.
+
+=== t330 | Planlegge maratonløp etter fødsel | running | parenting | no
+U: Jeg fødte for åtte måneder siden og vil løpe Berlin maraton neste høst. Er det realistisk?
+A: Med over et år igjen er det realistisk for mange, men bygg opp forsiktig. Før du øker mengden: få en sjekk hos en fysioterapeut som jobber med bekkenbunn etter fødsel, og tren bekkenbunn og kjerne jevnlig. Start med rolig løping 3 ganger i uka og øk med maks 10 prosent per uke. Fokuser på å tåle 40–50 km i uka før du starter et maratonprogram 16–18 uker før løpet.
+U: Jeg ammer fortsatt. Påvirker det treningen?
+A: Det går fint å trene mens du ammer. Spis og drikk nok — amming bruker mye energi, og for lite mat gir dårligere restitusjon og kan påvirke melkeproduksjonen. Amme eller pumpe før lange økter gjør det mer komfortabelt, og en godt tilpasset sports-BH er viktig.
+U: Hvordan får jeg tid til langturene med en baby?
+A: Mange løser det slik: langtur tidlig lørdag eller søndag morgen mens partneren har babyen, og kortere økter med løpevogn i uka. En løpevogn er fin for rolige turer, men ikke for intervaller. Bytt gjerne på med partneren så begge får egen treningstid. Og vær raus med deg selv: noen uker blir dårlige på grunn av søvnmangel, og det er helt normalt.
+U: Hva med søvn, babyen våkner fortsatt to ganger hver natt
+A: Søvnmangel er den største begrensningen. Juster treningen etter natta: etter en dårlig natt, gjør en rolig tur eller hvil i stedet for en hard økt. Legg harde økter etter netter med bedre søvn. Restitusjon skjer i søvnen, så prøv å legge deg tidlig når du kan.
+
+=== t331 | New chat | py-data | automation | en
+U: python script to read all the csv files in a folder and combine them
+A: ```python
+from pathlib import Path
+import pandas as pd
+
+files = sorted(Path("data").glob("*.csv"))
+df = pd.concat((pd.read_csv(f).assign(source=f.name) for f in files), ignore_index=True)
+df.to_csv("combined.csv", index=False)
+```
+
+The `source` column tells you which file each row came from.
+U: some files use ; as separator
+A: Let pandas sniff it: `pd.read_csv(f, sep=None, engine="python")`. It's slower but detects commas and semicolons automatically. If all the semicolon files are European exports, also pass `decimal=","` for numbers.
+U: works. can i run this automatically every night on windows
+A: Yes, with Task Scheduler: Create Basic Task → Daily → Start a program, with `python.exe` as the program and the full path to your script as the argument. Set "Start in" to the script's folder so relative paths work. Tick "Run whether user is logged on or not" if the PC may be locked.
+U: and email me if it fails?
+A: Wrap the work in try/except and send the error with smtplib:
+
+```python
+import smtplib, traceback
+from email.message import EmailMessage
+
+try:
+    main()
+except Exception:
+    msg = EmailMessage()
+    msg["Subject"] = "CSV merge failed"
+    msg["From"] = msg["To"] = "you@example.com"
+    msg.set_content(traceback.format_exc())
+    with smtplib.SMTP_SSL("smtp.example.com", 465) as s:
+        s.login("you@example.com", os.environ["MAIL_PASSWORD"])
+        s.send_message(msg)
+    raise
+```
+
+Store the password in an environment variable, not in the script.
+
+=== t332 | Как подготовиться к собеседованию в норвежскую компанию | interviews | languages | ru
+U: У меня собеседование в Осло на позицию бухгалтера. Чем норвежские собеседования отличаются от российских?
+A: Несколько особенностей:
+- атмосфера неформальная, обращение на «ты» и по имени — это нормально;
+- ценится скромность: говорите о результатах фактами, без преувеличений;
+- много вопросов о том, как вы работаете в команде и решаете конфликты;
+- часто спрашивают о балансе работы и жизни — это не ловушка;
+- после интервью обычно звонят рекомендателям, подготовьте двух.
+U: Собеседование будет на норвежском, мой уровень B1. Как подготовиться?
+A: Подготовьте и проговорите вслух ответы на основные вопросы: о себе, почему эта работа, опыт с норвежскими системами учёта, сильные стороны. Выучите профессиональные термины: regnskap, bilag, avstemming, mva, årsoppgjør, lønnskjøring. Если чего-то не поняли — спокойно переспросите: «Kan du gjenta det?» Это лучше, чем отвечать невпопад.
+U: Можешь написать короткий рассказ о себе на норвежском?
+A[no]: «Jeg heter Olga og har jobbet som regnskapsfører i sju år, først i et revisjonsselskap i Moskva og de siste to årene i et lite firma i Drammen. Jeg har ansvar for bilagsføring, avstemminger og mva-meldinger, og jeg har jobbet mye i Tripletex. Jeg liker å finne systemer som sparer tid, og jeg lærer norsk hver dag. Jeg søker denne stillingen fordi dere jobber med mange små bedrifter, og det er der jeg trives best.»
+U: Спасибо! А как ответить на вопрос о зарплате?
+A: Узнайте медианную зарплату бухгалтера в Осло по статистике SSB или профсоюза и назовите диапазон, нижняя граница которого вас устраивает: «Jeg ser for meg rundt 580 000–620 000, avhengig av ansvar og pensjonsordning». В Норвегии принято обсуждать и пенсию, и гибкий график.
+
+=== t333 | Renovating an old bathroom floor | renovation | repairs | en
+U: Lifting the vinyl in our 1970s bathroom revealed rotten boards near the toilet. How bad is this?
+A: It depends on how far the rot goes. Probe the boards and the joists underneath with a screwdriver: if the joists are firm and only the boards are soft, it's a manageable repair. If joists are soft too, you'll need a carpenter to sister or replace them. Either way, find the leak first — usually the toilet seal or the supply connection — or the new floor will rot as well.
+U: the joists seem fine, just two boards are spongy
+A: Good news. Cut out the rotten boards back to the nearest joists, let the area dry fully (a fan for a few days), treat the exposed wood, and screw in new boards of the same thickness. Then a layer of plywood over the whole floor gives a stiff, flat base for whatever goes on top.
+U: what floor covering is best for a bathroom without a shower?
+A: Without a shower, a quality vinyl sheet or click vinyl rated for wet rooms works well and is warm underfoot. Tile is the most durable but needs a very stiff subfloor. With vinyl, seal the edges and around the toilet with silicone so spills can't get underneath.
+U: also the toilet rocks a bit, is that related?
+A: Very likely — a rocking toilet breaks the wax seal, which leaks a little with each flush, and that's how boards rot. When you refit it on the new floor, use a new seal, make sure the flange is level and screwed down, and use shims if needed so the toilet sits without moving. Caulk around the base, leaving a small gap at the back so any future leak shows itself.
+
+=== t334 | Hvordan komme i gang med indeksfond | investing | budgeting | no
+U: Jeg er 35 og har aldri spart i fond. Jeg har 150 000 på sparekonto. Hva bør jeg gjøre?
+A: Først: behold en buffer på sparekontoen, for eksempel tre månedslønner, til uforutsette utgifter. Resten kan du vurdere å spare i et globalt indeksfond hvis du ikke trenger pengene de neste fem–ti årene. Åpne en aksjesparekonto, velg et globalt indeksfond med lav forvaltningsavgift, og sett opp et fast månedlig beløp.
+U: Bør jeg sette inn alt på en gang eller litt og litt?
+A: Historisk har det oftest lønnet seg å sette inn alt med en gang, fordi markedet stiger mer enn det faller over tid. Men hvis du blir urolig av tanken på et fall rett etter, kan du spre det over seks–tolv måneder. Det viktigste er at du faktisk starter og ikke selger når det går ned.
+U: Hva med bærekraftige fond?
+A: Det finnes globale indeksfond som utelater for eksempel fossil energi, våpen og tobakk, ofte med bare litt høyere kostnad. Avkastningen har vært omtrent lik vanlige globale fond over tid, men kan avvike enkelte år. Sjekk hva fondet faktisk utelater; begrepene brukes ulikt.
+U: Og hvor mye skal jeg spare i måneden?
+A: En vanlig tommelfingerregel er 10–20 prosent av inntekten etter skatt, men det viktigste er et beløp du klarer å holde over tid. Begynn gjerne med 2 000 i måneden og øk når du får lønnsøkning. Sett trekket til dagen etter lønning, så merker du det minst.
+
+=== t335 | Unfinished fantasy novel | fiction | stress | en
+U: I've been writing a fantasy novel for three years and I'm at 60,000 words. I keep rewriting chapter one instead of moving on.
+A: Rewriting the opening is a very common way of avoiding the harder middle. Make a rule: no more edits to finished chapters until the first draft is complete. Keep a "fix later" document where you note what you want to change. Set a modest daily target, like 300 words, and track it visibly.
+U: The problem is I don't know how it ends
+A: Then that's the real block. Try writing the ending first, or at least a one-page summary of the final confrontation and what your protagonist gains or loses. You can change it later; you just need a destination to write towards. Ask: what does the main character want, what do they need, and what will it cost them?
+U: ok I think she has to give up the magic to save the city
+A: That's a strong ending because it costs her something real. Now work backwards: what does she need to believe at the start so that this choice is hard? Plant moments in the middle where the magic gives her what she wants most, so the sacrifice hurts.
+U: honestly I'm also just exhausted from work and writing feels like another job
+A: That matters as much as the plot. If writing feels like a second job, shrink it: 20 minutes, three times a week, at a time of day when you have a bit of energy. Some weeks you'll write nothing, and that's fine. Many novels are finished slowly by tired people who kept coming back.
+
+=== t336 | Переход с Windows на Mac для работы | devices | - | ru
+U: На работе дали MacBook, всю жизнь сидела на Windows. С чего начать?
+A: Основные отличия: Cmd вместо Ctrl для копирования и вставки, Finder вместо Проводника, Spotlight (Cmd+Пробел) для поиска и запуска всего, закрытие окна не закрывает программу (Cmd+Q). Включите в настройках трекпада «касание для нажатия» и перетаскивание тремя пальцами.
+U: Как сделать скриншот части экрана?
+A: Cmd+Shift+4 — выделить область, Cmd+Shift+5 — меню со всеми вариантами, включая запись экрана. Скриншоты по умолчанию сохраняются на рабочий стол; там же можно поменять папку.
+U: А где диспетчер задач? Программа зависла.
+A: Нажмите Cmd+Option+Esc — откроется окно «Принудительное завершение». Подробный аналог диспетчера задач называется «Мониторинг системы», его можно найти через Spotlight.
+U: И последнее: как переключать раскладку?
+A: По умолчанию Ctrl+Пробел или клавиша глобуса (fn). Добавьте русскую раскладку в настройках клавиатуры → источники ввода. Там же можно включить автоматическое переключение раскладки для каждого окна отдельно.
+
+=== t337 | Teamet mitt er overarbeidet | workplace | stress | no
+U: Jeg leder et team på seks, og alle er slitne. Ledelsen vil ha to nye prosjekter i høst. Hva gjør jeg?
+A: Start med å få oversikt: list alle pågående oppgaver med estimert tidsbruk, og vis hva teamet faktisk har kapasitet til. Gå til ledelsen med tallene og et konkret forslag: hvilke av de nye prosjektene kan tas, hva må utsettes eller kuttes, eller hva trengs av ekstra ressurser.
+U: Ledelsen sier at alt er like viktig
+A: Da må du tvinge frem prioritering. Spør: «Hvis vi bare rekker to av disse fire i høst, hvilke to velger dere?» Skriftliggjør svaret. Når alt er like viktig, er ingenting prioritert — og det er deres jobb å velge, ikke teamets å jobbe kveldene.
+U: En i teamet har begynt å bli sykmeldt i perioder
+A: Ta en samtale med henne om hvordan hun har det og hva som kan tilrettelegges: færre oppgaver, mer fleksibel arbeidstid, eller kortere arbeidsdager i en periode. Involver HR og bedriftshelsetjenesten ved behov. Det er også et tydelig signal til ledelsen om at belastningen er for høy — dokumenter det.
+U: Og jeg er ganske sliten selv
+A: Det er viktig å ta på alvor. Snakk med din egen leder om din arbeidsmengde, deleger mer i teamet der det går, og hold deg til normale arbeidstider selv — teamet ser hva du gjør. Hvis du merker søvnproblemer eller at du ikke henter deg inn i helgene, snakk med fastlegen.
+
+=== t338 | Kitchen garden on a north-facing balcony | vegetables | houseplants | en
+U: My balcony faces north and only gets a bit of evening sun. Can I grow anything edible?
+A: Yes, leafy greens and herbs handle shade much better than fruiting plants: lettuce, rocket, spinach, chard, Asian greens, parsley, mint, chives and coriander. Skip tomatoes, peppers and courgettes — they need 6+ hours of direct sun.
+U: what about strawberries?
+A: Woodland or alpine strawberries cope with partial shade and produce small, very flavourful berries. Regular strawberries will grow but give few berries. Try a couple of alpine plants in a hanging basket where the evening sun reaches.
+U: how do i keep everything watered when it's windy up there? 7th floor
+A: Wind dries pots fast. Use larger containers (they hold more water), self-watering pots or reservoirs, and mulch the soil surface. Group pots together and put a windbreak on the railing — mesh or plants like bamboo in a trough. Check fixings so nothing can blow off at that height.
+U: and indoors in winter? the kitchen window is south facing
+A: A south window works well in winter for herbs like basil, parsley and chives, and for microgreens, which are ready in 10–14 days. Add a small LED grow light for the darkest months; in Norway from November to January even a south window doesn't give enough light for steady growth.
+
+=== t339 | Помогите с эссе на английском для поступления | applications | languages | ru
+U: Поступаю в магистратуру в Нидерланды, нужен мотивационное письмо на английском. Я архитектор, хочу на урбанистику.
+A: Структура: зачем вам урбанистика (конкретная история, которая вас к ней привела), что вы уже сделали (проекты, практика), почему именно эта программа (курсы, преподаватели, исследования), и что вы будете делать после. Объём обычно 500–800 слов.
+U[en]: Can you help me with the opening paragraph? The story is that I designed a housing block and later saw that nobody used the courtyard.
+A[en]: Here's a draft: "Two years after my first housing project was completed, I went back to see how people were living in it. The building worked; the courtyard did not. The benches I had carefully placed were empty, children played in the parking lot instead, and residents told me the space felt like it belonged to no one. That afternoon changed what I think architecture is for. I realised I had designed an object, not a place — and that understanding how people actually use cities is the knowledge I am missing."
+U: Отлично! А как закончить письмо?
+A: Свяжите финал с началом: вернитесь к двору и скажите, чему вы хотите научиться, чтобы следующий проект работал. Например, что после программы вы хотите заниматься реконструкцией дворовых пространств в постсоветских микрорайонах — это конкретно и запоминается.
+
+=== t340 | Taxes after moving countries mid-year | taxes | moving | en
+U: I moved from Sweden to Norway in June. Where do I pay tax for this year?
+A: Generally each country taxes the income earned while you were resident or working there, and the tax treaty between Norway and Sweden decides which country has the right to tax what. You'll typically file in both countries for the year: Sweden for January to May, Norway for June onwards. Report foreign income where it's required and claim credit for tax already paid, so you're not taxed twice.
+U: I still have a flat in Stockholm that I rent out
+A: Rental income from property is normally taxed in the country where the property is, so Sweden taxes it. As a Norwegian tax resident you must also report it in Norway, which then gives credit for the Swedish tax (or exempts it) under the treaty. Keep records of rent, costs and Swedish tax paid.
+U: do I need an accountant for this?
+A: For a first year with two countries and a rental property, it's often worth paying a few hours for an accountant who knows the Nordic treaty. After the first year, many people manage on their own using the previous year as a template.
+
+=== t341 | Hund og katt sammen | dogs | cats | no
+U: Vi har en katt på seks år og skal hente en valp. Hvordan får vi dem til å gå overens?
+A: Forbered katten først: lag rømningsveier og steder i høyden der katten kan være i fred, og ha mat og kattedo utenfor valpens rekkevidde. De første dagene holder dere dem adskilt og lar dem bli kjent med hverandres lukt.
+U: Når kan de møtes?
+A: Når katten virker rolig med lukten. Ha valpen i bånd og la katten bestemme avstanden. Belønn valpen for å være rolig og se bort fra katten. Korte møter, flere ganger daglig.
+U: Valpen jager katten hele tiden
+A: Avbryt jaging hver gang — ta valpen bort rolig, og gi den noe annet å gjøre. Tren «se på meg» og «bli» med godbiter. Gi valpen nok aktivitet så den ikke er overladet når katten er i nærheten. Og la aldri valpen få «vinne» en jakt; det blir fort en vane.
+U: Hvor lang tid tar det?
+A: Fra noen uker til et par måneder. Mange hunder og katter ender som gode venner, andre lever side om side med respekt. Det viktigste er at katten alltid har trygge soner.
+
+=== t342 | Сменить профессию в 40 лет | applications | stress | ru
+U: Мне 40, работаю юристом 15 лет и больше не могу. Хочу в IT, но страшно. Это реально?
+A: Реально, и люди делают это регулярно. Важно не прыгать в пустоту. Сначала попробуйте направление на практике: курс, небольшой проект, общение с людьми из профессии. Посмотрите, где ваш юридический опыт даёт преимущество: legal tech, compliance, аналитика в финтехе, продуктовый менеджмент в юридических сервисах.
+U: Мне нравится аналитика данных
+A: Тогда начните с SQL и Excel, затем Python (pandas) и визуализации. За 6–9 месяцев при 10 часах в неделю реально выйти на уровень джуна. Сделайте 2–3 проекта на юридических данных — например, анализ судебной практики. Это выделит вас среди других кандидатов.
+U: А если не найду работу и останусь без денег?
+A: Не увольняйтесь, пока не получите оффер. Учитесь параллельно с работой, создайте финансовую подушку на 6 месяцев. Попробуйте сначала перейти на аналитическую роль внутри своей компании или отрасли — это самый мягкий путь.
+U: Спасибо, стало спокойнее
+A: Хорошо. Страх при таком решении нормален. Составьте план на первые три месяца с конкретными шагами — когда видно движение, тревога уменьшается.
+
+=== t343 | Debugging a slow Django page | web-backend | sql | en
+U: One page in our Django app takes 8 seconds to load. Where do I start?
+A: Install django-debug-toolbar in development and open the page: the SQL panel shows how many queries run and how long they take. The usual cause is the N+1 problem — a loop in the template that triggers one query per row.
+U: 1,240 queries. yeah.
+A: Classic N+1. Find the related objects used in the loop and fetch them up front: `select_related()` for foreign keys and one-to-one, `prefetch_related()` for many-to-many and reverse relations. For example: `Order.objects.select_related("customer").prefetch_related("items__product")`.
+U: down to 6 queries but still 2 seconds
+A: Look at the slowest remaining query in the toolbar and run `EXPLAIN ANALYZE` on it. Probably a missing index on a filter or ordering column. Also check whether the page renders many objects — pagination may be the real fix.
+U: added an index on created_at, now 300ms
+A: Great result. Add a test that asserts the number of queries for this view (`assertNumQueries`) so an N+1 doesn't sneak back in later.
+
+=== t344 | Organisere digitale bilder | organising | devices | no
+U: Jeg har 40 000 bilder spredt på tre telefoner, en gammel PC og Google Photos. Hvordan får jeg orden?
+A: Samle alt på ett sted først. Kopier bildene fra de gamle enhetene til en ekstern disk, i mapper per enhet. Last deretter ned alt fra Google Photos med Google Takeout.
+U: Mange er duplikater
+A: Bruk et program som finner duplikater, for eksempel dupeGuru eller digiKam, som sammenligner innholdet, ikke bare filnavn. Gå gjennom forslagene før du sletter.
+U: Hvordan bør mappene se ut?
+A: En enkel struktur: År/År-Måned, for eksempel 2019/2019-07. Programmer som digiKam eller Adobe Bridge kan sortere automatisk etter datoen i bildet. Album for spesielle anledninger lager du heller i et bildeprogram enn med flere mapper.
+U: Og sikkerhetskopi?
+A: Følg 3-2-1-regelen: tre kopier, på to typer lagring, én utenfor huset. For eksempel: PC, ekstern disk og en skytjeneste. Test innimellom at du faktisk kan hente bilder fra sikkerhetskopien.
+
+=== t345 | Packing for a hut-to-hut hike in Jotunheimen | hiking | logistics | en
+U: Doing 5 days hut-to-hut in Jotunheimen in August. What do I pack? I want to keep it light.
+A: With staffed DNT huts you don't need tent or stove. Core list: 35–40 l backpack, rain jacket and trousers, warm layer (fleece or light down), wool base layers, hat and gloves, sturdy boots, map and compass plus an offline map app, headlamp, first aid, sun protection, a sleeping bag liner (required in huts), water bottle, snacks for between huts, and a DNT membership card for discounts.
+U: Do I need to book the huts?
+A: Staffed DNT huts don't take bookings for single nights in many cases; they never turn anyone away, but you might sleep on a mattress on the floor in peak season. Some popular huts like Gjendebu and Memurubu now allow booking — check DNT's site. Self-service huts need the DNT key.
+U: Is Besseggen part of a good route?
+A: Yes. A classic: Gjendesheim → Memurubu over Besseggen, Memurubu → Gjendebu, Gjendebu → Leirvassbu, Leirvassbu → Spiterstulen, and if you have energy, Galdhøpiggen from Spiterstulen. Take the Gjende boat if your legs need a break.
+U: what if the weather turns bad on Besseggen?
+A: Don't go up the ridge in strong wind, rain or poor visibility; the rock gets slippery and it's exposed. Take the boat from Gjendesheim to Memurubu instead and continue the route. Mountain weather changes fast — check yr.no in the morning and ask the hut staff.
+
+=== t346 | Мой сын не хочет читать | parenting | exams | ru
+U: Сыну 9 лет, читает очень неохотно, только под давлением. Как привить любовь к чтению?
+A: Давление обычно отталкивает. Попробуйте: давайте выбирать книги самому, включая комиксы и книги по его интересам (динозавры, футбол, Minecraft); читайте вслух по очереди; читайте сами при нём; ходите в библиотеку как на приключение. Пусть чтение будет без пересказов и проверок хотя бы какое-то время.
+U: Учительница говорит, что техника чтения у него ниже нормы
+A: Тогда стоит проверить, нет ли трудностей — например, дислексии или проблем со зрением. Обратитесь к логопеду или психологу в школе для диагностики. Если трудности подтвердятся, специальные занятия очень помогают, а давление только усилит нелюбовь к чтению.
+U: Он говорит, что буквы "прыгают"
+A: Это важный сигнал. Сначала сходите к офтальмологу — проверьте не только остроту зрения, но и бинокулярное зрение и фокусировку. Расскажите врачу именно эту фразу. После этого — к логопеду для оценки навыков чтения.
+
+=== t347 | Building a portfolio site as a photographer | frontend | crafts | en
+U: I'm a hobby photographer and want a portfolio website. Squarespace or build it myself?
+A: If you just want a beautiful site quickly, Squarespace or a similar builder is the fastest. If you'd enjoy learning a bit of web development, a static site with a template (Astro or Hugo) hosted free on Netlify gives you full control and no monthly fee.
+U: I'd like to learn, I know a little HTML
+A: Then start with Astro: pick a photography theme, put your images in a folder, and write simple pages. Use its image component, which creates responsive sizes and modern formats automatically — that's crucial for a photo site.
+U: My photos are 25 MB each though
+A: Never upload the originals. Export at around 2500 px on the long edge with quality 80–85 as JPEG, or let the build generate WebP/AVIF. That brings each image to a few hundred KB without visible loss on screens. Keep the originals offline.
+U: How do I stop people stealing them?
+A: You can't fully prevent it on the web. Practical options: a subtle watermark, only uploading web-size versions, and adding your copyright info in the metadata. Reverse image search (Google Lens, TinEye) helps you find copies. Most photographers accept some risk in exchange for being seen.
+
+=== t348 | Søvn og trening om kvelden | sleep | strength | no
+U: Jeg trener styrke kl. 21 fordi det er eneste ledige tid. Etterpå klarer jeg ikke sove før kl. 1.
+A: Hard trening sent øker puls, kroppstemperatur og stresshormoner, og for noen tar det flere timer før kroppen roer seg. Hvis du ikke kan flytte økta: hold intensiteten litt lavere, avslutt med 10 minutter rolig nedtrapping og tøying, ta en varm dusj, og unngå sterkt lys og koffein i pre-workout.
+U: Jeg tar faktisk pre-workout med koffein
+A: Der er sannsynligvis den største synderen. Koffein har halveringstid på rundt fem timer, så en dose kl. 20.30 er fortsatt halvveis i kroppen når du legger deg. Bytt til en koffeinfri variant eller dropp den helt på kveldsøkter.
+U: Hva med protein etter trening, kan det påvirke søvnen?
+A: Et proteinrikt mellommåltid etter trening er fint og forstyrrer ikke søvnen for de fleste — for eksempel kesam eller yoghurt. Unngå store, tunge måltider rett før leggetid.
+
+=== t349 | Grocery spending app for my household | py-data | budgeting | en
+U: I export our bank transactions as CSV every month. I'd like a small Python script that categorises grocery spending and shows the trend.
+A: Start with keyword rules, which work well for repeated merchants:
+
+```python
+import pandas as pd
+
+rules = {"groceries": ["REMA", "KIWI", "COOP", "MENY"], "transport": ["RUTER", "VY"], "eating out": ["PEPPES", "STARBUCKS"]}
+
+def categorise(text):
+    t = text.upper()
+    for cat, words in rules.items():
+        if any(w in t for w in words):
+            return cat
+    return "other"
+
+df = pd.read_csv("transactions.csv", sep=";", decimal=",", parse_dates=["Dato"], dayfirst=True)
+df["category"] = df["Beskrivelse"].map(categorise)
+monthly = df[df["Beløp"] < 0].groupby([pd.Grouper(key="Dato", freq="ME"), "category"])["Beløp"].sum().unstack().abs()
+monthly.plot(marker="o")
+```
+
+U: "other" is 40% of everything
+A: Print the top "other" descriptions by amount and add keywords for the biggest ones: `df[df.category == "other"].groupby("Beskrivelse")["Beløp"].sum().sort_values().head(30)`. Two or three rounds usually brings "other" under 10%.
+U: can it learn categories instead of me typing keywords?
+A: You could train a small classifier on descriptions you've already labelled, but for a household with maybe 50 recurring merchants, a keyword list plus a CSV of manual overrides is simpler and more transparent. Learning makes sense when you have thousands of different merchants.
+
+=== t350 | Kontorlandskap og konsentrasjon | workplace | - | no
+U: Vi har flyttet til åpent kontorlandskap og jeg får ikke konsentrert meg. Hva kan jeg gjøre?
+A: Bruk stillesoner og møterom til fokusarbeid hvis dere har det, støydempende hodetelefoner, og avtal faste «ikke forstyrr»-tider med kollegene. Mange team bruker et tegn, som hodetelefoner på, for at man ikke skal forstyrres.
+U: Det finnes nesten ingen stillerom
+A: Ta det opp med lederen, gjerne med konkrete forslag: booking av møterom til fokusarbeid, hjemmekontor én–to dager i uka for konsentrasjonskrevende oppgaver, eller å gjøre et hjørne om til stillesone. Hvis flere i teamet opplever det samme, står dere sterkere sammen.
+U: Lederen sier vi skal «tilpasse oss»
+A: Da kan det være nyttig å involvere verneombudet. Støy og konsentrasjon er en del av arbeidsmiljøet, og arbeidsmiljøloven krever et forsvarlig arbeidsmiljø. Dokumenter hva som påvirker arbeidet ditt, og foreslå en enkel kartlegging i teamet.
+
+=== t351 | Deploying a small app cheaply | git-devops | web-backend | en
+U: I built a small Node + Postgres app for my sports club. What's the cheapest reliable way to host it?
+A: A few options around 0–10 euros a month:
+- a small VPS (Hetzner, around 4–5 euros) running Docker Compose with Node and Postgres — cheapest, but you maintain it;
+- a PaaS like Render or Railway with a managed Postgres — easier, slightly more expensive;
+- Fly.io with a small Postgres volume.
+For a club app with little traffic, a VPS with automatic backups is the best value if you're comfortable with Linux.
+U: I'm comfortable with Linux. How do I do backups for Postgres?
+A: A nightly cron job with `pg_dump`, compressed, copied off the server:
+
+```bash
+pg_dump -Fc clubdb > /backups/clubdb-$(date +%F).dump
+find /backups -name '*.dump' -mtime +14 -delete
+rclone copy /backups remote:club-backups
+```
+
+Test a restore into a separate database once — a backup you haven't restored isn't a backup.
+U: and https?
+A: Put Caddy in front of the app: it gets and renews Let's Encrypt certificates automatically with a two-line config (`club.example.com { reverse_proxy app:3000 }`). Point your domain's A record to the VPS first.
+
+=== t352 | Плохо сплю после переезда | sleep | moving | ru
+U: Месяц назад переехали в новую квартиру, и я стала плохо спать. Раньше такого не было.
+A: Новая обстановка часто нарушает сон: другие звуки, свет, температура, подсознательная настороженность. Проверьте, что мешает: уличный свет (поможет плотная штора или маска), шум (беруши, белый шум), температура в спальне (оптимально 17–19 °C).
+U: Окна выходят на дорогу, ночью шумно
+A: Тогда шум — главный кандидат. Беруши из пены или силиконовые, приложение или устройство белого шума, плотные шторы немного глушат звук. Если квартира ваша надолго, лучшее решение — шумоизоляционные стеклопакеты: они снижают шум сильнее всего.
+U: Мы снимаем, окна менять нельзя
+A: Тогда можно поговорить с хозяином — иногда соглашаются, если вы готовы разделить расходы. Временное решение: переставить кровать к стене, дальше от окна, или спать в комнате, выходящей во двор, если такая есть.

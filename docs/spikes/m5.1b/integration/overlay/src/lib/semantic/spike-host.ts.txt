@@ -1,0 +1,138 @@
+/**
+ * M5.1b integration spike (temporary; copied into src/ only while the spike runs).
+ * Hosts the M5.1a Embedder inside the Next.js server process. Synthetic text only; no
+ * database. Writes static event names and numbers to THREADATLAS_SPIKE_LOG.
+ */
+import fs from "node:fs";
+import path from "node:path";
+import { pathToFileURL } from "node:url";
+import { Embedder as SourceEmbedder } from "./spike-embedder-source.ts";
+import { Embedder as BundledEmbedder } from "./spike-embedder-bundled.ts";
+import { ProcessEmbedder } from "./spike-process-embedder.ts";
+import { resolveModelDir } from "./model-files.ts";
+
+export type Mode = "source" | "bundled" | "process";
+type Embedder = SourceEmbedder | BundledEmbedder | ProcessEmbedder;
+type Host = {
+  evaluations: number;
+  instances: { mode: Mode; scope: string; e: Embedder }[];
+  singleton: Partial<Record<Mode, Promise<Embedder>>>;
+  busy: number;
+  busyDone: number;
+  busyErrors: string[];
+  signalsInstalled: number;
+  shuttingDown: boolean;
+};
+const g = globalThis as { __taSpike?: Host };
+const host: Host = (g.__taSpike ??= {
+  evaluations: 0,
+  instances: [],
+  singleton: {},
+  busy: 0,
+  busyDone: 0,
+  busyErrors: [],
+  signalsInstalled: 0,
+  shuttingDown: false,
+});
+host.evaluations++;
+// Module-scoped handle: re-created whenever `next dev` re-evaluates this module.
+let moduleScoped: Partial<Record<Mode, Promise<Embedder>>> = {};
+
+const t0 = performance.now();
+export function event(name: string, extra: Record<string, unknown> = {}): void {
+  const file = process.env.THREADATLAS_SPIKE_LOG;
+  if (!file) return;
+  fs.appendFileSync(file, JSON.stringify({ pid: process.pid, t: Math.round(performance.now() - t0), name, ...extra }) + "\n");
+}
+
+async function start(mode: Mode, scope: string): Promise<Embedder> {
+  const modelDir = resolveModelDir({ env: process.env, root: process.cwd() });
+  const t = performance.now();
+  const e: Embedder =
+    mode === "source"
+      ? await SourceEmbedder.start({ modelDir, verifyHashes: false, workerUrl: pathToFileURL(path.join(process.cwd(), "src", "lib", "semantic", "worker.ts")) })
+      : mode === "process"
+        ? await ProcessEmbedder.start({
+            modelDir,
+            verifyHashes: false,
+            entry: path.join(process.cwd(), "docs", "spikes", "m5.1b", "shutdown", "child-entry.ts"),
+            log: process.env.THREADATLAS_SPIKE_LOG,
+            stderr: "inherit",
+          })
+        : await BundledEmbedder.start({ modelDir, verifyHashes: false });
+  host.instances.push({ mode, scope, e });
+  event("worker-ready", { mode, scope, ms: Math.round(performance.now() - t), loadMs: e.info.loadMs });
+  return e;
+}
+
+export function getEmbedder(mode: Mode, scope: "global" | "module"): Promise<Embedder> {
+  if (scope === "global") {
+    const current = host.instances.filter((i) => i.mode === mode && i.scope === "global").at(-1);
+    if (current && (current.e.state === "failed" || current.e.state === "closed")) delete host.singleton[mode];
+    return (host.singleton[mode] ??= start(mode, scope));
+  }
+  return (moduleScoped[mode] ??= start(mode, scope));
+}
+
+export const SYNTHETIC = [
+  "The community garden plan needs a budget for seeds and tools.",
+  "Hagen trenger et budsjett for frø og verktøy til våren.",
+  "Бюджет на семена и инструменты для сада нужно утвердить.",
+  "A short note.",
+];
+
+/** Starts a long embedding call and returns at once, so a batch is in flight. */
+export function startBusy(e: Embedder, n: number): void {
+  host.busy++;
+  const texts = Array.from({ length: n }, (_, i) => `Synthetic passage ${i} about gardening budgets, travel plans and recipes.`);
+  e.embedPassages(texts).then(
+    () => host.busyDone++,
+    (err: { code?: string }) => host.busyErrors.push(err?.code ?? "unknown"),
+  );
+}
+
+export function status() {
+  return {
+    pid: process.pid,
+    evaluations: host.evaluations,
+    workersStarted: host.instances.length,
+    workersLive: host.instances.filter((i) => i.e.state === "ready" || i.e.state === "closing").length,
+    instances: host.instances.map((i) => ({ mode: i.mode, scope: i.scope, state: i.e.state, ...(i.e instanceof ProcessEmbedder ? { childPid: i.e.pid } : {}) })),
+    busy: host.busy,
+    busyDone: host.busyDone,
+    busyErrors: host.busyErrors,
+    signalsInstalled: host.signalsInstalled,
+    manualSignals: process.env.NEXT_MANUAL_SIG_HANDLE ?? null,
+    sigtermListeners: process.listenerCount("SIGTERM"),
+  };
+}
+
+export async function closeAll(): Promise<number> {
+  const t = performance.now();
+  await Promise.all(host.instances.map((i) => i.e.close()));
+  host.singleton = {};
+  moduleScoped = {};
+  return Math.round(performance.now() - t);
+}
+
+/** Drain-then-exit on SIGINT/SIGTERM. Never terminates a worker that is inferring. */
+export function installShutdown(): void {
+  if (host.signalsInstalled > 0) return;
+  host.signalsInstalled++;
+  const onSignal = (signal: NodeJS.Signals) => {
+    if (host.shuttingDown) return;
+    host.shuttingDown = true;
+    const live = host.instances.filter((i) => i.e.state === "ready").length;
+    event("signal", { signal, live });
+    const deadline = setTimeout(() => event("deadline-passed-still-draining"), 10_000);
+    deadline.unref();
+    void closeAll().then((ms) => {
+      clearTimeout(deadline);
+      event("drained", { ms });
+      if (process.env.NEXT_MANUAL_SIG_HANDLE) process.exit(signal === "SIGINT" ? 130 : 143);
+    });
+  };
+  process.on("SIGTERM", onSignal);
+  process.on("SIGINT", onSignal);
+  event("signals-installed", { manual: !!process.env.NEXT_MANUAL_SIG_HANDLE });
+}

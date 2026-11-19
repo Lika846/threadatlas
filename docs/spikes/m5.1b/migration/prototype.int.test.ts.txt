@@ -1,0 +1,591 @@
+/**
+ * M5.1b pre-implementation prototype (temporary; archived as
+ * docs/spikes/m5.1b/migration/prototype.int.test.ts.txt).
+ *
+ * Applies the reviewed draft migration to a migrated M2 test database and runs the
+ * exact SQL planned for M5.1b-1 against it, together with the real import code:
+ * - C: status invalidation for every import decision (cases 5–13), placed in the
+ *      import transaction through the existing test hook;
+ * - D: zero-chunk completion, oversized and failed conversations, A→B→A, and model /
+ *      configuration incompatibility in the reader.
+ * Synthetic data only; temporary databases only.
+ */
+import fs from "node:fs";
+import path from "node:path";
+import { randomBytes } from "node:crypto";
+import Database from "better-sqlite3";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { syntheticConversation, type SyntheticOptions } from "./helpers/synthetic-export";
+import { createTestDb, type TestDb } from "./helpers/test-db";
+import type { DbClient } from "../src/lib/db/client";
+import { runWriterTransaction } from "../src/lib/db/transaction-recovery";
+import { parseChatGptExport } from "../src/lib/import/chatgpt/adapter";
+import { normalizeConversation } from "../src/lib/import/chatgpt/normalize";
+import { createBatch, zeroCounters } from "../src/lib/import/persist/batch";
+import { persistConversation, type TxStage } from "../src/lib/import/persist/conversation";
+import type { NormalizedConversation } from "../src/lib/import/types";
+import { searchConversations } from "../src/lib/search/search";
+
+const MIGRATION = fs.readFileSync(path.join(process.cwd(), "docs/spikes/m5.1b/migration/migration.sql"), "utf8");
+
+// ---- Planned configuration (constants in src/lib/semantic) ---------------------
+const CONFIG = {
+  embeddingVersion: "Xenova/multilingual-e5-small@761b726d/onnx-q8/prefix-e5/trunc512-keep-eos/mean-l2/batch16-sorted-window256",
+  chunkerVersion: "sentence-pack-v1",
+  chunkTokens: 64,
+  quantization: "int8-absmax-v1",
+  dimensions: 384,
+};
+type Config = typeof CONFIG;
+const VECTOR_BYTES = 4 + CONFIG.dimensions; // quantizedByteLength(384)
+const MAX_ATTEMPTS = 3;
+
+// DateTime as the Prisma better-sqlite3 adapter stores it (checked in a test below).
+const ts = (d = new Date()) => d.toISOString().replace("Z", "+00:00");
+
+// ---- Planned SQL ------------------------------------------------------------------
+
+/** I2: in the import transaction, after an add or replace has written the messages. */
+const I2_DELETE_CHUNKS = `DELETE FROM "EmbeddingChunk" WHERE "conversationId" = ?`;
+const I2_UPSERT_STATUS = `
+INSERT INTO "EmbeddingStatus" ("conversationId", "contentHash", "parserVersion", "epoch", "state", "claimToken",
+  "attempts", "chunkCount", "lastErrorCode", "queuedAt", "updatedAt")
+SELECT c."id", c."contentHash", c."parserVersion",
+  COALESCE((SELECT "epoch" FROM "EmbeddingIndex" WHERE "id" = 'main'), 0), 'pending', NULL, 0, NULL, NULL, ?, ?
+FROM "Conversation" c WHERE c."id" = ?
+ON CONFLICT ("conversationId") DO UPDATE SET
+  "contentHash" = excluded."contentHash", "parserVersion" = excluded."parserVersion", "epoch" = excluded."epoch",
+  "state" = 'pending', "claimToken" = NULL, "attempts" = 0, "chunkCount" = NULL, "lastErrorCode" = NULL,
+  "queuedAt" = excluded."queuedAt", "updatedAt" = excluded."updatedAt"`;
+const BUMP_COUNTER = `UPDATE "EmbeddingIndex" SET "changeCounter" = "changeCounter" + 1, "updatedAt" = ? WHERE "id" = 'main'`;
+
+async function invalidate(tx: DbClient, conversationId: string): Promise<void> {
+  const now = ts();
+  const deleted = await tx.$executeRawUnsafe(I2_DELETE_CHUNKS, conversationId);
+  await tx.$executeRawUnsafe(I2_UPSERT_STATUS, now, now, conversationId);
+  if (deleted > 0) await tx.$executeRawUnsafe(BUMP_COUNTER, now);
+}
+
+/** Start, step 3 (Reconcile), one transaction. Returns how many rows were queued. */
+async function reconcile(db: DbClient, cfg: Config = CONFIG): Promise<{ queued: number; reset: number; configChanged: boolean }> {
+  return runWriterTransaction(db, async (tx) => {
+    const now = ts();
+    const [row] = await tx.$queryRawUnsafe<Record<string, unknown>[]>(`SELECT * FROM "EmbeddingIndex" WHERE "id" = 'main'`);
+    let configChanged = false;
+    if (!row) {
+      await tx.$executeRawUnsafe(
+        `INSERT INTO "EmbeddingIndex" ("id", "epoch", "embeddingVersion", "chunkerVersion", "chunkTokens", "quantization", "dimensions", "changeCounter", "lastErrorCode", "updatedAt")
+         VALUES ('main', 1, ?, ?, ?, ?, ?, 0, NULL, ?)`,
+        cfg.embeddingVersion, cfg.chunkerVersion, cfg.chunkTokens, cfg.quantization, cfg.dimensions, now,
+      );
+    } else if (!sameConfig(row, cfg)) {
+      configChanged = true;
+      await tx.$executeRawUnsafe(`DELETE FROM "EmbeddingChunk"`);
+      await tx.$executeRawUnsafe(
+        `UPDATE "EmbeddingIndex" SET "epoch" = "epoch" + 1, "embeddingVersion" = ?, "chunkerVersion" = ?, "chunkTokens" = ?,
+           "quantization" = ?, "dimensions" = ?, "changeCounter" = "changeCounter" + 1, "updatedAt" = ? WHERE "id" = 'main'`,
+        cfg.embeddingVersion, cfg.chunkerVersion, cfg.chunkTokens, cfg.quantization, cfg.dimensions, now,
+      );
+      await tx.$executeRawUnsafe(
+        `UPDATE "EmbeddingStatus" SET "state" = 'pending', "claimToken" = NULL, "attempts" = 0, "chunkCount" = NULL,
+           "lastErrorCode" = NULL, "epoch" = (SELECT "epoch" FROM "EmbeddingIndex" WHERE "id" = 'main'), "updatedAt" = ?`,
+        now,
+      );
+    }
+    // I5 (the indexer lock is held): every running row belongs to a dead run.
+    const reset = await tx.$executeRawUnsafe(
+      `UPDATE "EmbeddingStatus" SET "state" = 'pending', "claimToken" = NULL, "updatedAt" = ? WHERE "state" = 'running'`, now,
+    );
+    // Defensive (I2 makes this impossible): a row describing another version.
+    await tx.$executeRawUnsafe(
+      `UPDATE "EmbeddingStatus" SET "state" = 'pending', "claimToken" = NULL, "attempts" = 0, "chunkCount" = NULL,
+         "contentHash" = (SELECT c."contentHash" FROM "Conversation" c WHERE c."id" = "EmbeddingStatus"."conversationId"),
+         "parserVersion" = (SELECT c."parserVersion" FROM "Conversation" c WHERE c."id" = "EmbeddingStatus"."conversationId"),
+         "updatedAt" = ?
+       WHERE EXISTS (SELECT 1 FROM "Conversation" c WHERE c."id" = "EmbeddingStatus"."conversationId"
+                     AND (c."contentHash" <> "EmbeddingStatus"."contentHash" OR c."parserVersion" <> "EmbeddingStatus"."parserVersion"))`,
+      now,
+    );
+    // Correction A: only conversations with no status row at all.
+    const queued = await tx.$executeRawUnsafe(
+      `INSERT INTO "EmbeddingStatus" ("conversationId", "contentHash", "parserVersion", "epoch", "state", "claimToken",
+         "attempts", "chunkCount", "lastErrorCode", "queuedAt", "updatedAt")
+       SELECT c."id", c."contentHash", c."parserVersion", (SELECT "epoch" FROM "EmbeddingIndex" WHERE "id" = 'main'),
+         'pending', NULL, 0, NULL, NULL, ?, ?
+       FROM "Conversation" c
+       WHERE NOT EXISTS (SELECT 1 FROM "EmbeddingStatus" s WHERE s."conversationId" = c."id")`,
+      now, now,
+    );
+    return { queued, reset, configChanged };
+  });
+}
+
+function sameConfig(row: Record<string, unknown>, cfg: Config): boolean {
+  return (
+    row.embeddingVersion === cfg.embeddingVersion &&
+    row.chunkerVersion === cfg.chunkerVersion &&
+    Number(row.chunkTokens) === cfg.chunkTokens &&
+    row.quantization === cfg.quantization &&
+    Number(row.dimensions) === cfg.dimensions
+  );
+}
+
+type Claim = { conversationId: string; contentHash: string; parserVersion: string; epoch: number; token: string; attempts: number };
+
+/** T1: the oldest pending row, with a fresh token; the attempt counts at claim (§5.6). */
+async function claim(db: DbClient): Promise<Claim | null> {
+  return runWriterTransaction(db, async (tx) => {
+    const token = randomBytes(16).toString("hex");
+    const rows = await tx.$queryRawUnsafe<Record<string, unknown>[]>(
+      `UPDATE "EmbeddingStatus" SET "state" = 'running', "claimToken" = ?, "attempts" = "attempts" + 1,
+         "epoch" = (SELECT "epoch" FROM "EmbeddingIndex" WHERE "id" = 'main'), "updatedAt" = ?
+       WHERE "conversationId" = (SELECT "conversationId" FROM "EmbeddingStatus" WHERE "state" = 'pending'
+                                 ORDER BY "queuedAt", "conversationId" LIMIT 1)
+       RETURNING "conversationId", "contentHash", "parserVersion", "epoch", "attempts"`,
+      token, ts(),
+    );
+    const r = rows[0];
+    if (!r) return null;
+    return {
+      conversationId: String(r.conversationId),
+      contentHash: String(r.contentHash),
+      parserVersion: String(r.parserVersion),
+      epoch: Number(r.epoch),
+      attempts: Number(r.attempts),
+      token,
+    };
+  });
+}
+
+type ChunkRow = { sourceNodeId: string; chunkIndex: number; start: number; end: number; tokenCount: number; chunkKey: string; vector: Buffer };
+
+/**
+ * T2: I4 as one compare-and-set; chunks are written only if it succeeded.
+ * `worker` is the configuration the running worker reported.
+ */
+async function commit(db: DbClient, c: Claim, chunks: ChunkRow[], worker: Config = CONFIG): Promise<"committed" | "stale"> {
+  return runWriterTransaction(db, async (tx) => {
+    const now = ts();
+    const ok = await tx.$executeRawUnsafe(
+      `UPDATE "EmbeddingStatus" SET "state" = 'indexed', "claimToken" = NULL, "chunkCount" = ?, "lastErrorCode" = NULL, "updatedAt" = ?
+       WHERE "conversationId" = ? AND "state" = 'running' AND "claimToken" = ?
+         AND "contentHash" = ? AND "parserVersion" = ? AND "epoch" = ?
+         AND EXISTS (SELECT 1 FROM "Conversation" c WHERE c."id" = ? AND c."contentHash" = ? AND c."parserVersion" = ?)
+         AND EXISTS (SELECT 1 FROM "EmbeddingIndex" i WHERE i."id" = 'main' AND i."epoch" = ?
+                     AND i."embeddingVersion" = ? AND i."chunkerVersion" = ? AND i."chunkTokens" = ?
+                     AND i."quantization" = ? AND i."dimensions" = ?)`,
+      chunks.length, now, c.conversationId, c.token, c.contentHash, c.parserVersion, c.epoch,
+      c.conversationId, c.contentHash, c.parserVersion,
+      c.epoch, worker.embeddingVersion, worker.chunkerVersion, worker.chunkTokens, worker.quantization, worker.dimensions,
+    );
+    if (ok !== 1) return "stale";
+    await tx.$executeRawUnsafe(`DELETE FROM "EmbeddingChunk" WHERE "conversationId" = ?`, c.conversationId);
+    for (let i = 0; i < chunks.length; i += 500) {
+      const part = chunks.slice(i, i + 500);
+      await tx.$executeRawUnsafe(
+        `INSERT INTO "EmbeddingChunk" ("conversationId", "contentHash", "parserVersion", "epoch", "sourceNodeId", "chunkIndex",
+           "start", "end", "tokenCount", "chunkKey", "vector") VALUES ${part.map(() => "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)").join(", ")}`,
+        ...part.flatMap((k) => [c.conversationId, c.contentHash, c.parserVersion, c.epoch, k.sourceNodeId, k.chunkIndex, k.start, k.end, k.tokenCount, k.chunkKey, k.vector]),
+      );
+    }
+    await tx.$executeRawUnsafe(BUMP_COUNTER, now);
+    return "committed";
+  });
+}
+
+type FailureClass = "recoverable" | "permanent" | "run-level" | "worker-crash";
+
+/** §5.6: the effect of a failure on the claimed row (only if the claim is still current). */
+async function fail(db: DbClient, c: Claim, cls: FailureClass, code: string): Promise<number> {
+  const now = ts();
+  const sql = {
+    recoverable: `UPDATE "EmbeddingStatus" SET "state" = CASE WHEN "attempts" >= ${MAX_ATTEMPTS} THEN 'failed' ELSE 'pending' END,
+                    "claimToken" = NULL, "lastErrorCode" = ?, "updatedAt" = ? WHERE "conversationId" = ? AND "claimToken" = ?`,
+    permanent: `UPDATE "EmbeddingStatus" SET "state" = 'failed', "claimToken" = NULL, "lastErrorCode" = ?, "updatedAt" = ?
+                  WHERE "conversationId" = ? AND "claimToken" = ?`,
+    "run-level": `UPDATE "EmbeddingStatus" SET "state" = 'pending', "claimToken" = NULL, "attempts" = "attempts" - 1,
+                    "lastErrorCode" = ?, "updatedAt" = ? WHERE "conversationId" = ? AND "claimToken" = ?`,
+    "worker-crash": `UPDATE "EmbeddingStatus" SET "state" = CASE WHEN "attempts" >= ${MAX_ATTEMPTS} THEN 'failed' ELSE 'pending' END,
+                       "claimToken" = NULL, "lastErrorCode" = ?, "updatedAt" = ? WHERE "conversationId" = ? AND "claimToken" = ?`,
+  }[cls];
+  return db.$executeRawUnsafe(sql, code, now, c.conversationId, c.token);
+}
+
+const retryFailed = (db: DbClient) =>
+  db.$executeRawUnsafe(`UPDATE "EmbeddingStatus" SET "state" = 'pending', "attempts" = 0, "updatedAt" = ? WHERE "state" = 'failed'`, ts());
+
+/** The reader (§7): configuration and query-side checks, I6 join, byte-length check. */
+async function readVectors(db: DbClient, query: { embeddingVersion: string; chunkerVersion: string }, cfg: Config = CONFIG) {
+  const [row] = await db.$queryRawUnsafe<Record<string, unknown>[]>(`SELECT * FROM "EmbeddingIndex" WHERE "id" = 'main'`);
+  if (!row) return { ok: false as const, code: "INDEX_EMPTY" };
+  if (!sameConfig(row, cfg)) return { ok: false as const, code: "INDEX_INCOMPATIBLE" };
+  if (query.embeddingVersion !== row.embeddingVersion || query.chunkerVersion !== row.chunkerVersion) {
+    return { ok: false as const, code: "INDEX_INCOMPATIBLE" };
+  }
+  const rows = await db.$queryRawUnsafe<{ conversationId: string; sourceNodeId: string; chunkIndex: number; vector: Uint8Array }[]>(
+    `SELECT ch."conversationId", ch."sourceNodeId", ch."chunkIndex", ch."vector"
+     FROM "EmbeddingChunk" ch
+     JOIN "Conversation" c ON c."id" = ch."conversationId" AND c."contentHash" = ch."contentHash" AND c."parserVersion" = ch."parserVersion"
+     JOIN "EmbeddingIndex" i ON i."id" = 'main' AND ch."epoch" = i."epoch"
+     ORDER BY ch."conversationId", ch."sourceNodeId", ch."chunkIndex"`,
+  );
+  const good = rows.filter((r) => r.vector.byteLength === VECTOR_BYTES);
+  return { ok: true as const, rows: good, skipped: rows.length - good.length };
+}
+
+// ---- Fixtures -----------------------------------------------------------------------
+
+let t: TestDb;
+beforeEach(() => {
+  t = createTestDb();
+  const raw = new Database(t.file);
+  raw.exec(MIGRATION);
+  raw.close();
+});
+afterEach(async () => {
+  await t.cleanup();
+});
+
+function normalized(o: SyntheticOptions): NormalizedConversation {
+  const res = parseChatGptExport([syntheticConversation(o)]);
+  if (!res.ok || res.accepted.length !== 1) throw new Error("synthetic conversation must be accepted");
+  return normalizeConversation(res.accepted[0]!).conversation;
+}
+const newBatch = () =>
+  createBatch(t.db, {
+    adapter: "chatgpt", adapterVersion: "0.3.0", sourceFilename: "s.json", sourceSha256: "0".repeat(64), sourceBytes: 1,
+    conversationsSeen: 100, adapterCounters: zeroCounters(), warningsJson: "{}", startedAt: new Date(),
+  });
+
+/** The real import transaction, with the planned I2 statements placed after the message writes. */
+async function importWithI2(conv: NormalizedConversation, opts: { failAt?: TxStage; withoutI2?: boolean } = {}) {
+  const b = await newBatch();
+  return persistConversation(t.db, {
+    batchId: b,
+    conversation: conv,
+    pending: zeroCounters(),
+    hooks: {
+      inTransaction: async (stage, _i, tx) => {
+        // "afterInsert" is reached only by add and replace (the writing decisions).
+        if (stage === "afterInsert" && !opts.withoutI2) {
+          const [r] = await (tx as unknown as DbClient).$queryRawUnsafe<{ id: string }[]>(
+            `SELECT "id" FROM "Conversation" WHERE "source" = ? AND "sourceId" = ?`, conv.source, conv.sourceId,
+          );
+          await invalidate(tx as unknown as DbClient, r!.id);
+        }
+        if (stage === opts.failAt) throw new Error("injected failure");
+      },
+    },
+  });
+}
+
+const idOf = async (sourceId: string) => (await t.db.conversation.findUniqueOrThrow({ where: { source_sourceId: { source: "chatgpt", sourceId } } })).id;
+const statusOf = async (id: string) =>
+  (await t.db.$queryRawUnsafe<Record<string, unknown>[]>(`SELECT * FROM "EmbeddingStatus" WHERE "conversationId" = ?`, id))[0] ?? null;
+const chunkCount = async (id?: string) =>
+  Number(
+    (await t.db.$queryRawUnsafe<{ n: bigint }[]>(
+      id ? `SELECT COUNT(*) AS n FROM "EmbeddingChunk" WHERE "conversationId" = ?` : `SELECT COUNT(*) AS n FROM "EmbeddingChunk"`,
+      ...(id ? [id] : []),
+    ))[0]!.n,
+  );
+const vec = (seed: number) => {
+  const b = Buffer.alloc(VECTOR_BYTES);
+  b.writeFloatLE(0.01, 0);
+  for (let i = 4; i < VECTOR_BYTES; i++) b[i] = (seed * 31 + i) & 0x7f;
+  return b;
+};
+const chunksFor = (n: number, seed = 1): ChunkRow[] =>
+  Array.from({ length: n }, (_, k) => ({ sourceNodeId: `n${(k % 3) + 1}`, chunkIndex: Math.floor(k / 3), start: 0, end: 5, tokenCount: 3, chunkKey: "k".repeat(32), vector: vec(seed + k) }));
+
+/** Index a conversation completely: Start, claim, commit. */
+async function indexAll(n = 2) {
+  await reconcile(t.db);
+  for (let c = await claim(t.db); c; c = await claim(t.db)) expect(await commit(t.db, c, chunksFor(n))).toBe("committed");
+}
+
+// ---- Tests ----------------------------------------------------------------------------
+
+describe("schema basics", () => {
+  it("stores DateTime like the Prisma adapter, and enforces the foreign keys", async () => {
+    await importWithI2(normalized({ id: "c1" }));
+    const [b] = await t.db.$queryRawUnsafe<{ v: string; k: string }[]>(`SELECT CAST("startedAt" AS TEXT) AS v, typeof("startedAt") AS k FROM "ImportBatch" LIMIT 1`);
+    const [s] = await t.db.$queryRawUnsafe<{ v: string; k: string }[]>(`SELECT CAST("queuedAt" AS TEXT) AS v, typeof("queuedAt") AS k FROM "EmbeddingStatus" LIMIT 1`);
+    expect(s!.k).toBe(b!.k);
+    expect(s!.v.replace(/\d/g, "0")).toBe(b!.v.replace(/\d/g, "0"));
+    const [fk] = await t.db.$queryRawUnsafe<{ foreign_keys: bigint }[]>(`PRAGMA foreign_keys`);
+    expect(Number(fk!.foreign_keys)).toBe(1);
+    // I2's upsert writes nothing for an unknown conversation.
+    await expect(t.db.$executeRawUnsafe(I2_UPSERT_STATUS, ts(), ts(), "no-such-conversation")).resolves.toBe(0);
+    await expect(
+      t.db.$executeRawUnsafe(
+        `INSERT INTO "EmbeddingChunk" ("conversationId", "contentHash", "parserVersion", "epoch", "sourceNodeId", "chunkIndex", "start", "end", "tokenCount", "chunkKey", "vector")
+         VALUES ('no-such-conversation', 'h', 'p', 1, 'n1', 0, 0, 1, 1, 'k', x'00')`,
+      ),
+    ).rejects.toThrow();
+  });
+});
+
+describe("C: invalidation for every import decision", () => {
+  it("case 5 (add) queues a pending row with the conversation's version", async () => {
+    const r = await importWithI2(normalized({ id: "c1" }));
+    expect(r.decision).toEqual({ kind: "add", case: 5 });
+    const id = await idOf("c1");
+    const c = await t.db.conversation.findUniqueOrThrow({ where: { id } });
+    expect(await statusOf(id)).toMatchObject({ state: "pending", contentHash: c.contentHash, parserVersion: c.parserVersion, attempts: 0, chunkCount: null, claimToken: null, epoch: 0 });
+  });
+
+  it("case 8 (newer copy) resets an indexed row and deletes its chunks in the import transaction", async () => {
+    await importWithI2(normalized({ id: "c1", updateTime: 100 }));
+    await indexAll(3);
+    const id = await idOf("c1");
+    expect(await statusOf(id)).toMatchObject({ state: "indexed", chunkCount: 3 });
+    const r = await importWithI2(normalized({ id: "c1", updateTime: 200, tag: "v2" }));
+    expect(r.decision).toEqual({ kind: "replace", case: 8 });
+    const c = await t.db.conversation.findUniqueOrThrow({ where: { id } });
+    expect(c.id).toBe(id); // replaced in place: the FK cascade does not fire
+    expect(await statusOf(id)).toMatchObject({ state: "pending", contentHash: c.contentHash, chunkCount: null, attempts: 0 });
+    expect(await chunkCount(id)).toBe(0);
+  });
+
+  it("case 7 (parser-only reprocessing) keeps contentHash but changes the pair, and is invalidated", async () => {
+    await importWithI2(normalized({ id: "c1" }));
+    const id = await idOf("c1");
+    await t.db.conversation.updateMany({ data: { parserVersion: "0.2.0" } });
+    await t.db.$executeRawUnsafe(`UPDATE "EmbeddingStatus" SET "parserVersion" = '0.2.0'`);
+    await indexAll(3);
+    const before = await t.db.conversation.findUniqueOrThrow({ where: { id } });
+    const r = await importWithI2(normalized({ id: "c1" }));
+    expect(r.decision).toEqual({ kind: "replace", case: 7, code: "CONVERSATION_REPROCESSED" });
+    const after = await t.db.conversation.findUniqueOrThrow({ where: { id } });
+    expect(after.contentHash).toBe(before.contentHash); // hash alone would not see it
+    expect(after.parserVersion).not.toBe(before.parserVersion);
+    expect(await statusOf(id)).toMatchObject({ state: "pending", parserVersion: after.parserVersion, chunkCount: null });
+    expect(await chunkCount(id)).toBe(0);
+  });
+
+  it("cases 6, 9, 10, 11, 12 and 13 write nothing and leave an indexed row and its chunks valid", async () => {
+    await importWithI2(normalized({ id: "c1", updateTime: 200 }));
+    await indexAll(3);
+    const id = await idOf("c1");
+    const snapshot = async () => JSON.stringify([await statusOf(id), await chunkCount(id), await t.db.message.findMany({ orderBy: { id: "asc" } })], (_k, v) => (typeof v === "bigint" ? Number(v) : v));
+    const before = await snapshot();
+    const decisions = [
+      await importWithI2(normalized({ id: "c1", updateTime: 200 })), // 6 unchanged
+      await importWithI2(normalized({ id: "c1", updateTime: 100, tag: "old" })), // 9 older
+      await importWithI2(normalized({ id: "c1", updateTime: 200, tag: "same-time" })), // 10 ambiguous
+      await importWithI2(normalized({ id: "c1", updateTime: null, tag: "no-time" })), // 11 ambiguous time
+    ].map((r) => r.decision.case);
+    // 12: stored by a newer parser; 13: unrecognised stored hash.
+    await t.db.conversation.updateMany({ data: { parserVersion: "9.0.0" } });
+    await t.db.$executeRawUnsafe(`UPDATE "EmbeddingStatus" SET "parserVersion" = '9.0.0'`);
+    decisions.push((await importWithI2(normalized({ id: "c1", updateTime: 300, tag: "v3" }))).decision.case);
+    await t.db.conversation.updateMany({ data: { parserVersion: "0.3.0" } });
+    await t.db.$executeRawUnsafe(`UPDATE "EmbeddingStatus" SET "parserVersion" = '0.3.0'`);
+    const realHash = (await t.db.conversation.findMany({ select: { contentHash: true } }))[0]!.contentHash;
+    await t.db.conversation.updateMany({ data: { contentHash: "v9:unknown" } });
+    decisions.push((await importWithI2(normalized({ id: "c1", updateTime: 300, tag: "v3" }))).decision.case);
+    await t.db.conversation.updateMany({ data: { contentHash: realHash } });
+    expect(decisions).toEqual([6, 9, 10, 11, 12, 13]);
+    expect(await snapshot()).toBe(before);
+    const rv = await readVectors(t.db, CONFIG);
+    expect(rv.ok && rv.rows.length).toBe(3);
+  });
+
+  it("a failed import transaction leaves the status row and chunks unchanged (atomic with the messages)", async () => {
+    await importWithI2(normalized({ id: "c1", updateTime: 100 }));
+    await indexAll(3);
+    const id = await idOf("c1");
+    const before = JSON.stringify([await statusOf(id), await chunkCount(id)], (_k, v) => (typeof v === "bigint" ? Number(v) : v));
+    for (const stage of ["afterInsert", "beforeCommit"] as const) {
+      await expect(importWithI2(normalized({ id: "c1", updateTime: 200, tag: "v2" }), { failAt: stage })).rejects.toThrow();
+    }
+    expect(JSON.stringify([await statusOf(id), await chunkCount(id)], (_k, v) => (typeof v === "bigint" ? Number(v) : v))).toBe(before);
+  });
+
+  it("without I2 (today's code) a replacement leaves stale chunks, which the reader's join still hides", async () => {
+    await importWithI2(normalized({ id: "c1", updateTime: 100 }));
+    await indexAll(3);
+    const id = await idOf("c1");
+    await importWithI2(normalized({ id: "c1", updateTime: 200, tag: "v2" }), { withoutI2: true });
+    expect(await chunkCount(id)).toBe(3); // stale rows survive an in-place replacement
+    const r = await readVectors(t.db, CONFIG);
+    expect(r.ok && r.rows.length).toBe(0); // I6
+  });
+
+  it.each(["case8", "case7"] as const)("a replacement during inference makes the in-flight commit stale (%s)", async (variant) => {
+    {
+      const sid = `c-${variant}`;
+      await importWithI2(normalized({ id: sid, updateTime: 100 }));
+      if (variant === "case7") {
+        await t.db.conversation.updateMany({ where: { sourceId: sid }, data: { parserVersion: "0.2.0" } });
+        await t.db.$executeRawUnsafe(`UPDATE "EmbeddingStatus" SET "parserVersion" = '0.2.0' WHERE "conversationId" = ?`, await idOf(sid));
+      }
+      await reconcile(t.db);
+      const c = (await claim(t.db))!;
+      await importWithI2(normalized({ id: sid, updateTime: variant === "case8" ? 200 : 100, tag: variant === "case8" ? "v2" : "v1" }));
+      expect(await commit(t.db, c, chunksFor(2))).toBe("stale");
+      expect(await chunkCount(c.conversationId)).toBe(0);
+      expect(await statusOf(c.conversationId)).toMatchObject({ state: "pending", claimToken: null });
+    }
+  });
+});
+
+describe("D: explicit lifecycle cases", () => {
+  it("zero-chunk completion: indexed with chunkCount 0 and never queued again", async () => {
+    await importWithI2(normalized({ id: "empty", messages: 0 }));
+    await importWithI2(normalized({ id: "full" }));
+    await indexAll(0);
+    const id = await idOf("empty");
+    expect(await statusOf(id)).toMatchObject({ state: "indexed", chunkCount: 0 });
+    for (let i = 0; i < 3; i++) expect((await reconcile(t.db)).queued).toBe(0);
+    expect(await claim(t.db)).toBeNull();
+  });
+
+  it("backfill: conversations imported before the migration are queued once", async () => {
+    await importWithI2(normalized({ id: "c1" }), { withoutI2: true });
+    await importWithI2(normalized({ id: "c2" }), { withoutI2: true });
+    expect((await reconcile(t.db)).queued).toBe(2);
+    expect((await reconcile(t.db)).queued).toBe(0);
+  });
+
+  it("oversized conversation: fails permanently, the others are indexed, keyword search still finds it", async () => {
+    await importWithI2(normalized({ id: "huge", tag: "zebracanary" }));
+    await importWithI2(normalized({ id: "small", tag: "otter" }));
+    await reconcile(t.db);
+    const done: string[] = [];
+    for (let c = await claim(t.db); c; c = await claim(t.db)) {
+      if (c.conversationId === (await idOf("huge"))) expect(await fail(t.db, c, "permanent", "CONVERSATION_TOO_LARGE")).toBe(1);
+      else expect(await commit(t.db, c, chunksFor(2))).toBe("committed");
+      done.push(c.conversationId);
+    }
+    expect(done).toHaveLength(2); // one attempt each: no retries for a permanent failure
+    expect(await statusOf(await idOf("huge"))).toMatchObject({ state: "failed", lastErrorCode: "CONVERSATION_TOO_LARGE", attempts: 1 });
+    expect(await statusOf(await idOf("small"))).toMatchObject({ state: "indexed" });
+    expect((await reconcile(t.db)).queued).toBe(0); // failed rows are not requeued by Start
+    const s = await searchConversations(t.db, "zebracanary", undefined);
+    expect(s.status === "ok" && s.results.map((r) => r.conversationId)).toEqual([await idOf("huge")]);
+  });
+
+  it("failed jobs: a recoverable error fails after 3 attempts, the others continue; retry resets", async () => {
+    await importWithI2(normalized({ id: "poison" }));
+    await importWithI2(normalized({ id: "ok1" }));
+    await importWithI2(normalized({ id: "ok2" }));
+    await reconcile(t.db);
+    const poison = await idOf("poison");
+    let claims = 0;
+    for (let c = await claim(t.db); c; c = await claim(t.db)) {
+      claims++;
+      if (c.conversationId === poison) await fail(t.db, c, "recoverable", "INFERENCE_FAILED");
+      else await commit(t.db, c, chunksFor(1));
+    }
+    expect(claims).toBe(2 + MAX_ATTEMPTS);
+    expect(await statusOf(poison)).toMatchObject({ state: "failed", attempts: 3, lastErrorCode: "INFERENCE_FAILED" });
+    expect(await retryFailed(t.db)).toBe(1);
+    expect(await statusOf(poison)).toMatchObject({ state: "pending", attempts: 0 });
+  });
+
+  it("failed jobs: a clean run-level failure refunds the attempt; a worker crash keeps it", async () => {
+    await importWithI2(normalized({ id: "c1" }));
+    await reconcile(t.db);
+    const id = await idOf("c1");
+    for (let i = 0; i < 5; i++) await fail(t.db, (await claim(t.db))!, "run-level", "MODEL_MISSING");
+    expect(await statusOf(id)).toMatchObject({ state: "pending", attempts: 0 });
+    for (let i = 0; i < 3; i++) await fail(t.db, (await claim(t.db))!, "worker-crash", "WORKER_FAILED");
+    expect(await statusOf(id)).toMatchObject({ state: "failed", attempts: 3 });
+  });
+
+  it("a crash mid-inference leaves a running row; it counts as an attempt and is reset at the next Start", async () => {
+    await importWithI2(normalized({ id: "c1" }));
+    await reconcile(t.db);
+    await claim(t.db); // the process dies here
+    expect(await statusOf(await idOf("c1"))).toMatchObject({ state: "running", attempts: 1 });
+    expect((await reconcile(t.db)).reset).toBe(1);
+    expect(await statusOf(await idOf("c1"))).toMatchObject({ state: "pending", attempts: 1, claimToken: null });
+  });
+
+  it("A→B→A during one inference: the commit is refused by the token although the versions match again", async () => {
+    // Through the real import path an exact return to an earlier version is impossible
+    // (the v1 hash covers update_time and older copies are refused), so I2 is driven directly.
+    await importWithI2(normalized({ id: "c1" }));
+    await reconcile(t.db);
+    const c = (await claim(t.db))!;
+    const id = c.conversationId;
+    const tx = t.db;
+    await t.db.$executeRawUnsafe(`UPDATE "Conversation" SET "contentHash" = 'v1:' || hex(randomblob(32)) WHERE "id" = ?`, id); // B
+    await invalidate(tx, id);
+    await t.db.$executeRawUnsafe(`UPDATE "Conversation" SET "contentHash" = ? WHERE "id" = ?`, c.contentHash, id); // back to A
+    await invalidate(tx, id);
+    expect(await statusOf(id)).toMatchObject({ contentHash: c.contentHash, parserVersion: c.parserVersion, state: "pending" });
+    expect(await commit(t.db, c, chunksFor(2))).toBe("stale");
+    expect(await chunkCount(id)).toBe(0);
+    const again = (await claim(t.db))!;
+    expect(again.token).not.toBe(c.token);
+    expect(await commit(t.db, again, chunksFor(2))).toBe("committed");
+  });
+
+  it("delete-all during inference: the commit is refused (conversation and status gone, epoch changed)", async () => {
+    await importWithI2(normalized({ id: "c1" }));
+    await reconcile(t.db);
+    const c = (await claim(t.db))!;
+    // Planned delete-all phase 1 additions, then today's row deletions.
+    await t.db.$executeRawUnsafe(`DELETE FROM "EmbeddingChunk"`);
+    await t.db.$executeRawUnsafe(`DELETE FROM "EmbeddingStatus"`);
+    await t.db.$executeRawUnsafe(`UPDATE "EmbeddingIndex" SET "epoch" = "epoch" + 1, "changeCounter" = "changeCounter" + 1 WHERE "id" = 'main'`);
+    await t.db.message.deleteMany();
+    await t.db.conversation.deleteMany();
+    expect(await commit(t.db, c, chunksFor(2))).toBe("stale");
+    expect(await chunkCount()).toBe(0);
+  });
+
+  it("model-version incompatibility: the reader returns nothing before Reconcile, for each field", async () => {
+    await importWithI2(normalized({ id: "c1" }));
+    await indexAll(2);
+    expect((await readVectors(t.db, CONFIG)).ok).toBe(true);
+    const variants: Partial<Config>[] = [
+      { embeddingVersion: CONFIG.embeddingVersion.replace("761b726d", "aaaaaaaa") },
+      { chunkerVersion: "sentence-pack-v2" },
+      { chunkTokens: 128 },
+      { quantization: "int8-absmax-v2" },
+      { dimensions: 768 },
+    ];
+    for (const v of variants) {
+      const code = { ...CONFIG, ...v };
+      const r = await readVectors(t.db, code, code);
+      expect(r).toEqual({ ok: false, code: "INDEX_INCOMPATIBLE" });
+    }
+    // A query worker on another model version is refused too.
+    expect(await readVectors(t.db, { ...CONFIG, embeddingVersion: "other" })).toEqual({ ok: false, code: "INDEX_INCOMPATIBLE" });
+    // No row at all.
+    await t.db.$executeRawUnsafe(`DELETE FROM "EmbeddingIndex"`);
+    expect(await readVectors(t.db, CONFIG)).toEqual({ ok: false, code: "INDEX_EMPTY" });
+  });
+
+  it("model-version change: Reconcile drops all chunks, bumps the epoch and requeues indexed and failed rows", async () => {
+    await importWithI2(normalized({ id: "c1" }));
+    await importWithI2(normalized({ id: "c2" }));
+    await indexAll(2);
+    const e0 = Number((await t.db.$queryRawUnsafe<{ epoch: number }[]>(`SELECT "epoch" FROM "EmbeddingIndex"`))[0]!.epoch);
+    const next = { ...CONFIG, embeddingVersion: CONFIG.embeddingVersion + "-next" };
+    // A worker still on the old version cannot commit after the change.
+    const r = await reconcile(t.db, next);
+    expect(r.configChanged).toBe(true);
+    expect(await chunkCount()).toBe(0);
+    const e1 = Number((await t.db.$queryRawUnsafe<{ epoch: number }[]>(`SELECT "epoch" FROM "EmbeddingIndex"`))[0]!.epoch);
+    expect(e1).toBe(e0 + 1);
+    const c = (await claim(t.db))!;
+    expect(await commit(t.db, c, chunksFor(1), CONFIG)).toBe("stale");
+  });
+
+  it("the reader skips malformed vectors and rows from an old epoch or version", async () => {
+    await importWithI2(normalized({ id: "c1" }));
+    await indexAll(2);
+    const id = await idOf("c1");
+    await t.db.$executeRawUnsafe(`UPDATE "EmbeddingChunk" SET "vector" = x'0102' WHERE "chunkIndex" = 0 AND "sourceNodeId" = 'n1'`);
+    const r1 = await readVectors(t.db, CONFIG);
+    expect(r1.ok && [r1.rows.length, r1.skipped]).toEqual([1, 1]);
+    await t.db.$executeRawUnsafe(`UPDATE "EmbeddingChunk" SET "epoch" = "epoch" - 1 WHERE "conversationId" = ? AND "sourceNodeId" = 'n2'`, id);
+    const r2 = await readVectors(t.db, CONFIG);
+    expect(r2.ok && r2.rows.length).toBe(0);
+  });
+});

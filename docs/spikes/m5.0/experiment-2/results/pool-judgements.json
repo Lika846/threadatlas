@@ -1,0 +1,908 @@
+{
+ "method": "Pooled top-5 from semantic (message, sent64, win256, turn), gated fusion (sent64) and any-word keyword (message); every unlabelled (query, conversation) pair judged from its best passage without knowing which method retrieved it. Judge: the same author as the dataset (not independent).",
+ "judged": 180,
+ "relevant": 0,
+ "partlyRelevant": 0,
+ "pairs": [
+  {
+   "query": "LQ01",
+   "conversation": "n01",
+   "grade": 0
+  },
+  {
+   "query": "LQ01",
+   "conversation": "c10",
+   "grade": 0
+  },
+  {
+   "query": "LQ01",
+   "conversation": "c04",
+   "grade": 0
+  },
+  {
+   "query": "LQ01",
+   "conversation": "f01",
+   "grade": 0
+  },
+  {
+   "query": "LQ01",
+   "conversation": "d03",
+   "grade": 0
+  },
+  {
+   "query": "LQ01",
+   "conversation": "c24",
+   "grade": 0
+  },
+  {
+   "query": "LQ02",
+   "conversation": "c22",
+   "grade": 0
+  },
+  {
+   "query": "LQ02",
+   "conversation": "c04",
+   "grade": 0
+  },
+  {
+   "query": "LQ02",
+   "conversation": "c07",
+   "grade": 0
+  },
+  {
+   "query": "LQ02",
+   "conversation": "L03",
+   "grade": 0
+  },
+  {
+   "query": "LQ02",
+   "conversation": "c19",
+   "grade": 0
+  },
+  {
+   "query": "LQ02",
+   "conversation": "c24",
+   "grade": 0
+  },
+  {
+   "query": "LQ02",
+   "conversation": "c21",
+   "grade": 0
+  },
+  {
+   "query": "LQ02",
+   "conversation": "f01",
+   "grade": 0
+  },
+  {
+   "query": "LQ02",
+   "conversation": "f06",
+   "grade": 0
+  },
+  {
+   "query": "LQ03",
+   "conversation": "L02",
+   "grade": 0
+  },
+  {
+   "query": "LQ03",
+   "conversation": "c19",
+   "grade": 0
+  },
+  {
+   "query": "LQ03",
+   "conversation": "c04",
+   "grade": 0
+  },
+  {
+   "query": "LQ03",
+   "conversation": "c10",
+   "grade": 0
+  },
+  {
+   "query": "LQ03",
+   "conversation": "c22",
+   "grade": 0
+  },
+  {
+   "query": "LQ03",
+   "conversation": "f04",
+   "grade": 0
+  },
+  {
+   "query": "LQ03",
+   "conversation": "c07",
+   "grade": 0
+  },
+  {
+   "query": "LQ04",
+   "conversation": "c24",
+   "grade": 0
+  },
+  {
+   "query": "LQ04",
+   "conversation": "c05",
+   "grade": 0
+  },
+  {
+   "query": "LQ04",
+   "conversation": "c21",
+   "grade": 0
+  },
+  {
+   "query": "LQ04",
+   "conversation": "f08",
+   "grade": 0
+  },
+  {
+   "query": "LQ04",
+   "conversation": "f03",
+   "grade": 0
+  },
+  {
+   "query": "LQ04",
+   "conversation": "c04",
+   "grade": 0
+  },
+  {
+   "query": "LQ04",
+   "conversation": "c07",
+   "grade": 0
+  },
+  {
+   "query": "LQ04",
+   "conversation": "d02",
+   "grade": 0
+  },
+  {
+   "query": "LQ05",
+   "conversation": "c08",
+   "grade": 0
+  },
+  {
+   "query": "LQ05",
+   "conversation": "f12",
+   "grade": 0
+  },
+  {
+   "query": "LQ05",
+   "conversation": "c26",
+   "grade": 0
+  },
+  {
+   "query": "LQ05",
+   "conversation": "L06",
+   "grade": 0
+  },
+  {
+   "query": "LQ05",
+   "conversation": "c24",
+   "grade": 0
+  },
+  {
+   "query": "LQ05",
+   "conversation": "L04",
+   "grade": 0
+  },
+  {
+   "query": "LQ06",
+   "conversation": "f09",
+   "grade": 0
+  },
+  {
+   "query": "LQ06",
+   "conversation": "n02",
+   "grade": 0
+  },
+  {
+   "query": "LQ06",
+   "conversation": "c05",
+   "grade": 0
+  },
+  {
+   "query": "LQ06",
+   "conversation": "f12",
+   "grade": 0
+  },
+  {
+   "query": "LQ06",
+   "conversation": "c14",
+   "grade": 0
+  },
+  {
+   "query": "LQ06",
+   "conversation": "f10",
+   "grade": 0
+  },
+  {
+   "query": "LQ06",
+   "conversation": "c24",
+   "grade": 0
+  },
+  {
+   "query": "LQ07",
+   "conversation": "f15",
+   "grade": 0
+  },
+  {
+   "query": "LQ07",
+   "conversation": "L09",
+   "grade": 0
+  },
+  {
+   "query": "LQ07",
+   "conversation": "c25",
+   "grade": 0
+  },
+  {
+   "query": "LQ07",
+   "conversation": "c06",
+   "grade": 0
+  },
+  {
+   "query": "LQ07",
+   "conversation": "f13",
+   "grade": 0
+  },
+  {
+   "query": "LQ07",
+   "conversation": "c18",
+   "grade": 0
+  },
+  {
+   "query": "LQ07",
+   "conversation": "f17",
+   "grade": 0
+  },
+  {
+   "query": "LQ07",
+   "conversation": "L08",
+   "grade": 0
+  },
+  {
+   "query": "LQ08",
+   "conversation": "c20",
+   "grade": 0
+  },
+  {
+   "query": "LQ08",
+   "conversation": "c09",
+   "grade": 0
+  },
+  {
+   "query": "LQ08",
+   "conversation": "c06",
+   "grade": 0
+  },
+  {
+   "query": "LQ08",
+   "conversation": "f15",
+   "grade": 0
+  },
+  {
+   "query": "LQ08",
+   "conversation": "L07",
+   "grade": 0
+  },
+  {
+   "query": "LQ09",
+   "conversation": "c06",
+   "grade": 0
+  },
+  {
+   "query": "LQ09",
+   "conversation": "c20",
+   "grade": 0
+  },
+  {
+   "query": "LQ09",
+   "conversation": "c09",
+   "grade": 0
+  },
+  {
+   "query": "LQ09",
+   "conversation": "L07",
+   "grade": 0
+  },
+  {
+   "query": "LQ09",
+   "conversation": "c23",
+   "grade": 0
+  },
+  {
+   "query": "LQ09",
+   "conversation": "c03",
+   "grade": 0
+  },
+  {
+   "query": "LQ09",
+   "conversation": "f14",
+   "grade": 0
+  },
+  {
+   "query": "LQ10",
+   "conversation": "f01",
+   "grade": 0
+  },
+  {
+   "query": "LQ10",
+   "conversation": "c04",
+   "grade": 0
+  },
+  {
+   "query": "LQ10",
+   "conversation": "c24",
+   "grade": 0
+  },
+  {
+   "query": "LQ10",
+   "conversation": "L01",
+   "grade": 0
+  },
+  {
+   "query": "LQ10",
+   "conversation": "f06",
+   "grade": 0
+  },
+  {
+   "query": "LQ10",
+   "conversation": "d02",
+   "grade": 0
+  },
+  {
+   "query": "LQ10",
+   "conversation": "L02",
+   "grade": 0
+  },
+  {
+   "query": "LQ10",
+   "conversation": "n01",
+   "grade": 0
+  },
+  {
+   "query": "LQ10",
+   "conversation": "c16",
+   "grade": 0
+  },
+  {
+   "query": "LQ11",
+   "conversation": "f01",
+   "grade": 0
+  },
+  {
+   "query": "LQ11",
+   "conversation": "c10",
+   "grade": 0
+  },
+  {
+   "query": "LQ11",
+   "conversation": "c07",
+   "grade": 0
+  },
+  {
+   "query": "LQ11",
+   "conversation": "L01",
+   "grade": 0
+  },
+  {
+   "query": "LQ11",
+   "conversation": "c22",
+   "grade": 0
+  },
+  {
+   "query": "LQ11",
+   "conversation": "f02",
+   "grade": 0
+  },
+  {
+   "query": "LQ12",
+   "conversation": "n02",
+   "grade": 0
+  },
+  {
+   "query": "LQ12",
+   "conversation": "c24",
+   "grade": 0
+  },
+  {
+   "query": "LQ12",
+   "conversation": "c05",
+   "grade": 0
+  },
+  {
+   "query": "LQ12",
+   "conversation": "c17",
+   "grade": 0
+  },
+  {
+   "query": "LQ12",
+   "conversation": "L04",
+   "grade": 0
+  },
+  {
+   "query": "LQ12",
+   "conversation": "c26",
+   "grade": 0
+  },
+  {
+   "query": "LQ12",
+   "conversation": "f12",
+   "grade": 0
+  },
+  {
+   "query": "LQ12",
+   "conversation": "L05",
+   "grade": 0
+  },
+  {
+   "query": "LQ13",
+   "conversation": "d05",
+   "grade": 0
+  },
+  {
+   "query": "LQ13",
+   "conversation": "f14",
+   "grade": 0
+  },
+  {
+   "query": "LQ13",
+   "conversation": "c20",
+   "grade": 0
+  },
+  {
+   "query": "LQ13",
+   "conversation": "c09",
+   "grade": 0
+  },
+  {
+   "query": "LQ13",
+   "conversation": "c23",
+   "grade": 0
+  },
+  {
+   "query": "LQ13",
+   "conversation": "c06",
+   "grade": 0
+  },
+  {
+   "query": "LQ13",
+   "conversation": "f17",
+   "grade": 0
+  },
+  {
+   "query": "LQ13",
+   "conversation": "L08",
+   "grade": 0
+  },
+  {
+   "query": "LQ14",
+   "conversation": "c01",
+   "grade": 0
+  },
+  {
+   "query": "LQ14",
+   "conversation": "d01",
+   "grade": 0
+  },
+  {
+   "query": "LQ14",
+   "conversation": "c07",
+   "grade": 0
+  },
+  {
+   "query": "LQ14",
+   "conversation": "L03",
+   "grade": 0
+  },
+  {
+   "query": "LQ14",
+   "conversation": "f04",
+   "grade": 0
+  },
+  {
+   "query": "LQ14",
+   "conversation": "c04",
+   "grade": 0
+  },
+  {
+   "query": "LQ14",
+   "conversation": "c11",
+   "grade": 0
+  },
+  {
+   "query": "LQ15",
+   "conversation": "L01",
+   "grade": 0
+  },
+  {
+   "query": "LQ15",
+   "conversation": "c10",
+   "grade": 0
+  },
+  {
+   "query": "LQ15",
+   "conversation": "f14",
+   "grade": 0
+  },
+  {
+   "query": "LQ15",
+   "conversation": "L03",
+   "grade": 0
+  },
+  {
+   "query": "LQ15",
+   "conversation": "f06",
+   "grade": 0
+  },
+  {
+   "query": "LQ15",
+   "conversation": "f03",
+   "grade": 0
+  },
+  {
+   "query": "LQ16",
+   "conversation": "n02",
+   "grade": 0
+  },
+  {
+   "query": "LQ16",
+   "conversation": "f11",
+   "grade": 0
+  },
+  {
+   "query": "LQ16",
+   "conversation": "f09",
+   "grade": 0
+  },
+  {
+   "query": "LQ16",
+   "conversation": "c05",
+   "grade": 0
+  },
+  {
+   "query": "LQ16",
+   "conversation": "L05",
+   "grade": 0
+  },
+  {
+   "query": "LQ16",
+   "conversation": "f08",
+   "grade": 0
+  },
+  {
+   "query": "LQ17",
+   "conversation": "c15",
+   "grade": 0
+  },
+  {
+   "query": "LQ17",
+   "conversation": "c23",
+   "grade": 0
+  },
+  {
+   "query": "LQ17",
+   "conversation": "f13",
+   "grade": 0
+  },
+  {
+   "query": "LQ17",
+   "conversation": "L09",
+   "grade": 0
+  },
+  {
+   "query": "LQ17",
+   "conversation": "f16",
+   "grade": 0
+  },
+  {
+   "query": "LQ17",
+   "conversation": "L08",
+   "grade": 0
+  },
+  {
+   "query": "LQ18",
+   "conversation": "d02",
+   "grade": 0
+  },
+  {
+   "query": "LQ18",
+   "conversation": "L01",
+   "grade": 0
+  },
+  {
+   "query": "LQ18",
+   "conversation": "f09",
+   "grade": 0
+  },
+  {
+   "query": "LQ18",
+   "conversation": "d03",
+   "grade": 0
+  },
+  {
+   "query": "LQ18",
+   "conversation": "L03",
+   "grade": 0
+  },
+  {
+   "query": "LQ18",
+   "conversation": "c13",
+   "grade": 0
+  },
+  {
+   "query": "LQ18",
+   "conversation": "f02",
+   "grade": 0
+  },
+  {
+   "query": "LQ19",
+   "conversation": "c04",
+   "grade": 0
+  },
+  {
+   "query": "LQ19",
+   "conversation": "c07",
+   "grade": 0
+  },
+  {
+   "query": "LQ19",
+   "conversation": "L02",
+   "grade": 0
+  },
+  {
+   "query": "LQ19",
+   "conversation": "n01",
+   "grade": 0
+  },
+  {
+   "query": "LQ19",
+   "conversation": "d03",
+   "grade": 0
+  },
+  {
+   "query": "LQ19",
+   "conversation": "c13",
+   "grade": 0
+  },
+  {
+   "query": "LQ20",
+   "conversation": "c06",
+   "grade": 0
+  },
+  {
+   "query": "LQ20",
+   "conversation": "c20",
+   "grade": 0
+  },
+  {
+   "query": "LQ20",
+   "conversation": "f13",
+   "grade": 0
+  },
+  {
+   "query": "LQ20",
+   "conversation": "f14",
+   "grade": 0
+  },
+  {
+   "query": "LQ20",
+   "conversation": "d05",
+   "grade": 0
+  },
+  {
+   "query": "LQ20",
+   "conversation": "c23",
+   "grade": 0
+  },
+  {
+   "query": "LQ20",
+   "conversation": "f17",
+   "grade": 0
+  },
+  {
+   "query": "LQ03",
+   "conversation": "L01",
+   "grade": 0
+  },
+  {
+   "query": "LQ04",
+   "conversation": "f11",
+   "grade": 0
+  },
+  {
+   "query": "LQ06",
+   "conversation": "L05",
+   "grade": 0
+  },
+  {
+   "query": "LQ08",
+   "conversation": "c23",
+   "grade": 0
+  },
+  {
+   "query": "LQ08",
+   "conversation": "L09",
+   "grade": 0
+  },
+  {
+   "query": "LQ10",
+   "conversation": "c10",
+   "grade": 0
+  },
+  {
+   "query": "LQ11",
+   "conversation": "c05",
+   "grade": 0
+  },
+  {
+   "query": "LQ12",
+   "conversation": "L06",
+   "grade": 0
+  },
+  {
+   "query": "LQ14",
+   "conversation": "n01",
+   "grade": 0
+  },
+  {
+   "query": "LQ15",
+   "conversation": "L08",
+   "grade": 0
+  },
+  {
+   "query": "LQ16",
+   "conversation": "L06",
+   "grade": 0
+  },
+  {
+   "query": "LQ17",
+   "conversation": "c09",
+   "grade": 0
+  },
+  {
+   "query": "LQ18",
+   "conversation": "c04",
+   "grade": 0
+  },
+  {
+   "query": "LQ19",
+   "conversation": "L03",
+   "grade": 0
+  },
+  {
+   "query": "LQ20",
+   "conversation": "L07",
+   "grade": 0
+  },
+  {
+   "query": "LQ02",
+   "conversation": "c25",
+   "grade": 0
+  },
+  {
+   "query": "LQ05",
+   "conversation": "f10",
+   "grade": 0
+  },
+  {
+   "query": "LQ05",
+   "conversation": "c02",
+   "grade": 0
+  },
+  {
+   "query": "LQ06",
+   "conversation": "f07",
+   "grade": 0
+  },
+  {
+   "query": "LQ12",
+   "conversation": "f07",
+   "grade": 0
+  },
+  {
+   "query": "LQ13",
+   "conversation": "c25",
+   "grade": 0
+  },
+  {
+   "query": "LQ15",
+   "conversation": "c20",
+   "grade": 0
+  },
+  {
+   "query": "LQ15",
+   "conversation": "c18",
+   "grade": 0
+  },
+  {
+   "query": "LQ18",
+   "conversation": "L02",
+   "grade": 0
+  },
+  {
+   "query": "LQ20",
+   "conversation": "f07",
+   "grade": 0
+  },
+  {
+   "query": "LQ01",
+   "conversation": "c05",
+   "grade": 0
+  },
+  {
+   "query": "LQ03",
+   "conversation": "d02",
+   "grade": 0
+  },
+  {
+   "query": "LQ05",
+   "conversation": "c17",
+   "grade": 0
+  },
+  {
+   "query": "LQ06",
+   "conversation": "c02",
+   "grade": 0
+  },
+  {
+   "query": "LQ06",
+   "conversation": "L04",
+   "grade": 0
+  },
+  {
+   "query": "LQ07",
+   "conversation": "c15",
+   "grade": 0
+  },
+  {
+   "query": "LQ09",
+   "conversation": "f17",
+   "grade": 0
+  },
+  {
+   "query": "LQ11",
+   "conversation": "n01",
+   "grade": 0
+  },
+  {
+   "query": "LQ11",
+   "conversation": "d02",
+   "grade": 0
+  },
+  {
+   "query": "LQ11",
+   "conversation": "c24",
+   "grade": 0
+  },
+  {
+   "query": "LQ15",
+   "conversation": "f17",
+   "grade": 0
+  },
+  {
+   "query": "LQ15",
+   "conversation": "c24",
+   "grade": 0
+  },
+  {
+   "query": "LQ15",
+   "conversation": "f01",
+   "grade": 0
+  },
+  {
+   "query": "LQ17",
+   "conversation": "f17",
+   "grade": 0
+  },
+  {
+   "query": "LQ20",
+   "conversation": "c15",
+   "grade": 0
+  },
+  {
+   "query": "LQ20",
+   "conversation": "f16",
+   "grade": 0
+  }
+ ]
+}

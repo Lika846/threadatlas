@@ -1,0 +1,30 @@
+[
+  "synthetic canary stray string",
+  null,
+  42,
+  true,
+  [],
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: no mapping",
+    "conversation_id": "no-mapping-0005"
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: mapping is an array",
+    "conversation_id": "array-mapping-0006",
+    "mapping": []
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: mapping is null",
+    "conversation_id": "null-mapping-0007",
+    "mapping": null
+  },
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: the valid one",
+    "conversation_id": "valid-0008",
+    "mapping": { "n1": { "id": "n1", "message": { "id": "n1", "author": { "role": "user" }, "content": { "content_type": "text", "parts": ["Synthetic canary valid entry."] } }, "parent": null, "children": [] } }
+  }
+]

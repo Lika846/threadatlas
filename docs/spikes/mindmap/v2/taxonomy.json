@@ -1,0 +1,17 @@
+{
+  "code": { "py-data": 16, "web-backend": 14, "frontend": 12, "git-devops": 12, "sql": 9, "automation": 7 },
+  "food": { "bread": 8, "dinners": 12, "desserts": 7, "coffee-tea": 6 },
+  "fitness": { "running": 10, "strength": 9, "cycling": 6 },
+  "health": { "sleep": 8, "nutrition": 8, "stress": 9 },
+  "home": { "renovation": 10, "repairs": 9, "organising": 6 },
+  "garden": { "vegetables": 8, "houseplants": 8 },
+  "money": { "budgeting": 9, "taxes": 8, "investing": 9 },
+  "career": { "applications": 10, "interviews": 7, "workplace": 12 },
+  "learning": { "languages": 12, "exams": 8, "thesis": 6 },
+  "travel": { "city-trips": 10, "hiking": 9, "logistics": 6 },
+  "family": { "parenting": 9, "dogs": 7, "cats": 6, "elderly": 4 },
+  "creative": { "fiction": 7, "speeches": 7, "music": 7, "crafts": 6 },
+  "tech": { "devices": 9, "network": 6, "smart-home": 5 },
+  "admin": { "moving": 7, "renting": 6, "bureaucracy": 5 },
+  "oneoff": { "_": 70 }
+}

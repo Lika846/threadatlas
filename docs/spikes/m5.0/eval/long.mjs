@@ -1,0 +1,267 @@
+// M5.0 synthetic evaluation set "long" (v1-long, 2026-11-10). Entirely invented text.
+// Nine long conversations (en, no, ru), each with a long assistant answer (well over 512
+// tokens) that hides one idea deep inside it, and a second topic later in the conversation.
+// Evaluated together with the v0 conversations (as distractors); the v0 queries stay a fixed,
+// separate baseline.
+//
+// Queries: { id, category, lang, text, relevant: { convId: grade }, target: [convId, message], evidence }
+//   evidence: a phrase from the target passage; a retrieved chunk "explains" the result when it
+//   contains this phrase (case-insensitive).
+// Categories: deep (buried, same language), deepx (buried, other language), topic2 (second topic
+// of a multi-topic conversation), head (early in a long answer; control).
+
+const para = (...ps) => ps.join("\n\n");
+
+export const conversations = [
+  { id: "L01", lang: "en", kind: "long", title: "Spare room office", messages: [
+    "I'm finally turning the spare bedroom into a home office. Can you walk me through everything I should think about?",
+    para(
+      "Start with light, because it decides where everything else goes. Put the desk at a right angle to the window rather than facing it or with your back to it: facing the window makes you squint at the screen, and a window behind you reflects in the monitor and makes you a dark silhouette on video calls. Add a task lamp around 4000 K for the evening and a small bias light behind the monitor, which makes long sessions noticeably less tiring for the eyes.",
+      "Next, ergonomics. A fixed desk should be 72 to 75 cm high for most adults; if you can afford it, a sit-stand frame is worth more than a fancy desktop. The top of the monitor should be at or slightly below eye level and about an arm's length away. Your chair matters more than anything else in the room: adjustable lumbar support, a seat depth that leaves a few fingers between the seat edge and your knees, and armrests that let your shoulders relax.",
+      "Small rooms with bare walls echo, and people on calls hear it before you do. A rug, heavy curtains and a full bookshelf absorb a lot of it. If it is still hollow, two or three felt panels at the first reflection points, the side walls level with your head, make a clear difference. A rubber seal on the door keeps household noise out and your calls in.",
+      "Count every device that needs power: computer, monitor, lamp, router, phone and headset chargers. Use a surge protector instead of a chain of extension cords, and mount it under the desk with a cable tray so nothing hangs down. Label the chargers. If the router is far away, a cable along the skirting board is more reliable than Wi-Fi for video calls, though a mesh system is fine for most work.",
+      "Keep the desk surface for what you use every day. Closed cabinets hide paperwork, a vertical file holder keeps current projects in reach, and a shelf above eye height can hold things you need a few times a year. Clearing the desk at the end of each day sounds fussy, but it makes starting the next morning much easier.",
+      "A small room with a computer and a person in it gets warm quickly, especially in summer. Check that the radiator valve works, plan for a fan or a window you can open, and consider a couple of plants; they do little for air quality in practice, but most people find the room more pleasant with them.",
+      "Working at home needs boundaries more than furniture. Keep a routine with a fixed start, a closed door that means you are working, and a short shutdown ritual at the end of the day, such as writing tomorrow's first task on a note. Using a separate user account on the computer for work also helps you switch off. One idea for the empty corner by the door: set up a small book-swap shelf for the neighbours in your building, with a notebook where people write down what they took and what they left, so the room also gives something back to the house.",
+      "If the budget is tight, spend it in this order: chair, light, desk, then everything else. Office clearance companies sell good second-hand chairs for a fraction of the new price, and a well-made used chair beats a cheap new one. Buy the acoustic and storage pieces later, once you know how you actually use the room.",
+    ),
+    "Thanks. Separate question: our garden shed is full of junk. Could it become a small woodworking workshop?",
+    para(
+      "Probably, if the structure is sound. Empty it completely first and check the floor and the roof: a soft floor or a leaking roof needs fixing before anything else. For year-round use, insulate the walls and roof with mineral wool or rigid boards behind plywood sheeting, and leave a ventilation gap so condensation does not rot the timber. Have an electrician run a proper supply with its own breaker; power tools on an extension cord from the house are a fire risk. Pegboard on one wall keeps hand tools visible, a sturdy bench goes under the window for light, and a shop vacuum connected to the saw handles most of the dust. Fit a good lock, since tools are a common target for theft.",
+    ),
+  ] },
+  { id: "L02", lang: "en", kind: "long", title: "Thesis plan", messages: [
+    "I have eight months left on my master's thesis in marine biology and I feel completely lost. How should I plan it?",
+    para(
+      "Work backwards from the submission date. Mark the final deadline, then the date your supervisor needs a full draft, usually four to six weeks earlier, then the dates for each chapter draft. Seeing that you have, say, five weeks per chapter makes the whole thing feel finite instead of endless.",
+      "For the literature, pick one reference manager now and stick with it; Zotero is free and works well. Write a short note for every paper you read: what they asked, what they did, what they found, and one sentence on why it matters for you. These notes become most of your literature review later, so the reading time is not lost.",
+      "Treat your data analysis as something someone else will need to repeat. Keep raw data read-only, do every step in scripts rather than by hand in a spreadsheet, and put the scripts under version control. When your supervisor asks you to rerun something with one outlier removed, you will be glad it takes minutes and not days.",
+      "Write a little every day rather than in large bursts. Five hundred words a day adds up to a full thesis in a few months, and rough text is much easier to improve than an empty page. Many people find it easiest to write the methods chapter first, because you already know what you did.",
+      "Make supervisor meetings count. Send a short agenda a day before, bring specific questions, and write three lines of notes afterwards about what you agreed. It also gives you a record if advice changes later.",
+      "Decide on a figure style early: one font, one colour scheme, consistent axis labels and units. Making every figure in the same script with the same settings saves a surprising amount of time at the end.",
+      "Build in a buffer of at least three weeks for illness, slow feedback and the revision that always takes longer than expected. Since you have hundreds of plankton photos from your fieldwork, one side idea is to turn them into a simple online identification key that first-year students can use in the lab course, which would also give you a nice line in your CV. Keep it for after submission, though, unless it fits naturally into your chapters.",
+      "Finally, protect your sleep and keep moving. Thesis months are long, and people who keep a regular walk or swim tend to write better and finish more calmly than people who sit at the desk until midnight.",
+    ),
+    "Also, I've been invited to give a twelve-minute talk at a student conference in March. Any advice?",
+    para(
+      "Twelve minutes is about ten slides. Choose one main message you want the audience to remember and build the talk around it: the question, why it matters, what you did, the key result, and what it means. Use large figures and very little text. Rehearse at least three times out loud with a timer, once in front of friends, and prepare two backup slides for the questions you expect. Finish a minute early; nobody minds a short talk.",
+    ),
+  ] },
+  { id: "L03", lang: "en", kind: "long", title: "Train puzzle game", messages: [
+    "Two years ago I started a small puzzle game in Godot about a train conductor. I built a level editor and twelve levels, then stopped. Should I pick it back up?",
+    para(
+      "First, look at what you actually have. Play your twelve levels again with fresh eyes and write down what still feels good and what does not. Two years away is an advantage here: you will see the rough edges a player would notice immediately.",
+      "Then cut the scope hard. List every feature you once planned and mark each one as essential, nice to have, or later. Most unfinished hobby games stall because the plan grew faster than the time available, not because the developer lacked skill.",
+      "Aim for a vertical slice: a short, complete experience from the title screen to an ending, with three to five polished levels. A finished small game is worth far more, to players and to you, than a large one that never ships.",
+      "Keep the art simple and consistent. A limited palette and clean shapes look deliberate, while half-finished detailed art looks unfinished. You can always improve it later if the game finds an audience.",
+      "Test early with other people. Watch three friends play without helping them; where they get stuck tells you more than any amount of thinking on your own. Puzzle games especially need this, because the designer always knows the solution.",
+      "Set a small weekly rhythm, such as two evenings a week, and track progress in a simple list. Regular small steps keep the project alive in your head, which matters more than the number of hours.",
+      "If finishing the whole game still feels too big, there is another option: release the level editor on its own, with your twelve levels as examples, so that other people can design and share their own train puzzles. Tools like that sometimes build a small community, and the feedback could give you the motivation to return to the full game.",
+      "When you are ready, publish on itch.io first. It is free, the audience is friendly to small games, and you can update the game as often as you like.",
+    ),
+    "Unrelated: my laptop fan gets really loud whenever I run Godot. Is that bad?",
+    para(
+      "A loud fan under load is normal, but you can reduce it. Clean the dust out of the vents with compressed air, use the laptop on a hard surface, and cap the editor's frame rate in the project settings so it does not render hundreds of frames per second while you work. If the laptop is several years old, new thermal paste on the processor often lowers temperatures noticeably.",
+    ),
+  ] },
+  { id: "L04", lang: "no", kind: "long", title: "Hytta ved Femunden", messages: [
+    "Vi har arvet en gammel hytte ved Femunden. Hvor begynner vi med oppussingen?",
+    para(
+      "Begynn med en grundig tilstandsvurdering før dere kjøper en eneste boks maling. Sjekk bunnsvillene og de nederste kledningsbordene for råte, se etter sprekker i grunnmuren eller pilarene, og kryp inn under hytta hvis det går. Det som ser ut som små skader utvendig, kan skjule fukt som har stått der i årevis.",
+      "Fukt er den største fienden til gamle hytter. Sørg for at terrenget heller bort fra veggene, at takvannet ledes vekk, og at det er god lufting under gulvet. Hvis jorda inntil veggene er høyere enn bunnsvillen, må den graves bort, selv om det er et kjedelig arbeid.",
+      "Taket må være tett før dere gjør noe innvendig. Gå over takpappen eller torva, sjekk beslag rundt pipa og sett opp takrenner hvis de mangler. Et lite lekk i taket kan ødelegge et helt nyoppusset rom på én vinter.",
+      "Gamle vinduer kan ofte reddes. Nye tetningslister, ny kitt og et forvindu om vinteren gir mye av effekten til nye vinduer, og hytta beholder sjarmen. Etterisolering av gulv og tak gir mest igjen for pengene, mens veggene kan vente.",
+      "Vedovnen og pipa må sjekkes av feiervesenet før dere fyrer. Gamle piper har ofte sprekker, og en piperehabilitering med innvendig stålrør er vanligvis billigere enn å mure ny pipe. Husk også røykvarsler og brannslukningsapparat.",
+      "Undersøk reglene for vann og avløp i kommunen. Mange hytter ved Femunden har brønn eller henter vann fra innsjøen, og et enkelt gråvannsanlegg krever ofte utslippstillatelse. Det er lurt å søke tidlig, for saksbehandlingen kan ta flere måneder.",
+      "Når dere maler, bruk linoljemaling på gammelt treverk. Den trekker inn i treet og flasser mindre enn moderne plastmaling. Skrap bort løs maling, vask med såpe og la treet tørke godt før dere starter. Når hytta er ferdig, kan dere lage en enkel felles kalender på nett der hele familien reserverer helgene og feriene sine, så slipper dere krangel om hvem som skal ha påsken og fellesferien.",
+      "Ta arbeidet i riktig rekkefølge: grunnmur og fukt, tak, pipe og brannsikkerhet, deretter vinduer, isolering og til slutt overflater. Sett av en buffer på minst tjue prosent i budsjettet, for gamle hytter overrasker nesten alltid.",
+    ),
+    "Vi lurer også på solcellepanel, det er ikke strøm der i dag.",
+    para(
+      "For en hytte uten strøm er et frittstående solcelleanlegg med batteribank vanlig. Start med å regne ut forbruket: lys, kjøleskap, lading og kanskje en vannpumpe. Om sommeren gir selv et lite anlegg mye strøm, men i mørketiden produserer panelene nesten ingenting, så de fleste har et lite aggregat som reserve. Velg litiumbatterier hvis budsjettet tillater det, og la en fagperson koble inverteren og sikringene.",
+    ),
+  ] },
+  { id: "L05", lang: "no", kind: "long", title: "Løping etter kneoperasjon", messages: [
+    "Jeg ble operert i kneet for et halvt år siden og vil begynne å løpe igjen. Hvordan legger jeg det opp?",
+    para(
+      "Avklar først med fysioterapeuten eller legen at kneet er klart for løpebelastning. Mange får en enkel test: hoppe på ett bein, gå ned trapper og stå på ett bein i et halvt minutt uten smerte. Hvis det går fint, kan du starte forsiktig.",
+      "Styrketrening er grunnlaget. Knebøy, utfall, setehev og øvelser for hofta beskytter kneet mye mer enn løpingen alene. Gjør styrkeøvelsene to eller tre ganger i uka, også når løpingen går bra.",
+      "Begynn med gå-løp-intervaller, for eksempel ett minutt løping og to minutter gange, gjentatt seks ganger. Øk løpedelen litt hver uke så lenge kneet tåler det. Det føles kanskje altfor lett, men det er nettopp poenget.",
+      "Velg mykt underlag i starten, som grusveier og skogsstier uten bratte nedoverbakker. Asfalt og løping nedover gir mer belastning på kneet.",
+      "Bruk en enkel smerteregel: litt ubehag på to av ti er greit, men hvis smerten går over fire, eller kneet er hovent dagen etter, skal du trappe ned igjen en uke. Skriv kort i en logg hvordan kneet kjennes etter hver økt.",
+      "Sko trenger ikke være avanserte, men de bør være behagelige og ikke slitt ut. Kjøp gjerne i en butikk der du kan prøve å løpe litt i dem.",
+      "Restitusjon er en del av treningen. Søvn, hviledager og rolig sykling eller svømming mellom løpeøktene gjør at kneet tåler mer over tid. Siden du kjenner flere som også har vært skadet, kan du starte en liten løpegruppe på søndager for folk som er på vei tilbake etter skade, med rolig tempo og en regel om at ingen blir igjen alene.",
+      "Sett deg mål som handler om vaner, ikke tider. Å løpe tre ganger i uka i to måneder uten smerter er et bedre første mål enn et bestemt løp.",
+    ),
+    "Og hva bør jeg spise når jeg trener mer?",
+    para(
+      "Spis vanlig, variert mat, men sørg for nok protein til hvert måltid, for eksempel egg, fisk, kylling, bønner eller yoghurt. Karbohydrater fra brød, poteter og pasta gir energi til øktene. Mange i Norge har lite D-vitamin om vinteren, så tran eller tilskudd kan være lurt. Drikk vann gjennom dagen, særlig etter lange økter.",
+    ),
+  ] },
+  { id: "L06", lang: "no", kind: "long", title: "Bakeri i Trondheim", messages: [
+    "Jeg drømmer om å åpne et lite bakeri i Trondheim. Hva må jeg tenke på?",
+    para(
+      "Skriv en enkel forretningsplan først. Hvem er kundene, hva skal du selge, hvor mange brød må du selge hver dag for å gå i null, og hvor mye penger trenger du før bakeriet tjener noe? Bare det å regne på dette gjør drømmen mye mer konkret.",
+      "Velg selskapsform. Et enkeltpersonforetak er enkelt og billig å starte, men du står personlig ansvarlig for gjelden. Et aksjeselskap krever mer papirarbeid og aksjekapital, men skiller privatøkonomien fra bedriften. Registreringen skjer i Brønnøysundregistrene.",
+      "Mattilsynet må vite om virksomheten før du starter, og du må ha et internkontrollsystem for mattrygghet. Det betyr rutiner for renhold, temperatur, allergener og sporbarhet. Det høres tungt ut, men det finnes gode maler for små bakerier.",
+      "Lokalet avgjør mye. Du trenger god ventilasjon, nok strøm til ovnene, et sted for varelevering og helst en disk ut mot gaten. Sjekk med kommunen om lokalet er godkjent for næringsmiddelproduksjon før du skriver under på leiekontrakten.",
+      "Kjøp brukt utstyr der det går. Ovner, eltemaskiner og kjølerom fra bakerier som legger ned, koster en brøkdel av nytt, men få en fagperson til å se på det før du kjøper.",
+      "Sett prisene ut fra råvarekostnad, arbeidstid og husleie, ikke ut fra hva konkurrentene tar. Mange nye bakere priser for lavt og jobber gratis uten å merke det.",
+      "Markedsføring kan være enkel. Bilder av brødene på Instagram, et skilt på fortauet og gode relasjoner med kafeene i nabolaget gir mye. En idé er et abonnement der kundene får et surdeigsbrød levert med sykkel hver fredag morgen, slik at du vet på forhånd hvor mye du skal bake og får faste inntekter.",
+      "Vær realistisk om arbeidstiden. Bakere starter tidlig, og de første årene blir det lange dager. Planlegg fri og hjelp i helgene, ellers sliter du deg ut før bakeriet har fått fotfeste.",
+    ),
+    "Jeg er også usikker på regnskap. Bør jeg ha regnskapsfører?",
+    para(
+      "Med et enkelt regnskapsprogram kan du føre mye selv, men mange små bedrifter bruker en regnskapsfører til årsoppgjøret og mva-meldingene. Du må registrere deg i Merverdiavgiftsregisteret når omsetningen passerer 50 000 kroner i løpet av tolv måneder. En regnskapsfører koster noen tusen kroner i måneden, men sparer deg for feil og gir deg tid til å bake.",
+    ),
+  ] },
+  { id: "L07", lang: "ru", kind: "long", title: "Переезд в Новосибирск", messages: [
+    "Мы с семьёй переезжаем из Самары в Новосибирск через два месяца. С чего начать?",
+    para(
+      "Начните с работы и сроков. Если новая работа уже есть, узнайте точную дату выхода и помогает ли работодатель с переездом: некоторые компании оплачивают билеты, перевозку вещей или первый месяц аренды. От этой даты и стройте весь план.",
+      "Жильё на первое время лучше снять, а не покупать. Поживите в городе несколько месяцев, поймите, где удобно добираться до работы и школы, и только потом выбирайте район для покупки. Посмотрите Академгородок, Центральный и Заельцовский районы, но учтите, что до работы зимой ехать может быть долго.",
+      "Школу и детский сад нужно искать заранее. Узнайте, к какой школе прикреплён дом, где вы будете жить, какие документы нужны для перевода и есть ли места. В хорошие школы очередь бывает уже весной.",
+      "Для перевозки вещей сравните контейнер по железной дороге и грузовик. Контейнер обычно дешевле, но идёт дольше; грузовик быстрее, но дороже. Многие вещи проще продать в Самаре и купить на месте, особенно старую мебель.",
+      "С документами всё проще, чем кажется. После переезда нужно оформить регистрацию по месту пребывания, прикрепиться к поликлинике по полису ОМС и сообщить новый адрес в банк и налоговую через госуслуги.",
+      "Составьте бюджет переезда: перевозка, билеты, залог за квартиру, первый месяц аренды, зимняя одежда и запас на непредвиденное. Обычно переезд обходится дороже, чем ожидают, примерно на треть.",
+      "Сибирская зима холоднее самарской, поэтому купите хорошую зимнюю обувь и пуховики заранее или сразу по приезде. Перед отъездом можно сделать фотокнигу о вашем старом дворе и соседях, чтобы дети взяли с собой память о Самаре и им было легче привыкнуть к новому месту.",
+      "Дайте детям время на адаптацию. Найдите кружки и секции в новом городе ещё до переезда, чтобы у них сразу появились занятия и новые знакомые.",
+    ),
+    "И ещё вопрос: стоит ли продавать машину или перегонять её самим?",
+    para(
+      "Перегон своим ходом занимает три-четыре дня, плюс бензин, гостиницы и износ машины. Автовоз стоит дороже, но бережёт время и силы. Если машине больше десяти лет, часто выгоднее продать её в Самаре и купить в Новосибирске, где выбор праворульных японских машин большой. В любом случае заранее купите зимнюю резину, она понадобится уже в октябре.",
+    ),
+  ] },
+  { id: "L08", lang: "ru", kind: "long", title: "Python для бухгалтера", messages: [
+    "Мне тридцать пять, я работаю бухгалтером и хочу выучить Python, чтобы автоматизировать отчёты. Как учиться?",
+    para(
+      "Начните с основ: переменные, списки, словари, циклы и функции. Хватит одного бесплатного курса или книги для начинающих; не пытайтесь проходить сразу несколько, иначе будете повторять одно и то же.",
+      "Для вашей работы главная библиотека — pandas. Она читает таблицы Excel, объединяет их, считает итоги и сохраняет результат обратно в Excel. Возьмите реальный отчёт, который вы делаете каждый месяц вручную, и попробуйте повторить его в Python.",
+      "Учитесь на маленьких проектах. Например, скрипт, который собирает выписки из нескольких файлов в одну таблицу, или проверка, что сумма проводок сходится. Каждый такой проект занимает вечер и сразу экономит время на работе.",
+      "Освойте git с самого начала. Это система контроля версий: вы всегда сможете вернуться к работающей версии скрипта, если что-то сломаете.",
+      "Практикуйтесь понемногу, но каждый день. Тридцать минут ежедневно дают больше, чем пять часов в выходные раз в месяц, потому что знания не успевают забываться.",
+      "Найдите сообщество: чат курса, местную группу или форум. Вопросы, которые кажутся глупыми, задают все, и ответ часто приходит за несколько минут.",
+      "Не бойтесь ошибок. Читайте текст ошибки целиком, ищите его в интернете и учитесь пользоваться отладчиком. Например, можно написать бота, который каждое утро присылает расписание электричек до вашей станции: маленький проект, на котором удобно научиться работать с интернетом и расписаниями, а заодно полезный каждый день.",
+      "Соберите портфолио: два-три проекта с понятным описанием. Даже если вы не собираетесь менять работу, это хороший способ показать руководителю, что автоматизация экономит время.",
+    ),
+    "А как подготовиться к собеседованию на позицию аналитика данных?",
+    para(
+      "Повторите SQL: соединения таблиц, группировки и оконные функции спрашивают почти везде. Решите несколько задач на pandas и подготовьте рассказ о проекте, где вы что-то посчитали и это повлияло на решение. Ваш опыт в бухгалтерии — сильная сторона: вы понимаете, откуда берутся цифры и как их проверять.",
+    ),
+  ] },
+  { id: "L09", lang: "ru", kind: "long", title: "Дача под Тверью", messages: [
+    "Купили дачу под Тверью, участок шесть соток, всё заросло. Как его организовать?",
+    para(
+      "Сначала расчистите участок: скосите траву, уберите мусор и старые постройки, которые нельзя восстановить. Не торопитесь выкорчёвывать все деревья — старая яблоня или куст смородины могут оказаться ценными.",
+      "Потом нарисуйте план. Отметьте, где солнце утром и вечером, где стоит вода после дождя, где будет зона отдыха, огород и компост. Шесть соток — это немного, и продуманная планировка важнее количества грядок.",
+      "Высокие грядки из досок хорошо подходят для заросших участков: не нужно перекапывать дёрн, земля быстрее прогревается весной, и за ними проще ухаживать.",
+      "Сделайте капельный полив. Бочка на подставке и шланги с капельницами экономят воду и время, особенно если вы приезжаете только на выходные. Таймер на кране позволяет поливать даже без вас.",
+      "Теплица из поликарбоната продлевает сезон. Ставьте её с севера на юг, чтобы растения освещались равномерно, и сделайте форточки с двух сторон, иначе летом будет слишком жарко.",
+      "Заведите компост в дальнем углу. Траву, листья и очистки за год превращаются в хорошее удобрение, и вам не придётся покупать землю мешками.",
+      "Меняйте культуры местами каждый год: там, где росли помидоры, на следующий год сажайте бобовые или зелень. Так меньше болезней и почва не истощается. Можно договориться с соседями и устроить весной обмен семенами и рассадой прямо у ворот товарищества, тогда у всех будут новые сорта почти бесплатно.",
+      "Из инструментов на первое время хватит лопаты, грабель, секатора и тачки. Остальное покупайте, когда станет понятно, что действительно нужно.",
+    ),
+    "А что делать с крышей старого домика, она протекает?",
+    para(
+      "Сначала временно закройте протечку плёнкой или рубероидом, чтобы не гнили стропила. Потом проверьте стропила и обрешётку: если дерево крепкое, можно положить новую кровлю прямо по старой обрешётке. Ондулин дешёвый и лёгкий, металлочерепица служит дольше. Работайте на крыше вдвоём и со страховкой.",
+    ),
+  ] },
+];
+
+export const queries = [
+  // deep: the idea sits late in a long answer, in the conversation's own language
+  { id: "LQ01", category: "deep", lang: "en", text: "book swap shelf for neighbours with a notebook", relevant: { L01: 2 }, target: ["L01", 2], evidence: "book-swap shelf" },
+  { id: "LQ02", category: "deep", lang: "en", text: "online identification key for plankton photos for students", relevant: { L02: 2 }, target: ["L02", 2], evidence: "identification key" },
+  { id: "LQ03", category: "deep", lang: "en", text: "release the level editor separately so others can make puzzles", relevant: { L03: 2 }, target: ["L03", 2], evidence: "release the level editor" },
+  { id: "LQ04", category: "deep", lang: "no", text: "felles kalender for å reservere hyttehelger", relevant: { L04: 2 }, target: ["L04", 2], evidence: "felles kalender" },
+  { id: "LQ05", category: "deep", lang: "no", text: "løpegruppe for folk som har vært skadet", relevant: { L05: 2 }, target: ["L05", 2], evidence: "løpegruppe" },
+  { id: "LQ06", category: "deep", lang: "no", text: "brødabonnement levert med sykkel", relevant: { L06: 2 }, target: ["L06", 2], evidence: "levert med sykkel" },
+  { id: "LQ07", category: "deep", lang: "ru", text: "фотокнига о старом дворе для детей", relevant: { L07: 2 }, target: ["L07", 2], evidence: "фотокнигу" },
+  { id: "LQ08", category: "deep", lang: "ru", text: "бот, который присылает расписание электричек", relevant: { L08: 2 }, target: ["L08", 2], evidence: "расписание электричек" },
+  { id: "LQ09", category: "deep", lang: "ru", text: "обмен семенами с соседями весной", relevant: { L09: 2 }, target: ["L09", 2], evidence: "обмен семенами" },
+  // deepx: the same kind of buried idea, asked in another language
+  { id: "LQ10", category: "deepx", lang: "en", text: "family calendar to book weekends at the cabin", relevant: { L04: 2 }, target: ["L04", 2], evidence: "felles kalender" },
+  { id: "LQ11", category: "deepx", lang: "en", text: "photo book about the old courtyard before moving", relevant: { L07: 2 }, target: ["L07", 2], evidence: "фотокнигу" },
+  { id: "LQ12", category: "deepx", lang: "no", text: "bot som sender togtider hver morgen", relevant: { L08: 2 }, target: ["L08", 2], evidence: "расписание электричек" },
+  { id: "LQ13", category: "deepx", lang: "ru", text: "подписка на хлеб с доставкой на велосипеде", relevant: { L06: 2 }, target: ["L06", 2], evidence: "levert med sykkel" },
+  // topic2: the second topic of a multi-topic conversation
+  { id: "LQ14", category: "topic2", lang: "en", text: "insulating a garden shed to use as a workshop", relevant: { L01: 2 }, target: ["L01", 4], evidence: "insulate the walls" },
+  { id: "LQ15", category: "topic2", lang: "en", text: "preparing a twelve-minute conference talk", relevant: { L02: 2 }, target: ["L02", 4], evidence: "ten slides" },
+  { id: "LQ16", category: "topic2", lang: "no", text: "solcellepanel på hytte uten strøm", relevant: { L04: 2 }, target: ["L04", 4], evidence: "batteribank" },
+  { id: "LQ17", category: "topic2", lang: "ru", text: "перегнать машину самому или продать перед переездом", relevant: { L07: 2 }, target: ["L07", 4], evidence: "автовоз" },
+  { id: "LQ18", category: "topic2", lang: "en", text: "should I hire an accountant for a small bakery", relevant: { L06: 2 }, target: ["L06", 4], evidence: "regnskapsfører" },
+  // head: early in a long answer (control: even truncation should find it)
+  { id: "LQ19", category: "head", lang: "en", text: "desk and monitor height for a home office", relevant: { L01: 2 }, target: ["L01", 2], evidence: "72 to 75 cm" },
+  { id: "LQ20", category: "head", lang: "ru", text: "капельный полив на даче, если приезжаешь только на выходные", relevant: { L09: 2, c01: 1 }, target: ["L09", 2], evidence: "капельный полив" },
+];
+
+// Extra on-topic paragraphs, inserted before the seventh paragraph of each long answer (message 2),
+// so that every buried idea lies beyond the 512-token truncation limit (added after the first
+// token-position check showed most answers were only 400–550 tokens long).
+const EXTRA = {
+  L01: [
+    "Think about the view behind you on video calls. A plain wall, a shelf with a few books or a plant looks calm; an open wardrobe or a laundry rack does not. If you cannot rearrange the room, a simple folding screen works well and costs little.",
+    "Plan for the second person in the household too. If someone else sometimes works from the room, a second chair and a few free sockets on the other side of the desk avoid a lot of friction later.",
+  ],
+  L02: [
+    "Keep a single document called 'decisions' where you write down every methodological choice and the reason for it: which samples you excluded, why you chose a particular statistical test, which version of a database you used. Examiners often ask about exactly these choices, and months later you will not remember them.",
+    "Back up your work in at least two places, one of them outside your laptop. University cloud storage plus an external drive is enough. Losing a chapter a month before the deadline is more common than people think.",
+    "Share drafts early, even when they feel unfinished. A supervisor can redirect a rough chapter in an hour, while a polished chapter that goes in the wrong direction costs weeks.",
+    "Read two or three recent theses from your department. They show what level of detail is expected, how long the chapters usually are and how the examiners like the results to be presented.",
+    "Plan the discussion chapter from the start by keeping a list of surprising results and open questions as you go. When you reach the end, you will have the raw material instead of starting from nothing.",
+  ],
+  L03: [
+    "Write down why you stopped two years ago. If it was time, a smaller scope helps; if it was a technical problem, solve that first in a tiny test project; if it was boredom, change the part of the game that bored you before you continue.",
+    "Update Godot carefully. Opening a two-year-old project in a new major version can break scripts. Make a copy of the project first and upgrade the copy, or stay on the old version until the game is finished.",
+    "Save your work in a git repository and push it somewhere online. It protects the project and gives you a visible history of progress, which is surprisingly motivating.",
+    "Decide what 'done' means before you start again: for example, fifteen levels, a menu, sound effects and a credits screen. Without a clear finish line, hobby projects tend to grow forever.",
+    "Music and sound can come from free libraries with permissive licences. Keep a text file with the source and licence of every asset, so you can publish without worrying later.",
+  ],
+  L04: [
+    "Ta bilder av alt før dere starter, både ute og inne. Bildene er nyttige når dere skal snakke med håndverkere, og det er hyggelig å se forskjellen når arbeidet er ferdig.",
+    "Sjekk om hytta er regulert til fritidsbolig, og om det finnes bevaringsregler i området. Rundt Femunden kan det være begrensninger på tilbygg og fargevalg, og det er bedre å vite det før dere planlegger.",
+    "Snakk med naboene. De vet ofte hvor snøen legger seg, hvor vannet går om våren og hvilke håndverkere i bygda som er pålitelige.",
+    "Lag en enkel prosjektplan med hva som må gjøres før vinteren, hva som kan vente til neste sommer og hva som er ønsker. Det gjør det lettere å fordele arbeid og penger mellom søsknene.",
+    "Lei inn fagfolk til det som krever det, som elektrisk arbeid, pipe og avløp, og gjør resten selv. Dugnader med familien blir ofte de beste minnene fra hytta.",
+  ],
+  L05: [
+    "Varm opp i ti minutter før hver økt med rask gange, lette knebøy og noen bevegelser for hofter og ankler. Et varmt kne tåler belastningen mye bedre enn et kaldt.",
+    "Tren balanse hjemme. Å stå på ett bein mens du pusser tennene, eller på en pute, styrker de små musklene rundt kneet og ankelen, som ofte blir svake etter en operasjon.",
+    "Unngå å øke både lengde, fart og antall økter samtidig. Øk bare én ting om gangen, og la det gå minst en uke før neste økning.",
+    "Hvis du kjenner smerte på innsiden eller utsiden av kneet som ikke går over, er det bedre å ta en ekstra time hos fysioterapeuten enn å presse på. Små justeringer i teknikk eller styrkeprogram løser ofte problemet.",
+    "Mange blir overrasket over hvor mye det mentale betyr. Det er vanlig å være redd for å skade seg igjen, og det hjelper å løpe sammen med noen eller på kjente ruter i starten.",
+  ],
+  L06: [
+    "Test produktene før du åpner. Bak for venner, naboer og et lokalt marked noen helger, og lytt til hva folk kjøper igjen. Det gir deg et bedre sortiment enn å gjette.",
+    "Tenk på hvem som skal levere råvarene. Lokale møller og meierier kan gi bedre kvalitet og en historie å fortelle, men sjekk at de kan levere jevnt hele året.",
+    "Lag en plan for svinn. Brød som ikke blir solgt, kan selges billigere ved stengetid, gis til matsentraler eller brukes til krutonger og brødpudding.",
+    "Søk om støtte. Innovasjon Norge og kommunen har ordninger for nye bedrifter, og noen banker har egne lån for gründere med lav egenkapital.",
+    "Snakk med andre bakere. De fleste er hyggelige og deler gjerne erfaringer med en som ikke åpner rett ved siden av dem.",
+  ],
+  L07: [
+    "Сделайте список всех организаций, которым нужно сообщить о переезде: работодатель, банк, школа, поликлиника, управляющая компания, интернет-провайдер. Отмечайте, что уже сделано, иначе что-нибудь обязательно забудется.",
+    "Возьмите с собой в ручную кладь все важные документы: паспорта, свидетельства о рождении, медицинские карты, договоры. Они не должны ехать в контейнере вместе с мебелью.",
+    "Если есть возможность, слетайте в Новосибирск заранее на два-три дня. Посмотрите квартиры вживую, проедьтесь по районам в час пик и загляните в школу.",
+    "Подумайте, что делать с квартирой в Самаре: продать, сдать или оставить. Сдача приносит доход, но требует надёжного человека на месте, который поможет с жильцами.",
+    "Последние недели перед отъездом устройте прощание с друзьями и родственниками. Детям важно попрощаться с одноклассниками и знать, что они смогут созваниваться и приезжать в гости.",
+  ],
+  L08: [
+    "Привыкайте писать понятный код с самого начала: давайте переменным говорящие имена, разбивайте длинные скрипты на функции и оставляйте короткие комментарии там, где логика неочевидна.",
+    "Научитесь работать с датами и форматами чисел. В бухгалтерских отчётах это самая частая причина ошибок: разделители тысяч, запятые вместо точек, разные форматы дат в разных выгрузках.",
+    "Используйте виртуальное окружение для каждого проекта. Тогда библиотеки одного проекта не сломают другой, и вы всегда знаете, какие версии нужны.",
+    "Покажите первые результаты коллегам. Если ваш скрипт экономит им час в месяц, у вас появятся и поддержка, и новые идеи для автоматизации.",
+    "Не пытайтесь сразу автоматизировать всё. Начните с одного отчёта, доведите его до конца и только потом беритесь за следующий.",
+  ],
+  L09: [
+    "Проверьте почву. Простой тест кислотности из садового магазина покажет, нужна ли известь, а горсть земли в руке — песчаная она или глинистая. От этого зависит, что и где сажать.",
+    "Подумайте о воде заранее. Если на участке нет скважины, узнайте, когда в товариществе дают воду, и поставьте ёмкость для дождевой воды под водосток домика.",
+    "Не сажайте в первый год слишком много. Несколько грядок, за которыми вы успеваете ухаживать, принесут больше радости, чем большой огород, заросший сорняками к августу.",
+    "Сделайте дорожки из щепы или плитки между грядками. По ним удобно ходить после дождя, и сорняки растут меньше.",
+    "Узнайте у соседей, какие сорта хорошо растут в вашей местности. Под Тверью лето короткое, и ранние сорта часто надёжнее модных новинок.",
+  ],
+};
+for (const c of conversations) {
+  const ps = c.messages[1].split("\n\n");
+  ps.splice(6, 0, ...EXTRA[c.id]);
+  c.messages[1] = ps.join("\n\n");
+}

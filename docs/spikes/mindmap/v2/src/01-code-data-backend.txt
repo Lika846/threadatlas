@@ -1,0 +1,357 @@
+=== t001 | Merge two CSV files on customer id | py-data | - | en
+U: I have orders.csv and customers.csv. When I merge them on customer_id I end up with fewer rows than orders.csv has. Why are rows disappearing?
+A: A plain `merge` is an inner join by default, so any order whose customer_id has no match in customers.csv is dropped. Use `how="left"` to keep every order:
+
+```python
+merged = orders.merge(customers, on="customer_id", how="left", indicator=True)
+print(merged["_merge"].value_counts())
+```
+
+The `indicator` column tells you which rows found no customer. Also check the dtypes: if one file reads the id as int and the other as string, nothing will match even when the values look identical.
+U: the dtype thing was it, one was object. thanks
+A: Classic one. `customers["customer_id"] = customers["customer_id"].astype(int)` before the merge, or pass `dtype={"customer_id": str}` to both `read_csv` calls so they agree from the start.
+
+=== t002 | Plot monthly sales with a rolling average | py-data | - | en
+U: How do I draw monthly totals from a daily sales table and put a 3-month rolling average on top in matplotlib?
+A: Resample to month ends, then roll over the monthly series:
+
+```python
+s = df.set_index("date")["amount"].resample("ME").sum()
+ax = s.plot(kind="bar", alpha=0.5, label="monthly")
+s.rolling(3).mean().plot(ax=ax, color="black", label="3-month avg")
+ax.legend()
+```
+
+Bars and a line on the same axis can misalign because bar positions are integers. If that happens, use `ax.plot(range(len(s)), s.rolling(3).mean())` instead of the second `.plot` call.
+
+=== t003 | Fix SettingWithCopyWarning | py-data | - | no
+U: Jeg får denne advarselen hele tiden og skjønner ikke hva jeg gjør galt:
+
+```
+SettingWithCopyWarning: A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+```
+
+Koden er `aktive = df[df["status"] == "aktiv"]` og så `aktive["rabatt"] = 0.1`.
+A: Advarselen kommer fordi `aktive` kan være en kopi av en del av `df`, og da er det uklart om du vil endre originalen eller bare utvalget. Vil du bare jobbe videre med utvalget, lag en eksplisitt kopi:
+
+```python
+aktive = df[df["status"] == "aktiv"].copy()
+aktive["rabatt"] = 0.1
+```
+
+Vil du endre selve `df`, skriv i stedet `df.loc[df["status"] == "aktiv", "rabatt"] = 0.1`. Begge fjerner advarselen, men de gjør forskjellige ting.
+
+=== t004 | Groupby with several aggregations | py-data | - | en
+U: per region i need the total revenue, the number of unique customers and the biggest single order. one line if possible
+A: Named aggregation does exactly that:
+
+```python
+summary = df.groupby("region").agg(
+    revenue=("amount", "sum"),
+    customers=("customer_id", "nunique"),
+    largest_order=("amount", "max"),
+).sort_values("revenue", ascending=False)
+```
+
+The result has one row per region and readable column names, so you can write it straight to Excel with `summary.to_excel("regions.xlsx")`.
+
+=== t005 | Jupyter kernel keeps dying | py-data | - | en
+U: My notebook kernel dies every time I load a 6 GB CSV. Laptop has 16 GB RAM.
+A: Loading with default dtypes often needs 2–3× the file size in memory, so 6 GB on disk can easily exceed what's free. Options, from easiest:
+
+1. Read only the columns you need: `usecols=[...]`.
+2. Give compact dtypes: `dtype={"store": "category", "qty": "int32"}`.
+3. Process in chunks: `for part in pd.read_csv(path, chunksize=500_000): ...` and aggregate as you go.
+4. Convert once to Parquet; later loads are faster and smaller.
+
+If you only need aggregates, chunking plus a running groupby usually solves it without changing tools.
+U: usecols + category got it down to 3 GB, works now
+A: Nice. Saving it as Parquet now will make every later load take seconds instead of minutes.
+
+=== t006 | Разбор дат в разных форматах | py-data | - | ru
+U: В колонке с датами вперемешку "03.04.2024", "2024-04-05" и иногда "5 апр 2024". pd.to_datetime падает. Как это разобрать?
+A: Проще всего разбирать по шагам и заполнять пропуски:
+
+```python
+d = pd.to_datetime(df["date"], format="%d.%m.%Y", errors="coerce")
+d = d.fillna(pd.to_datetime(df["date"], format="%Y-%m-%d", errors="coerce"))
+```
+
+Строки вида «5 апр 2024» придётся заменить словарём месяцев: `df["date"].str.replace("апр", "04")` и т. д., а потом формат `"%d %m %Y"`. После этого проверьте `d.isna().sum()` — оставшиеся пропуски покажут, какие ещё форматы встречаются.
+
+=== t007 | Numpy broadcasting error | py-data | - | en
+U: ValueError: operands could not be broadcast together with shapes (100,3) (100,)
+I'm trying to divide each row by its sum.
+A: The row sums have shape (100,), which numpy lines up with the last axis (3), not the first. Keep the summed axis with `keepdims`:
+
+```python
+normalised = X / X.sum(axis=1, keepdims=True)
+```
+
+Now the sums are (100, 1) and broadcast across the three columns as you intended.
+
+=== t008 | Rens telefonnumre i et regneark med Python | py-data | - | no
+U: Jeg har en kolonne med telefonnumre skrevet på alle mulige måter: "+47 912 34 567", "91234567", "0047-912-34-567". Hvordan får jeg dem like?
+A: Fjern alt som ikke er sifre, og kutt landskoden:
+
+```python
+import re
+
+def rens(nr):
+    siffer = re.sub(r"\D", "", str(nr))
+    if siffer.startswith("0047"):
+        siffer = siffer[4:]
+    elif siffer.startswith("47") and len(siffer) == 10:
+        siffer = siffer[2:]
+    return siffer if len(siffer) == 8 else None
+
+df["telefon"] = df["telefon"].map(rens)
+```
+
+Rader som blir `None` har ikke et gyldig norsk nummer og bør sjekkes for hånd.
+
+=== t009 | New chat | py-data | - | en
+U: how to get the top 3 products per category
+A: Sort, then take the head of each group:
+
+```python
+top3 = (df.sort_values("sales", ascending=False)
+          .groupby("category")
+          .head(3))
+```
+
+If you want ties handled explicitly, use `df.groupby("category")["sales"].rank(method="dense", ascending=False) <= 3` as a filter instead.
+
+=== t010 | Seaborn heatmap of correlations | py-data | - | en
+U: I want a correlation heatmap of all numeric columns but the labels overlap and the numbers are unreadable.
+A: Limit to numeric columns, mask the duplicate upper triangle and give the figure room:
+
+```python
+corr = df.select_dtypes("number").corr()
+mask = np.triu(np.ones_like(corr, dtype=bool))
+plt.figure(figsize=(10, 8))
+sns.heatmap(corr, mask=mask, annot=True, fmt=".2f", cmap="vlag", center=0)
+plt.xticks(rotation=45, ha="right")
+plt.tight_layout()
+```
+
+With more than about 15 columns, drop `annot=True`; the colours carry the information and the numbers just become noise.
+
+=== t011 | Pivot table to wide format | py-data | - | en
+U: My data is long: date, city, temperature. I need one column per city.
+A: `pivot` does it when each (date, city) pair appears once:
+
+```python
+wide = df.pivot(index="date", columns="city", values="temperature")
+```
+
+If you get "Index contains duplicate entries", there are repeated measurements; use `pivot_table(..., aggfunc="mean")` to average them instead.
+
+=== t012 | Как ускорить apply по строкам | py-data | - | ru
+U: У меня функция через df.apply(axis=1) считает скидку для каждой строки, на миллионе строк это 4 минуты. Как сделать быстрее?
+A: Построчный `apply` — это по сути цикл на Python. Почти всегда его можно заменить векторными операциями. Например, если скидка зависит от суммы и типа клиента:
+
+```python
+import numpy as np
+df["discount"] = np.select(
+    [df["type"].eq("vip"), df["amount"].gt(1000)],
+    [0.15, 0.05],
+    default=0.0,
+)
+```
+
+`np.select` проверяет условия по порядку для всего столбца сразу. Обычно это ускоряет в 50–200 раз.
+U: переписала через np.select, теперь 2 секунды
+A: Отлично. Если появятся условия посложнее, `np.where` и `.map` по словарю работают так же быстро.
+
+=== t013 | Read Excel file with several sheets | py-data | - | en
+U: I get a monthly Excel file from finance with one sheet per department. How do I load all sheets into one table?
+A: `sheet_name=None` reads every sheet into a dict, which you can concatenate with the sheet name as a column:
+
+```python
+sheets = pd.read_excel("report.xlsx", sheet_name=None)
+df = pd.concat(
+    (s.assign(department=name) for name, s in sheets.items()),
+    ignore_index=True,
+)
+```
+
+Check that all sheets have the same header row first; finance files often have a title line above the table, which you can skip with `skiprows=1`.
+
+=== t014 | Missing values: fill or drop? | py-data | - | en
+U: About 8% of the income column is missing in my survey data. Should I drop those rows or fill them with the mean?
+A: It depends on why they're missing. If people with high incomes skip the question more often, dropping or mean-filling both bias your results downwards. A few practical steps:
+
+- Compare the respondents with and without income on age, education and region. Big differences mean the data isn't missing at random.
+- For a quick analysis, fill with the median within groups (e.g. by education level), and add a flag column `income_missing` so the model can learn from the gap itself.
+- For anything you'll publish, consider multiple imputation and report results both ways.
+
+8% is not much, so if the groups look similar, dropping is defensible and simplest to explain.
+
+=== t015 | Datavisualisering for styremøtet | py-data | - | no
+U: Jeg skal vise salgsutviklingen for styret. Hvilken graf bør jeg bruke for fem produktlinjer over tre år?
+A: Et linjediagram med én linje per produktlinje fungerer best for utvikling over tid. Noen tips for et styremøte:
+- Fremhev én eller to linjer med farge og gjør resten grå, så blir budskapet tydelig.
+- Skriv navnet rett ved enden av hver linje i stedet for en forklaring i hjørnet.
+- Bruk månedstall eller kvartal, ikke daglige tall.
+- Sett en kort overskrift som sier konklusjonen, for eksempel «Tjenester vokser, maskinvare flater ut».
+Stablet arealdiagram er fristende, men det gjør det vanskelig å lese hver enkelt linje.
+
+=== t016 | Dedupe rows but keep the newest | py-data | - | en
+U: drop duplicates by email but keep the most recent signup
+A: Sort by date first, then keep the last occurrence:
+
+```python
+df = (df.sort_values("signup_date")
+        .drop_duplicates(subset="email", keep="last"))
+```
+
+Normalise the emails before that (`df["email"] = df["email"].str.strip().str.lower()`), otherwise "Anna@x.no" and "anna@x.no " count as different people.
+
+=== t017 | Express API returns 404 for every route | web-backend | - | en
+U: I split my Express routes into a separate file and now every request returns 404.
+
+```js
+// routes/users.js
+const router = require("express").Router();
+router.get("/users", (req, res) => res.json([]));
+module.exports = router;
+
+// app.js
+app.use("/users", require("./routes/users"));
+```
+A: The prefix is applied twice. With `app.use("/users", router)`, a route defined as `/users` inside the router answers at `/users/users`. Define it as `/` in the router:
+
+```js
+router.get("/", (req, res) => res.json([]));
+```
+
+Now `GET /users` works. The same applies to every route in that file: drop the `/users` part from each path.
+
+=== t018 | CORS error from my React app | web-backend | frontend | en
+U: Access to fetch at 'http://localhost:8000/api/items' from origin 'http://localhost:5173' has been blocked by CORS policy. Backend is FastAPI.
+A: The browser blocks the call because the API doesn't say that the Vite dev server's origin is allowed. Add the CORS middleware in FastAPI:
+
+```python
+from fastapi.middleware.cors import CORSMiddleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+```
+
+Alternatively, proxy `/api` through Vite (`server.proxy` in vite.config) so the browser only ever talks to one origin; then you don't need CORS in development at all.
+U: proxy is cleaner, did that
+A: Good choice. Remember to set up the same path on your production server (or keep the middleware with your real domain) when you deploy.
+
+=== t019 | JWT token expires too fast | web-backend | - | en
+U: Users get logged out every 15 minutes. Should I just make the JWT valid for a week?
+A: A week-long access token is risky: if one leaks, it can't be revoked. The usual pattern is two tokens:
+- a short access token (5–15 minutes) sent with every request;
+- a long refresh token (days or weeks) stored in an httpOnly cookie, used only to get a new access token.
+When an API call returns 401, the client calls `/refresh` quietly and retries. Users stay logged in, and you can revoke refresh tokens in the database when someone logs out or changes their password.
+
+=== t020 | Postgres connection pool exhausted | web-backend | sql | en
+U: Under load our Node service starts failing with "sorry, too many clients already". Pool max is 20, we run 8 instances.
+A: 8 instances × 20 connections = 160, and Postgres defaults to `max_connections = 100`. Each instance is allowed to open more than the server will accept. Options:
+1. Lower the pool size per instance (e.g. 10), which is usually enough because queries are short.
+2. Put PgBouncer in transaction mode in front of Postgres so many client connections share a few server connections.
+3. Check for leaks: a route that does `pool.connect()` without `release()` on an error path will slowly eat the pool.
+Start with 3 — leaks look exactly like load problems and no setting fixes them.
+
+=== t021 | Dockerize a Django app | web-backend | git-devops | en
+U: What's a reasonable Dockerfile for a small Django app with gunicorn?
+A: A compact version:
+
+```dockerfile
+FROM python:3.12-slim
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+RUN python manage.py collectstatic --noinput
+CMD ["gunicorn", "mysite.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3"]
+```
+
+Copying requirements first lets Docker cache the install layer, so rebuilding after a code change takes seconds. Run migrations as a separate step at deploy time, not in the image build.
+
+=== t022 | REST API: PUT eller PATCH? | web-backend | - | no
+U: Vi diskuterer i teamet om vi skal bruke PUT eller PATCH når brukeren endrer profilen sin. Hva er forskjellen egentlig?
+A: PUT erstatter hele ressursen: klienten sender alle feltene, og det som mangler regnes som fjernet. PATCH endrer bare feltene som sendes. For et profilskjema der brukeren ofte endrer ett felt om gangen, er PATCH mest naturlig og tryggest — da sletter dere ikke telefonnummeret ved et uhell fordi klienten glemte å sende det. PUT passer når klienten alltid har hele objektet, for eksempel når man laster opp en komplett innstillingsfil.
+
+=== t023 | Ошибка 500 после деплоя на сервер | web-backend | - | ru
+U: Локально всё работает, а на сервере Flask отдаёт 500 и в логах только это:
+
+```
+jinja2.exceptions.TemplateNotFound: index.html
+```
+A: Почти всегда это путь. Flask ищет шаблоны в папке `templates` рядом с модулем приложения. Проверьте:
+1. Папка называется именно `templates` (на Linux регистр важен: `Templates` не найдётся).
+2. Она попала на сервер — часто её забывают добавить в архив или в Docker-образ.
+3. Если приложение создаётся в пакете, передайте путь явно: `Flask(__name__, template_folder="templates")`.
+На Windows и macOS регистр в именах не учитывается, поэтому локально ошибка не проявляется.
+U: да, было Templates с большой буквы
+A: Тогда переименуйте через `git mv Templates templates`, чтобы git тоже заметил изменение регистра.
+
+=== t024 | Rate limiting a public endpoint | web-backend | - | en
+U: Someone is hammering our signup endpoint with bots. What's the simplest rate limit I can add to an Express app?
+A: For a single instance, `express-rate-limit` is enough:
+
+```js
+const rateLimit = require("express-rate-limit");
+app.post("/signup", rateLimit({ windowMs: 15 * 60 * 1000, max: 5 }), signupHandler);
+```
+
+With several instances behind a load balancer, store the counters in Redis (`rate-limit-redis`) so the limit is shared. Make sure `app.set("trust proxy", 1)` is on behind a proxy, otherwise every request looks like it comes from the load balancer's IP and you'll block everyone at once.
+
+=== t025 | Webhook from Stripe fails signature check | web-backend | - | en
+U: Stripe webhook verification always fails: "No signatures found matching the expected signature for payload".
+A: Stripe signs the raw request body. If a JSON body parser runs first, the body you verify is re-serialised and no longer matches. Use the raw body for that route only:
+
+```js
+app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
+  const event = stripe.webhooks.constructEvent(req.body, req.headers["stripe-signature"], secret);
+  ...
+});
+```
+
+and register `express.json()` after it (or exclude this path). Also double-check you use the signing secret for this endpoint, not your API key; the CLI and the dashboard give different secrets.
+
+=== t026 | Background jobs in a web app | web-backend | - | en
+U: After a user uploads a video we need to make thumbnails, which takes a minute. Right now the request just hangs. What's the normal way to do this?
+A: Move the work out of the request:
+1. The upload handler saves the file, creates a job row (status "pending") and returns immediately with the job id.
+2. A worker process picks up jobs from a queue (Celery or RQ with Redis in Python, BullMQ in Node), makes the thumbnails and sets the status to "done".
+3. The page polls `/jobs/<id>` every few seconds, or you push an update over a websocket.
+For low volume, a database table polled by one worker is perfectly fine and avoids adding Redis.
+U: and if the worker crashes halfway?
+A: Make the job safe to run twice: write thumbnails to a temporary name and rename at the end, and mark the job "running" with a timestamp. A job that has been "running" for much longer than usual gets reset to "pending" and retried. Cap retries at three and keep the last error message on the row so you can see what went wrong.
+
+=== t027 | GraphQL vs REST for a small app | web-backend | - | en
+U: Starting a small app with a React frontend. Is GraphQL worth it or should I just do REST?
+A: For a small app with one frontend, REST is usually less work: fewer moving parts, simple caching, easy to debug with curl. GraphQL pays off when many clients need different shapes of the same data, or when the frontend team wants to change queries without waiting for backend changes. A middle ground is REST with a typed client generated from an OpenAPI spec, which gives you most of the type safety people like about GraphQL.
+
+=== t028 | Hvordan logge riktig i en Node-tjeneste | web-backend | - | no
+U: Loggene våre er bare console.log overalt og helt umulige å søke i. Hva er god praksis?
+A: Gå over til strukturert logging med et bibliotek som pino:
+- Logg JSON-objekter med faste felter: tid, nivå, melding, request-id og bruker-id i stedet for løse tekststrenger.
+- Lag en request-id i en middleware og ta den med i alle logglinjer for samme forespørsel; da kan du følge ett kall gjennom hele tjenesten.
+- Bruk nivåer konsekvent: `error` når noe må fikses, `warn` for ting som går bra men er rare, `info` for viktige hendelser, `debug` bare lokalt.
+- Aldri logg passord, tokens eller hele forespørselskropper med persondata.
+
+=== t029 | Websocket disconnects every 60 seconds | web-backend | - | en
+U: my websocket connection drops exactly every 60 seconds in production but not locally
+A: Exactly 60 seconds points to an idle timeout in something between the browser and your server — Nginx's `proxy_read_timeout` defaults to 60s, and many load balancers do the same. Two fixes, ideally both:
+- send a ping from the server every 25–30 seconds so the connection is never idle;
+- raise the proxy timeout for the websocket location (`proxy_read_timeout 3600s;`) and make sure the `Upgrade` and `Connection` headers are passed through.
+
+=== t030 | Хранить файлы в базе или на диске | web-backend | - | ru
+U: Пользователи загружают фото профиля. Хранить их прямо в PostgreSQL как bytea или класть на диск?
+A: Для фото лучше хранить сами файлы вне базы — на диске или в объектном хранилище (S3-совместимом), а в таблице держать только путь, размер и тип. Причины:
+- база растёт, бэкапы и восстановление становятся медленными;
+- отдавать файлы через веб-сервер или CDN намного дешевле, чем через приложение.
+Хранение в базе оправдано, если файлов мало и важна транзакционность: например, договор и запись о нём должны появиться одновременно. Для аватарок это не нужно.

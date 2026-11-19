@@ -1,0 +1,61 @@
+{
+  "name": "threadatlas",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "NEXT_TELEMETRY_DISABLED=1 next dev --hostname 127.0.0.1",
+    "build": "npm run db:generate && NEXT_TELEMETRY_DISABLED=1 next build",
+    "start": "NEXT_TELEMETRY_DISABLED=1 next start --hostname 127.0.0.1",
+    "lint": "eslint",
+    "typecheck": "npm run db:generate && NEXT_TELEMETRY_DISABLED=1 next typegen && tsc --noEmit",
+    "test": "npm run db:generate && vitest run",
+    "test:unit": "vitest run --project unit",
+    "test:int": "npm run db:generate && vitest run --project int",
+    "test:model": "THREADATLAS_MODEL_TESTS=1 vitest run --project model",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "check": "npm run typecheck && npm run lint && npm run test",
+    "db:generate": "CHECKPOINT_DISABLE=1 PRISMA_HIDE_UPDATE_MESSAGE=1 prisma generate --no-hints < /dev/null",
+    "db:validate": "CHECKPOINT_DISABLE=1 PRISMA_HIDE_UPDATE_MESSAGE=1 prisma validate < /dev/null",
+    "db:check-migrations": "CHECKPOINT_DISABLE=1 PRISMA_HIDE_UPDATE_MESSAGE=1 node scripts/check-migrations.mjs < /dev/null",
+    "db:deploy": "umask 077 && CHECKPOINT_DISABLE=1 PRISMA_HIDE_UPDATE_MESSAGE=1 prisma migrate deploy < /dev/null",
+    "model:fetch": "node scripts/model-fetch.ts",
+    "concepts:embed": "node scripts/concept-vectors.ts"
+  },
+  "dependencies": {
+    "@huggingface/tokenizers": "0.2.0",
+    "@prisma/adapter-better-sqlite3": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "@xyflow/react": "12.12.0",
+    "better-sqlite3": "12.11.1",
+    "next": "16.4.6",
+    "onnxruntime-node": "1.23.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@tailwindcss/turbopack": "4.3.4",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.6",
+    "prisma": "7.10.1",
+    "tailwindcss": "4.3.4",
+    "typescript": "5.9.3",
+    "vitest": "5.0.5"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true,
+    "onnxruntime-node@1.23.2": true,
+    "prisma@7.10.1": true,
+    "@prisma/engines@7.10.1": true,
+    "fsevents": false
+  }
+}

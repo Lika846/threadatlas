@@ -1,0 +1,75 @@
+// TEMPORARY M5.0 keyword-baseline harness (research only, not committed; removed after the run).
+// Reads the synthetic evaluation set from M5_EVAL_IN and writes raw rankings to M5_EVAL_OUT.
+import fs from "node:fs";
+import { afterAll, beforeAll, expect, it } from "vitest";
+import { importText } from "../../../tests/helpers/import";
+import { exportText, syntheticConversation } from "../../../tests/helpers/synthetic-export";
+import { createTestDb, type TestDb } from "../../../tests/helpers/test-db";
+import { parseSearchQuery } from "./query";
+import { searchConversations, TITLE_WEIGHT } from "./search";
+
+type Conv = { id: string; title: string; messages: string[] };
+type Query = { id: string; text: string };
+const IN = process.env.M5_EVAL_IN;
+const OUT = process.env.M5_EVAL_OUT;
+const VISIBLE = `m."pathIndex" IS NOT NULL AND m."isStructural" = 0 AND m."isHidden" = 0`;
+// Copy of RANKED_SQL (search.ts), used with an OR query instead of the app's AND query.
+const RANKED_SQL = `
+WITH message_hits AS (
+  SELECT m."conversationId" AS cid, m.rowid AS rid, m."pathIndex" AS pathIndex, bm25("message_fts") AS score
+  FROM "message_fts" JOIN "Message" m ON m.rowid = "message_fts".rowid
+  WHERE "message_fts" MATCH ? AND ${VISIBLE}
+),
+message_best AS MATERIALIZED (
+  SELECT cid, rid, pathIndex, score FROM (
+    SELECT cid, rid, pathIndex, score, ROW_NUMBER() OVER (PARTITION BY cid ORDER BY score ASC, pathIndex ASC, rid ASC) AS rn
+    FROM message_hits) WHERE rn = 1
+),
+title_hits AS MATERIALIZED (
+  SELECT c."id" AS cid, bm25("conversation_fts") * ${TITLE_WEIGHT}.0 AS score
+  FROM "conversation_fts" JOIN "Conversation" c ON c.rowid = "conversation_fts".rowid
+  WHERE "conversation_fts" MATCH ?
+),
+matched AS (SELECT cid FROM message_best UNION SELECT cid FROM title_hits)
+SELECT c."sourceId" AS sid,
+  (SELECT COUNT(*) FROM "Message" m WHERE m."conversationId" = x.cid AND m."pathIndex" <= mb.pathIndex AND ${VISIBLE}) AS num
+FROM matched x JOIN "Conversation" c ON c."id" = x.cid
+LEFT JOIN message_best mb ON mb.cid = x.cid LEFT JOIN title_hits th ON th.cid = x.cid
+ORDER BY CASE WHEN mb.score IS NULL THEN th.score WHEN th.score IS NULL THEN mb.score ELSE min(mb.score, th.score) END ASC,
+  c."updatedAtSec" DESC NULLS LAST, c."id" DESC`;
+
+let t: TestDb;
+beforeAll(() => { t = createTestDb(); });
+afterAll(async () => { await t.cleanup(); });
+
+it.skipIf(!IN || !OUT)("M5.0 keyword baseline", { timeout: 120_000 }, async () => {
+  const data = JSON.parse(fs.readFileSync(IN!, "utf8")) as { conversations: Conv[]; queries: Query[] };
+  const exportConvs = data.conversations.map((c, i) => {
+    const s = syntheticConversation({ id: c.id, title: c.title, messages: c.messages.length, updateTime: 1_790_000_000 - i });
+    const mapping = s.mapping as Record<string, { message: { content: { parts: string[] } } }>;
+    c.messages.forEach((text, k) => (mapping[`n${k + 1}`]!.message.content.parts = [text]));
+    return s;
+  });
+  const r = await importText(exportText(exportConvs), { writer: t.writer });
+  expect(r.complete).toBe(true);
+  const db = t.reader();
+  const idToSource = new Map((await db.conversation.findMany({ select: { id: true, sourceId: true } })).map((c) => [c.id, c.sourceId]));
+  const results = [];
+  for (const q of data.queries) {
+    let s = performance.now();
+    const and = await searchConversations(db, q.text, undefined);
+    const andMs = performance.now() - s;
+    const andRanked = and.status === "ok" ? and.results.map((x) => ({ sid: idToSource.get(x.conversationId)!, num: x.link.messageNumber })) : [];
+    const parsed = parseSearchQuery(q.text);
+    let orRanked: { sid: string; num: number | null }[] = [];
+    s = performance.now();
+    if (parsed.ok) {
+      const fts = parsed.terms.map((x) => `"${x.text.replace(/"/g, '""')}"${x.prefix ? "*" : ""}`).join(" OR ");
+      const rows = await db.$queryRawUnsafe<{ sid: string; num: bigint | number | null }[]>(RANKED_SQL, fts, fts);
+      orRanked = rows.slice(0, 20).map((x) => ({ sid: x.sid, num: x.num === null ? null : Number(x.num) }));
+    }
+    const orMs = performance.now() - s;
+    results.push({ id: q.id, andStatus: and.status, andTotal: and.status === "ok" ? and.total : 0, and: andRanked.slice(0, 20), andMs, or: orRanked, orMs, terms: parsed.ok ? parsed.terms.map((x) => x.text) : null });
+  }
+  fs.writeFileSync(OUT!, JSON.stringify(results, null, 1));
+});

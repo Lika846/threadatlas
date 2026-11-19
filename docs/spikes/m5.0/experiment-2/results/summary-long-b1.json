@@ -1,0 +1,50 @@
+{
+ "tag": "long-b1",
+ "batch": 1,
+ "corpusConversations": 60,
+ "queries": 20,
+ "loadMs": 1088.215042,
+ "reps": {
+  "message": {
+   "units": 252,
+   "tokensMean": 56.5,
+   "tokensMax": 512,
+   "truncatedUnits": 0,
+   "indexMs": 6225,
+   "unitsPerSec": 40.5,
+   "retrieveMs": {
+    "p50": 0.63,
+    "p95": 15.04
+   },
+   "evidenceHit": 0.25
+  },
+  "sent256": {
+   "units": 279,
+   "tokensMean": 58.8,
+   "tokensMax": 260,
+   "truncatedUnits": 0,
+   "indexMs": 6500,
+   "unitsPerSec": 42.9,
+   "retrieveMs": {
+    "p50": 2.39,
+    "p95": 22.23
+   },
+   "evidenceHit": 0.7
+  },
+  "sent64": {
+   "units": 531,
+   "tokensMean": 40.6,
+   "tokensMax": 68,
+   "truncatedUnits": 0,
+   "indexMs": 9423,
+   "unitsPerSec": 56.4,
+   "retrieveMs": {
+    "p50": 1.35,
+    "p95": 13.5
+   },
+   "evidenceHit": 0.85
+  }
+ },
+ "peakRssMb": 905,
+ "tripwire": 0
+}

@@ -1,0 +1,3 @@
+{"runtime":"direct","n":1000,"batch":16,"tokensMean":260.2,"importMs":22,"loadMs":1039,"embedMs":81596,"chunksPerSec":12.3,"tokensPerSec":3188,"rssAfterLoadMb":633,"peakRssMb":1544,"dims":384,"tripwire":0}
+{"runtime":"direct","n":1000,"batch":1,"tokensMean":260.2,"importMs":25,"loadMs":1068,"embedMs":104174,"chunksPerSec":9.6,"tokensPerSec":2497,"rssAfterLoadMb":612,"peakRssMb":1289,"dims":384,"tripwire":0}
+{"n":1000,"batch":1,"tokensTarget":256,"tokensMean":260.2,"dims":384,"importMs":136,"loadMs":1307,"embedMs":128158,"chunksPerSec":7.8,"tokensPerSec":2030,"rssAfterLoadMb":811,"peakRssMb":1500,"vectorBytesFloat32":1536000,"tripwireAttempts":0}

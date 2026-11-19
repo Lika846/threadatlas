@@ -1,0 +1,186 @@
+=== t217 | Learning Norwegian as an adult | languages | - | en
+U: Moved to Bergen six months ago and my Norwegian is stuck at "takk" and "hei". How do I actually learn it?
+A: Combine structure with daily exposure:
+- a course with homework (the free language training for new residents, or an evening class) for grammar and pronunciation;
+- 20 minutes a day of input you enjoy: NRK's children's programmes and podcasts like "Norsk for innvandrere" at slower speed;
+- speaking practice where you can't switch to English: a language café, or telling colleagues you want to try in Norwegian even if it's slow;
+- learn the local words too — Bergen dialect differs from what textbooks teach, so listening to locals matters.
+Expect it to feel slow for a few months and then suddenly click.
+U: people always switch to english when they hear my accent
+A: Very common in Norway. Say early in the conversation "Jeg øver på norsk, kan vi snakke norsk?" — most people are happy to, once they know. Ask close colleagues to keep going in Norwegian even when you hesitate.
+
+=== t218 | Spansk før ferien | languages | city-trips | no
+U: Vi skal til Spania om tre måneder og jeg vil kunne snakke litt spansk. Hvor begynner jeg?
+A: På tre måneder kan du rekke mye hvis du øver litt hver dag. Start med uttale og de 300 vanligste ordene, og lær setninger du faktisk trenger: bestille mat, spørre om veien, handle, small talk. En app gir daglig vane, men suppler med å snakke: en språkpartner på nett eller en lærer på italki én gang i uka. Lytt til spanske podkaster for nybegynnere på vei til jobb. Og lær tallene ordentlig — de dukker opp overalt.
+
+=== t219 | Как выучить английские времена | languages | - | ru
+U: Не могу запомнить, когда Present Perfect, а когда Past Simple. Есть простое правило?
+A: Главный вопрос: важно ли, когда именно это случилось?
+- Past Simple — когда есть конкретное время в прошлом или оно понятно из контекста: I saw him yesterday. I lived in Paris in 2019.
+- Present Perfect — когда важен результат сейчас или опыт без указания времени: I have lost my keys (их нет сейчас). I have been to Paris (опыт).
+Слова-подсказки: yesterday, last year, ago → Past Simple; already, yet, ever, never, just, since, for → чаще Present Perfect. Американцы употребляют Present Perfect реже британцев, так что в разговорной речи ошибки здесь не критичны.
+
+=== t220 | Anki deck for vocabulary | languages | - | en
+U: Is Anki worth it for learning German vocabulary or is it just grinding?
+A: It's worth it if you use it well. Make cards from sentences you've actually met (in a book, a show, a lesson) rather than lists of isolated words, add audio, and keep new cards to about 10–15 a day so reviews stay under 20 minutes. Spaced repetition handles remembering; reading and listening handle understanding words in context. Together they work far better than either alone.
+
+=== t221 | Barnet vil ikke snakke morsmålet | languages | parenting | no
+U: Vi snakker russisk hjemme, men sønnen vår på 7 svarer bare på norsk. Hvordan holder vi russisken ved like?
+A: Det er veldig vanlig når barnet begynner på skolen. Fortsett å snakke russisk selv, også når han svarer på norsk. Gjør språket nyttig og hyggelig: høytlesning hver kveld, tegnefilmer og videosamtaler med besteforeldre som ikke kan norsk. Russisk lørdagsskole eller lekegrupper med andre russisktalende barn hjelper mye. Ikke gjør det til en kamp — press gir ofte motstand, mens et levende språk i familien gjør at forståelsen holder seg, og snakkingen kommer ofte tilbake senere.
+
+=== t222 | Shadowing technique | languages | - | en
+U: Someone recommended "shadowing" for pronunciation. What is it?
+A: You listen to a short recording of a native speaker and repeat it at the same time, or a split second behind, copying rhythm, intonation and sounds — not just the words. Use clips of 1–2 minutes with a transcript, repeat each one many times over a week, and record yourself to compare. It's especially good for the melody of a language, which textbooks don't teach.
+
+=== t223 | Письмо на норвежском в коммуну | languages | bureaucracy | ru
+U: Мне нужно написать письмо в коммуну, что я хочу записать ребёнка в детский сад. Я плохо пишу по-норвежски.
+U[no]: Kan du skrive et kort brev på norsk? Barnet heter Mila, født i mars 2022, og vi bor i Sandnes.
+A[no]: Her er et forslag:
+
+"Hei,
+Jeg ønsker å søke barnehageplass for datteren min, Mila (født mars 2022). Vi bor i Sandnes kommune og ønsker plass fra august i år, gjerne i nærheten av [adresse]. Jeg kan sende fødselsnummer og annen dokumentasjon dersom det trengs.
+Med vennlig hilsen
+[navn og telefonnummer]"
+
+U: Спасибо! А куда это отправлять?
+A: В большинстве коммун заявление подаётся через электронную форму на сайте, и сроки основного приёма обычно весной. Проверьте сайт коммуны Сандnes — письмо можно приложить или использовать как текст в форме.
+
+=== t224 | French subjunctive | languages | - | en
+U: when do i need the subjunctive in french, i always get it wrong after "il faut que"
+A: After "il faut que" it's always subjunctive: il faut que tu viennes, il faut que je fasse. The main triggers are expressions of necessity, wish, emotion and doubt followed by "que": vouloir que, être content que, douter que, avant que, pour que, bien que. After "après que" and "espérer que" you use the indicative — those two catch everyone.
+
+=== t225 | Exam stress and procrastination | exams | stress | en
+U: Final exams in 3 weeks. I keep procrastinating and then panicking at night.
+A: Shrink the starting step. Make a plan by day: which topic, which past paper, and stop overplanning after that. Use 25-minute blocks with a 5-minute break (Pomodoro), and start each day with the task you're avoiding most, for just one block. Study somewhere without your phone. Practise with past exams under timed conditions — it's the most effective revision and reduces panic, because the real exam feels familiar.
+
+=== t226 | Hvordan lese til eksamen i statsvitenskap | exams | - | no
+U: Jeg har hjemmeeksamen i statsvitenskap om to uker, fire timer. Hvordan forbereder jeg meg best?
+A: Ved hjemmeeksamen er det struktur og argumentasjon som teller, ikke pugging. Lag et kompendium med de viktigste teoriene, ett avsnitt per teori med definisjon, nøkkelbegreper, typiske eksempler og kritikk, slik at du finner frem raskt. Øv på tidligere eksamensoppgaver: bruk 20 minutter på disposisjon før du skriver. Avklar hvordan kilder skal oppgis. Og husk at det er lett å bruke for mye tid på første oppgave — sett deg en tidsplan.
+
+=== t227 | Math exam preparation | exams | - | ru
+U: Сыну через 4 месяца сдавать профильную математику. Он решает первую часть, а вторую почти не трогает. Что делать?
+A: Для профиля главное — стабильно решать первую часть без ошибок и добрать баллы во второй на заданиях, которые реально освоить: уравнения (13), неравенства (15), экономическая задача (16). Составьте план: каждую неделю — одна тема из второй части с разбором и 10–15 задачами. Раз в две недели — полный вариант на время с разбором ошибок. Если есть возможность, репетитор на 1–2 занятия в неделю именно по второй части даёт хороший результат.
+
+=== t228 | Memorising anatomy | exams | - | en
+U: First year medicine, drowning in anatomy terms. Tips?
+A: Active recall beats rereading by a lot. Turn lectures into questions (flashcards or blank diagrams to label), test yourself daily with spaced repetition, and draw structures from memory rather than copying. Learn things in context: origin, insertion and function together, and link them to clinical examples. Studying with a partner and explaining structures to each other out loud is surprisingly effective.
+
+=== t229 | Note-taking: by hand or laptop | exams | - | en
+U: Should I take lecture notes by hand or on my laptop?
+A: Handwriting tends to help understanding because you have to summarise instead of transcribing, but the difference shrinks if you type in your own words. What matters most is what you do afterwards: rewriting the notes as questions and testing yourself. Pick whatever you'll actually review.
+
+=== t230 | Matteangst | exams | - | no
+U: Datteren min på 14 sier hun er dum i matte og gruer seg til hver prøve.
+A: Matteangst er vanlig og handler ofte om tidligere nederlag mer enn evner. Ikke si «jeg var også dårlig i matte» — det bekrefter følelsen. Ros innsats og strategi, ikke talent. Hjelp henne å finne hull fra tidligere trinn; ofte sitter det fast i brøk eller algebra. Små, jevne økter med oppgaver hun får til, bygger mestring. Snakk med læreren om hva som skjer i timene, og om hun kan få litt ekstra oppfølging.
+
+=== t231 | Thesis outline in marine biology | thesis | - | en
+U: My master's thesis is on microplastics in mussels along the coast. My supervisor says my outline is "unfocused". Help?
+A: "Unfocused" usually means there are several research questions competing. Pick one main question you can answer with your data, for example: "Does microplastic concentration in blue mussels differ between harbour and non-harbour sites?" Then structure the outline around it: background that leads only to that question, methods that answer it, results in the order the question needs, and a discussion that comes back to it. Move interesting side findings to one short section or an appendix.
+U: I also had a whole chapter about policy
+A: Keep a short policy paragraph in the discussion — what your results mean for monitoring — and drop the chapter. A thesis that answers one question well is much stronger than one that touches five.
+
+=== t232 | Masteroppgave: skrivesperre | thesis | stress | no
+U: Jeg har fem måneder igjen på masteroppgaven og har knapt skrevet noe. Jeg sitter fast.
+A: Senk kravet til første utkast. Skriv det dårlig først; teksten skal forbedres senere. Begynn med metodekapittelet, som ofte er lettest fordi du vet hva du har gjort. Sett av faste skriveøkter hver dag, gjerne om morgenen, og mål innsatsen i tid, ikke sider. Avtal korte, hyppige møter med veilederen og send tekst før hvert møte — fristene hjelper. Mange universiteter har skrivegrupper og skrivesenter; bruk dem.
+
+=== t233 | Как написать литературный обзор | thesis | - | ru
+U: Пишу диплом по социологии, не понимаю, как строить обзор литературы. Просто пересказывать статьи?
+A: Нет, пересказ — самая частая ошибка. Обзор строится вокруг вопросов, а не авторов. Сгруппируйте источники по темам или подходам: что известно, где исследования расходятся, чего не хватает. В каждом разделе сравнивайте авторов между собой и в конце покажите пробел, который закрывает ваша работа. Удобно вести таблицу: источник, метод, выборка, главный вывод, ограничения.
+
+=== t234 | Citation manager recommendation | thesis | - | en
+U: Zotero or Mendeley for my PhD?
+A: Zotero: free, open source, works with Word, LibreOffice and Google Docs, and syncs well. Mendeley has become more locked into Elsevier and lost features. Most PhD students today use Zotero with the Better BibTeX plugin if they write in LaTeX.
+
+=== t235 | Choosing a thesis topic | thesis | - | en
+U: I have to pick a bachelor thesis topic in computer science by next week. I'm interested in everything and nothing.
+A: Filter by three things: a supervisor who's interested (ask them for their open topics), data or tools you can actually access, and a question small enough for the time you have. Look at the last chapter of recent papers you liked — "future work" sections are full of feasible thesis questions.
+
+=== t236 | Weekend in Copenhagen | city-trips | - | en
+U: Two days in Copenhagen in October. We like food, design and walking. What should we do?
+A: Day 1: start in Nyhavn early before the crowds, walk to the design museum (Designmuseum Danmark), then lunch at Torvehallerne food market. Afternoon in Christianshavn and up the spiral of Church of Our Saviour for the view, dinner in Vesterbro's meatpacking district.
+Day 2: rent bikes, ride along the lakes to Nørrebro and Assistens cemetery, coffee at a specialty café, then cross to Refshaleøen for food at Reffen if it's open, or Papirøen alternatives. Evening: Tivoli is open in October with the Halloween theme.
+Bring rain gear; October weather changes fast.
+
+=== t237 | Helg i Berlin med tenåringer | city-trips | parenting | no
+U: Vi skal til Berlin med to tenåringer (14 og 16). Hva liker de?
+A: Tenåringer liker ofte det som er litt annerledes:
+- East Side Gallery og gatekunsten i Kreuzberg;
+- Berlinmuren-minnesmerket på Bernauer Strasse, som gjør historien konkret;
+- DDR-museet, som er interaktivt;
+- Mauerpark-loppemarkedet på søndag, med karaoke;
+- shopping i Mitte og street food i Markthalle Neun.
+Gi dem litt frihet med kollektivtransport-kort; byen er enkel å navigere. Et besøk i Reichstag-kuppelen krever forhåndsbestilling.
+
+=== t238 | Что посмотреть в Стамбуле за 3 дня | city-trips | - | ru
+U: Летим в Стамбул на 3 дня в мае. Как всё успеть и не устать?
+A: Делите по районам, чтобы не тратить время на дорогу:
+- День 1: Султанахмет — Айя-София, Голубая мечеть, Цистерна Базилика, вечером прогулка у Галатского моста.
+- День 2: Гранд-базар и Египетский рынок с утра, потом паром на азиатскую сторону в Кадыкёй — еда и рынки.
+- День 3: Топкапы утром, затем Галата и Бейоглу, круиз по Босфору на закате.
+Покупайте Istanbulkart для транспорта, а в мечети берите платок и закрытую одежду.
+
+=== t239 | Rome with a toddler | city-trips | parenting | en
+U: Is Rome doable with a 2-year-old? Any tips?
+A: Yes, with lower ambitions. Plan one main sight per day in the morning, then parks and gelato: Villa Borghese has playgrounds and rental bikes with child seats. Bring a light stroller that folds easily — cobblestones and stairs are everywhere. Book Vatican and Colosseum tickets with timed entry to skip queues. Romans love children, and restaurants are relaxed about them, especially at lunchtime.
+
+=== t240 | Bytur til Edinburgh | city-trips | - | no
+U: Hva bør jeg ikke gå glipp av i Edinburgh på en langhelg?
+A: Gå opp Arthur's Seat for utsikten, gjerne tidlig morgen. Utforsk Old Town og de små gatene (closes) rundt Royal Mile, og ta en guidet tur i de underjordiske hvelvene. Edinburgh Castle er verdt det, men bestill billett på forhånd. Dean Village og Stockbridge er fine for en rolig ettermiddag. Prøv en tradisjonell frokost og et whiskysmaking-besøk. Pakk regnjakke uansett årstid.
+
+=== t241 | Cheap eats in Tokyo | city-trips | - | en
+U: Tokyo is expensive, how do I eat well on a budget?
+A: Tokyo can be surprisingly cheap if you eat like locals: set lunches (teishoku) at 800–1200 yen, ramen and udon shops with ticket machines, conveyor-belt sushi, and convenience stores (onigiri, egg sandwiches, bento). Department store food halls discount bento in the evening. Standing soba bars near stations are fast and cheap. Avoid tourist-area restaurants with English-only menus outside.
+
+=== t242 | Lisbon in winter | city-trips | - | en
+U: Is Lisbon worth visiting in January?
+A: Yes: mild temperatures (around 15 °C), few tourists and lower prices. It can be rainy, so plan indoor options like the Gulbenkian museum, the tile museum and LX Factory. Sintra is beautiful and far less crowded in winter. Many beach places are closed, but the city itself is fully alive.
+
+=== t243 | Bestige Galdhøpiggen | hiking | - | no
+U: Vi vil gå på Galdhøpiggen i juli. Hvilken rute er best for førstegangsturister?
+A: Fra Juvasshytta er det kortest, men turen går over Styggebreen og krever brefører — det arrangeres daglige fellesturer om sommeren. Uten brefører kan dere gå fra Spiterstulen, som er lengre (rundt 6–7 timer tur–retur) og brattere, men uten bre. Uansett: start tidlig, ta med lue, votter og vindtett jakke selv i juli, og sjekk værmeldingen — tåka kommer raskt på toppen.
+
+=== t244 | Первый поход с палаткой | hiking | - | ru
+U: Хотим с подругой в первый раз пойти в поход с ночёвкой в палатке. Что точно нужно взять?
+A: Базовый список:
+- палатка, спальники по температуре ночи (смотрите «комфорт», а не «экстрим») и коврики — без коврика будет холодно даже летом;
+- горелка, газ, котелок, спички, нож;
+- еда с запасом на день, вода и фильтр или таблетки для воды;
+- фонарики, аптечка, тёплая одежда и дождевики;
+- карта офлайн и заряженный пауэрбанк.
+Для первого раза выберите маршрут на 10–15 км с местами для стоянки и возможностью быстро вернуться.
+
+=== t245 | Hiking boots or trail runners | hiking | running | en
+U: Doing a 5-day trek in the Alps on marked trails. Heavy boots or trail runners?
+A: On well-marked trails with a light pack, many hikers now prefer trail runners: lighter, dry faster and cause fewer blisters. Boots make sense with a heavy pack, on rough scree, snow patches or if your ankles are weak. Whatever you pick, break them in before the trip and bring good wool socks plus blister plasters.
+
+=== t246 | Fjelltur med barn | hiking | parenting | no
+U: Vi vil gå en enkel fjelltur med barna på 5 og 8 år. Hvordan gjør vi det trivelig?
+A: Velg en kort tur med et mål de gleder seg til: et vann å kaste stein i, en hytte med vafler eller en topp med varde. Planlegg mange pauser og ha godt med niste og noe søtt. La dem bære en liten sekk selv, og gjør turen til en lek med skattejakt eller å telle varder. Snu før de er slitne — en god første tur gjør at de vil igjen.
+
+=== t247 | Sleeping bag for cold nights | hiking | - | en
+U: I froze last night camping at 2 °C with a "3 °C comfort" bag. Why?
+A: Comfort ratings assume a good sleeping mat, dry warm clothing and that you've eaten. Most cold nights come from the ground, not the air, so check your mat's R-value (4 or higher for cold nights). Wear a warm hat and dry socks, eat something fatty before bed, and don't breathe inside the bag — the moisture makes it colder.
+
+=== t248 | Солнце и горы: как не сгореть | hiking | - | ru
+U: Едем в горы на неделю летом. Как защититься от солнца на высоте?
+A: На высоте ультрафиолет сильнее, особенно на снегу. Нужны солнцезащитный крем SPF 50 с обновлением каждые 2 часа, бальзам для губ с SPF, очки с защитой UV400 (на ледник — категории 4), кепка с козырьком и бафф для шеи. Пейте больше воды и не забывайте про уши и нос — они сгорают первыми.
+
+=== t249 | Packing light for two weeks | logistics | - | en
+U: Two weeks in Southeast Asia with only carry-on. Is that realistic?
+A: Very. Pack for one week and do laundry once or twice — guesthouses offer cheap laundry service everywhere. Lightweight, quick-drying clothes, one pair of walking shoes plus sandals, a light rain jacket, and toiletries in travel sizes (buy sunscreen there). Use packing cubes. You'll be glad you don't have a big bag on ferries and minibuses.
+
+=== t250 | Forsinket fly og kompensasjon | logistics | - | no
+U: Flyet fra Oslo til Barcelona var fire timer forsinket. Har jeg krav på noe?
+A: Ja, etter EUs regler (EU261, som gjelder i Norge) kan du ha krav på 400 euro i standardkompensasjon for en flyreise på denne distansen med mer enn tre timers forsinkelse ved ankomst — med mindre forsinkelsen skyldtes ekstraordinære forhold som ekstremvær. Send krav direkte til flyselskapet via skjemaet deres. Ta vare på boardingkort og eventuelle kvitteringer for mat mens du ventet.
+
+=== t251 | Виза в Японию для граждан России | logistics | - | ru
+U: Какие документы нужны для туристической визы в Японию?
+A: Обычно требуется: загранпаспорт, анкета, фото, бронирование отеля или приглашение, маршрут поездки, справка с работы и выписка с банковского счёта. Подаются документы через аккредитованное визовое агентство или консульство. Требования периодически меняются, поэтому сверьтесь с актуальным списком на сайте посольства Японии перед подачей.
+
+=== t252 | Travel insurance — what to check | logistics | - | en
+U: Is my credit card's travel insurance enough?
+A: Read the terms for: medical coverage amount (at least several hundred thousand euros for the US), whether it covers trips only paid with the card, the maximum trip length, cancellation coverage, and activities like skiing or diving. Card insurance often has gaps in exactly those areas. A separate annual policy can be cheaper than you think if you travel several times a year.
+
+=== t253 | Train from Oslo to Stockholm | logistics | - | en
+U: Is it better to take the train or fly from Oslo to Stockholm?
+A: The train takes about 5–6 hours city centre to city centre, versus around 3.5 hours door to door by plane once you add airport transfers and security. Trains are more comfortable, let you work, and emit far less. Book early for the cheapest tickets. If you're short on time, flying still wins.

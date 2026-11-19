@@ -1,0 +1,24 @@
+{
+ "tag": "v0-b1",
+ "batch": 1,
+ "corpusConversations": 51,
+ "queries": 38,
+ "loadMs": 1062.49695,
+ "reps": {
+  "message": {
+   "units": 216,
+   "tokensMean": 38.2,
+   "tokensMax": 350,
+   "truncatedUnits": 0,
+   "indexMs": 3881,
+   "unitsPerSec": 55.7,
+   "retrieveMs": {
+    "p50": 0.46,
+    "p95": 5.38
+   },
+   "evidenceHit": null
+  }
+ },
+ "peakRssMb": 671,
+ "tripwire": 0
+}

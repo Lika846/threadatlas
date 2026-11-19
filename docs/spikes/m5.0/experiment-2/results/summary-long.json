@@ -1,0 +1,102 @@
+{
+ "tag": "long",
+ "batch": 16,
+ "corpusConversations": 60,
+ "queries": 20,
+ "loadMs": 1194.671846,
+ "reps": {
+  "message": {
+   "units": 252,
+   "tokensMean": 56.5,
+   "tokensMax": 512,
+   "truncatedUnits": 0,
+   "indexMs": 15855,
+   "unitsPerSec": 15.9,
+   "retrieveMs": {
+    "p50": 6.12,
+    "p95": 12.93
+   },
+   "evidenceHit": 0.25
+  },
+  "turn": {
+   "units": 126,
+   "tokensMean": 107.3,
+   "tokensMax": 512,
+   "truncatedUnits": 0,
+   "indexMs": 10424,
+   "unitsPerSec": 12.1,
+   "retrieveMs": {
+    "p50": 0.38,
+    "p95": 3.16
+   },
+   "evidenceHit": 0.3
+  },
+  "win256": {
+   "units": 279,
+   "tokensMean": 60.1,
+   "tokensMax": 261,
+   "truncatedUnits": 0,
+   "indexMs": 12380,
+   "unitsPerSec": 22.5,
+   "retrieveMs": {
+    "p50": 0.31,
+    "p95": 12.48
+   },
+   "evidenceHit": 0.65
+  },
+  "win64": {
+   "units": 455,
+   "tokensMean": 43.7,
+   "tokensMax": 69,
+   "truncatedUnits": 0,
+   "indexMs": 7179,
+   "unitsPerSec": 63.4,
+   "retrieveMs": {
+    "p50": 0.83,
+    "p95": 4.61
+   },
+   "evidenceHit": 0.7
+  },
+  "sent256": {
+   "units": 279,
+   "tokensMean": 58.8,
+   "tokensMax": 260,
+   "truncatedUnits": 0,
+   "indexMs": 12607,
+   "unitsPerSec": 22.1,
+   "retrieveMs": {
+    "p50": 0.72,
+    "p95": 8.8
+   },
+   "evidenceHit": 0.6
+  },
+  "sent64": {
+   "units": 531,
+   "tokensMean": 40.6,
+   "tokensMax": 68,
+   "truncatedUnits": 0,
+   "indexMs": 8073,
+   "unitsPerSec": 65.8,
+   "retrieveMs": {
+    "p50": 1.31,
+    "p95": 11.35
+   },
+   "evidenceHit": 0.8
+  },
+  "sent64title": {
+   "units": 531,
+   "tokensMean": 46.2,
+   "tokensMax": 76,
+   "truncatedUnits": 0,
+   "indexMs": 9718,
+   "unitsPerSec": 54.6,
+   "retrieveMs": {
+    "p50": 0.58,
+    "p95": 1.87
+   },
+   "evidenceHit": 0.7
+  }
+ },
+ "peakRssMb": 1696,
+ "tripwire": 0
+}

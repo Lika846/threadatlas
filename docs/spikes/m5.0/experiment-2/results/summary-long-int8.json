@@ -1,0 +1,37 @@
+{
+ "tag": "long-int8",
+ "batch": 16,
+ "corpusConversations": 60,
+ "queries": 20,
+ "loadMs": 1090.352368,
+ "reps": {
+  "sent256": {
+   "units": 279,
+   "tokensMean": 58.8,
+   "tokensMax": 260,
+   "truncatedUnits": 0,
+   "indexMs": 11608,
+   "unitsPerSec": 24,
+   "retrieveMs": {
+    "p50": 0.64,
+    "p95": 7.8
+   },
+   "evidenceHit": 0.6
+  },
+  "sent64": {
+   "units": 531,
+   "tokensMean": 40.6,
+   "tokensMax": 68,
+   "truncatedUnits": 0,
+   "indexMs": 7400,
+   "unitsPerSec": 71.8,
+   "retrieveMs": {
+    "p50": 13.14,
+    "p95": 16.59
+   },
+   "evidenceHit": 0.8
+  }
+ },
+ "peakRssMb": 821,
+ "tripwire": 0
+}

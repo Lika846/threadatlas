@@ -1,0 +1,9 @@
+{"rep":"message","strategy":"b1","units":252,"tokens":14241,"seconds":5.9,"unitsPerSec":42.4,"tokensPerSec":2396,"peakRssMb":687}
+{"rep":"message","strategy":"b16","units":252,"tokens":14241,"seconds":15,"unitsPerSec":16.8,"tokensPerSec":950,"peakRssMb":1614}
+{"rep":"message","strategy":"sorted16","units":252,"tokens":14241,"seconds":6.2,"unitsPerSec":40.5,"tokensPerSec":2286,"peakRssMb":1166}
+{"rep":"sent256","strategy":"b1","units":279,"tokens":16409,"seconds":7.5,"unitsPerSec":37.3,"tokensPerSec":2192,"peakRssMb":696}
+{"rep":"sent256","strategy":"b16","units":279,"tokens":16409,"seconds":13.1,"unitsPerSec":21.3,"tokensPerSec":1253,"peakRssMb":784}
+{"rep":"sent256","strategy":"sorted16","units":279,"tokens":16409,"seconds":5.9,"unitsPerSec":47.1,"tokensPerSec":2770,"peakRssMb":778}
+{"rep":"sent64","strategy":"b1","units":531,"tokens":21579,"seconds":10,"unitsPerSec":52.9,"tokensPerSec":2150,"peakRssMb":693}
+{"rep":"sent64","strategy":"b16","units":531,"tokens":21579,"seconds":8.7,"unitsPerSec":61,"tokensPerSec":2478,"peakRssMb":709}
+{"rep":"sent64","strategy":"sorted16","units":531,"tokens":21579,"seconds":7,"unitsPerSec":75.4,"tokensPerSec":3063,"peakRssMb":715}

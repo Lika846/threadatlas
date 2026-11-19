@@ -1,0 +1,15 @@
+direct-normal: 0 0 0 0 0
+direct-exitcode: 1 1 1 1 1
+direct-throw: 134A 134A 134A 134A 134A
+direct-reject: 134A 134A 134A 134A 134A
+direct-release-throw: 134A 134A 134A 134A 134A
+direct-exit-inflight: 134A 134A 134A 134A 134A
+worker-normal: 0 0 0 0 0
+worker-throw: 1 1 1 1 1
+worker-terminate-throw: 1 1 1 1 1
+worker-shutdown-throw: 1 1 1 1 1
+tfjs-normal: 0 0 0 0 0
+tfjs-throw: 134A 134A 134A 134A 134A
+tfjs-dispose-throw: 134A 134A 134A 134A 134A
+worker-exit-inflight: 134 134 134 134 134
+worker-kill-inflight: 134 134 134 134 134

@@ -1,0 +1,1249 @@
+# Edges: max | mutual k=5 (base)
+
+Each edge: similarity, titles, labels (primary topic / second topic), and the best-matching pair of passages.
+
+
+## Cross-theme links the labels support (57)
+
+- **0.90** “Groupby with several aggregations” (py-data+budgeting, en) ↔ “Spreadsheet for tracking shared flat costs” (budgeting+py-data, en)
+  - "Start from last year's actuals per cost line, then add three columns: known changes (new hires, contracts), in"
+  - "Make one table with columns Date, Paid by, Amount, Description. Then a summary block: - total spent: `=SUM(C:C"
+- **0.90** “Pivot table to wide format” (py-data, en) ↔ “Spreadsheet for tracking shared flat costs” (budgeting+py-data, en)
+  - "My data is long: date, city, temperature. I need one column per city."
+  - "Make one table with columns Date, Paid by, Amount, Description. Then a summary block: - total spent: `=SUM(C:C"
+- **0.90** “Missing values: fill or drop?” (py-data, en) ↔ “Spreadsheet for tracking shared flat costs” (budgeting+py-data, en)
+  - "- Compare the respondents with and without income on age, education and region. Big differences mean the data "
+  - "Make one table with columns Date, Paid by, Amount, Description. Then a summary block: - total spent: `=SUM(C:C"
+- **0.89** “Missing values: fill or drop?” (py-data, en) ↔ “Thesis data analysis in R or Python” (thesis+py-data, en)
+  - "- For a quick analysis, fill with the median within groups (e.g. by education level), and add a flag column `i"
+  - "Fine choice. Use statsmodels' formula interface (`smf.ols(\"y ~ x1 + x2\", data=df)`) so the output looks famili"
+- **0.89** “Window function: running total per customer” (sql, en) ↔ “Spreadsheet for tracking shared flat costs” (budgeting+py-data, en)
+  - "Use `SUM` as a window function partitioned by customer: ```sql SELECT customer_id, paid_at, amount, SUM(amount"
+  - "Make one table with columns Date, Paid by, Amount, Description. Then a summary block: - total spent: `=SUM(C:C"
+- **0.89** “Meal prep for the work week” (dinners+nutrition, en) ↔ “Snacks for a long hike” (nutrition+hiking, en)
+  - "- chili or lentil stew (better on day 3 than day 1); - roasted vegetables with grains like farro or bulgur, dr"
+  - "Plan on eating something small every hour rather than one big lunch: a mix of nuts and dried fruit, a couple o"
+- **0.90** “Trail running shoes or road shoes” (running+hiking, en) ↔ “Hiking boots or trail runners” (hiking+running, en)
+  - "For packed gravel, road shoes are fine. For forest trails with roots, mud and rocks, trail shoes are worth it:"
+  - "On well-marked trails with a light pack, many hikers now prefer trail runners: lighter, dry faster and cause f"
+- **0.91** “Styrketrening hjemme uten utstyr” (strength, no) ↔ “Søvn og trening om kvelden” (sleep+strength, no)
+  - "Kan jeg bli sterkere med bare kroppsvekt hjemme? Har ikke tid til treningssenter."
+  - "Jeg trener styrke kl. 21 fordi det er eneste ledige tid. Etterpå klarer jeg ikke sove før kl. 1."
+- **0.89** “Сколько белка нужно для роста мышц” (strength+nutrition, ru) ↔ “Питание при повышенном холестерине” (nutrition, ru)
+  - "Распределите его на 3–4 приёма пищи по 25–40 г. Источники: творог, яйца, курица, рыба, бобовые, при необходимо"
+  - "- больше растворимой клетчатки: овсянка, бобовые, яблоки, ячмень; - рыба 2 раза в неделю; - меньше переработан"
+- **0.90** “Treningsprogram for 50-åringer” (strength, no) ↔ “Søvn og trening om kvelden” (sleep+strength, no)
+  - "Jeg er 54 og har aldri trent styrke. Er det for sent å begynne?"
+  - "Jeg trener styrke kl. 21 fordi det er eneste ledige tid. Etterpå klarer jeg ikke sove før kl. 1."
+- **0.89** “Creatine — worth it?” (strength+nutrition, en) ↔ “Calorie counting for weight loss” (nutrition, en)
+  - "It's one of the best-studied supplements and does work for strength training: a few percent more strength and "
+  - "It works for some people simply because it limits the eating window, so they eat less. Studies show similar re"
+- **0.90** “First gravel ride” (cycling+hiking, en) ↔ “Snacks for a long hike” (nutrition+hiking, en)
+  - "Planning a 60 km gravel ride with some forest roads. What should I bring?"
+  - "Doing a 25 km hike next weekend. What food should I pack?"
+- **0.88** “First gravel ride” (cycling+hiking, en) ↔ “Hiking boots or trail runners” (hiking+running, en)
+  - "Planning a 60 km gravel ride with some forest roads. What should I bring?"
+  - "Doing a 5-day trek in the Alps on marked trails. Heavy boots or trail runners?"
+- **0.92** “Waking at 3am every night” (sleep+stress, en) ↔ “Exam stress and procrastination” (exams+stress, en)
+  - "For a month I've been waking at 3 or 4 every night and my mind starts racing about work. Then I can't fall asl"
+  - "Final exams in 3 weeks. I keep procrastinating and then panicking at night."
+- **0.89** “Kids bedtime takes two hours” (sleep+parenting, en) ↔ “Toddler tantrums in the supermarket” (parenting, en)
+  - "- if they get up, walk them back calmly with as little talk as possible, every time. Also check the timing: a "
+  - "Afterwards, reconnect without a lecture. To prevent them: shop after naps and meals, give a job (holding the l"
+- **0.90** “Snacks for a long hike” (nutrition+hiking, en) ↔ “Sleeping bag for cold nights” (hiking, en)
+  - "Bring more water than you think (2–3 litres in summer) and electrolyte tablets if it's warm. Eat before you fe"
+  - "Wear a warm hat and dry socks, eat something fatty before bed, and don't breathe inside the bag — the moisture"
+- **0.92** “Anxiety before presentations” (stress+workplace, en) ↔ “Exam anxiety in driving test” (exams+stress, en)
+  - "Physical symptoms like these are the body's normal stress response, and some tricks reduce them: - slow breath"
+  - "Physical calming before the test helps: slow breathing with long exhales for a few minutes in the car park, li"
+- **0.91** “Følelsen av å aldri strekke til” (stress, no) ↔ “Teamet mitt er overarbeidet” (workplace+stress, no)
+  - "- Gi deg selv små pauser uten mål, 15 minutter for deg selv i løpet av dagen. Hvis følelsen blir til konstant "
+  - "Snakk med din egen leder om din arbeidsmengde, deleger mer i teamet der det går, og hold deg til normale arbei"
+- **0.90** “Breathing exercise for panic” (stress, en) ↔ “Exam anxiety in driving test” (exams+stress, en)
+  - "Glad to hear it. Take care."
+  - "Congratulations! Well done for keeping at it."
+- **0.92** “Meditasjon for nybegynnere” (stress, no) ↔ “Masteroppgave: skrivesperre” (thesis+stress, no)
+  - "Jeg har prøvd meditasjonsapper, men klarer ikke å sitte stille i ti minutter. Tips?"
+  - "Jeg har fem måneder igjen på masteroppgaven og har knapt skrevet noe. Jeg sitter fast."
+- **0.90** “Pusse opp kjøkken på budsjett” (renovation, no) ↔ “Strømregningen er altfor høy” (budgeting+repairs, no)
+  - "Kjøkkenet er fra 90-tallet. Vi har 60 000 kroner. Hva gir mest for pengene?"
+  - "Strømregningen var 4 800 i januar for en treroms leilighet. Hva kan vi gjøre?"
+- **0.91** “Ремонт в съёмной квартире” (renovation+renting, ru) ↔ “Сосед сверху затопил” (renting+repairs, ru)
+  - "Снимаю квартиру надолго, хочу освежить: покрасить стены, поменять светильники. Нужно ли спрашивать хозяина?"
+  - "Снимаю квартиру, сосед сверху залил ванную, на потолке пятно и отходит краска. Кто должен платить?"
+- **0.89** “Ремонт в съёмной квартире” (renovation+renting, ru) ↔ “Плохо сплю после переезда” (sleep+moving, ru)
+  - "Опишите, что именно хотите сделать, и предложите варианты: нейтральные цвета, сохранить старые светильники и в"
+  - "Тогда можно поговорить с хозяином — иногда соглашаются, если вы готовы разделить расходы. Временное решение: п"
+- **0.89** “Ремонт в съёмной квартире” (renovation+renting, ru) ↔ “Переезд с детьми в новый город” (moving+parenting, ru)
+  - "Опишите, что именно хотите сделать, и предложите варианты: нейтральные цвета, сохранить старые светильники и в"
+  - "Рассказывайте о переезде заранее и честно, покажите фотографии нового города и школы. Дайте детям выбрать что-"
+- **0.89** “Insulating an attic” (renovation, en) ↔ “Mould in a rental flat” (renting+repairs, en)
+  - "Our 1960s house has almost no insulation in the attic. DIY job or contractor?"
+  - "There's mould on the bedroom wall of our rental. The landlord says it's because we don't ventilate."
+- **0.90** “Male panel i stua” (renovation, no) ↔ “Klage på manglende vedlikehold” (renting+repairs, no)
+  - "Kan vi bruke vanlig veggmaling?"
+  - "Kan jeg holde tilbake husleia?"
+- **0.88** “Adding a window to a wall” (renovation, en) ↔ “Mould in a rental flat” (renting+repairs, en)
+  - "Usually yes, but it's structural work: an opening needs a header (lintel) sized for the load above, and the ne"
+  - "Both can be true. Ventilate daily and keep furniture a few centimetres from outside walls, but persistent moul"
+- **0.89** “Adding a window to a wall” (renovation, en) ↔ “Home studio acoustic treatment” (music+renovation, en)
+  - "Usually yes, but it's structural work: an opening needs a header (lintel) sized for the load above, and the ne"
+  - "Yes: a wooden frame with 10 cm of mineral wool or acoustic foam, wrapped in breathable fabric. Leave a small a"
+- **0.87** “Течёт бачок унитаза” (repairs, ru) ↔ “Сосед сверху затопил” (renting+repairs, ru)
+  - "Скорее всего, изношена прокладка сливного клапана или неправильно настроен поплавок. Проверьте: 1. Снимите кры"
+  - "Сначала сразу сообщите хозяину квартиры и сфотографируйте повреждения. Вызовите представителя управляющей комп"
+- **0.90** “Как приучить семью к порядку” (organising+parenting, ru) ↔ “Puppy chewing furniture” (dogs, ru)
+  - "Перестаньте убирать за ними молча — это закрепляет привычку. Сядьте вместе и договоритесь о правилах: у каждог"
+  - "Дайте разрешённые варианты: жевательные игрушки, замороженную морковку, жилы. Когда грызёт мебель — спокойно з"
+- **0.90** “Как приучить семью к порядку” (organising+parenting, ru) ↔ “Переезд с детьми в новый город” (moving+parenting, ru)
+  - "Перестаньте убирать за ними молча — это закрепляет привычку. Сядьте вместе и договоритесь о правилах: у каждог"
+  - "Рассказывайте о переезде заранее и честно, покажите фотографии нового города и школы. Дайте детям выбрать что-"
+- **0.90** “Paperwork system at home” (organising+budgeting, en) ↔ “Receipts for VAT as a small business” (taxes, en)
+  - "- a small set of folders: bills (current year), tax, insurance, warranties and manuals, house, health; - a sca"
+  - "Photograph or scan receipts as you get them and store them in your accounting software or a dated folder struc"
+- **0.90** “Skattemeldingen og utleie av hybel” (taxes+renting, no) ↔ “Leieavtale: kan utleier øke husleia?” (renting, no)
+  - "Det avhenger av hvor stor del av boligen du leier ut. Bor du selv i boligen og leier ut mindre enn halvparten "
+  - "En økning på 15 prosent etter ett år er sannsynligvis ikke lov hvis prisstigningen var lavere. Sjekk leiekontr"
+- **0.91** “Skattemeldingen og utleie av hybel” (taxes+renting, no) ↔ “Pakke for flytting til hybel” (moving, no)
+  - "Jeg leier ut en hybel i kjelleren for 6 000 i måneden. Må jeg skatte av det?"
+  - "Jeg flytter på hybel i Trondheim for å studere. Hva må jeg ha med?"
+- **0.90** “Jobbintervju på engelsk” (interviews+languages, no) ↔ “Spansk før ferien” (languages+city-trips, no)
+  - "Jeg har intervju hos et internasjonalt selskap på fredag og det skal være på engelsk. Jeg er nervøs for språke"
+  - "Vi skal til Spania om tre måneder og jeg vil kunne snakke litt spansk. Hvor begynner jeg?"
+- **0.91** “Письмо на норвежском в коммуну” (languages+bureaucracy, ru) ↔ “Как подготовиться к собеседованию в норвежскую компанию” (interviews+languages, ru)
+  - "Спасибо! А куда это отправлять?"
+  - "Спасибо! А как ответить на вопрос о зарплате?"
+- **0.92** “Письмо на норвежском в коммуну” (languages+bureaucracy, ru) ↔ “Помогите с эссе на английском для поступления” (applications+languages, ru)
+  - "Спасибо! А куда это отправлять?"
+  - "Отлично! А как закончить письмо?"
+- **0.91** “Hvordan lese til eksamen i statsvitenskap” (exams, no) ↔ “Stress før eksamen og jobbsøking samtidig” (stress+exams, no)
+  - "Jeg har hjemmeeksamen i statsvitenskap om to uker, fire timer. Hvordan forbereder jeg meg best?"
+  - "Lykke til med innspurten. Fem uker er kort, men det er nok tid til å gjøre ferdig en god oppgave."
+- **0.88** “Math exam preparation” (exams, ru) ↔ “Мой сын не хочет читать” (parenting+exams, ru)
+  - "Сыну через 4 месяца сдавать профильную математику. Он решает первую часть, а вторую почти не трогает. Что дела"
+  - "Сыну 9 лет, читает очень неохотно, только под давлением. Как привить любовь к чтению?"
+- **0.91** “Masteroppgave: skrivesperre” (thesis+stress, no) ↔ “Teamet mitt er overarbeidet” (workplace+stress, no)
+  - "Begynn med metodekapittelet, som ofte er lettest fordi du vet hva du har gjort. Sett av faste skriveøkter hver"
+  - "Start med å få oversikt: list alle pågående oppgaver med estimert tidsbruk, og vis hva teamet faktisk har kapa"
+- **0.94** “Masteroppgave: skrivesperre” (thesis+stress, no) ↔ “Stress før eksamen og jobbsøking samtidig” (stress+exams, no)
+  - "Jeg har fem måneder igjen på masteroppgaven og har knapt skrevet noe. Jeg sitter fast."
+  - "Jeg har masteroppgave som skal leveres om fem uker og samtidig søker jeg jobber. Jeg får nesten ikke puste."
+- **0.90** “Rome with a toddler” (city-trips+parenting, en) ↔ “Potty training in a week” (parenting, en)
+  - "Is Rome doable with a 2-year-old? Any tips?"
+  - "Is it realistic to potty train a 2.5-year-old in a long weekend?"
+- **0.89** “Hiking boots or trail runners” (hiking+running, en) ↔ “Training for a trail race” (running+hiking, en)
+  - "On well-marked trails with a light pack, many hikers now prefer trail runners: lighter, dry faster and cause f"
+  - "Most trail runners hike the steep sections — it's often as fast and saves energy. Practise power-hiking with h"
+- **0.90** “Fjelltur med barn” (hiking+parenting, no) ↔ “Skjermtid for 10-åringen” (parenting, no)
+  - "Vi vil gå en enkel fjelltur med barna på 5 og 8 år. Hvordan gjør vi det trivelig?"
+  - "Sønnen vår på 10 vil spille hele tiden. Hvor mye skjermtid er rimelig?"
+- **0.90** “Fjelltur med barn” (hiking+parenting, no) ↔ “Barnehagestart for ettåringen” (parenting, no)
+  - "Vi vil gå en enkel fjelltur med barna på 5 og 8 år. Hvordan gjør vi det trivelig?"
+  - "Datteren vår skal begynne i barnehagen om en måned, hun er 13 måneder. Hvordan gjør vi tilvenningen best mulig"
+- **0.90** “Skjermtid for 10-åringen” (parenting, no) ↔ “Pianoøving for barn” (music+parenting, no)
+  - "Det er nesten alltid det barn sier. Snakk gjerne med foreldrene til vennene; ofte har de lignende regler, og d"
+  - "Små konserter for besteforeldre gir motivasjon. Snakk med læreren om hun synes stykkene er for vanskelige elle"
+- **0.88** “Adopting a rescue dog” (dogs, en) ↔ “Moving checklist with kids” (moving+parenting, en)
+  - "Keep the first weeks quiet and predictable: a crate or bed in a calm corner, the same feeding and walk times, "
+  - "- Moving week: an \"open first\" box with bedding, kettle, chargers, toilet paper, and the kids' favourite thing"
+- **0.91** “Mamma med begynnende demens” (elderly, no) ↔ “Smarthus for en eldre forelder” (smart-home+elderly, no)
+  - "Mamma på 82 glemmer mer og mer, og har gått seg bort en gang. Hva gjør vi?"
+  - "Mamma bor alene. Finnes det smarte løsninger som varsler oss hvis noe er galt, uten kamera?"
+- **0.89** “Home recording setup” (music+devices, en) ↔ “Laptop for a design student” (devices, en)
+  - "I want to record acoustic guitar and vocals at home. Budget 400 euros."
+  - "My daughter starts a graphic design degree. Budget 1,500 euros. Mac or Windows?"
+- **0.90** “Bytte fra Android til iPhone” (devices, no) ↔ “Organisere digitale bilder” (organising+devices, no)
+  - "Jeg går fra Android til iPhone. Hvordan flytter jeg bilder, kontakter og WhatsApp?"
+  - "Jeg har 40 000 bilder spredt på tre telefoner, en gammel PC og Google Photos. Hvordan får jeg orden?"
+- **0.87** “Robot vacuum worth it?” (smart-home+organising, en) ↔ “Mould in a rental flat” (renting+repairs, en)
+  - "Good ones genuinely keep floors clean day to day if your home is reasonably clear of cables and clutter. Lidar"
+  - "Both can be true. Ventilate daily and keep furniture a few centimetres from outside walls, but persistent moul"
+- **0.90** “Planlegge maratonløp etter fødsel” (running+parenting, no) ↔ “Søvn og trening om kvelden” (sleep+strength, no)
+  - "Søvnmangel er den største begrensningen. Juster treningen etter natta: etter en dårlig natt, gjør en rolig tur"
+  - "Et proteinrikt mellommåltid etter trening er fint og forstyrrer ikke søvnen for de fleste — for eksempel kesam"
+- **0.90** “Unfinished fantasy novel” (fiction+stress, en) ↔ “Exam anxiety in driving test” (exams+stress, en)
+  - "Keep a \"fix later\" document where you note what you want to change. Set a modest daily target, like 300 words,"
+  - "Keep driving as if it didn't happen. Many candidates fail by dwelling on a small error and then making a bigge"
+- **0.91** “Taxes after moving countries mid-year” (taxes+moving, en) ↔ “Moving abroad for a job” (moving+applications, en)
+  - "Generally each country taxes the income earned while you were resident or working there, and the tax treaty be"
+  - "Your Norwegian pension rights earned so far stay, and EEA rules coordinate social security. You'll pay tax in "
+- **0.90** “Сменить профессию в 40 лет” (applications+stress, ru) ↔ “Стресс из-за ремонта соседей” (stress, ru)
+  - "Хорошо. Страх при таком решении нормален. Составьте план на первые три месяца с конкретными шагами — когда вид"
+  - "Это понятное чувство. Важно помнить, что это временно — месяц пройдёт. Злость тоже даёт нагрузку, поэтому найд"
+- **0.89** “Packing for a hut-to-hut hike in Jotunheimen” (hiking+logistics, en) ↔ “Training for a trail race” (running+hiking, en)
+  - "Do I need to book the huts?"
+  - "should I run the uphills?"
+- **0.90** “Training for a trail race” (running+hiking, en) ↔ “Hike Trolltunga safely” (hiking, en)
+  - "Trail shoes with good grip, a running vest with water capacity of 1–1.5 litres, gels or snacks, a light waterp"
+  - "Proper hiking boots, warm layers, waterproof jacket and trousers, hat and gloves, plenty of food and water, he"
+
+## Cross-topic links within a theme (via a second topic) (26)
+
+- **0.89** “JWT token expires too fast” (web-backend, en) ↔ “Deadlock between two transactions” (sql+web-backend, en)
+  - "Give each device its own refresh token, list active sessions in the user's account settings, and let them revo"
+  - "Each transaction locks the first account, then waits for the second, which the other transaction already holds"
+- **0.89** “Postgres connection pool exhausted” (web-backend+sql, en) ↔ “SQLite or Postgres for a side project” (sql, en)
+  - "8 instances × 20 connections = 160, and Postgres defaults to `max_connections = 100`. Each instance is allowed"
+  - "Turn on WAL mode for better concurrency. Postgres is worth it once you have several app servers writing at the"
+- **0.89** “Postgres connection pool exhausted” (web-backend+sql, en) ↔ “Deploying a small app cheaply” (git-devops+web-backend, en)
+  - "Lower the pool size per instance (e.g. 10), which is usually enough because queries are short. 2. Put PgBounce"
+  - "- a PaaS like Render or Railway with a managed Postgres — easier, slightly more expensive; - Fly.io with a sma"
+- **0.90** “Ошибка 500 после деплоя на сервер” (web-backend, ru) ↔ “Как настроить автодеплой на VPS” (git-devops+web-backend, ru)
+  - "2. Она попала на сервер — часто её забывают добавить в архив или в Docker-образ. 3. Если приложение создаётся "
+  - "``` Заведите отдельного пользователя `deploy` с правами только на папку приложения и перезапуск сервиса, а клю"
+- **0.88** “Хранить файлы в базе или на диске” (web-backend, ru) ↔ “Как настроить автодеплой на VPS” (git-devops+web-backend, ru)
+  - "- база растёт, бэкапы и восстановление становятся медленными; - отдавать файлы через веб-сервер или CDN намног"
+  - "Надёжнее собирать в новую папку релиза, а потом переключать симлинк `current` на неё. Если сборка упала, симли"
+- **0.91** “Database design for tags” (sql, en) ↔ “Debugging a slow Django page” (web-backend+sql, en)
+  - "A comma-separated column can't be indexed properly, makes \"articles with tag X\" queries slow and error-prone, "
+  - "Look at the slowest remaining query in the toolbar and run `EXPLAIN ANALYZE` on it. Probably a missing index o"
+- **0.93** “EXPLAIN shows a sequential scan” (sql, en) ↔ “Debugging a slow Django page” (web-backend+sql, en)
+  - "Check with `EXPLAIN ANALYZE` how many rows match. If the planner's estimate is far from the actual count, run "
+  - "Look at the slowest remaining query in the toolbar and run `EXPLAIN ANALYZE` on it. Probably a missing index o"
+- **0.89** “Trail running shoes or road shoes” (running+hiking, en) ↔ “First gravel ride” (cycling+hiking, en)
+  - "I mostly run on gravel paths and forest trails. Do I need trail shoes?"
+  - "Planning a 60 km gravel ride with some forest roads. What should I bring?"
+- **0.91** “Waking at 3am every night” (sleep+stress, en) ↔ “Anxiety before presentations” (stress+workplace, en)
+  - "- write down tomorrow's worries in the early evening, with one next step for each, so your brain doesn't rehea"
+  - "- slow breathing for two minutes before you start, with the exhale longer than the inhale (4 in, 6 out); - reh"
+- **0.90** “Waking at 3am every night” (sleep+stress, en) ↔ “Digital detox weekend” (stress, en)
+  - "For a month I've been waking at 3 or 4 every night and my mind starts racing about work. Then I can't fall asl"
+  - "I check my phone constantly and feel scattered. Thinking about a phone-free weekend. Good idea?"
+- **0.90** “Waking at 3am every night” (sleep+stress, en) ↔ “Overwhelmed and can't switch off” (stress+sleep, en)
+  - "For a month I've been waking at 3 or 4 every night and my mind starts racing about work. Then I can't fall asl"
+  - "I feel tense all the time, even on weekends. My shoulders are like stone and my mind keeps making to-do lists."
+- **0.89** “Kitchen tap dripping” (repairs, en) ↔ “Renovating an old bathroom floor” (renovation+repairs, en)
+  - "Take it to a plumbing shop to match the size, or order by the tap's model number. Fitting the new one takes te"
+  - "When you refit it on the new floor, use a new seal, make sure the flange is level and screwed down, and use sh"
+- **0.88** “Door won't close properly” (repairs, en) ↔ “Renovating an old bathroom floor” (renovation+repairs, en)
+  - "If it still rubs, mark the spot with chalk, take the door off and plane a millimetre or two, then seal the pla"
+  - "Good news. Cut out the rotten boards back to the nearest joists, let the area dry fully (a fan for a few days)"
+- **0.89** “Mould around the shower” (repairs, en) ↔ “Renovating an old bathroom floor” (renovation+repairs, en)
+  - "Cut out the old silicone, clean the joint with a mould remover, let it dry completely (24 hours), and apply ne"
+  - "Good news. Cut out the rotten boards back to the nearest joists, let the area dry fully (a fan for a few days)"
+- **0.89** “Fixing a wobbly chair” (repairs+crafts, en) ↔ “Renovating an old bathroom floor” (renovation+repairs, en)
+  - "Don't just add screws — reglue the joint. Gently knock it apart with a rubber mallet, scrape out the old glue,"
+  - "Good news. Cut out the rotten boards back to the nearest joists, let the area dry fully (a fan for a few days)"
+- **0.89** “Squash plants with white powder” (vegetables+houseplants, en) ↔ “Fiddle leaf fig dropping leaves” (houseplants, en)
+  - "A spray of 1 part milk to 9 parts water once a week slows it down. It rarely kills the plant before the season"
+  - "Water only when the top few centimetres are dry. It usually settles within a month or two and starts new growt"
+- **0.90** “Plants for a dark bathroom” (houseplants, en) ↔ “Kitchen garden on a north-facing balcony” (vegetables+houseplants, en)
+  - "With almost no light, nothing thrives long-term; rotate plants to a brighter room every few weeks, or add a sm"
+  - "Add a small LED grow light for the darkest months; in Norway from November to January even a south window does"
+- **0.93** “Student monthly budget” (budgeting, no) ↔ “Hvordan komme i gang med indeksfond” (investing+budgeting, no)
+  - "Inntektsgrensen gjelder hele kalenderåret, så det er samlet inntekt som teller. Sjekk Lånekassens kalkulator f"
+  - "Begynn gjerne med 2 000 i måneden og øk når du får lønnsøkning. Sett trekket til dagen etter lønning, så merke"
+- **0.88** “Emergency fund size” (budgeting+investing, en) ↔ “Freelancer: setting money aside for taxes” (taxes+budgeting, en)
+  - "Go toward 6 if your income is irregular, you're the only earner, or you own a home. Keep it in a high-interest"
+  - "A safe rule of thumb is 30–35% of every payment into a separate tax account the day it arrives, until you know"
+- **0.90** “Emergency fund size” (budgeting+investing, en) ↔ “Index funds for a beginner” (investing, en)
+  - "Go toward 6 if your income is irregular, you're the only earner, or you own a home. Keep it in a high-interest"
+  - "Look for low fees (under 0.3% per year) and buy through a low-cost broker or your bank's fund platform. Set up"
+- **0.89** “Emergency fund size” (budgeting+investing, en) ↔ “Crypto: worth putting money in?” (investing, en)
+  - "Go toward 6 if your income is irregular, you're the only earner, or you own a home. Keep it in a high-interest"
+  - "If you want exposure, treat it like a lottery-style bet: a small amount you can afford to lose completely (man"
+- **0.89** “Subscriptions eating my money” (budgeting, en) ↔ “Freelancer: setting money aside for taxes” (taxes+budgeting, en)
+  - "I just realised I pay for 11 subscriptions. how do i decide which to cancel"
+  - "First year freelancing. How much of each invoice should I put aside for tax?"
+- **0.90** “Index funds for a beginner” (investing, en) ↔ “Monthly budget for a couple saving for a house” (budgeting+investing, en)
+  - "Your fund will drop, maybe by a lot, but with monthly purchases you keep buying at lower prices. Over long per"
+  - "With a three-year horizon, mostly no — a stock market drop could delay your purchase. High-interest savings or"
+- **0.90** “Dollar-cost averaging vs lump sum” (investing, en) ↔ “Monthly budget for a couple saving for a house” (budgeting+investing, en)
+  - "Spreading it out reduces the regret if the market drops right after you invest. If a big drop would make you p"
+  - "With a three-year horizon, mostly no — a stock market drop could delay your purchase. High-interest savings or"
+- **0.91** “Как подготовиться к собеседованию в норвежскую компанию” (interviews+languages, ru) ↔ “Помогите с эссе на английском для поступления” (applications+languages, ru)
+  - "Спасибо! А как ответить на вопрос о зарплате?"
+  - "Отлично! А как закончить письмо?"
+- **0.93** “Hvordan komme i gang med indeksfond” (investing+budgeting, no) ↔ “Flytte hjem til foreldrene for å spare” (budgeting+moving, no)
+  - "Og hvor mye skal jeg spare i måneden?"
+  - "Hva gjør jeg med pengene i mellomtiden?"
+
+## False by the labels (shares neither topic nor theme) (207)
+
+- **0.89** “Jupyter kernel keeps dying” (py-data, en) ↔ “Kitchen tap dripping” (repairs, en)
+  - "Nice. Saving it as Parquet now will make every later load take seconds instead of minutes."
+  - "Much cheaper than a new tap. Nicely done."
+- **0.89** “Rens telefonnumre i et regneark med Python” (py-data, no) ↔ “Bil som ikke starter i kulda” (one-off, no)
+  - "``` Rader som blir `None` har ikke et gyldig norsk nummer og bør sjekkes for hånd."
+  - "Bilen klikker bare når jeg vrir om nøkkelen. Det er minus 15."
+- **0.89** “Rens telefonnumre i et regneark med Python” (py-data, no) ↔ “Klage på manglende vedlikehold” (renting+repairs, no)
+  - "``` Rader som blir `None` har ikke et gyldig norsk nummer og bør sjekkes for hånd."
+  - "Nei, ikke uten videre. Å holde tilbake hele leien kan gi grunnlag for oppsigelse. Bruk prisavslag og formelle "
+- **0.91** “Missing values: fill or drop?” (py-data, en) ↔ “Note-taking: by hand or laptop” (exams, en)
+  - "- Compare the respondents with and without income on age, education and region. Big differences mean the data "
+  - "Good experiment. Compare how much you remember at the midterms."
+- **0.90** “REST API: PUT eller PATCH?” (web-backend, no) ↔ “Письмо на норвежском в коммуну” (languages+bureaucracy, ru)
+  - "Godt valg. Husk å validere at feltene som sendes faktisk kan endres av brukeren."
+  - "Спасибо! А куда это отправлять?"
+- **0.91** “REST API: PUT eller PATCH?” (web-backend, no) ↔ “Stress før eksamen og jobbsøking samtidig” (stress+exams, no)
+  - "Godt valg. Husk å validere at feltene som sendes faktisk kan endres av brukeren."
+  - "Takk. Det hjelper å få en plan"
+- **0.90** “Background jobs in a web app” (web-backend, en) ↔ “Exam anxiety in driving test” (exams+stress, en)
+  - "A job that has been \"running\" for much longer than usual gets reset to \"pending\" and retried. Cap retries at t"
+  - "Keep driving as if it didn't happen. Many candidates fail by dwelling on a small error and then making a bigge"
+- **0.90** “Background jobs in a web app” (web-backend, en) ↔ “Monthly budget for a couple saving for a house” (budgeting+investing, en)
+  - "and if the worker crashes halfway?"
+  - "and if one of us loses their job?"
+- **0.90** “Hvordan logge riktig i en Node-tjeneste” (web-backend, no) ↔ “Organisere boden” (organising+organising, no)
+  - "- Bruk nivåer konsekvent: `error` når noe må fikses, `warn` for ting som går bra men er rare, `info` for vikti"
+  - "Bruk like, gjennomsiktige bokser med etiketter, og sett ofte brukte ting nærmest døra. En enkel liste i telefo"
+- **0.89** “Hvordan logge riktig i en Node-tjeneste” (web-backend, no) ↔ “Sette opp gjestenett hjemme” (network, no)
+  - "Loggene våre er bare console.log overalt og helt umulige å søke i. Hva er god praksis?"
+  - "Hvordan lager jeg et eget wifi for gjester så de ikke kommer inn på det vanlige nettet vårt?"
+- **0.91** “Hvordan logge riktig i en Node-tjeneste” (web-backend, no) ↔ “Hvordan lage et godt passord” (devices, no)
+  - "- Bruk nivåer konsekvent: `error` når noe må fikses, `warn` for ting som går bra men er rare, `info` for vikti"
+  - "Lengde er viktigst. Bruk en passordfrase på fire–fem tilfeldige ord, for eksempel «tannkrem-sykkel-fjell-kanel"
+- **0.90** “Websocket disconnects every 60 seconds” (web-backend, en) ↔ “New chat” (network+devices, en)
+  - "Two fixes, ideally both: - send a ping from the server every 25–30 seconds so the connection is never idle;"
+  - "Great. If it happens again after a router restart, the fixed IP will stop it for good."
+- **0.90** “TypeScript: type for an object with dynamic keys” (frontend, en) ↔ “Crypto: worth putting money in?” (investing, en)
+  - "Glad it helps. It's especially handy for ids like `user_${number}`."
+  - "That's a sensible way to learn. Use a regulated exchange and turn on two-factor authentication."
+- **0.87** “Сайт медленно грузится на телефоне” (frontend, ru) ↔ “Почему падает скорость интернета вечером” (network, ru)
+  - "4. Проверить шрифты: если текст ждёт загрузки веб-шрифта, добавьте `display: swap`. После первых двух пунктов "
+  - "Проверьте скорость по кабелю, подключив компьютер напрямую к роутеру, в разное время. Если по кабелю вечером т"
+- **0.88** “Хук для загрузки данных с повтором” (frontend+web-backend, ru) ↔ “Почему падает скорость интернета вечером” (network, ru)
+  - "Напиши хук useFetch, который повторяет запрос до 3 раз при ошибке сети."
+  - "Проверьте скорость по кабелю, подключив компьютер напрямую к роутеру, в разное время. Если по кабелю вечером т"
+- **0.90** “Commit-melding på engelsk” (git-devops, no) ↔ “Unfinished fantasy novel” (fiction+stress, en)
+  - "Store the token first, then update the session. Add a regression test. ```"
+  - "Keep a \"fix later\" document where you note what you want to change. Set a modest daily target, like 300 words,"
+- **0.88** “Как настроить автодеплой на VPS” (git-devops+web-backend, ru) ↔ “Noisy laptop fan” (devices, ru)
+  - "Надёжнее собирать в новую папку релиза, а потом переключать симлинк `current` на неё. Если сборка упала, симли"
+  - "Почистить радиатор и заменить пасту можно в сервисе за умеренные деньги — шум и температура обычно сильно пада"
+- **0.88** “Rewrite history to remove a leaked secret” (git-devops, en) ↔ “Fastest way to learn to type” (one-off, en)
+  - "No — the key is still in the history and bots scan public repos within minutes. Do these in order: 1. Revoke a"
+  - "Yes, it's a skill you use every day. Spend 15 minutes daily on a site like Keybr or TypingClub for a few weeks"
+- **0.88** “Kubernetes pod in CrashLoopBackOff” (git-devops, en) ↔ “iPhone storage full” (devices, en)
+  - "A probe that starts too early is a common cause after a deploy that made startup slower."
+  - "\"System Data\" sometimes balloons; a restart often shrinks it."
+- **0.90** “Branching strategy for a small team” (git-devops, en) ↔ “Giving negative feedback to a team member” (workplace, en)
+  - "Four developers. We tried git flow and it feels heavy. What do small teams usually do?"
+  - "One of my reports keeps missing deadlines and it's affecting the team. How do I give feedback without crushing"
+- **0.91** “Finn kunder som ikke har handlet i år” (sql, no) ↔ “Hvordan følge opp en søknad” (applications, no)
+  - "Jeg trenger en spørring som finner alle kunder som har handlet før, men ikke i 2024."
+  - "Jeg søkte på en jobb for tre uker siden og har ikke hørt noe. Kan jeg ringe?"
+- **0.89** “SQLite or Postgres for a side project” (sql, en) ↔ “Laptop for a design student” (devices, en)
+  - "ok sqlite it is. what about backups?"
+  - "ok she went with the asus. how do we set up backups?"
+- **0.90** “Deadlock between two transactions” (sql+web-backend, en) ↔ “Budget that actually sticks” (budgeting, en)
+  - "We get \"deadlock detected\" a few times a day when two requests transfer money between the same accounts in opp"
+  - "Try a \"pay yourself first\" setup instead of tracking every purchase: 1. On payday, automatic transfers move fi"
+- **0.89** “Скрипт для выгрузки курсов валют” (automation, ru) ↔ “Noisy laptop fan” (devices, ru)
+  - "``` Запускайте его раз в день через cron или планировщик Windows."
+  - "До этого проверьте диспетчер задач: нет ли процесса, который грузит процессор (обновления, антивирус, вкладка "
+- **0.89** “Automate filling a web form” (automation, en) ↔ “Choosing a thesis topic” (thesis, en)
+  - "Every week I have to enter the same 30 timesheet rows into a clunky web portal. Can I automate that?"
+  - "I have to pick a bachelor thesis topic in computer science by next week. I'm interested in everything and noth"
+- **0.90** “Dense whole wheat bread” (bread, no) ↔ “Grønnsakshage for nybegynnere” (vegetables, no)
+  - "Hvor lenge skal brødet heve første gang?"
+  - "Vi har fått en kolonihage. Hva er lettest å dyrke første året?"
+- **0.88** “Почему корка у хлеба мягкая” (bread, ru) ↔ “Shifting a late sleep schedule” (sleep, ru)
+  - "- допекать до тёмно-золотистого цвета, не вынимать слишком рано; - остужать на решётке, а не на доске — снизу "
+  - "- сразу после подъёма — яркий свет: прогулка 15–20 минут или лампа 10 000 люкс; - вечером за 2 часа до сна при"
+- **0.89** “Почему корка у хлеба мягкая” (bread, ru) ↔ “Как убрать пятно от красного вина” (organising, ru)
+  - "- допекать до тёмно-золотистого цвета, не вынимать слишком рано; - остужать на решётке, а не на доске — снизу "
+  - "Действуйте сразу: промокните (не трите!) бумажными полотенцами, затем посыпьте пятно солью или содой, чтобы вп"
+- **0.88** “Почему корка у хлеба мягкая” (bread, ru) ↔ “Как выбрать арбуз” (one-off, ru)
+  - "- допекать до тёмно-золотистого цвета, не вынимать слишком рано; - остужать на решётке, а не на доске — снизу "
+  - "При постукивании звук звонкий, глуховатый. Корка блестящая и плотная, ногтем не продавливается."
+- **0.89** “Quick dinner with chickpeas and spinach” (dinners, en) ↔ “Radiator stays cold at the top” (repairs, en)
+  - "Serve with rice or flatbread. A spoon of yoghurt on top rounds it off."
+  - "Air in the radiator. Turn the heating off, hold a cloth under the bleed valve at the top corner and open it wi"
+- **0.89** “Quick dinner with chickpeas and spinach” (dinners, en) ↔ “Kitchen garden on a north-facing balcony” (vegetables+houseplants, en)
+  - "2. Add the drained chickpeas and a can of tomatoes (or a few spoons of tomato paste and water). Simmer 10 minu"
+  - "Skip tomatoes, peppers and courgettes — they need 6+ hours of direct sun."
+- **0.90** “Middag til fem barn på en hverdag” (dinners+parenting, no) ↔ “Spise mindre sukker” (nutrition, no)
+  - "Jeg har ansvaret for middag til fem barn mellom 6 og 12 i morgen. Noe enkelt som alle spiser?"
+  - "Jeg spiser mye godteri på kveldene foran TV-en og vil kutte ned. Tips?"
+- **0.88** “Fiskesuppe som bergensere liker” (dinners, no) ↔ “Novelle om en gammel båt” (fiction, no)
+  - "Svigerforeldrene kommer fra Bergen og jeg vil lage fiskesuppe. Hvordan får jeg den riktig?"
+  - "Jeg skriver en novelle om en gutt som arver bestefarens gamle trebåt. Hvordan bygger jeg opp handlingen?"
+- **0.89** “Ужин за 15 минут после работы” (dinners, ru) ↔ “Shifting a late sleep schedule” (sleep, ru)
+  - "Прихожу домой в восемь и сил нет. Дайте 3 варианта ужина минут на 15."
+  - "Ложусь в 12, но засыпаю только к 2–3 часам. Утром вставать в 7 — мука."
+- **0.90** “Ужин за 15 минут после работы” (dinners, ru) ↔ “Плохо сплю после переезда” (sleep+moving, ru)
+  - "Прихожу домой в восемь и сил нет. Дайте 3 варианта ужина минут на 15."
+  - "Месяц назад переехали в новую квартиру, и я стала плохо спать. Раньше такого не было."
+- **0.89** “Kanelboller som blir tørre” (desserts, no) ↔ “Spise mindre sukker” (nutrition, no)
+  - "- Pensle med sukkerlake (like deler sukker og vann kokt opp) rett etter steking; det holder på fuktigheten. De"
+  - "- Finn noe å gjøre med hendene foran TV-en, for eksempel strikking eller et puslespill. Sukkersuget avtar gjer"
+- **0.89** “Kanelboller som blir tørre” (desserts, no) ↔ “Strømregningen er altfor høy” (budgeting+repairs, no)
+  - "- Stek kortere og varmere: 225 grader i 8–10 minutter, til de så vidt er gylne. - Pensle med sukkerlake (like "
+  - "Senk temperaturen én–to grader (hver grad sparer rundt fem prosent av oppvarmingen), skru ned i soverom og rom"
+- **0.88** “Медовик в домашних условиях” (desserts, ru) ↔ “Сколько белка нужно для роста мышц” (strength+nutrition, ru)
+  - "Хочу испечь медовик на день рождения мамы. Это очень сложно?"
+  - "Хожу в зал полгода. Сколько белка в день нужно, чтобы набирать мышцы?"
+- **0.86** “Is brown sugar the same as white plus molasses” (desserts, en) ↔ “When to plant garlic” (vegetables, en)
+  - "Out of brown sugar. Can I just use white sugar in cookies?"
+  - "can i use garlic from the supermarket?"
+- **0.89** “Pour-over coffee tastes sour” (coffee-tea, en) ↔ “Appealing a parking fine” (bureaucracy, en)
+  - "Nice. Note the grind setting so you can repeat it with the next bag."
+  - "Good result. Keep the screenshot for a while in case of follow-ups."
+- **0.90** “Kaffe i presskanne blir grumsete” (coffee-tea, no) ↔ “Hvor mye vann bør jeg drikke” (nutrition, no)
+  - "Kaffen fra presskanna mi har alltid grums i bunnen av koppen. Er det noe jeg gjør feil?"
+  - "Hva med kaffe, dehydrerer det ikke?"
+- **0.88** “Чай пуэр как заваривать” (coffee-tea, ru) ↔ “Как начать работать с эпоксидной смолой” (crafts, ru)
+  - "Отломите 5–7 г ножом для пуэра, стараясь отделять слои, а не крошить. Сначала промойте чай: залейте кипятком н"
+  - "Точно соблюдайте пропорции смолы и отвердителя по весу или объёму, как указано производителем, и тщательно пер"
+- **0.88** “Чай пуэр как заваривать” (coffee-tea, ru) ↔ “Как убрать пятно от красного вина” (organising, ru)
+  - "Отломите 5–7 г ножом для пуэра, стараясь отделять слои, а не крошить. Сначала промойте чай: залейте кипятком н"
+  - "бумажными полотенцами, затем посыпьте пятно солью или содой, чтобы впитать остатки. Потом смешайте ложку средс"
+- **0.88** “Espresso machine for beginners” (coffee-tea, en) ↔ “Home recording setup” (music+devices, en)
+  - "I want to start making espresso at home, budget around 600 euros including grinder. Where should the money go?"
+  - "I want to record acoustic guitar and vocals at home. Budget 400 euros."
+- **0.89** “Espresso machine for beginners” (coffee-tea, en) ↔ “Laptop for a design student” (devices, en)
+  - "I want to start making espresso at home, budget around 600 euros including grinder. Where should the money go?"
+  - "My daughter starts a graphic design degree. Budget 1,500 euros. Mac or Windows?"
+- **0.90** “Matcha klumper seg” (coffee-tea, no) ↔ “Snorking og dårlig søvn” (sleep, no)
+  - "Matchaen min blir full av klumper uansett hvor mye jeg rører."
+  - "Samboeren min sier jeg snorker kraftig og noen ganger slutter å puste. Jeg er alltid trøtt på dagtid."
+- **0.90** “Matcha klumper seg” (coffee-tea, no) ↔ “Matteangst” (exams, no)
+  - "Matchaen min blir full av klumper uansett hvor mye jeg rører."
+  - "Datteren min på 14 sier hun er dum i matte og gruer seg til hver prøve."
+- **0.90** “First 10K training plan” (running, en) ↔ “Calorie counting for weight loss” (nutrition, en)
+  - "6 × 3 minutes a bit faster than your 5K pace with 2 minutes walking or jogging between; - one long run that gr"
+  - "Either way, aim for about 0.5 kg per week; faster loss is hard to keep off. Weigh yourself a few times a week "
+- **0.90** “First 10K training plan” (running, en) ↔ “Overwhelmed and can't switch off” (stress+sleep, en)
+  - "Slow the long runs down, keep the increases small, and check your shoes aren't worn out. If the pain is sharp,"
+  - "If it doesn't ease, a physiotherapist or massage therapist can loosen it and show you exercises."
+- **0.91** “Løpe om vinteren på glatte veier” (running, no) ↔ “Meditasjon for nybegynnere” (stress, no)
+  - "Har du tips til refleks som ikke er stygg?"
+  - "Jeg har prøvd meditasjonsapper, men klarer ikke å sitte stille i ti minutter. Tips?"
+- **0.91** “Løpe om vinteren på glatte veier” (running, no) ↔ “Pakke kjøkkenet” (moving, no)
+  - "Har du tips til refleks som ikke er stygg?"
+  - "Hvordan pakker jeg glass og tallerkener så ingenting går i stykker?"
+- **0.91** “Как не задыхаться при беге” (running, ru) ↔ “Выгорание на работе” (stress+workplace, ru)
+  - "Начала бегать, через 3 минуты уже задыхаюсь и приходится идти. Это нормально?"
+  - "Кажется, я выгорела. Ничего не хочется, работа раздражает, по утрам тяжело вставать. Отпуск был месяц назад и "
+- **0.91** “Как не задыхаться при беге” (running, ru) ↔ “Плохо сплю после переезда” (sleep+moving, ru)
+  - "Начала бегать, через 3 минуты уже задыхаюсь и приходится идти. Это нормально?"
+  - "Месяц назад переехали в новую квартиру, и я стала плохо спать. Раньше такого не было."
+- **0.91** “Как не задыхаться при беге” (running, ru) ↔ “Как справиться с боязнью полётов” (one-off, ru)
+  - "Начала бегать, через 3 минуты уже задыхаюсь и приходится идти. Это нормально?"
+  - "Боюсь летать, а через месяц длинный перелёт. Что поможет?"
+- **0.90** “Как не задыхаться при беге” (running, ru) ↔ “Как научиться жонглировать” (one-off, ru)
+  - "- чередовать: 1 минута бега, 2 минуты шага, 8 повторов, и каждую неделю немного увеличивать бег; - дышать ртом"
+  - "Потом три: начинаете с руки, где два мяча, и повторяете тот же ритм. Тренируйтесь над кроватью, чтобы не нагиб"
+- **0.91** “Как не задыхаться при беге” (running, ru) ↔ “Гитара: как перестать бросать” (music, ru)
+  - "Начала бегать, через 3 минуты уже задыхаюсь и приходится идти. Это нормально?"
+  - "Третий раз начинаю учиться играть на гитаре и через месяц бросаю. Как не бросить?"
+- **0.89** “Shin splints after starting to run” (running, en) ↔ “Fastest way to learn to type” (one-off, en)
+  - "Running every day is too much at the start. Take 5–7 days off running (cycling or swimming are fine), then res"
+  - "Spend 15 minutes daily on a site like Keybr or TypingClub for a few weeks, and force yourself to use proper fi"
+- **0.89** “Trail running shoes or road shoes” (running+hiking, en) ↔ “Pottery wheel or hand building” (crafts, en)
+  - "If you mix both, a \"hybrid\" trail shoe with lower lugs works on both without feeling clumsy on hard surfaces."
+  - "If you join a studio, try the wheel there; it has a steeper learning curve but is very satisfying. Most people"
+- **0.88** “Beginner strength routine” (strength, en) ↔ “Calorie counting for weight loss” (nutrition, en)
+  - "I've never lifted weights. Gym 3 times a week, 45 minutes. What should I do?"
+  - "Trying to lose 8 kg. Do I really need to count calories?"
+- **0.90** “Styrketrening hjemme uten utstyr” (strength, no) ↔ “Hvordan lese til eksamen i statsvitenskap” (exams, no)
+  - "Kan jeg bli sterkere med bare kroppsvekt hjemme? Har ikke tid til treningssenter."
+  - "Jeg har hjemmeeksamen i statsvitenskap om to uker, fire timer. Hvordan forbereder jeg meg best?"
+- **0.90** “Deadlift lower back pain” (strength, en) ↔ “Anxiety before presentations” (stress+workplace, en)
+  - "- push the floor away with your legs first, keep the bar dragging up your legs; - brace hard before each rep —"
+  - "- slow breathing for two minutes before you start, with the exhale longer than the inhale (4 in, 6 out); - reh"
+- **0.88** “Pull-up progression” (strength, en) ↔ “Pottery wheel or hand building” (crafts, en)
+  - "Can't do a single pull-up. How do I get my first one?"
+  - "Taking up pottery. Should I start with the wheel or hand building?"
+- **0.90** “Commuting by bike in the rain” (cycling, en) ↔ “Snacks for a long hike” (nutrition+hiking, en)
+  - "Starting to commute 12 km by bike. How do I not arrive soaked?"
+  - "Doing a 25 km hike next weekend. What food should I pack?"
+- **0.90** “Commuting by bike in the rain” (cycling, en) ↔ “Sleeping bag for cold nights” (hiking, en)
+  - "Add a breathable rain jacket, rain trousers or a rain cape, and overshoes for heavy days. Keep a change of soc"
+  - "Wear a warm hat and dry socks, eat something fatty before bed, and don't breathe inside the bag — the moisture"
+- **0.89** “Commuting by bike in the rain” (cycling, en) ↔ “Moving checklist with kids” (moving+parenting, en)
+  - "Starting to commute 12 km by bike. How do I not arrive soaked?"
+  - "Moving to another city in 6 weeks with two school-age kids. Help me make a plan."
+- **0.89** “Sykkel med el-motor til jobb” (cycling, no) ↔ “Male panel i stua” (renovation, no)
+  - "Vurderer el-sykkel for å sykle 18 km til jobb. Hva bør jeg se etter?"
+  - "Vi skal male furupanelet i stua hvitt. Må vi slipe alt?"
+- **0.91** “Sykkel med el-motor til jobb” (cycling, no) ↔ “Fradrag for reisevei” (taxes, no)
+  - "Vurderer el-sykkel for å sykle 18 km til jobb. Hva bør jeg se etter?"
+  - "Jeg kjører 55 km hver vei til jobb. Får jeg fradrag?"
+- **0.87** “Велосипед скрипит при педалировании” (cycling, ru) ↔ “Новый пол на кухне” (renovation, ru)
+  - "При каждом обороте педалей что-то скрипит. Где искать?"
+  - "А под кварцвинил нужна подложка?"
+- **0.88** “Велосипед скрипит при педалировании” (cycling, ru) ↔ “Течёт бачок унитаза” (repairs, ru)
+  - "3. Смажьте цепь и посмотрите, не скрипит ли при этом. 4. Если не помогло — каретка: её нужно снять, почистить "
+  - "Скорее всего, изношена прокладка сливного клапана или неправильно настроен поплавок. Проверьте: 1. Снимите кры"
+- **0.89** “Велосипед скрипит при педалировании” (cycling, ru) ↔ “Как научиться петь чисто” (music, ru)
+  - "При каждом обороте педалей что-то скрипит. Где искать?"
+  - "Мне говорят, что я фальшивлю. Можно ли научиться петь чисто во взрослом возрасте?"
+- **0.88** “First gravel ride” (cycling+hiking, en) ↔ “Pottery wheel or hand building” (crafts, en)
+  - "Planning a 60 km gravel ride with some forest roads. What should I bring?"
+  - "Taking up pottery. Should I start with the wheel or hand building?"
+- **0.90** “Waking at 3am every night” (sleep+stress, en) ↔ “Salary question in the interview” (interviews+workplace, en)
+  - "It's worth having a concrete conversation with your manager: list your current projects with rough hours per w"
+  - "If you can, ask what range they've budgeted first. Avoid naming your current salary if you're switching to a b"
+- **0.90** “Melatonin dose” (sleep, en) ↔ “Sleeping bag for cold nights” (hiking, en)
+  - "That's a westward flight, which is easier on the body. Get daylight in the afternoon after arriving and try to"
+  - "Wear a warm hat and dry socks, eat something fatty before bed, and don't breathe inside the bag — the moisture"
+- **0.89** “Melatonin dose” (sleep, en) ↔ “Train from Oslo to Stockholm” (logistics, en)
+  - "thanks. flying tokyo to oslo next week"
+  - "Is it better to take the train or fly from Oslo to Stockholm?"
+- **0.89** “Spise mindre sukker” (nutrition, no) ↔ “Bursdagsleken til 6-åring” (one-off, no)
+  - "Det er sjelden viljestyrke alene som funker. Endre omgivelsene: - Ikke ha godteri liggende hjemme; kjøp heller"
+  - "Ha en rolig aktivitet mot slutten, for eksempel tegning eller høytlesning, så det ikke blir for vilt før de he"
+- **0.89** “Питание при повышенном холестерине” (nutrition, ru) ↔ “Как справиться с боязнью полётов” (one-off, ru)
+  - "У меня повышен ЛПНП, врач сказал пересмотреть питание. С чего начать?"
+  - "Боюсь летать, а через месяц длинный перелёт. Что поможет?"
+- **0.89** “Hvor mye vann bør jeg drikke” (nutrition, no) ↔ “Hvorfor er sjøvann salt” (one-off, no)
+  - "Hva med kaffe, dehydrerer det ikke?"
+  - "Hvorfor er havet salt, men ikke innsjøene?"
+- **0.90** “Hvor mye vann bør jeg drikke” (nutrition, no) ↔ “Klage på manglende vedlikehold” (renting+repairs, no)
+  - "Hva med kaffe, dehydrerer det ikke?"
+  - "Hva om han ikke gjør noe innen fristen?"
+- **0.92** “Følelsen av å aldri strekke til” (stress, no) ↔ “Første gang som leder” (workplace, no)
+  - "- Senk standarden bevisst på noen områder (middag, rengjøring) så det blir rom for det som betyr mest. - Del a"
+  - "- Vær åpen om at rollen er ny og at forholdet endrer seg litt — du kan ikke være med på baksnakk om ledelsen l"
+- **0.90** “Følelsen av å aldri strekke til” (stress, no) ↔ “Mamma med begynnende demens” (elderly, no)
+  - "- Senk standarden bevisst på noen områder (middag, rengjøring) så det blir rom for det som betyr mest. - Del a"
+  - "Snakk med søsken om hvordan dere fordeler ansvaret, og husk å ta vare på dere selv også."
+- **0.90** “Выгорание на работе” (stress+workplace, ru) ↔ “Подросток не хочет разговаривать” (parenting, ru)
+  - "Параллельно важно восстановить базовое: сон, движение, общение вне работы. Если вам постоянно плохо, нарушен с"
+  - "- найдите одно регулярное совместное дело. Если вы видите резкие изменения — в сне, еде, учёбе, самоповреждени"
+- **0.90** “Выгорание на работе” (stress+workplace, ru) ↔ “Как преодолеть кризис в середине романа” (fiction, ru)
+  - "Кажется, я выгорела. Ничего не хочется, работа раздражает, по утрам тяжело вставать. Отпуск был месяц назад и "
+  - "Пишу роман, дошла до середины и застряла. Сюжет кажется скучным, хочется бросить."
+- **0.91** “Выгорание на работе” (stress+workplace, ru) ↔ “Слишком много подписок и денег не хватает” (budgeting, ru)
+  - "Кажется, я выгорела. Ничего не хочется, работа раздражает, по утрам тяжело вставать. Отпуск был месяц назад и "
+  - "Зарплата приходит, а к концу месяца ничего не остаётся. Не понимаю, куда уходят деньги."
+- **0.89** “Digital detox weekend” (stress, en) ↔ “Subscriptions eating my money” (budgeting, en)
+  - "Longer-lasting changes: turn off all non-essential notifications, move social apps off the home screen, charge"
+  - "List each with its monthly cost and when you last used it. Cancel anything unused in the past month without th"
+- **0.90** “Digital detox weekend” (stress, en) ↔ “Plan a surprise anniversary weekend” (one-off, en)
+  - "I check my phone constantly and feel scattered. Thinking about a phone-free weekend. Good idea?"
+  - "10th anniversary next month. My wife loves nature and good food. Ideas for a surprise weekend nearby?"
+- **0.91** “Meditasjon for nybegynnere” (stress, no) ↔ “Bil som ikke starter i kulda” (one-off, no)
+  - "Begynn med to–tre minutter, ikke ti. Det viktige er å gjøre det hver dag, ikke lenge. Prøv også å kombinere me"
+  - "Hvis bilen starter, kjør minst 30 minutter for å lade. Er batteriet over fem år gammelt, bør det testes og san"
+- **0.89** “Bathroom renovation order of work” (renovation, en) ↔ “Tomatoes on the balcony split” (vegetables, en)
+  - "Roughly: 1. Demolition and checking the floor and walls for water damage. 2. Plumbing rough-in and electrical "
+  - "Water deeply and regularly, ideally at the same time every day, and mulch the pots so the soil doesn't dry out"
+- **0.89** “Ремонт в съёмной квартире” (renovation+renting, ru) ↔ “Как вести семейный бюджет вдвоём” (budgeting, ru)
+  - "Снимаю квартиру надолго, хочу освежить: покрасить стены, поменять светильники. Нужно ли спрашивать хозяина?"
+  - "Мы с мужем живём вместе год, деньги то общие, то раздельные, постоянные споры. Как лучше устроить?"
+- **0.88** “Ремонт в съёмной квартире” (renovation+renting, ru) ↔ “Как начать работать с эпоксидной смолой” (crafts, ru)
+  - "Снимаю квартиру надолго, хочу освежить: покрасить стены, поменять светильники. Нужно ли спрашивать хозяина?"
+  - "Хочу попробовать делать изделия из эпоксидной смолы. Что важно знать новичку?"
+- **0.89** “Insulating an attic” (renovation, en) ↔ “Kitchen garden on a north-facing balcony” (vegetables+houseplants, en)
+  - "Keep the eaves ventilated so the roof can breathe, don't cover recessed lights unless they're rated for it, an"
+  - "Group pots together and put a windbreak on the railing — mesh or plants like bamboo in a trough. Check fixings"
+- **0.88** “Новый пол на кухне” (renovation, ru) ↔ “Переход с Windows на Mac для работы” (devices, ru)
+  - "А под кварцвинил нужна подложка?"
+  - "Как сделать скриншот части экрана?"
+- **0.89** “Kitchen tap dripping” (repairs, en) ↔ “Subscriptions eating my money” (budgeting, en)
+  - "Much cheaper than a new tap. Nicely done."
+  - "That's over 750 a year. Nice work."
+- **0.90** “Organisere boden” (organising+organising, no) ↔ “Pakke kjøkkenet” (moving, no)
+  - "Boden vår er full av esker vi ikke vet hva inneholder. Hvordan får jeg orden?"
+  - "Hvordan pakker jeg glass og tallerkener så ingenting går i stykker?"
+- **0.89** “Как приучить семью к порядку” (organising+parenting, ru) ↔ “Как вести семейный бюджет вдвоём” (budgeting, ru)
+  - "Я одна убираю за всеми. Муж и двое подростков разбрасывают вещи. Как это изменить?"
+  - "Мы с мужем живём вместе год, деньги то общие, то раздельные, постоянные споры. Как лучше устроить?"
+- **0.89** “Как приучить семью к порядку” (organising+parenting, ru) ↔ “Конфликт между двумя сотрудниками в команде” (workplace, ru)
+  - "Перестаньте убирать за ними молча — это закрепляет привычку. Сядьте вместе и договоритесь о правилах: у каждог"
+  - "Затем проведите встречу втроём с правилами: обсуждаем факты и решения, не личности. Договоритесь, кто за что о"
+- **0.89** “Paperwork system at home” (organising+budgeting, en) ↔ “Home Assistant on a Raspberry Pi” (smart-home+automation, en)
+  - "- a small set of folders: bills (current year), tax, insurance, warranties and manuals, house, health; - a sca"
+  - "Set up automatic backups to another machine or cloud from day one. If you later have many devices and add-ons,"
+- **0.89** “Мошки в цветочных горшках” (houseplants, ru) ↔ “Как убрать пятно от красного вина” (organising, ru)
+  - "- повесьте жёлтые клеевые ловушки для взрослых мошек; - насыпьте сверху слой песка или мелкого керамзита, чтоб"
+  - "Действуйте сразу: промокните (не трите!) бумажными полотенцами, затем посыпьте пятно солью или содой, чтобы вп"
+- **0.89** “Stueplanter når vi er på ferie” (houseplants, no) ↔ “Strømregningen er altfor høy” (budgeting+repairs, no)
+  - "Samle dem i et rom uten direkte sol, vann godt rett før dere drar, og sett de største i en balje med et par ce"
+  - "Begynn med de store postene: oppvarming og varmtvann. Senk temperaturen én–to grader (hver grad sparer rundt f"
+- **0.90** “Stueplanter når vi er på ferie” (houseplants, no) ↔ “Spansk før ferien” (languages+city-trips, no)
+  - "Vi skal på tre ukers ferie i juli. Hvordan overlever plantene?"
+  - "Vi skal til Spania om tre måneder og jeg vil kunne snakke litt spansk. Hvor begynner jeg?"
+- **0.91** “Student monthly budget” (budgeting, no) ↔ “NAV unemployment benefits” (bureaucracy, no)
+  - "Inntektsgrensen gjelder hele kalenderåret, så det er samlet inntekt som teller. Sjekk Lånekassens kalkulator f"
+  - "Du må sende meldekort hver fjortende dag for å få utbetalt. Ha arbeidsavtale, oppsigelsesbrev og lønnsslipper "
+- **0.90** “Strømregningen er altfor høy” (budgeting+repairs, no) ↔ “Flyttebyrå eller gjøre det selv” (moving, no)
+  - "Strømregningen var 4 800 i januar for en treroms leilighet. Hva kan vi gjøre?"
+  - "Vi flytter fra en treroms i Oslo til Trondheim. Lønner det seg med flyttebyrå?"
+- **0.89** “Strømregningen er altfor høy” (budgeting+repairs, no) ↔ “Leieavtale: kan utleier øke husleia?” (renting, no)
+  - "Strømregningen var 4 800 i januar for en treroms leilighet. Hva kan vi gjøre?"
+  - "Utleier vil øke husleia med 15 prosent etter et år. Er det lov?"
+- **0.89** “Tax deduction for home office” (taxes, en) ↔ “Negotiating a 4-day week” (workplace, en)
+  - "I work from home three days a week as an employee. Can I deduct anything?"
+  - "Is it realistic to ask my employer for a 4-day week at 80% pay?"
+- **0.89** “Tax deduction for home office” (taxes, en) ↔ “Deposit not returned” (renting, en)
+  - "It depends heavily on your country. In many places employees can't deduct home office costs unless the employe"
+  - "Compare with the move-in report and your photos. Most places have a deadline by which the landlord must return"
+- **0.88** “Tax deduction for home office” (taxes, en) ↔ “Explain inflation like I'm 12” (one-off, en)
+  - "Where it's allowed, there's often a simple flat-rate option per day worked from home instead of calculating re"
+  - "It often happens when people and businesses have more money to spend than there are goods, or when things like"
+- **0.88** “Налоговый вычет за лечение” (taxes, ru) ↔ “Сколько стоит содержание лошади” (one-off, ru)
+  - "В прошлом году лечила зубы на 180 тысяч. Можно ли получить вычет?"
+  - "Дочь мечтает о своей лошади. Сколько в среднем стоит содержание?"
+- **0.89** “Freelancer: setting money aside for taxes” (taxes+budgeting, en) ↔ “Tipping in the US” (one-off, en)
+  - "First year freelancing. How much of each invoice should I put aside for tax?"
+  - "Going to New York for the first time. How much do I tip?"
+- **0.88** “Инвестиции: вклад или облигации” (investing, ru) ↔ “Сколько стоит содержание лошади” (one-off, ru)
+  - "Есть 500 тысяч рублей, нужны через 2 года на первый взнос по ипотеке. Куда положить?"
+  - "Дочь мечтает о своей лошади. Сколько в среднем стоит содержание?"
+- **0.90** “Junior QA resume tips” (applications, ru) ↔ “Переход с Windows на Mac для работы” (devices, ru)
+  - "Закончила курсы по тестированию, опыта работы в IT нет. Что писать в резюме?"
+  - "На работе дали MacBook, всю жизнь сидела на Windows. С чего начать?"
+- **0.90** “Junior QA resume tips” (applications, ru) ↔ “Пересдача экзамена в университете” (exams, ru)
+  - "Закончила курсы по тестированию, опыта работы в IT нет. Что писать в резюме?"
+  - "Завалила экзамен по статистике, пересдача через две недели. Как подготовиться за такой срок?"
+- **0.89** “LinkedIn headline” (applications, en) ↔ “Shadowing technique” (languages, en)
+  - "Keep it scannable, avoid buzzwords like \"passionate\" and \"guru\", and make sure the same keywords appear in you"
+  - "Use clips of 1–2 minutes with a transcript, repeat each one many times over a week, and record yourself to com"
+- **0.90** “LinkedIn headline” (applications, en) ↔ “Appealing a parking fine” (bureaucracy, en)
+  - "Nice. Recruiters often notice a clear headline within the first seconds of a search result."
+  - "Good result. Keep the screenshot for a while in case of follow-ups."
+- **0.90** “LinkedIn headline” (applications, en) ↔ “Unfinished fantasy novel” (fiction+stress, en)
+  - "Keep it scannable, avoid buzzwords like \"passionate\" and \"guru\", and make sure the same keywords appear in you"
+  - "Keep a \"fix later\" document where you note what you want to change. Set a modest daily target, like 300 words,"
+- **0.91** “Hvordan følge opp en søknad” (applications, no) ↔ “Письмо на норвежском в коммуну” (languages+bureaucracy, ru)
+  - "Hold det kort og vennlig. Har søknadsfristen nettopp gått ut, kan de fortsatt være i gang med å lese søknader."
+  - "Jeg kan sende fødselsnummer og annen dokumentasjon dersom det trengs. Med vennlig hilsen [navn og telefonnumme"
+- **0.92** “Hvordan følge opp en søknad” (applications, no) ↔ “Stress før eksamen og jobbsøking samtidig” (stress+exams, no)
+  - "Jeg søkte på en jobb for tre uker siden og har ikke hørt noe. Kan jeg ringe?"
+  - "Jeg har masteroppgave som skal leveres om fem uker og samtidig søker jeg jobber. Jeg får nesten ikke puste."
+- **0.90** “Writing a portfolio case study” (applications, en) ↔ “Thesis outline in marine biology” (thesis, en)
+  - "Structure: the problem and your role in one paragraph, two or three key decisions with the evidence behind the"
+  - "Then structure the outline around it: background that leads only to that question, methods that answer it, res"
+- **0.90** “"Tell me about yourself" answer” (interviews, en) ↔ “Shadowing technique” (languages, en)
+  - "Practise it out loud until it's natural but not memorised word for word. End by connecting to the job, which h"
+  - "Use clips of 1–2 minutes with a transcript, repeat each one many times over a week, and record yourself to com"
+- **0.90** “"Tell me about yourself" answer” (interviews, en) ↔ “Toddler tantrums in the supermarket” (parenting, en)
+  - "Practise it out loud until it's natural but not memorised word for word. End by connecting to the job, which h"
+  - "If you can, move to a quieter spot and wait it out. Afterwards, reconnect without a lecture."
+- **0.90** “"Tell me about yourself" answer” (interviews, en) ↔ “Sibling fights” (parenting, en)
+  - "Practise it out loud until it's natural but not memorised word for word. End by connecting to the job, which h"
+  - "Step in when it's physical or one is clearly overpowered; otherwise coach rather than referee. Help them name "
+- **0.90** “"Tell me about yourself" answer” (interviews, en) ↔ “Writing believable dialogue” (fiction, en)
+  - "Practise it out loud until it's natural but not memorised word for word. End by connecting to the job, which h"
+  - "Real people interrupt, avoid questions and say less than they mean. Read your dialogue aloud; cut greetings an"
+- **0.89** “Как отвечать про слабые стороны” (interviews, ru) ↔ “Как правильно ответить на свадебное приглашение” (one-off, ru)
+  - "На собеседовании всегда спрашивают о слабых сторонах. Что отвечать, чтобы не навредить себе?"
+  - "Пригласили на свадьбу дальних родственников, идти не хочу. Как вежливо отказаться?"
+- **0.89** “Как отвечать про слабые стороны” (interviews, ru) ↔ “Как помириться с подругой” (one-off, ru)
+  - "Назовите реальную, но не критичную для этой роли слабость и покажите, что вы с ней работаете. Например: «Раньш"
+  - "Напишите коротко и тепло, без разбора, кто прав: «Мне не хватает наших разговоров. Прости, что так вышло. Дава"
+- **0.90** “Technical interview prep plan” (interviews+py-data, en) ↔ “Exam stress and procrastination” (exams+stress, en)
+  - "- Days 5–7: a mini take-home on a public dataset: clean it with pandas, answer three business questions, make "
+  - "Shrink the starting step. Make a plan by day: which topic, which past paper, and stop overplanning after that."
+- **0.90** “Difficult conversation with a colleague” (workplace, en) ↔ “Unfinished fantasy novel” (fiction+stress, en)
+  - "Often that's enough. Meanwhile make your work visible: send short written summaries to the team or manager whe"
+  - "That matters as much as the plot. If writing feels like a second job, shrink it: 20 minutes, three times a wee"
+- **0.91** “Første gang som leder” (workplace, no) ↔ “Mamma med begynnende demens” (elderly, no)
+  - "- Snakk med hver enkelt én-til-én de første ukene: hva fungerer, hva vil de endre, hvordan vil de ha det med o"
+  - "Snakk med søsken om hvordan dere fordeler ansvaret, og husk å ta vare på dere selv også."
+- **0.91** “Første gang som leder” (workplace, no) ↔ “Løpe raskere på 5 km” (running, no)
+  - "Jeg har nettopp blitt teamleder for de jeg jobbet sammen med i fem år. Hvordan håndterer jeg overgangen?"
+  - "Jeg løper 5 km på 27 minutter og vil under 25. Hvordan trener jeg?"
+- **0.90** “Too many meetings” (workplace, en) ↔ “Sibling fights” (parenting, en)
+  - "Then act on each group: decline or ask for notes for the third group, suggest a written update instead of the "
+  - "What could work?\"). Avoid deciding who's to blame — you rarely see how it started. Give each child some one-on"
+- **0.89** “Too many meetings” (workplace, en) ↔ “Subletting my room for the summer” (renting, en)
+  - "Great outcome. Protect them consistently for a few weeks so it becomes the norm."
+  - "Great. Put the agreement in writing and keep a copy of the subtenant's ID."
+- **0.91** “Too many meetings” (workplace, en) ↔ “Appealing a parking fine” (bureaucracy, en)
+  - "Great outcome. Protect them consistently for a few weeks so it becomes the norm."
+  - "Good result. Keep the screenshot for a while in case of follow-ups."
+- **0.90** “Too many meetings” (workplace, en) ↔ “New chat” (network+devices, en)
+  - "Great outcome. Protect them consistently for a few weeks so it becomes the norm."
+  - "Great. If it happens again after a router restart, the fixed IP will stop it for good."
+- **0.90** “Giving negative feedback to a team member” (workplace, en) ↔ “Unfinished fantasy novel” (fiction+stress, en)
+  - "Agree on concrete next steps and a check-in date, and follow up. Kind feedback is clear feedback; vague hints "
+  - "Keep a \"fix later\" document where you note what you want to change. Set a modest daily target, like 300 words,"
+- **0.90** “Hjemmekontor og ensomhet” (workplace+stress, no) ↔ “Smarthus for en eldre forelder” (smart-home+elderly, no)
+  - "Etter at vi ble helt digitale føler jeg meg isolert fra kollegene. Noen tips?"
+  - "Mamma bor alene. Finnes det smarte løsninger som varsler oss hvis noe er galt, uten kamera?"
+- **0.89** “Quitting a job gracefully” (workplace, en) ↔ “Landlord entering without notice” (renting, en)
+  - "Tell your manager in person or on a call first, before anyone else, then follow up in writing with your last d"
+  - "Put it in writing, politely and clearly: \"Please give me at least 24 hours' notice before entering the flat, w"
+- **0.90** “Конфликт между двумя сотрудниками в команде” (workplace, ru) ↔ “Подросток не хочет разговаривать” (parenting, ru)
+  - "Сначала поговорите с каждым отдельно: выясните, в чём суть конфликта — в задачах, ролях или личном. Часто это "
+  - "- больше слушайте, меньше советуйте и не критикуйте сразу; - интересуйтесь её миром — музыкой, сериалами, друз"
+- **0.90** “Конфликт между двумя сотрудниками в команде” (workplace, ru) ↔ “Как помириться с подругой” (one-off, ru)
+  - "Сначала поговорите с каждым отдельно: выясните, в чём суть конфликта — в задачах, ролях или личном. Часто это "
+  - "Напишите коротко и тепло, без разбора, кто прав: «Мне не хватает наших разговоров. Прости, что так вышло. Дава"
+- **0.90** “Конфликт между двумя сотрудниками в команде” (workplace, ru) ↔ “Мама не хочет переезжать к нам” (elderly+moving, ru)
+  - "Затем проведите встречу втроём с правилами: обсуждаем факты и решения, не личности. Договоритесь, кто за что о"
+  - "Это хороший шаг. Подберите человека вместе с мамой, чтобы она чувствовала, что решение её."
+- **0.90** “Spansk før ferien” (languages+city-trips, no) ↔ “NAV unemployment benefits” (bureaucracy, no)
+  - "Vi skal til Spania om tre måneder og jeg vil kunne snakke litt spansk. Hvor begynner jeg?"
+  - "Jeg ble sagt opp og slutter om en måned. Når søker jeg dagpenger?"
+- **0.91** “Exam stress and procrastination” (exams+stress, en) ↔ “Toddler tantrums in the supermarket” (parenting, en)
+  - "Study somewhere without your phone. Practise with past exams under timed conditions — it's the most effective "
+  - "If you can, move to a quieter spot and wait it out. Afterwards, reconnect without a lecture."
+- **0.89** “Math exam preparation” (exams, ru) ↔ “Puppy chewing furniture” (dogs, ru)
+  - "Сыну через 4 месяца сдавать профильную математику. Он решает первую часть, а вторую почти не трогает. Что дела"
+  - "Щенку 4 месяца, он грызёт ножки стульев и обувь. Как отучить?"
+- **0.88** “Math exam preparation” (exams, ru) ↔ “Шахматы или го для ребёнка” (one-off, ru)
+  - "Сыну через 4 месяца сдавать профильную математику. Он решает первую часть, а вторую почти не трогает. Что дела"
+  - "Хочу научить сына 8 лет настольной стратегической игре. Шахматы или го?"
+- **0.89** “Note-taking: by hand or laptop” (exams, en) ↔ “Appealing a parking fine” (bureaucracy, en)
+  - "Good experiment. Compare how much you remember at the midterms."
+  - "Good result. Keep the screenshot for a while in case of follow-ups."
+- **0.89** “Note-taking: by hand or laptop” (exams, en) ↔ “Trolley problem” (one-off, en)
+  - "Good experiment. Compare how much you remember at the midterms."
+  - "It's a thought experiment, not a realistic scenario. It isolates a question philosophers disagree about: is it"
+- **0.91** “Matteangst” (exams, no) ↔ “Pianoøving for barn” (music+parenting, no)
+  - "Små, jevne økter med oppgaver hun får til, bygger mestring. Snakk med læreren om hva som skjer i timene, og om"
+  - "Små konserter for besteforeldre gir motivasjon. Snakk med læreren om hun synes stykkene er for vanskelige elle"
+- **0.90** “Matteangst” (exams, no) ↔ “Teamet mitt er overarbeidet” (workplace+stress, no)
+  - "Små, jevne økter med oppgaver hun får til, bygger mestring. Snakk med læreren om hva som skjer i timene, og om"
+  - "Ta en samtale med henne om hvordan hun har det og hva som kan tilrettelegges: færre oppgaver, mer fleksibel ar"
+- **0.90** “Что посмотреть в Стамбуле за 3 дня” (city-trips, ru) ↔ “Как справиться с боязнью полётов” (one-off, ru)
+  - "Летим в Стамбул на 3 дня в мае. Как всё успеть и не устать?"
+  - "Боюсь летать, а через месяц длинный перелёт. Что поможет?"
+- **0.90** “Что посмотреть в Стамбуле за 3 дня” (city-trips, ru) ↔ “Гитара: как перестать бросать” (music, ru)
+  - "Летим в Стамбул на 3 дня в мае. Как всё успеть и не устать?"
+  - "Третий раз начинаю учиться играть на гитаре и через месяц бросаю. Как не бросить?"
+- **0.87** “Cheap eats in Tokyo” (city-trips, en) ↔ “Translate a sentence into Japanese” (languages, en)
+  - "Tokyo is expensive, how do I eat well on a budget?"
+  - "how do you say \"thank you for the delicious dinner\" in japanese"
+- **0.87** “Cheap eats in Tokyo” (city-trips, en) ↔ “Tipping in the US” (one-off, en)
+  - "Tokyo is expensive, how do I eat well on a budget?"
+  - "Going to New York for the first time. How much do I tip?"
+- **0.89** “Первый поход с палаткой” (hiking, ru) ↔ “Переезд в другую страну с котом” (moving+cats, ru)
+  - "Хотим с подругой в первый раз пойти в поход с ночёвкой в палатке. Что точно нужно взять?"
+  - "Переезжаем из России в Норвегию, берём кошку. Какие документы нужны?"
+- **0.89** “Fjelltur med barn” (hiking+parenting, no) ↔ “Bursdagsleken til 6-åring” (one-off, no)
+  - "Velg en kort tur med et mål de gleder seg til: et vann å kaste stein i, en hytte med vafler eller en topp med "
+  - "Ha en rolig aktivitet mot slutten, for eksempel tegning eller høytlesning, så det ikke blir for vilt før de he"
+- **0.89** “Sleeping bag for cold nights” (hiking, en) ↔ “Potty training in a week” (parenting, en)
+  - "Wear a warm hat and dry socks, eat something fatty before bed, and don't breathe inside the bag — the moisture"
+  - "Stay home, skip the nappy during the day, offer the potty often, and stay calm about accidents. Night dryness "
+- **0.89** “Солнце и горы: как не сгореть” (hiking, ru) ↔ “Puppy chewing furniture” (dogs, ru)
+  - "Пейте больше воды и не забывайте про уши и нос — они сгорают первыми."
+  - "Когда грызёт мебель — спокойно забирайте и сразу давайте игрушку, хвалите, когда он грызёт её. Убирайте обувь,"
+- **0.89** “Солнце и горы: как не сгореть” (hiking, ru) ↔ “Как начать работать с эпоксидной смолой” (crafts, ru)
+  - "Пейте больше воды и не забывайте про уши и нос — они сгорают первыми."
+  - "Безопасность прежде всего: работайте в проветриваемом помещении, в перчатках и, лучше, респираторе."
+- **0.89** “Packing light for two weeks” (logistics, en) ↔ “Potty training in a week” (parenting, en)
+  - "Two weeks in Southeast Asia with only carry-on. Is that realistic?"
+  - "Is it realistic to potty train a 2.5-year-old in a long weekend?"
+- **0.90** “Forsinket fly og kompensasjon” (logistics, no) ↔ “Flyttebyrå eller gjøre det selv” (moving, no)
+  - "Flyet fra Oslo til Barcelona var fire timer forsinket. Har jeg krav på noe?"
+  - "Vi flytter fra en treroms i Oslo til Trondheim. Lønner det seg med flyttebyrå?"
+- **0.90** “Виза в Японию для граждан России” (logistics, ru) ↔ “Переезд в другую страну с котом” (moving+cats, ru)
+  - "Какие документы нужны для туристической визы в Японию?"
+  - "Переезжаем из России в Норвегию, берём кошку. Какие документы нужны?"
+- **0.90** “Подросток не хочет разговаривать” (parenting, ru) ↔ “Как преодолеть кризис в середине романа” (fiction, ru)
+  - "- больше слушайте, меньше советуйте и не критикуйте сразу; - интересуйтесь её миром — музыкой, сериалами, друз"
+  - "- спросить себя, чего герой хочет в каждой сцене и что ему мешает — сцены без конфликта скучны и при написании"
+- **0.90** “Lommepenger: hvor mye?” (parenting+budgeting, no) ↔ “Leieavtale: kan utleier øke husleia?” (renting, no)
+  - "Hvor mye lommepenger bør en 12-åring få, og skal det være koblet til husarbeid?"
+  - "Utleier vil øke husleia med 15 prosent etter et år. Er det lov?"
+- **0.93** “Hunden bjeffer på andre hunder” (dogs, no) ↔ “Klage på nabohundens bjeffing” (one-off, no)
+  - "Hunden vår bjeffer og kaster seg mot andre hunder på tur. Hva gjør vi?"
+  - "Naboens hund bjeffer i timevis når de er på jobb. Hva gjør jeg?"
+- **0.88** “Puppy chewing furniture” (dogs, ru) ↔ “Слишком много подписок и денег не хватает” (budgeting, ru)
+  - "Дайте разрешённые варианты: жевательные игрушки, замороженную морковку, жилы. Когда грызёт мебель — спокойно з"
+  - "Удалите приложения доставки с главного экрана, держите дома замороженные готовые блюда на «ленивый» вечер и ра"
+- **0.90** “Mamma med begynnende demens” (elderly, no) ↔ “Eksamen i matte R1” (exams, no)
+  - "Snakk med søsken om hvordan dere fordeler ansvaret, og husk å ta vare på dere selv også."
+  - "Ta tidligere eksamener på tid, rett dem selv med løsningsforslag, og lag en liste over feil du gjør flere gang"
+- **0.90** “Fanfiction og opphavsrett” (fiction, no) ↔ “Sette opp gjestenett hjemme” (network, no)
+  - "Kan jeg publisere fanfiction på nettet uten å bryte opphavsretten?"
+  - "Hvordan lager jeg et eget wifi for gjester så de ikke kommer inn på det vanlige nettet vårt?"
+- **0.91** “Takketale ved avskjed på jobb” (speeches+workplace, no) ↔ “NAV unemployment benefits” (bureaucracy, no)
+  - "Jeg slutter etter 14 år og skal si noen ord på avskjeden. Hva sier jeg?"
+  - "Jeg ble sagt opp og slutter om en måned. Når søker jeg dagpenger?"
+- **0.91** “Takketale ved avskjed på jobb” (speeches+workplace, no) ↔ “Gave til sjefen som slutter” (one-off, no)
+  - "Jeg slutter etter 14 år og skal si noen ord på avskjeden. Hva sier jeg?"
+  - "Sjefen vår går av med pensjon. Vi er 12 i avdelingen. Gaveidé?"
+- **0.91** “Takketale ved avskjed på jobb” (speeches+workplace, no) ↔ “Bursdagsleken til 6-åring” (one-off, no)
+  - "Hold det positivt, uten å ta opp gamle konflikter. Avslutt med lykkeønskninger til dem som blir igjen. To–tre "
+  - "Ha en rolig aktivitet mot slutten, for eksempel tegning eller høytlesning, så det ikke blir for vilt før de he"
+- **0.90** “Learning guitar as an adult” (music, en) ↔ “Fastest way to learn to type” (one-off, en)
+  - "Practise switching between pairs of chords for a minute at a time, and a simple strumming pattern. Fifteen min"
+  - "Spend 15 minutes daily on a site like Keybr or TypingClub for a few weeks, and force yourself to use proper fi"
+- **0.90** “Pianoøving for barn” (music+parenting, no) ↔ “Gave til sjefen som slutter” (one-off, no)
+  - "Datteren vår på 8 går på pianotimer, men vil ikke øve. Skal vi presse?"
+  - "Sjefen vår går av med pensjon. Vi er 12 i avdelingen. Gaveidé?"
+- **0.88** “Как научиться петь чисто” (music, ru) ↔ “Мой сын не хочет читать” (parenting+exams, ru)
+  - "Затем простые интервалы и гаммы. Записывайте себя — слышать со стороны очень помогает. Несколько занятий с пре"
+  - "Тогда стоит проверить, нет ли трудностей — например, дислексии или проблем со зрением. Обратитесь к логопеду и"
+- **0.87** “Music theory for songwriting” (music, en) ↔ “Sudoku strategy” (one-off, en)
+  - "I write songs by ear but always end up with the same four chords. How do I get more variety?"
+  - "I'm stuck on hard sudokus. What technique comes after finding singles?"
+- **0.88** “Pottery wheel or hand building” (crafts, en) ↔ “Rebuilding a bike's rear wheel” (cycling+repairs, en)
+  - "Taking up pottery. Should I start with the wheel or hand building?"
+  - "replacing the wheel then, what do I need to know?"
+- **0.89** “Telefonen blir varm og batteriet tømmes” (devices, no) ↔ “Bil som ikke starter i kulda” (one-off, no)
+  - "Sjekk Innstillinger → Batteri → bruk per app; ofte er det én app som går i bakgrunnen. Oppdater alle apper og "
+  - "Klikking betyr nesten alltid for lite strøm fra batteriet; kulde svekker batteriet kraftig. Prøv å starte med "
+- **0.88** “Old laptop: Linux?” (devices, en) ↔ “Deploying a small app cheaply” (git-devops+web-backend, en)
+  - "I have a 2014 laptop that's too slow for Windows 10. Is Linux a good idea for browsing and documents?"
+  - "I'm comfortable with Linux. How do I do backups for Postgres?"
+- **0.89** “Moving checklist with kids” (moving+parenting, en) ↔ “Weekend in Prague on a budget” (city-trips+budgeting, en)
+  - "Moving to another city in 6 weeks with two school-age kids. Help me make a plan."
+  - "Planning 3 days in Prague with my partner in March. Budget is tight. Tips?"
+- **0.90** “Переезд в другую страну с котом” (moving+cats, ru) ↔ “Как подготовиться к собеседованию в норвежскую компанию” (interviews+languages, ru)
+  - "Переезжаем из России в Норвегию, берём кошку. Какие документы нужны?"
+  - "У меня собеседование в Осло на позицию бухгалтера. Чем норвежские собеседования отличаются от российских?"
+- **0.90** “Change of address checklist” (moving+bureaucracy, en) ↔ “Rebuilding a bike's rear wheel” (cycling+repairs, en)
+  - "Who do I need to tell when I move?"
+  - "replacing the wheel then, what do I need to know?"
+- **0.91** “Pakke kjøkkenet” (moving, no) ↔ “Kontorlandskap og konsentrasjon” (workplace, no)
+  - "Hvordan pakker jeg glass og tallerkener så ingenting går i stykker?"
+  - "Vi har flyttet til åpent kontorlandskap og jeg får ikke konsentrert meg. Hva kan jeg gjøre?"
+- **0.88** “Deposit not returned” (renting, en) ↔ “Помогите с эссе на английском для поступления” (applications+languages, ru)
+  - "Moved out 6 weeks ago, landlord won't return the deposit and keeps finding new \"damages\"."
+  - "Here's a draft: \"Two years after my first housing project was completed, I went back to see how people were li"
+- **0.90** “Deposit not returned” (renting, en) ↔ “Monthly budget for a couple saving for a house” (budgeting+investing, en)
+  - "Compare with the move-in report and your photos. Most places have a deadline by which the landlord must return"
+  - "Keep a separate buffer of three months of fixed costs, untouched by the house fund. That way a job loss doesn'"
+- **0.89** “Сосед сверху затопил” (renting+repairs, ru) ↔ “Стресс из-за ремонта соседей” (stress, ru)
+  - "Снимаю квартиру, сосед сверху залил ванную, на потолке пятно и отходит краска. Кто должен платить?"
+  - "Соседи третий месяц делают ремонт, с утра перфоратор. Я работаю из дома и уже на пределе."
+- **0.91** “NAV unemployment benefits” (bureaucracy, no) ↔ “Hvordan komme i gang med indeksfond” (investing+budgeting, no)
+  - "Jeg ble sagt opp og slutter om en måned. Når søker jeg dagpenger?"
+  - "Og hvor mye skal jeg spare i måneden?"
+- **0.91** “Как получить норвежский D-номер” (bureaucracy, ru) ↔ “Как подготовиться к собеседованию в норвежскую компанию” (interviews+languages, ru)
+  - "Я приехала на работу в Норвегию на полгода. Работодатель говорит, нужен D-номер. Как его получить?"
+  - "Собеседование будет на норвежском, мой уровень B1. Как подготовиться?"
+- **0.89** “Appealing a parking fine” (bureaucracy, en) ↔ “Exam anxiety in driving test” (exams+stress, en)
+  - "Good result. Keep the screenshot for a while in case of follow-ups."
+  - "Congratulations! Well done for keeping at it."
+- **0.89** “Weekly dinner plan for a family of four” (dinners+budgeting, en) ↔ “Plan a surprise anniversary weekend” (one-off, en)
+  - "great. last thing, the 10 year old wants to cook one night. which dish?"
+  - "10th anniversary next month. My wife loves nature and good food. Ideas for a surprise weekend nearby?"
+- **0.90** “Hund og katt sammen” (dogs+cats, no) ↔ “Bursdagsleken til 6-åring” (one-off, no)
+  - "Avbryt jaging hver gang — ta valpen bort rolig, og gi den noe annet å gjøre. Tren «se på meg» og «bli» med god"
+  - "Ha en rolig aktivitet mot slutten, for eksempel tegning eller høytlesning, så det ikke blir for vilt før de he"
+- **0.89** “Сменить профессию в 40 лет” (applications+stress, ru) ↔ “Как справиться с боязнью полётов” (one-off, ru)
+  - "Хорошо. Страх при таком решении нормален. Составьте план на первые три месяца с конкретными шагами — когда вид"
+  - "Боюсь летать, а через месяц длинный перелёт. Что поможет?"
+- **0.89** “Сменить профессию в 40 лет” (applications+stress, ru) ↔ “Мама не хочет переезжать к нам” (elderly+moving, ru)
+  - "Мне 40, работаю юристом 15 лет и больше не могу. Хочу в IT, но страшно. Это реально?"
+  - "Маме 80, живёт одна в другом городе. Мы зовём её к себе, а она отказывается. Как убедить?"
+- **0.88** “Мой сын не хочет читать” (parenting+exams, ru) ↔ “Шахматы или го для ребёнка” (one-off, ru)
+  - "Сыну 9 лет, читает очень неохотно, только под давлением. Как привить любовь к чтению?"
+  - "Хочу научить сына 8 лет настольной стратегической игре. Шахматы или го?"
+- **0.91** “Kontorlandskap og konsentrasjon” (workplace, no) ↔ “Pakke for flytting til hybel” (moving, no)
+  - "Vi har flyttet til åpent kontorlandskap og jeg får ikke konsentrert meg. Hva kan jeg gjøre?"
+  - "Jeg flytter på hybel i Trondheim for å studere. Hva må jeg ha med?"
+- **0.88** “Why is the sky blue” (one-off, en) ↔ “Black hole in simple words” (one-off, en)
+  - "When sunlight comes into the air, the tiny bits of air bump the blue light around much more than the red and y"
+  - "Far from it, nothing special. As you approach, gravity pulls harder on your feet than your head; near a small "
+- **0.86** “Hvem var Harald Hårfagre” (one-off, no) ↔ “Fakta om elg” (one-off, no)
+  - "Hvem var egentlig Harald Hårfagre, og samlet han virkelig Norge?"
+  - "Hvor mange elg finnes det i Norge?"
+- **0.87** “Хорошая книга для отпуска” (one-off, ru) ↔ “Что подарить коллеге на 50 лет” (one-off, ru)
+  - "Посоветуйте лёгкую, но не глупую книгу для отпуска на море."
+  - "Варианты: хорошая книга по военной или местной истории в подарочном издании плюс что-то для рыбалки (качествен"
+- **0.90** “Как правильно ответить на свадебное приглашение” (one-off, ru) ↔ “Как помириться с подругой” (one-off, ru)
+  - "Ответьте заранее и коротко, с тёплыми пожеланиями, без длинных объяснений: «Спасибо большое за приглашение! К "
+  - "Напишите коротко и тепло, без разбора, кто прав: «Мне не хватает наших разговоров. Прости, что так вышло. Дава"
+- **0.89** “Как правильно ответить на свадебное приглашение” (one-off, ru) ↔ “Стресс из-за ремонта соседей” (stress, ru)
+  - "От всей души поздравляем вас и желаем счастья». Можно отправить небольшой подарок или открытку — это сохранит "
+  - "Это понятное чувство. Важно помнить, что это временно — месяц пройдёт. Злость тоже даёт нагрузку, поэтому найд"
+- **0.87** “How do noise cancelling headphones work” (one-off, en) ↔ “Black hole in simple words” (one-off, en)
+  - "Small microphones on the headphones pick up the sound around you, and a chip creates the opposite sound wave —"
+  - "Once inside, every path leads to the centre, and no signal can get out. To an outside observer you'd appear to"
+- **0.89** “How do noise cancelling headphones work” (one-off, en) ↔ “Home studio acoustic treatment” (music+renovation, en)
+  - "Played through the speakers, the two waves cancel out. It works best for steady low sounds like engines and ai"
+  - "Treat the first reflection points: put absorption panels on the side walls at ear height between you and the s"
+- **0.88** “Birdwatching for beginners” (one-off, en) ↔ “Origami crane instructions” (one-off, en)
+  - "Start in your local park or a lake early in the morning. Learn the common birds well first; it makes the rare "
+  - "Start with a square sheet. Fold it into a square base (preliminary base), then fold the lower edges of the top"
+- **0.87** “Explain inflation like I'm 12” (one-off, en) ↔ “Trolley problem” (one-off, en)
+  - "It often happens when people and businesses have more money to spend than there are goods, or when things like"
+  - "It's a thought experiment, not a realistic scenario. It isolates a question philosophers disagree about: is it"
+- **0.91** “Лучшее время посетить Байкал” (one-off, ru) ↔ “Переезд с детьми в новый город” (moving+parenting, ru)
+  - "Когда лучше ехать на Байкал?"
+  - "Когда лучше переезжать — летом или в середине года?"
+- **0.90** “Как помириться с подругой” (one-off, ru) ↔ “Гитара: как перестать бросать” (music, ru)
+  - "Поругались с близкой подругой из-за пустяка, неделю не общаемся. Как первой сделать шаг?"
+  - "Третий раз начинаю учиться играть на гитаре и через месяц бросаю. Как не бросить?"
+- **0.90** “Как помириться с подругой” (one-off, ru) ↔ “Пересдача экзамена в университете” (exams, ru)
+  - "Поругались с близкой подругой из-за пустяка, неделю не общаемся. Как первой сделать шаг?"
+  - "Завалила экзамен по статистике, пересдача через две недели. Как подготовиться за такой срок?"
+- **0.87** “Speed of a sneeze” (one-off, en) ↔ “How much does a cloud weigh” (one-off, en)
+  - "Estimates vary a lot, but measurements suggest the air leaves at around 10–40 metres per second, and droplets "
+  - "A typical fluffy cumulus cloud of about one cubic kilometre holds roughly 500 tonnes of water droplets — about"
+- **0.90** “Как справиться с боязнью полётов” (one-off, ru) ↔ “Гитара: как перестать бросать” (music, ru)
+  - "Боюсь летать, а через месяц длинный перелёт. Что поможет?"
+  - "Третий раз начинаю учиться играть на гитаре и через месяц бросаю. Как не бросить?"
+- **0.89** “Fastest way to learn to type” (one-off, en) ↔ “Learning piano as an adult with little time” (music, en)
+  - "Yes, it's a skill you use every day. Spend 15 minutes daily on a site like Keybr or TypingClub for a few weeks"
+  - "Yes, 20 focused minutes daily beats long irregular sessions. Split it: 5 minutes of scales or technique, 10 on"
+- **0.89** “Стресс из-за ремонта соседей” (stress, ru) ↔ “Мама не хочет переезжать к нам” (elderly+moving, ru)
+  - "Узнайте разрешённое время шумных работ в вашем регионе — обычно это будни днём с перерывом. Поговорите с сосед"
+  - "Можно найти промежуточные варианты: сиделка или соцработник на несколько часов в неделю, кнопка экстренного вы"
+- **0.89** “Стресс из-за ремонта соседей” (stress, ru) ↔ “Слишком много подписок и денег не хватает” (budgeting, ru)
+  - "Соседи третий месяц делают ремонт, с утра перфоратор. Я работаю из дома и уже на пределе."
+  - "Зарплата приходит, а к концу месяца ничего не остаётся. Не понимаю, куда уходят деньги."
+- **0.93** “Lære å synge i kor” (music, no) ↔ “Flytte hjem til foreldrene for å spare” (budgeting+moving, no)
+  - "Jeg er redd jeg synger falskt"
+  - "Jeg er redd for å miste friheten"
+- **0.91** “Eksamen i matte R1” (exams, no) ↔ “Flytte hjem til foreldrene for å spare” (budgeting+moving, no)
+  - "Hvordan bør jeg bruke tiden siste uka?"
+  - "Hva gjør jeg med pengene i mellomtiden?"
+
+## Same theme, different topic (121)
+
+- **0.90** “Merge two CSV files on customer id” (py-data, en) ↔ “Debugging a slow Django page” (web-backend+sql, en)
+  - "```python merged = orders.merge(customers, on=\"customer_id\", how=\"left\", indicator=True) print(merged[\"_merge\""
+  - "For example: `Order.objects.select_related(\"customer\").prefetch_related(\"items__product\")`."
+- **0.90** “Plot monthly sales with a rolling average” (py-data, en) ↔ “Pivot rows into columns in SQL” (sql, en)
+  - "Resample to month ends, then roll over the monthly series: ```python s = df.set_index(\"date\")[\"amount\"].resamp"
+  - "SUM(CASE WHEN MONTH(sold_at) = 1 THEN amount ELSE 0 END) AS jan, SUM(CASE WHEN MONTH(sold_at) = 2 THEN amount "
+- **0.89** “Fix SettingWithCopyWarning” (py-data, no) ↔ “REST API: PUT eller PATCH?” (web-backend, no)
+  - "Advarselen kommer fordi `aktive` kan være en kopi av en del av `df`, og da er det uklart om du vil endre origi"
+  - "Godt valg. Husk å validere at feltene som sendes faktisk kan endres av brukeren."
+- **0.90** “Jupyter kernel keeps dying” (py-data, en) ↔ “Tailwind classes not applied” (frontend, en)
+  - "usecols + category got it down to 3 GB, works now"
+  - "it was the content path. works now"
+- **0.91** “Jupyter kernel keeps dying” (py-data, en) ↔ “Debugging a slow Django page” (web-backend+sql, en)
+  - "usecols + category got it down to 3 GB, works now"
+  - "added an index on created_at, now 300ms"
+- **0.89** “Разбор дат в разных форматах” (py-data, ru) ↔ “Удалить дубликаты из таблицы” (sql, ru)
+  - "d = d.fillna(pd.to_datetime(df[\"date\"], format=\"%Y-%m-%d\", errors=\"coerce\")) ```"
+  - "SELECT id, ROW_NUMBER() OVER (PARTITION BY lower(email) ORDER BY created_at) AS rn FROM users ) t WHERE rn > 1"
+- **0.90** “Разбор дат в разных форматах” (py-data, ru) ↔ “Скрипт для выгрузки курсов валют” (automation, ru)
+  - "Проще всего разбирать по шагам и заполнять пропуски: ```python d = pd.to_datetime(df[\"date\"], format=\"%d.%m.%Y"
+  - "with open(\"rates.csv\", \"a\", newline=\"\") as f: csv.writer(f).writerow([datetime.date.today(), rates[\"USD\"], rat"
+- **0.90** “Rens telefonnumre i et regneark med Python” (py-data, no) ↔ “Finn kunder som ikke har handlet i år” (sql, no)
+  - "``` Rader som blir `None` har ikke et gyldig norsk nummer og bør sjekkes for hånd."
+  - "``` Unngå `NOT IN (SELECT kunde_id ...)`: hvis én rad har NULL i kunde_id, returnerer den ingenting i det hele"
+- **0.90** “New chat” (py-data, en) ↔ “Debugging a slow Django page” (web-backend+sql, en)
+  - "Same thing with `ascending=True`, or `.nsmallest(3, \"sales\")` inside a `groupby(...).apply(...)`."
+  - "Great result. Add a test that asserts the number of queries for this view (`assertNumQueries`) so an N+1 doesn"
+- **0.89** “Как ускорить apply по строкам” (py-data, ru) ↔ “Удалить дубликаты из таблицы” (sql, ru)
+  - "df[\"discount\"] = np.select( [df[\"type\"].eq(\"vip\"), df[\"amount\"].gt(1000)], [0.15, 0.05], default=0.0, ) ```"
+  - "SELECT id, ROW_NUMBER() OVER (PARTITION BY lower(email) ORDER BY created_at) AS rn FROM users ) t WHERE rn > 1"
+- **0.89** “Read Excel file with several sheets” (py-data, en) ↔ “Window function: running total per customer” (sql, en)
+  - "``` Check that all sheets have the same header row first; finance files often have a title line above the tabl"
+  - "``` The explicit `ROWS` frame matters when two payments share a timestamp; the default `RANGE` frame would giv"
+- **0.90** “Read Excel file with several sheets” (py-data, en) ↔ “EXPLAIN shows a sequential scan” (sql, en)
+  - "``` Check that all sheets have the same header row first; finance files often have a title line above the tabl"
+  - "If a year of orders is a large part of the table (say more than 10–20%), reading the whole table sequentially "
+- **0.89** “Missing values: fill or drop?” (py-data, en) ↔ “EXPLAIN shows a sequential scan” (sql, en)
+  - "You fill in the missing values several times, each time with plausible random values based on the other column"
+  - "Check with `EXPLAIN ANALYZE` how many rows match. If the planner's estimate is far from the actual count, run "
+- **0.89** “Datavisualisering for styremøtet” (py-data, no) ↔ “Mørk modus på nettsiden” (frontend, no)
+  - "- Fremhev én eller to linjer med farge og gjør resten grå, så blir budskapet tydelig. - Skriv navnet rett ved "
+  - "Definer fargene som CSS-variabler og bytt dem: ```css :root { --bg: #fff; --tekst: #111; }"
+- **0.90** “Express API returns 404 for every route” (web-backend, en) ↔ “Docker container exits immediately” (git-devops, en)
+  - "// app.js app.use(\"/users\", require(\"./routes/users\")); ```"
+  - "For servers, make sure they run in the foreground (e.g. `nginx -g 'daemon off;'`, or `CMD [\"node\", \"server.js\""
+- **0.91** “CORS error from my React app” (web-backend+frontend, en) ↔ “Nginx som reverse proxy for to apper” (git-devops, no)
+  - "app.add_middleware( CORSMiddleware, allow_origins=[\"http://localhost:5173\"], allow_methods=[\"*\"], allow_header"
+  - "server { server_name api.mittdomene.no; location / { proxy_pass http://127.0.0.1:4000; proxy_set_header Host $"
+- **0.89** “JWT token expires too fast” (web-backend, en) ↔ “Form state in React getting messy” (frontend, en)
+  - "Users get logged out every 15 minutes. Should I just make the JWT valid for a week?"
+  - "I have a sign-up form with 12 fields and a useState for each. Validation is all over the place. Is there a bet"
+- **0.90** “JWT token expires too fast” (web-backend, en) ↔ “Commit-melding på engelsk” (git-devops, no)
+  - "When an API call returns 401, the client calls `/refresh` quietly and retries. Users stay logged in, and you c"
+  - "Here's one in conventional-commit style: ``` fix(auth): keep users signed in when the access token is refreshe"
+- **0.89** “JWT token expires too fast” (web-backend, en) ↔ “Automate filling a web form” (automation, en)
+  - "Users get logged out every 15 minutes. Should I just make the JWT valid for a week?"
+  - "Every week I have to enter the same 30 timesheet rows into a clunky web portal. Can I automate that?"
+- **0.90** “REST API: PUT eller PATCH?” (web-backend, no) ↔ “Commit-melding på engelsk” (git-devops, no)
+  - "Godt valg. Husk å validere at feltene som sendes faktisk kan endres av brukeren."
+  - "Kan du skrive en commit-melding for dette? Jeg har fikset at brukere ble logget ut når tokenet ble fornyet, og"
+- **0.90** “Ошибка 500 после деплоя на сервер” (web-backend, ru) ↔ “Ускорить сборку Docker-образа” (git-devops, ru)
+  - "Тогда переименуйте через `git mv Templates templates`, чтобы git тоже заметил изменение регистра."
+  - "Ещё добавьте `.dockerignore` с `node_modules` и `.git` — иначе их копирование тоже сбрасывает кэш и раздувает "
+- **0.89** “Rate limiting a public endpoint” (web-backend, en) ↔ “Docker container exits immediately” (git-devops, en)
+  - "Make sure `app.set(\"trust proxy\", 1)` is on behind a proxy, otherwise every request looks like it comes from t"
+  - "Check what runs with `docker inspect myimage --format '{{.Config.Cmd}}'`. For servers, make sure they run in t"
+- **0.90** “Webhook from Stripe fails signature check” (web-backend, en) ↔ “useEffect runs twice” (frontend, en)
+  - "```js app.post(\"/webhook\", express.raw({ type: \"application/json\" }), (req, res) => {"
+  - "fetch(url, { signal: ctrl.signal }).then(r => r.json()).then(setData).catch(() => {}); return () => ctrl.abort"
+- **0.91** “Webhook from Stripe fails signature check” (web-backend, en) ↔ “Tailwind classes not applied” (frontend, en)
+  - "```js app.post(\"/webhook\", express.raw({ type: \"application/json\" }), (req, res) => {"
+  - "```js content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\"], ```"
+- **0.89** “Background jobs in a web app” (web-backend, en) ↔ “Script to rename hundreds of photos by date” (automation, en)
+  - "Make the job safe to run twice: write thumbnails to a temporary name and rename at the end, and mark the job \""
+  - "p.rename(target) ``` Run it on a copy first. Photos taken in the same second keep their old name rather than o"
+- **0.90** “GraphQL vs REST for a small app” (web-backend, en) ↔ “Component library or build our own?” (frontend, en)
+  - "Starting a small app with a React frontend. Is GraphQL worth it or should I just do REST?"
+  - "Small startup, two frontend devs. Should we build our own component library or use something like shadcn/ui or"
+- **0.88** “GraphQL vs REST for a small app” (web-backend, en) ↔ “Animate a list when items are removed” (frontend, en)
+  - "Starting a small app with a React frontend. Is GraphQL worth it or should I just do REST?"
+  - "When I delete an item from a list it just vanishes. How can I make it fade and slide out in React?"
+- **0.90** “Hvordan logge riktig i en Node-tjeneste” (web-backend, no) ↔ “Commit-melding på engelsk” (git-devops, no)
+  - "Loggene våre er bare console.log overalt og helt umulige å søke i. Hva er god praksis?"
+  - "Kan du skrive en commit-melding for dette? Jeg har fikset at brukere ble logget ut når tokenet ble fornyet, og"
+- **0.89** “Websocket disconnects every 60 seconds” (web-backend, en) ↔ “Nginx som reverse proxy for to apper” (git-devops, no)
+  - "- raise the proxy timeout for the websocket location (`proxy_read_timeout 3600s;`) and make sure the `Upgrade`"
+  - "server { server_name api.mittdomene.no; location / { proxy_pass http://127.0.0.1:4000; proxy_set_header Host $"
+- **0.90** “TypeScript: type for an object with dynamic keys” (frontend, en) ↔ “Pivot rows into columns in SQL” (sql, en)
+  - "type Month = `${number}-${number}`; const totals: Record<Month, number> = { \"2024-01\": 120 }; ```"
+  - "through dec SUM(CASE WHEN MONTH(sold_at) = 12 THEN amount ELSE 0 END) AS `dec` FROM sales WHERE YEAR(sold_at) "
+- **0.90** “TypeScript: type for an object with dynamic keys” (frontend, en) ↔ “New chat” (py-data+automation, en)
+  - "Glad it helps. It's especially handy for ids like `user_${number}`."
+  - "It's slower but detects commas and semicolons automatically. If all the semicolon files are European exports, "
+- **0.90** “Tailwind classes not applied” (frontend, en) ↔ “Docker container exits immediately” (git-devops, en)
+  - "``` and make sure `src/index.css` has the three `@tailwind` lines and is imported in `main.tsx`."
+  - "For servers, make sure they run in the foreground (e.g. `nginx -g 'daemon off;'`, or `CMD [\"node\", \"server.js\""
+- **0.90** “Tailwind classes not applied” (frontend, en) ↔ “Cron job that doesn't run” (automation, en)
+  - "it was the content path. works now"
+  - "it was PATH, pg_dump is in /usr/local/bin"
+- **0.90** “Component library or build our own?” (frontend, en) ↔ “Branching strategy for a small team” (git-devops, en)
+  - "Small startup, two frontend devs. Should we build our own component library or use something like shadcn/ui or"
+  - "Four developers. We tried git flow and it feels heavy. What do small teams usually do?"
+- **0.90** “Component library or build our own?” (frontend, en) ↔ “SQLite or Postgres for a side project” (sql, en)
+  - "Small startup, two frontend devs. Should we build our own component library or use something like shadcn/ui or"
+  - "Building a small web app for my running club, maybe 200 users. SQLite or Postgres?"
+- **0.89** “Merge conflict in package-lock.json” (git-devops, en) ↔ “Cron job that doesn't run” (automation, en)
+  - "every time I rebase I get conflicts in package-lock.json. resolving by hand is impossible"
+  - "My backup script works when I run it manually but the cron job never does anything."
+- **0.90** “Commit-melding på engelsk” (git-devops, no) ↔ “Deadlock between two transactions” (sql+web-backend, en)
+  - "Here's one in conventional-commit style: ``` fix(auth): keep users signed in when the access token is refreshe"
+  - "Each transaction locks the first account, then waits for the second, which the other transaction already holds"
+- **0.89** “Как настроить автодеплой на VPS” (git-devops+web-backend, ru) ↔ “Скрипт для выгрузки курсов валют” (automation, ru)
+  - "``` Заведите отдельного пользователя `deploy` с правами только на папку приложения и перезапуск сервиса, а клю"
+  - "``` Запускайте его раз в день через cron или планировщик Windows."
+- **0.89** “Branching strategy for a small team” (git-devops, en) ↔ “SQLite or Postgres for a side project” (sql, en)
+  - "Four developers. We tried git flow and it feels heavy. What do small teams usually do?"
+  - "Building a small web app for my running club, maybe 200 users. SQLite or Postgres?"
+- **0.89** “Branching strategy for a small team” (git-devops, en) ↔ “Automate filling a web form” (automation, en)
+  - "Start with something simple: a config value or environment variable per flag, checked in code. Move to a flag "
+  - "Then replace the hard-coded values with a loop over a CSV. Check the portal's terms of use first, keep your pa"
+- **0.89** “Slow query with LIKE '%term%'” (sql, en) ↔ “Automate filling a web form” (automation, en)
+  - "Searching product names with LIKE '%term%' takes seconds on 2 million rows. Index on name doesn't help."
+  - "Every week I have to enter the same 30 timesheet rows into a clunky web portal. Can I automate that?"
+- **0.90** “Database design for tags” (sql, en) ↔ “New chat” (py-data+automation, en)
+  - "A comma-separated column can't be indexed properly, makes \"articles with tag X\" queries slow and error-prone, "
+  - "Let pandas sniff it: `pd.read_csv(f, sep=None, engine=\"python\")`. It's slower but detects commas and semicolon"
+- **0.92** “SQLite or Postgres for a side project” (sql, en) ↔ “Deploying a small app cheaply” (git-devops+web-backend, en)
+  - "Turn on WAL mode for better concurrency. Postgres is worth it once you have several app servers writing at the"
+  - "- a PaaS like Render or Railway with a managed Postgres — easier, slightly more expensive; - Fly.io with a sma"
+- **0.90** “Cron job that doesn't run” (automation, en) ↔ “Deploying a small app cheaply” (git-devops+web-backend, en)
+  - "Cron runs with a minimal environment, so the usual suspects are: - `PATH`: commands like `pg_dump` aren't foun"
+  - "A nightly cron job with `pg_dump`, compressed, copied off the server: ```bash pg_dump -Fc clubdb > /backups/cl"
+- **0.90** “Sourdough starter smells like nail polish” (bread, en) ↔ “Cheesecake cracked on top” (desserts+desserts, en)
+  - "Keep it somewhere around 24–26 °C. Once it doubles reliably within 6 hours and smells yoghurty again, it's rea"
+  - "Scoop onto a tray and bake at 180 °C for 10–12 minutes. They'll look underdone when they come out — that's rig"
+- **0.89** “Sourdough starter smells like nail polish” (bread, en) ↔ “Can I freeze cooked rice” (dinners, en)
+  - "Keep it somewhere around 24–26 °C. Once it doubles reliably within 6 hours and smells yoghurty again, it's rea"
+  - "Reheat until piping hot all the way through. Don't leave cooked rice at room temperature for long, since bacte"
+- **0.90** “Dense whole wheat bread” (bread, no) ↔ “Kanelboller som blir tørre” (desserts, no)
+  - "- Elt lenger, eller bruk strekk-og-brett tre ganger i løpet av hevingen. - La brødet etterheve til det har bli"
+  - "- Stek kortere og varmere: 225 grader i 8–10 minutter, til de så vidt er gylne. - Pensle med sukkerlake (like "
+- **0.90** “Focaccia overnight in the fridge” (bread, en) ↔ “One-pan salmon and potatoes” (dinners, en)
+  - "Yes, and it tastes better that way. Mix the dough with a little less yeast (about 3 g instant per 500 g flour)"
+  - "Yes, thaw it in the fridge overnight, or roast from frozen for about 18–20 minutes and add the glaze halfway."
+- **0.89** “Focaccia overnight in the fridge” (bread, en) ↔ “Lemon tart filling too runny” (desserts, en)
+  - "Next day, tip it into an oiled tin, let it warm and relax for 2–3 hours until puffy, dimple it with oily finge"
+  - "For a baked filling, bake until the edges are set and the centre has only a slight wobble, then cool and chill"
+- **0.91** “Focaccia overnight in the fridge” (bread, en) ↔ “Can I freeze cooked rice” (dinners, en)
+  - "Yes, and it tastes better that way. Mix the dough with a little less yeast (about 3 g instant per 500 g flour)"
+  - "Yes. Cool it quickly (spread on a tray), freeze within an hour or two in portions, and keep up to a month. Reh"
+- **0.90** “Почему корка у хлеба мягкая” (bread, ru) ↔ “Chicken plov recipe” (dinners, ru)
+  - "Обычно не хватает жара и пара в начале выпечки. Попробуйте: - разогреть духовку с противнем или чугунной кастр"
+  - "4. Варите на сильном огне, пока вода не уйдёт с поверхности, потом накройте крышкой и томите на минимальном ог"
+- **0.89** “Baguettes keep spreading flat” (bread, en) ↔ “Quick dinner with chickpeas and spinach” (dinners, en)
+  - "My baguettes spread sideways in the oven instead of rising up. Dough seems fine."
+  - "Serve with rice or flatbread. A spoon of yoghurt on top rounds it off."
+- **0.88** “Baguettes keep spreading flat” (bread, en) ↔ “Vegetarian dinner guests” (dinners, en)
+  - "My baguettes spread sideways in the oven instead of rising up. Dough seems fine."
+  - "Two of my four dinner guests are vegetarian. I don't want to cook two separate mains."
+- **0.91** “Rugbrød med surdeig” (bread, no) ↔ “Kanelboller som blir tørre” (desserts, no)
+  - "La heve 3–5 timer til det har sprukket litt på toppen. Stek på 200 grader i 60–70 minutter. Vent minst et døgn"
+  - "Tre grep hjelper: - Bruk litt mer smør i deigen og ha deigen myk, nesten klissete. - Stek kortere og varmere: "
+- **0.89** “New chat” (bread, en) ↔ “Can I freeze cooked rice” (dinners, en)
+  - "At least an hour for a normal loaf, and two or more for large or rye loaves. The inside keeps cooking while it"
+  - "Reheat until piping hot all the way through. Don't leave cooked rice at room temperature for long, since bacte"
+- **0.90** “Pizza dough in a home oven” (bread+dinners, en) ↔ “Cheesecake cracked on top” (desserts+desserts, en)
+  - "Let it rise in the fridge for 1–3 days, then divide into balls 3 hours before baking. Bake on a steel or stone"
+  - "Scoop onto a tray and bake at 180 °C for 10–12 minutes. They'll look underdone when they come out — that's rig"
+- **0.88** “Chicken plov recipe” (dinners, ru) ↔ “Медовик в домашних условиях” (desserts, ru)
+  - "Сделайте плов с курицей в одной кастрюле: 1. Обжарьте бёдра кусками до корочки, добавьте лук полукольцами и мо"
+  - "Основа: на водяной бане смешайте мёд, сахар и масло, добавьте яйца и соду, потом муку, чтобы вышло мягкое тест"
+- **0.92** “Chicken plov recipe” (dinners, ru) ↔ “Чай пуэр как заваривать” (coffee-tea, ru)
+  - "4. Варите на сильном огне, пока вода не уйдёт с поверхности, потом накройте крышкой и томите на минимальном ог"
+  - "Сначала промойте чай: залейте кипятком на 5–10 секунд и слейте воду. Потом заваривайте проливами в маленьком ч"
+- **0.90** “One-pan salmon and potatoes” (dinners, en) ↔ “Cheesecake cracked on top” (desserts+desserts, en)
+  - "Roast another 10–12 minutes until the salmon flakes. Everything is ready at once and there's one tray to wash."
+  - "Scoop onto a tray and bake at 180 °C for 10–12 minutes. They'll look underdone when they come out — that's rig"
+- **0.90** “Kanelboller som blir tørre” (desserts, no) ↔ “Matcha klumper seg” (coffee-tea, no)
+  - "- Stek kortere og varmere: 225 grader i 8–10 minutter, til de så vidt er gylne. - Pensle med sukkerlake (like "
+  - "Sikt pulveret gjennom en tesil først, og lag en pasta med litt vann før du heller på resten. Bruk vann på rund"
+- **0.88** “Медовик в домашних условиях” (desserts, ru) ↔ “Чай пуэр как заваривать” (coffee-tea, ru)
+  - "Не сложно, но долго — заложите полдня и ночь в холодильнике. Основа: на водяной бане смешайте мёд, сахар и мас"
+  - "Сначала промойте чай: залейте кипятком на 5–10 секунд и слейте воду. Потом заваривайте проливами в маленьком ч"
+- **0.89** “First 10K training plan” (running, en) ↔ “Deadlift lower back pain” (strength, en)
+  - "Slow the long runs down, keep the increases small, and check your shoes aren't worn out. If the pain is sharp,"
+  - "Then the weight is probably too heavy for your leg strength right now. Pause briefly just after the bar leaves"
+- **0.88** “Should I run with a heart rate monitor” (running+devices, en) ↔ “Indoor trainer winter plan” (cycling, en)
+  - "My watch says I'm in zone 4 on every easy run. Should I slow down even more?"
+  - "I have a smart trainer for the winter. How do I stay motivated for 4 months?"
+- **0.89** “Shin splints after starting to run” (running, en) ↔ “Sore for days after leg day” (strength, en)
+  - "Pain along the inside of my shins after two weeks of running every day."
+  - "After my first leg day in years I can barely walk down the stairs, three days later."
+- **0.89** “Shin splints after starting to run” (running, en) ↔ “Bike fit: knee pain on longer rides” (cycling, en)
+  - "Pain along the inside of my shins after two weeks of running every day."
+  - "After 40 km my knee hurts at the front. Bike is new."
+- **0.91** “Styrketrening hjemme uten utstyr” (strength, no) ↔ “Løpe raskere på 5 km” (running, no)
+  - "Ja, særlig i starten. Nøkkelen er å gjøre øvelsene tyngre etter hvert: - Knebøy → bulgarske utfall med bakside"
+  - "Ja, to korte økter i uka med knebøy, utfall, tåhev og hoftehev gjør deg mer effektiv og mindre skadeutsatt."
+- **0.90** “Deadlift lower back pain” (strength, en) ↔ “Bike fit: knee pain on longer rides” (cycling, en)
+  - "My lower back aches after deadlifts but not my legs. I think my form is off."
+  - "After 40 km my knee hurts at the front. Bike is new."
+- **0.89** “Pull-up progression” (strength, en) ↔ “Commuting by bike in the rain” (cycling, en)
+  - "Can't do a single pull-up. How do I get my first one?"
+  - "Starting to commute 12 km by bike. How do I not arrive soaked?"
+- **0.91** “Treningsprogram for 50-åringer” (strength, no) ↔ “Planlegge maratonløp etter fødsel” (running+parenting, no)
+  - "Begynn med to økter i uka med lette vekter og fokus på teknikk, gjerne med en personlig trener de første gange"
+  - "Før du øker mengden: få en sjekk hos en fysioterapeut som jobber med bekkenbunn etter fødsel, og tren bekkenbu"
+- **0.91** “Treningsprogram for 50-åringer” (strength, no) ↔ “Løpe raskere på 5 km” (running, no)
+  - "Begynn med to økter i uka med lette vekter og fokus på teknikk, gjerne med en personlig trener de første gange"
+  - "Tre økter i uka: én intervalløkt (for eksempel 5 × 1000 m i målfart for 25-minutter, rundt 5:00/km, med 2 minu"
+- **0.89** “Sore for days after leg day” (strength, en) ↔ “Indoor trainer winter plan” (cycling, en)
+  - "Light movement helps more than rest: walking, an easy bike ride, gentle squats with no weight. It'll fade with"
+  - "Structure helps more than willpower. Pick a goal for spring (a sportive, a time), follow a plan with two short"
+- **0.88** “Creatine — worth it?” (strength+nutrition, en) ↔ “Indoor trainer winter plan” (cycling, en)
+  - "It's one of the best-studied supplements and does work for strength training: a few percent more strength and "
+  - "Structure helps more than willpower. Pick a goal for spring (a sportive, a time), follow a plan with two short"
+- **0.90** “Bike fit: knee pain on longer rides” (cycling, en) ↔ “Training for a trail race” (running+hiking, en)
+  - "After 40 km my knee hurts at the front. Bike is new."
+  - "Signed up for a 30 km trail race with 1,500 m of climbing in four months. I've only run on roads."
+- **0.91** “Snorking og dårlig søvn” (sleep, no) ↔ “Følelsen av å aldri strekke til” (stress, no)
+  - "Samboeren min sier jeg snorker kraftig og noen ganger slutter å puste. Jeg er alltid trøtt på dagtid."
+  - "Jeg har to små barn og full jobb og føler at jeg aldri gjør noe skikkelig. Alltid dårlig samvittighet."
+- **0.91** “Выгорание на работе” (stress+workplace, ru) ↔ “Плохо сплю после переезда” (sleep+moving, ru)
+  - "Кажется, я выгорела. Ничего не хочется, работа раздражает, по утрам тяжело вставать. Отпуск был месяц назад и "
+  - "Месяц назад переехали в новую квартиру, и я стала плохо спать. Раньше такого не было."
+- **0.90** “Bathroom renovation order of work” (renovation, en) ↔ “Mould around the shower” (repairs, en)
+  - "6. Fitting the toilet, sink, shower and lights; final plumbing and electrical. 7. Silicone joints last. Book t"
+  - "Cut out the old silicone, clean the joint with a mould remover, let it dry completely (24 hours), and apply ne"
+- **0.90** “Bathroom renovation order of work” (renovation, en) ↔ “Radiator stays cold at the top” (repairs, en)
+  - "Roughly: 1. Demolition and checking the floor and walls for water damage. 2. Plumbing rough-in and electrical "
+  - "Air in the radiator. Turn the heating off, hold a cloth under the bleed valve at the top corner and open it wi"
+- **0.90** “Bathroom renovation order of work” (renovation, en) ↔ “Declutter a small apartment” (organising, en)
+  - "We're gutting our bathroom. In what order should the trades come in?"
+  - "Our 2-room apartment feels chaotic. Where do I start decluttering?"
+- **0.89** “Insulating an attic” (renovation, en) ↔ “Radiator stays cold at the top” (repairs, en)
+  - "Keep the eaves ventilated so the roof can breathe, don't cover recessed lights unless they're rated for it, an"
+  - "Air in the radiator. Turn the heating off, hold a cloth under the bleed valve at the top corner and open it wi"
+- **0.89** “Tomatoes on the balcony split” (vegetables, en) ↔ “Repot a cactus without getting stabbed” (houseplants, en)
+  - "Water deeply and regularly, ideally at the same time every day, and mulch the pots so the soil doesn't dry out"
+  - "Use cactus soil with extra grit, a pot only slightly bigger than the root ball, and don't water for a week aft"
+- **0.89** “Tomatoes on the balcony split” (vegetables, en) ↔ “Fiddle leaf fig dropping leaves” (houseplants, en)
+  - "My balcony tomatoes keep splitting just before they're ripe."
+  - "My fiddle leaf fig drops a leaf every few days since I moved it."
+- **0.88** “Potato late blight” (vegetables, no) ↔ “Orkideen blomstrer ikke igjen” (houseplants, no)
+  - "Vent to–tre uker før du tar opp potetene, så skallet herder og smitten fra riset ikke når knollene. Potetene k"
+  - "Gi den mye lys, men ikke direkte middagssol, vann ved å dyppe potten i ti minutter når røttene er sølvgrå, og "
+- **0.90** “Grønnsakshage for nybegynnere” (vegetables, no) ↔ “Stueplanter når vi er på ferie” (houseplants, no)
+  - "Vi har fått en kolonihage. Hva er lettest å dyrke første året?"
+  - "Vi skal på tre ukers ferie i juli. Hvordan overlever plantene?"
+- **0.89** “Budget that actually sticks” (budgeting, en) ↔ “Index funds for a beginner” (investing, en)
+  - "3. Once a month, spend 15 minutes checking that bills and savings went where they should. It works because the"
+  - "Set up a monthly automatic purchase so you keep investing regardless of the news. Expect the value to drop 20–"
+- **0.90** “Student monthly budget” (budgeting, no) ↔ “Skattemeldingen og utleie av hybel” (taxes+renting, no)
+  - "Jeg får 13 000 i måneden fra Lånekassen og husleia er 6 500. Hvordan får jeg pengene til å holde?"
+  - "Jeg leier ut en hybel i kjelleren for 6 000 i måneden. Må jeg skatte av det?"
+- **0.88** “Как вести семейный бюджет вдвоём” (budgeting, ru) ↔ “Инвестиции: вклад или облигации” (investing, ru)
+  - "Мы с мужем живём вместе год, деньги то общие, то раздельные, постоянные споры. Как лучше устроить?"
+  - "Есть 500 тысяч рублей, нужны через 2 года на первый взнос по ипотеке. Куда положить?"
+- **0.90** “Spreadsheet for tracking shared flat costs” (budgeting+py-data, en) ↔ “Tax deduction for home office” (taxes, en)
+  - "Four of us share a flat. I need a spreadsheet where everyone logs what they paid and it shows who owes whom."
+  - "Where it's allowed, there's often a simple flat-rate option per day worked from home instead of calculating re"
+- **0.88** “Налоговый вычет за лечение” (taxes, ru) ↔ “Инвестиции: вклад или облигации” (investing, ru)
+  - "В прошлом году лечила зубы на 180 тысяч. Можно ли получить вычет?"
+  - "Есть 500 тысяч рублей, нужны через 2 года на первый взнос по ипотеке. Куда положить?"
+- **0.90** “Aksjesparekonto eller fondskonto” (investing, no) ↔ “Flytte hjem til foreldrene for å spare” (budgeting+moving, no)
+  - "Ja, i overgangsperioder har det vært mulig å flytte uten skatt; ellers kan du overføre fond til en aksjesparek"
+  - "Sett dem i BSU så langt du kan (det gir skattefradrag), og resten på en høyrentekonto. Ikke i aksjer hvis du p"
+- **0.90** “Cover letter for a career change” (applications, en) ↔ “Giving negative feedback to a team member” (workplace, en)
+  - "- Keep it to three short paragraphs: why this company, what you bring (with evidence), and a confident close. "
+  - "Describe the behaviour and its impact, not their character: \"The last two reports came in three days late, and"
+- **0.89** “Junior QA resume tips” (applications, ru) ↔ “Как попросить повышение зарплаты” (workplace, ru)
+  - "- навыки конкретно: тест-кейсы, Postman, SQL-запросы, Jira, основы автотестов; - предыдущий опыт переформулиру"
+  - "Подготовьтесь заранее: 1. Соберите факты: какие задачи добавились, какие результаты вы дали (цифры, проекты, с"
+- **0.90** “LinkedIn headline” (applications, en) ↔ “"Tell me about yourself" answer” (interviews, en)
+  - "Keep it scannable, avoid buzzwords like \"passionate\" and \"guru\", and make sure the same keywords appear in you"
+  - "Practise it out loud until it's natural but not memorised word for word. End by connecting to the job, which h"
+- **0.91** “Hvordan følge opp en søknad” (applications, no) ↔ “Kontorlandskap og konsentrasjon” (workplace, no)
+  - "Jeg søkte på en jobb for tre uker siden og har ikke hørt noe. Kan jeg ringe?"
+  - "Vi har flyttet til åpent kontorlandskap og jeg får ikke konsentrert meg. Hva kan jeg gjøre?"
+- **0.89** “Questions to ask the interviewer” (interviews, en) ↔ “Negotiating a 4-day week” (workplace, en)
+  - "is it ok to ask about remote work?"
+  - "Is it realistic to ask my employer for a 4-day week at 80% pay?"
+- **0.90** “Как попросить повышение зарплаты” (workplace, ru) ↔ “Сменить профессию в 40 лет” (applications+stress, ru)
+  - "Подготовьтесь заранее: 1. Соберите факты: какие задачи добавились, какие результаты вы дали (цифры, проекты, с"
+  - "Сначала попробуйте направление на практике: курс, небольшой проект, общение с людьми из профессии. Посмотрите,"
+- **0.90** “Anki deck for vocabulary” (languages, en) ↔ “Memorising anatomy” (exams, en)
+  - "Spaced repetition handles remembering; reading and listening handle understanding words in context. Together t"
+  - "Active recall beats rereading by a lot. Turn lectures into questions (flashcards or blank diagrams to label), "
+- **0.89** “Shadowing technique” (languages, en) ↔ “Memorising anatomy” (exams, en)
+  - "Use clips of 1–2 minutes with a transcript, repeat each one many times over a week, and record yourself to com"
+  - "Turn lectures into questions (flashcards or blank diagrams to label), test yourself daily with spaced repetiti"
+- **0.90** “Exam stress and procrastination” (exams+stress, en) ↔ “Choosing a thesis topic” (thesis, en)
+  - "Final exams in 3 weeks. I keep procrastinating and then panicking at night."
+  - "I have to pick a bachelor thesis topic in computer science by next week. I'm interested in everything and noth"
+- **0.91** “Hvordan lese til eksamen i statsvitenskap” (exams, no) ↔ “Masteroppgave: skrivesperre” (thesis+stress, no)
+  - "Øv på tidligere eksamensoppgaver: bruk 20 minutter på disposisjon før du skriver. Avklar hvordan kilder skal o"
+  - "Senk kravet til første utkast. Skriv det dårlig først; teksten skal forbedres senere. Begynn med metodekapitte"
+- **0.91** “Masteroppgave: skrivesperre” (thesis+stress, no) ↔ “Eksamen i matte R1” (exams, no)
+  - "Senk kravet til første utkast. Skriv det dårlig først; teksten skal forbedres senere. Begynn med metodekapitte"
+  - "Ta tidligere eksamener på tid, rett dem selv med løsningsforslag, og lag en liste over feil du gjør flere gang"
+- **0.89** “Как написать литературный обзор” (thesis, ru) ↔ “Пересдача экзамена в университете” (exams, ru)
+  - "Пишу диплом по социологии, не понимаю, как строить обзор литературы. Просто пересказывать статьи?"
+  - "Завалила экзамен по статистике, пересдача через две недели. Как подготовиться за такой срок?"
+- **0.89** “Что посмотреть в Стамбуле за 3 дня” (city-trips, ru) ↔ “Солнце и горы: как не сгореть” (hiking, ru)
+  - "Летим в Стамбул на 3 дня в мае. Как всё успеть и не устать?"
+  - "Едем в горы на неделю летом. Как защититься от солнца на высоте?"
+- **0.89** “Что посмотреть в Стамбуле за 3 дня” (city-trips, ru) ↔ “Как выбрать рюкзак для похода” (hiking, ru)
+  - "Летим в Стамбул на 3 дня в мае. Как всё успеть и не устать?"
+  - "Нужен рюкзак для походов на 3–5 дней. На что смотреть?"
+- **0.89** “Packing light for two weeks” (logistics, en) ↔ “Hike Trolltunga safely” (hiking, en)
+  - "Lightweight, quick-drying clothes, one pair of walking shoes plus sandals, a light rain jacket, and toiletries"
+  - "Proper hiking boots, warm layers, waterproof jacket and trousers, hat and gloves, plenty of food and water, he"
+- **0.89** “Skjermtid for 10-åringen” (parenting, no) ↔ “Valp og alenetid” (dogs, no)
+  - "Sønnen vår på 10 vil spille hele tiden. Hvor mye skjermtid er rimelig?"
+  - "Vi jobber begge, valpen er 10 uker. Hvor lenge kan hun være alene?"
+- **0.90** “Barnehagestart for ettåringen” (parenting, no) ↔ “Valp og alenetid” (dogs, no)
+  - "Datteren vår skal begynne i barnehagen om en måned, hun er 13 måneder. Hvordan gjør vi tilvenningen best mulig"
+  - "Vi jobber begge, valpen er 10 uker. Hvor lenge kan hun være alene?"
+- **0.89** “Barnehagestart for ettåringen” (parenting, no) ↔ “Hund og katt sammen” (dogs+cats, no)
+  - "Datteren vår skal begynne i barnehagen om en måned, hun er 13 måneder. Hvordan gjør vi tilvenningen best mulig"
+  - "Vi har en katt på seks år og skal hente en valp. Hvordan får vi dem til å gå overens?"
+- **0.88** “Dog pulls on the leash” (dogs, en) ↔ “Elderly father refuses help at home” (elderly, en)
+  - "Practise in boring places first, with short sessions. A front-clip harness reduces pulling while he learns. La"
+  - "Start small — grab rails, better lighting, a personal alarm, meal delivery — rather than a full care package. "
+- **0.89** “Dog pulls on the leash” (dogs, en) ↔ “Why do cats knock things off tables” (cats, en)
+  - "Practise in boring places first, with short sessions. A front-clip harness reduces pulling while he learns. La"
+  - "Mostly attention and play. Batting small objects is hunting behaviour, and they quickly learn that it makes yo"
+- **0.88** “Adopting a rescue dog” (dogs, en) ↔ “Introducing a second cat” (cats, en)
+  - "Keep the first weeks quiet and predictable: a crate or bed in a calm corner, the same feeding and walk times, "
+  - "Slowly, over one to three weeks. Keep the kitten in a separate room at first, swap bedding so they learn each "
+- **0.89** “Tale til pappas 70-årsdag” (speeches, no) ↔ “Pianoøving for barn” (music+parenting, no)
+  - "Jeg skal holde tale for pappa som fyller 70. Han er stille og liker ikke oppmerksomhet. Hvordan gjør jeg den f"
+  - "Datteren vår på 8 går på pianotimer, men vil ikke øve. Skal vi presse?"
+- **0.88** “Pottery wheel or hand building” (crafts, en) ↔ “Learning piano as an adult with little time” (music, en)
+  - "Taking up pottery. Should I start with the wheel or hand building?"
+  - "what's the first piece I should aim for?"
+- **0.89** “Noisy laptop fan” (devices, ru) ↔ “Почему падает скорость интернета вечером” (network, ru)
+  - "До этого проверьте диспетчер задач: нет ли процесса, который грузит процессор (обновления, антивирус, вкладка "
+  - "Проверьте скорость по кабелю, подключив компьютер напрямую к роутеру, в разное время. Если по кабелю вечером т"
+- **0.88** “Old laptop: Linux?” (devices, en) ↔ “Smart lights that work without the cloud” (smart-home, en)
+  - "Swap the hard drive for a cheap SSD first if it still has a spinning disk — that's the biggest speed boost. Tr"
+  - "Avoid wifi bulbs that only work through the manufacturer's app and cloud. Matter is making this easier, but ch"
+- **0.89** “Old laptop: Linux?” (devices, en) ↔ “Home Assistant on a Raspberry Pi” (smart-home+automation, en)
+  - "Yes, it's a great use for it. Linux Mint (Xfce edition) or Lubuntu run well on older hardware and feel familia"
+  - "Yes, it's the classic setup. Use Home Assistant OS on an SSD rather than an SD card — SD cards wear out from d"
+- **0.90** “Sette opp gjestenett hjemme” (network, no) ↔ “Smarthus for en eldre forelder” (smart-home+elderly, no)
+  - "Hvordan lager jeg et eget wifi for gjester så de ikke kommer inn på det vanlige nettet vårt?"
+  - "Mamma bor alene. Finnes det smarte løsninger som varsler oss hvis noe er galt, uten kamera?"
+- **0.88** “VPN at home: needed?” (network, en) ↔ “Smart lights that work without the cloud” (smart-home, en)
+  - "Sensible. If you start using public wifi a lot, revisit it."
+  - "Avoid wifi bulbs that only work through the manufacturer's app and cloud. Matter is making this easier, but ch"
+- **0.88** “VPN at home: needed?” (network, en) ↔ “Home Assistant on a Raspberry Pi” (smart-home+automation, en)
+  - "Do I need a VPN at home for security?"
+  - "Worth running Home Assistant on a Raspberry Pi 4?"
+- **0.90** “Переезд в другую страну с котом” (moving+cats, ru) ↔ “Как получить норвежский D-номер” (bureaucracy, ru)
+  - "Переезжаем из России в Норвегию, берём кошку. Какие документы нужны?"
+  - "Я приехала на работу в Норвегию на полгода. Работодатель говорит, нужен D-номер. Как его получить?"
+- **0.88** “St Petersburg white nights trip” (city-trips, ru) ↔ “Как выбрать рюкзак для похода” (hiking, ru)
+  - "Едем в Петербург в конце июня на 4 дня. Что обязательно посмотреть?"
+  - "Нужен рюкзак для походов на 3–5 дней. На что смотреть?"
+- **0.88** “Moving abroad for a job” (moving+applications, en) ↔ “Applying for a residence permit for my partner” (bureaucracy, en)
+  - "Your Norwegian pension rights earned so far stay, and EEA rules coordinate social security. You'll pay tax in "
+  - "As a Norwegian citizen or resident, you can apply for family immigration for a spouse or cohabitant. Cohabitan"

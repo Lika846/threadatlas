@@ -1,0 +1,77 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: watering a desk cactus",
+    "create_time": 1767225600.125,
+    "update_time": 1767225900.5,
+    "conversation_id": "00000000-0000-4000-8000-00000000a001",
+    "id": "00000000-0000-4000-8000-00000000a001",
+    "current_node": "node-a001-assistant-1",
+    "default_model_slug": "synthetic-model",
+    "mapping": {
+      "node-a001-root": {
+        "id": "node-a001-root",
+        "message": null,
+        "parent": null,
+        "children": ["node-a001-system"]
+      },
+      "node-a001-system": {
+        "id": "node-a001-system",
+        "message": {
+          "id": "node-a001-system",
+          "author": { "role": "system", "name": null, "metadata": {} },
+          "create_time": null,
+          "update_time": null,
+          "content": { "content_type": "text", "parts": [""] },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "weight": 0.0,
+          "metadata": { "is_visually_hidden_from_conversation": true },
+          "recipient": "all"
+        },
+        "parent": "node-a001-root",
+        "children": ["node-a001-user-1"]
+      },
+      "node-a001-user-1": {
+        "id": "node-a001-user-1",
+        "message": {
+          "id": "node-a001-user-1",
+          "author": { "role": "user", "name": null, "metadata": {} },
+          "create_time": 1767225610.0,
+          "update_time": null,
+          "content": {
+            "content_type": "text",
+            "parts": ["Synthetic canary question: how often should a desk cactus be watered?"]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "weight": 1.0,
+          "metadata": {},
+          "recipient": "all"
+        },
+        "parent": "node-a001-system",
+        "children": ["node-a001-assistant-1"]
+      },
+      "node-a001-assistant-1": {
+        "id": "node-a001-assistant-1",
+        "message": {
+          "id": "node-a001-assistant-1",
+          "author": { "role": "assistant", "name": null, "metadata": {} },
+          "create_time": 1767225620.75,
+          "update_time": null,
+          "content": {
+            "content_type": "text",
+            "parts": ["Synthetic canary answer: roughly every two to three weeks in summer, less in winter."]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "weight": 1.0,
+          "metadata": {},
+          "recipient": "all"
+        },
+        "parent": "node-a001-user-1",
+        "children": []
+      }
+    }
+  }
+]

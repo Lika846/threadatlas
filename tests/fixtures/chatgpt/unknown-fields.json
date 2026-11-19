@@ -1,0 +1,38 @@
+[
+  {
+    "_synthetic": true,
+    "title": "Synthetic canary: future export version",
+    "create_time": 1767744000,
+    "update_time": 1767744100,
+    "conversation_id": "00000000-0000-4000-8000-00000000f001",
+    "id": "00000000-0000-4000-8000-00000000f001",
+    "current_node": "node-f001-user",
+    "is_archived": false,
+    "gizmo_id": null,
+    "plugin_ids": null,
+    "safe_urls": [],
+    "moderation_results": [],
+    "conversation_template_id": null,
+    "async_status": null,
+    "disabled_tool_ids": [],
+    "x_synthetic_future_object": { "nested": { "deeper": [1, 2, { "flag": true }] } },
+    "x_synthetic_future_list": ["a", "b"],
+    "mapping": {
+      "node-f001-user": {
+        "id": "node-f001-user",
+        "x_synthetic_node_field": 7,
+        "message": {
+          "id": "node-f001-user",
+          "author": { "role": "user", "x_synthetic_author_field": "unknown" },
+          "create_time": 1767744010,
+          "content": { "content_type": "text", "parts": ["Synthetic canary from a newer export format."] },
+          "channel": "final",
+          "x_synthetic_message_field": { "any": "thing" },
+          "metadata": { "x_synthetic_meta": 1 }
+        },
+        "parent": null,
+        "children": []
+      }
+    }
+  }
+]
