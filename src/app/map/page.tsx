@@ -161,7 +161,8 @@ async function AtlasBody({ params }: { params: AtlasParams }) {
         <Link href={atlasHref({ ...params, view: "list", all: false })} scroll={false} aria-current={!showMap ? "page" : undefined} className={tabClass(!showMap)}>
           List
         </Link>
-        <Link href={atlasHref({ ...params, view: "map", all: false })} scroll={false} aria-current={showMap ? "page" : undefined} className={tabClass(showMap)}>
+        {/* The map starts low on small screens and at 200% zoom: `#map` scrolls it into view. */}
+        <Link href={`${atlasHref({ ...params, view: "map", all: false })}#map`} aria-current={showMap ? "page" : undefined} className={tabClass(showMap)}>
           Map
         </Link>
       </nav>
@@ -187,7 +188,7 @@ async function AtlasBody({ params }: { params: AtlasParams }) {
             )}
           </p>
         </div>
-        <div className={mapClass}>
+        <div id="map" className={`${mapClass} scroll-mt-2`}>
           <noscript>
             <p className={NOTE_BOX}>The map needs JavaScript; the list next to it has the same themes and topics.</p>
           </noscript>

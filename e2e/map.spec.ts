@@ -104,7 +104,9 @@ test("a large selection keeps labels readable; reduced motion changes the view w
 });
 
 test("phones and 200% zoom: the list first, the selection's conversations next, the map on request", async ({ browser }) => {
-  for (const viewport of [{ width: 375, height: 812 }, { width: 640, height: 400 }]) {
+  // 640 × 400 and 640 × 360: 1280 × 800 and 1280 × 720 at 200% zoom. The map starts near or
+  // below the bottom of the window there, so the Map tab has to scroll it into view.
+  for (const viewport of [{ width: 375, height: 812 }, { width: 640, height: 400 }, { width: 640, height: 360 }]) {
     const context = await browser.newContext({ viewport, deviceScaleFactor: 2 });
     const page = await context.newPage();
     await page.goto("/map");
@@ -115,9 +117,12 @@ test("phones and 200% zoom: the list first, the selection's conversations next, 
     await expect(page).toHaveURL(/theme=/);
     await expect(page.getByTestId("atlas-panel")).toBeVisible();
     await expect(page.getByTestId("atlas-outline")).toBeHidden();
+    // Back up to the tabs, as a reader does (clicking the theme scrolled the page for us).
+    await page.evaluate(() => window.scrollTo(0, 0));
     await page.getByRole("navigation", { name: "Map view" }).getByRole("link", { name: "Map" }).click();
     await expect(page).toHaveURL(/view=map/);
     await expect(page.getByTestId("topic-map")).toBeVisible();
+    await expect(page.getByTestId("topic-map")).toBeInViewport({ ratio: 0.75 });
     await expect(page.getByTestId("topic-map").locator(`.react-flow__node-theme a[aria-current="true"]`)).toBeInViewport();
     await context.close();
   }
